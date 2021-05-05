@@ -407,6 +407,13 @@ $(ONT)-merged.owl: $(SRC)
 	  annotate --ontology-iri $(ONTBASE)/$@ \
 	  $(ANNOTATE_ONTOLOGY_VERSION) \
 	  --output $@.tmp.owl
-	mv $@.tmp.owl $@
+
+# remove obsolete classes
+	robot remove --input $@.tmp.owl \
+	  --select "owl:deprecated='true'^^xsd:boolean" \
+	  --output $@
+
+# clean up
+	rm -f $@.tmp.owl
 
 include nmdco.Makefile
