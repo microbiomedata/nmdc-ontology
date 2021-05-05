@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-<group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base="">
-
-  
-  <uri name="http://purl.obolibrary.org/obo/nmdco/imports/ro_import.owl" uri="imports/ro_import.owl"/>
-  <uri name="http://purl.obolibrary.org/obo/nmdco/imports/ro_import.obo" uri="imports/ro_import.obo"/>
-  
-
-
-  
-  <uri name="http://purl.obolibrary.org/obo/nmdco/components/po.owl" uri="components/po.owl"/>
-  
-  <uri name="http://purl.obolibrary.org/obo/nmdco/components/envo.owl" uri="components/envo.owl"/>
-  
-
-</group>
+    <group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base="">
+        <uri name="http://purl.obolibrary.org/obo/nmdco/imports/ro_import.owl" uri="imports/ro_import.owl"/>
+        <uri name="http://purl.obolibrary.org/obo/nmdco/imports/ro_import.obo" uri="imports/ro_import.obo"/>
+        <uri name="http://purl.obolibrary.org/obo/nmdco/releases/2021-05-03/components/po.owl" uri="components/po.owl"/>
+        <uri name="http://purl.obolibrary.org/obo/nmdco/releases/2021-05-03/components/envo.owl" uri="components/envo.owl"/>
+    </group>
 </catalog>
+
