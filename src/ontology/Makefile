@@ -399,7 +399,14 @@ validate_idranges:
 .PHONY: update_repo
 update_repo:
 	sh $(SCRIPTSDIR)/update_repo.sh
-	
 
+## -- cusotom targets --
+$(ONT)-merged.owl: $(SRC)
+# merge imports into single owl file
+	$(ROBOT) merge --input $< \
+	  annotate --ontology-iri $(ONTBASE)/$@ \
+	  $(ANNOTATE_ONTOLOGY_VERSION) \
+	  --output $@.tmp.owl
+	mv $@.tmp.owl $@
 
 include nmdco.Makefile
