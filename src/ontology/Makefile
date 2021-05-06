@@ -400,7 +400,8 @@ validate_idranges:
 update_repo:
 	sh $(SCRIPTSDIR)/update_repo.sh
 
-## -- cusotom targets --
+## -- cusotom targets -- ##
+
 $(ONT)-merged.owl: $(SRC)
 # merge imports into single owl file
 	$(ROBOT) merge --input $< \
@@ -415,5 +416,26 @@ $(ONT)-merged.owl: $(SRC)
 
 # clean up
 	rm -f $@.tmp.owl
+
+$(ONT)-merged.ttl: $(ONT)-merged.owl
+# convert file to turtle
+	$(ROBOT) convert --input $< --output $@
+
+nmdco-rg.ttl: $(ONT)-merged.ttl .FORCE
+# build relation-graph from nmdc-merged file
+# for relation-graph see https://github.com/balhoff/relation-graph	
+# note, you may need to increase Java memory: export JAVA_OPTS=-Xmx16G
+	relation-graph --ontology-file $< \
+	  --non-redundant-output-file $(ONT)-nonredundant.ttl \
+	  --redundant-output-file $(ONT)-redundant.ttl \
+	  --mode rdf
+
+# merge in nmdco-merged for annotaons
+	$(ROBOT) merge --include-annotations true \
+	  --input $< \
+	  --input $(ONT)-nonredundant.ttl \
+	  annotate --ontology-iri $(ONTBASE)/$@ \
+	  $(ANNOTATE_ONTOLOGY_VERSION) \
+	  --output $@
 
 include nmdco.Makefile
