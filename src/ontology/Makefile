@@ -412,16 +412,14 @@ $(ONT)-merged.ttl: $(SRC)
 	  annotate --ontology-iri $(ONTBASE)/$@ \
 	  $(ANNOTATE_ONTOLOGY_VERSION) \
 	  --output $@.tmp.ttl
-
 # remove obsolete classes
 	robot remove --input $@.tmp.ttl \
 	  --select "owl:deprecated='true'^^xsd:boolean" \
 	  --output $@
-
 # clean up
 	rm -f $@.tmp.ttl
 
-nmdco-rg.ttl: $(ONT)-merged.ttl .FORCE
+$(ONT)-rg.ttl: $(ONT)-merged.ttl .FORCE
 # build relation-graph from nmdc-merged file
 # for relation-graph see https://github.com/balhoff/relation-graph	
 # note, you may need to increase Java memory: export JAVA_OPTS=-Xmx16G
@@ -429,14 +427,15 @@ nmdco-rg.ttl: $(ONT)-merged.ttl .FORCE
 	  --non-redundant-output-file $(ONT)-nonredundant.ttl \
 	  --redundant-output-file $(ONT)-redundant.ttl \
 	  --mode rdf
-
-# merge in nmdco-merged for annotaons
+# merge in nmdco-merged for annotations
 	$(ROBOT) merge --include-annotations true \
 	  --input $< \
 	  --input $(ONT)-nonredundant.ttl \
 	  annotate --ontology-iri $(ONTBASE)/$@ \
 	  $(ANNOTATE_ONTOLOGY_VERSION) \
 	  --output $@
+# copy relation-graph to release directory
+	cp $@ $(RELEASEDIR)
 
 test-query:
 	$(ROBOT) query \
