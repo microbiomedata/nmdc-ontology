@@ -1,0 +1,10 @@
+prefix obo: <http://purl.obolibrary.org/obo/> 
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix part_of: <http://purl.obolibrary.org/obo/BFO_0000050>
+
+# simple query to every ?x that is part of ?x
+select ?x ?y where {
+	?x part_of: ?y .
+}
