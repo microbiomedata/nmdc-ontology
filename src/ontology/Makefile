@@ -439,7 +439,7 @@ $(ONT)-rg.ttl: $(ONT)-merged.ttl .FORCE
 
 test-query:
 	$(ROBOT) query \
-	  --input nmdco-rg.ttl \
+	  --input $(ONT)-rg.ttl \
 	  --query ../sparql/nmdco-test.sparql temp.tsv
 
 include nmdco.Makefile
