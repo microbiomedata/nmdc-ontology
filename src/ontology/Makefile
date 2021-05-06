@@ -401,25 +401,25 @@ update_repo:
 	sh $(SCRIPTSDIR)/update_repo.sh
 
 ## -- cusotom targets -- ##
+.PHONY: test-query
 
 $(ONT)-merged.owl: $(SRC)
+
+
+$(ONT)-merged.ttl: $(SRC) 
 # merge imports into single owl file
 	$(ROBOT) merge --input $< \
 	  annotate --ontology-iri $(ONTBASE)/$@ \
 	  $(ANNOTATE_ONTOLOGY_VERSION) \
-	  --output $@.tmp.owl
+	  --output $@.tmp.ttl
 
 # remove obsolete classes
-	robot remove --input $@.tmp.owl \
+	robot remove --input $@.tmp.ttl \
 	  --select "owl:deprecated='true'^^xsd:boolean" \
 	  --output $@
 
 # clean up
-	rm -f $@.tmp.owl
-
-$(ONT)-merged.ttl: $(ONT)-merged.owl
-# convert file to turtle
-	$(ROBOT) convert --input $< --output $@
+	rm -f $@.tmp.ttl
 
 nmdco-rg.ttl: $(ONT)-merged.ttl .FORCE
 # build relation-graph from nmdc-merged file
@@ -437,5 +437,10 @@ nmdco-rg.ttl: $(ONT)-merged.ttl .FORCE
 	  annotate --ontology-iri $(ONTBASE)/$@ \
 	  $(ANNOTATE_ONTOLOGY_VERSION) \
 	  --output $@
+
+test-query:
+	$(ROBOT) query \
+	  --input nmdco-rg.ttl \
+	  --query ../sparql/nmdco-test.sparql temp.tsv
 
 include nmdco.Makefile
