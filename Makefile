@@ -14,3 +14,8 @@ subset-files/astronomical-body-parts.tsv: .FORCE
 	$(ROBOT) query \
 	  --input $(ONT)-rg.ttl \
 	  --query src/sparql/astronomical-body-parts.sparql $@
+
+subset-files/astronomical-body-parts-and-manufactured-products.tsv: .FORCE
+	$(ROBOT) query \
+	  --input $(ONT)-rg.ttl \
+	  --query src/sparql/astronomical-body-parts-and-manufactured-products.sparql $@
