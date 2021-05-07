@@ -35,3 +35,8 @@ subset-files/soil-environmental-materials.tsv: .FORCE
 	  --input $(ONT)-rg.ttl \
 	  --query src/sparql/soil-environmental-materials.sparql $@
 
+subset-files/manufactured-products.tsv: .FORCE
+	$(ROBOT) query \
+	  --input $(ONT)-rg.ttl \
+	  --query src/sparql/manufactured-products.sparql $@
+
