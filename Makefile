@@ -19,3 +19,9 @@ subset-files/astronomical-body-parts-and-manufactured-products.tsv: .FORCE
 	$(ROBOT) query \
 	  --input $(ONT)-rg.ttl \
 	  --query src/sparql/astronomical-body-parts-and-manufactured-products.sparql $@
+
+subset-files/non-terrestrial-biomes.tsv: .FORCE
+	$(ROBOT) query \
+	  --input $(ONT)-rg.ttl \
+	  --query src/sparql/non-terrestrial-biomes.sparql $@
+
