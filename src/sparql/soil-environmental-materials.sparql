@@ -1,0 +1,22 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX envo: <http://purl.obolibrary.org/obo/ENVO_>
+PREFIX def:  <http://purl.obolibrary.org/obo/IAO_0000115>
+PREFIX soil: <http://purl.obolibrary.org/obo/ENVO_00001998>
+
+SELECT DISTINCT ?class ?label ?definition
+WHERE
+{
+  # find all biomes
+  ?class rdfs:subClassOf* soil:;
+		 rdfs:label ?class_label;
+  BIND(STR(?class_label) as ?label) . # this removes language tags
+
+  # get definition if present
+  optional {
+    ?class def: ?class_def .
+	BIND(STR(?class_def) as ?definition) .
+  }
+}
+ORDER BY ?label

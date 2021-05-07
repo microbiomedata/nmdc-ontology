@@ -30,3 +30,8 @@ subset-files/terrestrial-biomes.tsv: .FORCE
 	  --input $(ONT)-rg.ttl \
 	  --query src/sparql/terrestrial-biomes.sparql $@
 
+subset-files/soil-environmental-materials.tsv: .FORCE
+	$(ROBOT) query \
+	  --input $(ONT)-rg.ttl \
+	  --query src/sparql/soil-environmental-materials.sparql $@
+
