@@ -25,3 +25,8 @@ subset-files/non-terrestrial-biomes.tsv: .FORCE
 	  --input $(ONT)-rg.ttl \
 	  --query src/sparql/non-terrestrial-biomes.sparql $@
 
+subset-files/terrestrial-biomes.tsv: .FORCE
+	$(ROBOT) query \
+	  --input $(ONT)-rg.ttl \
+	  --query src/sparql/terrestrial-biomes.sparql $@
+
