@@ -10,12 +10,13 @@ WHERE
 { 
   # find all astronomical body parts
   ?class rdfs:subClassOf* astronomical_body_part:;
-		 rdfs:label ?l .
-  BIND(STR(?l) as ?label) . # this remove language tags
+		 rdfs:label ?class_label .
+  BIND(STR(?class_label) as ?label) . # this remove language tags
 
   # get definition if present
   optional {
-	?class def: ?def .
-	BIND(STR(?def) as ?definition) .
+	?class def: ?class_def .
+	BIND(STR(?class_def) as ?definition) .
   }
-} 
+}
+ORDER BY ?label
