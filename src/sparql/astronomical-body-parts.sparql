@@ -5,11 +5,17 @@ PREFIX envo: <http://purl.obolibrary.org/obo/ENVO_>
 PREFIX def:  <http://purl.obolibrary.org/obo/IAO_0000115> 
 PREFIX astronomical_body_part: <http://purl.obolibrary.org/obo/ENVO_01000813>
 
-SELECT DISTINCT ?class ?label ?def
+SELECT DISTINCT ?class ?label ?definition
 WHERE
 { 
-  # astronomical body part
+  # find all astronomical body parts
   ?class rdfs:subClassOf* astronomical_body_part:;
-		 rdfs:label ?label .
-  optional {?class def: ?def}.
+		 rdfs:label ?l .
+  BIND(STR(?l) as ?label) . # this remove language tags
+
+  # get definition if present
+  optional {
+	?class def: ?def .
+	BIND(STR(?def) as ?definition) .
+  }
 } 
