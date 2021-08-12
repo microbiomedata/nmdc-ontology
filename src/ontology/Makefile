@@ -248,23 +248,15 @@ $(COMPONENTSDIR)/%: .FORCE
 	touch $@
 .PRECIOUS: $(COMPONENTSDIR)/%
 
-
-
-
 $(COMPONENTSDIR)/po.owl: .FORCE
 	if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/po.owl \
 	annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) -o $@; fi
 .PRECIOUS: $(COMPONENTSDIR)/po.owl
 
-
-
 $(COMPONENTSDIR)/envo.owl: .FORCE
 	if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/envo.owl \
 	annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) -o $@; fi
 .PRECIOUS: $(COMPONENTSDIR)/envo.owl
-
-
-
 
 # ----------------------------------------
 # Mirroring upstream ontologies
@@ -283,7 +275,6 @@ mirror/ro.trigger: $(SRC)
 mirror/ro.owl: mirror/ro.trigger
 	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/ro.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/%.owl
-
 
 
 # ----------------------------------------
@@ -414,7 +405,16 @@ $(ONT)-merged.ttl: $(ONT)-merged.owl
 # convert merged owl file to ttl
 	$(ROBOT) convert -i $< -o $@
 
-$(ONT)-rg.ttl: $(ONT)-merged.ttl .FORCE
+$(ONT)-merged-object-property-annotations.ttl: $(ONT)-merged.ttl .FORCE
+# create an ontology of just the labels in the merged ontology
+# this is needed so that we can easily view the ontology in protege
+	$(ROBOT) filter -i $< --select object-properties  --select annotations -o $@
+
+$(ONT)-merged-labels.ttl: $(ONT)-merged.ttl .FORCE
+	$(ROBOT) query --format ttl -i $< --query ../sparql/all-labels.sparql $@
+
+#$(ONT)-rg.ttl: $(ONT)-merged.ttl $(ONT)-merged-class-annotations.ttl $(ONT)-merged-object-property-annotations.ttl .FORCE
+$(ONT)-rg.ttl: $(ONT)-merged.ttl $(ONT)-merged-labels.ttl .FORCE
 # build relation-graph from nmdc-merged.ttl file
 # for relation-graph see https://github.com/balhoff/relation-graph	
 # note, you may need to increase Java memory: export JAVA_OPTS=-Xmx16G
@@ -423,8 +423,8 @@ $(ONT)-rg.ttl: $(ONT)-merged.ttl .FORCE
 	  --redundant-output-file $(ONT)-redundant.ttl \
 	  --mode rdf
 # merge in nmdco-merged for annotations
-	$(ROBOT) merge --include-annotations true \
-	  --input $< \
+	$(ROBOT) merge \
+	  --input $(word 2, $^) \
 	  --input $(ONT)-nonredundant.ttl \
 	  annotate --ontology-iri $(ONTBASE)/$@ \
 	  $(ANNOTATE_ONTOLOGY_VERSION) \
