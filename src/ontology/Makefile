@@ -415,7 +415,7 @@ $(ONT)-merged.ttl: $(ONT)-merged.owl
 	$(ROBOT) convert -i $< -o $@
 
 $(ONT)-rg.ttl: $(ONT)-merged.ttl .FORCE
-# build relation-graph from nmdc-merged file
+# build relation-graph from nmdc-merged.ttl file
 # for relation-graph see https://github.com/balhoff/relation-graph	
 # note, you may need to increase Java memory: export JAVA_OPTS=-Xmx16G
 	relation-graph --ontology-file $< \
