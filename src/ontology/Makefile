@@ -364,10 +364,6 @@ $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
 	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/nmdco_terms.sparql $@
 
 
-
-
-
-
 # base: OTHER sources of interest, such as definitions owl
 $(ONT)-base.owl: $(SRC) $(OTHER_SRC)
 	$(ROBOT) remove --input $< --select imports --trim false \
@@ -390,8 +386,6 @@ $(ONT)-non-classified.owl: $(SRC) $(OTHER_SRC)
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
 
 
-
-
 .PHONY: validate_idranges
 validate_idranges:
 	amm $(SCRIPTSDIR)/validate_id_ranges.sc nmdco-idranges.owl
@@ -404,20 +398,21 @@ update_repo:
 .PHONY: test-query
 
 $(ONT)-merged.owl: $(SRC)
-
-
-$(ONT)-merged.ttl: $(SRC) 
 # merge imports into single owl file
 	$(ROBOT) merge --input $< \
 	  annotate --ontology-iri $(ONTBASE)/$@ \
 	  $(ANNOTATE_ONTOLOGY_VERSION) \
-	  --output $@.tmp.ttl
+	  --output $@.tmp.owl
 # remove obsolete classes
-	robot remove --input $@.tmp.ttl \
+	robot remove --input $@.tmp.owl \
 	  --select "owl:deprecated='true'^^xsd:boolean" \
 	  --output $@
 # clean up
-	rm -f $@.tmp.ttl
+	rm -f $@.tmp.owl
+
+$(ONT)-merged.ttl: $(ONT)-merged.owl
+# convert merged owl file to ttl
+	$(ROBOT) convert -i $< -o $@
 
 $(ONT)-rg.ttl: $(ONT)-merged.ttl .FORCE
 # build relation-graph from nmdc-merged file
