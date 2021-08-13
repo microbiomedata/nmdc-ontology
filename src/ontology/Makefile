@@ -44,9 +44,9 @@ ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --anno
 OTHER_SRC =                 $(COMPONENTSDIR)/po.owl $(COMPONENTSDIR)/envo.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 
-FORMATS = $(sort  owl owl)
+FORMATS = $(sort  owl)
 FORMATS_INCL_TSV = $(sort $(FORMATS) tsv)
-RELEASE_ARTEFACTS = $(sort $(ONT)-base $(ONT)-full $(ONT)-non-classified $(ONT)-base $(ONT)-full)
+RELEASE_ARTEFACTS = $(sort $(ONT)-full $(ONT)-non-classified)
 
 # ----------------------------------------
 # Top-level targets
@@ -55,16 +55,11 @@ RELEASE_ARTEFACTS = $(sort $(ONT)-base $(ONT)-full $(ONT)-non-classified $(ONT)-
 .PHONY: .FORCE
 
 .PHONY: all
-all: odkversion all_imports all_main all_subsets sparql_test all_reports all_assets
+all: all_imports all_main all_subsets sparql_test all_reports all_assets
 
 .PHONY: test
-test: odkversion sparql_test all_reports 
+test: sparql_test all_reports 
 	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed all --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
-
-.PHONY: odkversion
-odkversion:
-	echo "ODK Makefile version: $(ODK_VERSION_MAKEFILE) (this is the version of the ODK with which this Makefile was generated, not the version of the ODK you are running)" &&\
-	echo "ROBOT version (ODK): " && $(ROBOT) --version
 
 $(TMPDIR) $(REPORTDIR) :
 	mkdir -p $@
@@ -294,8 +289,8 @@ subsets/%.owl: $(ONT).owl
 # ----------------------------------------
 # copy from staging area (this directory) to top-level
 .PHONY: release
-release: $(ONT).owl $(ONT).obo
-	cp $^ $(RELEASEDIR) && cp imports/* $(RELEASEDIR)/imports
+release: $(ONT).owl $(ONT)-relation-graph.ttl
+	cp $^ $(RELEASEDIR)
 
 # ----------------------------------------
 # Sparql queries: Q/C
@@ -377,10 +372,6 @@ $(ONT)-non-classified.owl: $(SRC) $(OTHER_SRC)
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
 
 
-.PHONY: validate_idranges
-validate_idranges:
-	amm $(SCRIPTSDIR)/validate_id_ranges.sc nmdco-idranges.owl
-
 .PHONY: update_repo
 update_repo:
 	sh $(SCRIPTSDIR)/update_repo.sh
@@ -411,12 +402,13 @@ $(ONT)-merged-labels.ttl: $(ONT)-merged.ttl .FORCE
 # this is needed so that we can easily view the ontology in protege
 	$(ROBOT) query --format ttl -i $< --query ../sparql/all-labels.sparql $@
 
-$(ONT)-rg.ttl: $(ONT)-merged.ttl $(ONT)-merged-labels.ttl .FORCE
+$(ONT)-relation-graph.ttl: $(ONT)-merged.ttl $(ONT)-merged-labels.ttl .FORCE
 # build relation-graph from nmdc-merged.ttl file
 # for relation-graph see https://github.com/balhoff/relation-graph	
 # note, you may need to increase Java memory: export JAVA_OPTS=-Xmx16G
 	relation-graph --ontology-file $< \
 	  --reflexive-subclasses false \
+	  --equivalence-as-subclass true \
 	  --non-redundant-output-file $(ONT)-nonredundant.ttl \
 	  --redundant-output-file $(ONT)-redundant.ttl \
 	  --mode rdf
@@ -432,7 +424,7 @@ $(ONT)-rg.ttl: $(ONT)-merged.ttl $(ONT)-merged-labels.ttl .FORCE
 
 test-query:
 	$(ROBOT) query \
-	  --input $(ONT)-rg.ttl \
+	  --input $(ONT)-relation-graph.ttl \
 	  --query ../sparql/nmdco-test.sparql temp.tsv
 
 include nmdco.Makefile
