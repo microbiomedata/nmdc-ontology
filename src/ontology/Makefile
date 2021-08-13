@@ -405,20 +405,18 @@ $(ONT)-merged.ttl: $(ONT)-merged.owl
 # convert merged owl file to ttl
 	$(ROBOT) convert -i $< -o $@
 
-$(ONT)-merged-object-property-annotations.ttl: $(ONT)-merged.ttl .FORCE
-# create an ontology of just the labels in the merged ontology
-# this is needed so that we can easily view the ontology in protege
-	$(ROBOT) filter -i $< --select object-properties  --select annotations -o $@
 
 $(ONT)-merged-labels.ttl: $(ONT)-merged.ttl .FORCE
+# create an ontology of just the labels in the merged ontology
+# this is needed so that we can easily view the ontology in protege
 	$(ROBOT) query --format ttl -i $< --query ../sparql/all-labels.sparql $@
 
-#$(ONT)-rg.ttl: $(ONT)-merged.ttl $(ONT)-merged-class-annotations.ttl $(ONT)-merged-object-property-annotations.ttl .FORCE
 $(ONT)-rg.ttl: $(ONT)-merged.ttl $(ONT)-merged-labels.ttl .FORCE
 # build relation-graph from nmdc-merged.ttl file
 # for relation-graph see https://github.com/balhoff/relation-graph	
 # note, you may need to increase Java memory: export JAVA_OPTS=-Xmx16G
 	relation-graph --ontology-file $< \
+	  --reflexive-subclasses false \
 	  --non-redundant-output-file $(ONT)-nonredundant.ttl \
 	  --redundant-output-file $(ONT)-redundant.ttl \
 	  --mode rdf
