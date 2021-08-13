@@ -46,7 +46,7 @@ ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 
 FORMATS = $(sort  owl)
 FORMATS_INCL_TSV = $(sort $(FORMATS) tsv)
-RELEASE_ARTEFACTS = $(sort $(ONT)-full $(ONT)-non-classified)
+RELEASE_ARTEFACTS = $(sort $(ONT)-full $(ONT)-non-classified $(ONT)-relation-graph)
 
 # ----------------------------------------
 # Top-level targets
@@ -350,14 +350,6 @@ $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
 	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/nmdco_terms.sparql $@
 
 
-# base: OTHER sources of interest, such as definitions owl
-$(ONT)-base.owl: $(SRC) $(OTHER_SRC)
-	$(ROBOT) remove --input $< --select imports --trim false \
-		merge $(patsubst %, -i %, $(OTHER_SRC)) \
-		annotate --link-annotation http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 \
-		--ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		--output $@.tmp.owl && mv $@.tmp.owl $@
-
 # Full: The full artefacts with imports merged, reasoned
 $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 	$(ROBOT) merge --input $< \
@@ -392,9 +384,10 @@ $(ONT)-merged.owl: $(SRC)
 # clean up
 	rm -f $@.tmp.owl
 
-$(ONT)-merged.ttl: $(ONT)-merged.owl
+$(ONT)-merged.ttl: $(ONT)-merged.owl .FORCE
 # convert merged owl file to ttl
-	$(ROBOT) convert -i $< -o $@
+	$(ROBOT) annotate --ontology-iri $(ONTBASE)/$@ --input $< \
+	         convert --output $@
 
 
 $(ONT)-merged-labels.ttl: $(ONT)-merged.ttl .FORCE
@@ -422,9 +415,14 @@ $(ONT)-relation-graph.ttl: $(ONT)-merged.ttl $(ONT)-merged-labels.ttl .FORCE
 # copy relation-graph to release directory
 	cp $@ $(RELEASEDIR)
 
+$(ONT)-relation-graph.owl: $(ONT)-relation-graph.ttl
+# convert file to owl
+	$(ROBOT) annotate --ontology-iri $(ONTBASE)/$@ --input $< \
+	         convert --output $@
+
 test-query:
 	$(ROBOT) query \
-	  --input $(ONT)-relation-graph.ttl \
+	  --input $(ONT)-relation-graph.owl \
 	  --query ../sparql/nmdco-test.sparql temp.tsv
 
 include nmdco.Makefile
