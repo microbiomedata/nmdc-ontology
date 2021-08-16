@@ -2,7 +2,7 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base="">
         <uri name="http://purl.obolibrary.org/obo/nmdco/imports/ro_import.owl" uri="imports/ro_import.owl"/>
-        <uri name="http://purl.obolibrary.org/obo/nmdco/components/po.owl" uri="imports/po.owl"/>
-        <uri name="http://purl.obolibrary.org/obo/nmdco/components/envo.owl" uri="imports/envo.owl"/>
+        <uri name="http://purl.obolibrary.org/obo/nmdco/imports/po_import.owl" uri="imports/po_import.owl"/>
+        <uri name="http://purl.obolibrary.org/obo/nmdco/imports/envo_import.owl" uri="imports/envo_import.owl"/>
     </group>
 </catalog>
