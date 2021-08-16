@@ -674,25 +674,6 @@ refresh-%:
 
 
 # ----------------------------------------
-# Components
-# ----------------------------------------
-# Some ontologies contain external and internal components. A component is included in the ontology in its entirety.
-
-$(COMPONENTSDIR)/%: .FORCE
-	touch $@
-.PRECIOUS: $(COMPONENTSDIR)/%
-
-$(COMPONENTSDIR)/po.owl: .FORCE
-	if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/po.owl \
-	annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) -o $@; fi
-.PRECIOUS: $(COMPONENTSDIR)/po.owl
-
-$(COMPONENTSDIR)/envo.owl: .FORCE
-	if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/envo.owl \
-	annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) -o $@; fi
-.PRECIOUS: $(COMPONENTSDIR)/envo.owl
-
-# ----------------------------------------
 # Mirroring upstream ontologies
 # ----------------------------------------
 #
