@@ -399,7 +399,7 @@ $(ONT)-merged-labels.ttl: $(ONT)-merged.ttl
 	$(ROBOT) query --format ttl -i $< --query ../sparql/all-labels.sparql $@
 
 
-$(ONT)-relation-graph.ttl: $(ONT)-merged.ttl $(ONT)-merged-labels.ttl .FORCE
+$(ONT)-relation-graph.ttl: $(ONT)-merged.ttl $(ONT)-merged-labels.ttl
 # build relation-graph from nmdc-merged.ttl file
 # for relation-graph see https://github.com/balhoff/relation-graph	
 # note, you may need to increase Java memory: export JAVA_OPTS=-Xmx16G
@@ -428,13 +428,16 @@ $(ONT)-relation-graph.owl: $(ONT)-relation-graph.ttl
 # ----------------------------------------
 # Subsets
 # ----------------------------------------
-SUBSET_FILES := \
+.PHONEY: test-query test-subsets subsets
+
+SUBSETS := \
 	subsets/astronomical-body-parts.tsv \
 	subsets/astronomical-body-parts-and-manufactured-products.tsv \
 	subsets/non-terrestrial-biomes.tsv \
 	subsets/terrestrial-biomes.tsv \
-	soil-environmental-materials.tsv \
-	subsets/manufactured-products.tsv 
+	subsets/soil-environmental-materials.tsv \
+	subsets/manufactured-products.tsv
+
 
 test-query: $(ONT)-relation-graph.owl .FORCE
 # a simple query to very that I can run a query
@@ -442,9 +445,15 @@ test-query: $(ONT)-relation-graph.owl .FORCE
 	  --input $< \
 	  --query ../sparql/nmdco-test.sparql temp.tsv
 
+test-subsets: $(SUBSETS) .FORCE
+# test creating all subsets
+
+subsets:
+# create all subset files
+
 subsets/astronomical-body-parts.tsv: $(ONT)-relation-graph.owl
 	$(ROBOT) query \
-	  --input $<
+	  --input $< \
 	  --query ../sparql/astronomical-body-parts.sparql $@
 
 subsets/astronomical-body-parts-and-manufactured-products.tsv: $(ONT)-relation-graph.owl
