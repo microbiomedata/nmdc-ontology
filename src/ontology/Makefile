@@ -289,7 +289,7 @@ subsets/%.owl: $(ONT).owl
 # ----------------------------------------
 # copy from staging area (this directory) to top-level
 .PHONY: release
-release: $(ONT).owl $(ONT)-relation-graph.ttl
+release: $(ONT).owl $(ONT)-relation-graph.owl
 	cp $^ $(RELEASEDIR)
 
 # ----------------------------------------
@@ -358,6 +358,7 @@ $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 		reduce -r ELK \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
 
+
 # foo-non-classified: (edit->imports-merged)
 $(ONT)-non-classified.owl: $(SRC) $(OTHER_SRC)
 	$(ROBOT) merge --input $< \
@@ -384,16 +385,18 @@ $(ONT)-merged.owl: $(SRC)
 # clean up
 	rm -f $@.tmp.owl
 
-$(ONT)-merged.ttl: $(ONT)-merged.owl .FORCE
+
+$(ONT)-merged.ttl: $(ONT)-merged.owl
 # convert merged owl file to ttl
 	$(ROBOT) annotate --ontology-iri $(ONTBASE)/$@ --input $< \
 	         convert --output $@
 
 
-$(ONT)-merged-labels.ttl: $(ONT)-merged.ttl .FORCE
+$(ONT)-merged-labels.ttl: $(ONT)-merged.ttl
 # create an ontology of just the labels in the merged ontology
 # this is needed so that we can easily view the ontology in protege
 	$(ROBOT) query --format ttl -i $< --query ../sparql/all-labels.sparql $@
+
 
 $(ONT)-relation-graph.ttl: $(ONT)-merged.ttl $(ONT)-merged-labels.ttl .FORCE
 # build relation-graph from nmdc-merged.ttl file
@@ -414,6 +417,7 @@ $(ONT)-relation-graph.ttl: $(ONT)-merged.ttl $(ONT)-merged-labels.ttl .FORCE
 	  --output $@
 # copy relation-graph to release directory
 	cp $@ $(RELEASEDIR)
+
 
 $(ONT)-relation-graph.owl: $(ONT)-relation-graph.ttl
 # convert file to owl
