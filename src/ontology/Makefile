@@ -436,38 +436,38 @@ SUBSET_FILES := \
 	soil-environmental-materials.tsv \
 	subsets/manufactured-products.tsv 
 
-test-query: $(ONT)-relation-graph.ttl .FORCE
+test-query: $(ONT)-relation-graph.owl .FORCE
 # a simple query to very that I can run a query
 	$(ROBOT) query \
 	  --input $< \
 	  --query ../sparql/nmdco-test.sparql temp.tsv
 
-subsets/astronomical-body-parts.tsv: $(ONT)-relation-graph.ttl
+subsets/astronomical-body-parts.tsv: $(ONT)-relation-graph.owl
 	$(ROBOT) query \
 	  --input $<
 	  --query ../sparql/astronomical-body-parts.sparql $@
 
-subsets/astronomical-body-parts-and-manufactured-products.tsv: $(ONT)-relation-graph.ttl 
+subsets/astronomical-body-parts-and-manufactured-products.tsv: $(ONT)-relation-graph.owl
 	$(ROBOT) query \
 	  --input $< \
 	  --query ../sparql/astronomical-body-parts-and-manufactured-products.sparql $@
 
-subsets/non-terrestrial-biomes.tsv: $(ONT)-relation-graph.ttl
+subsets/non-terrestrial-biomes.tsv: $(ONT)-relation-graph.owl
 	$(ROBOT) query \
 	  --input $< \
 	  --query ../sparql/non-terrestrial-biomes.sparql $@
 
-subsets/terrestrial-biomes.tsv: $(ONT)-relation-graph.ttl
+subsets/terrestrial-biomes.tsv: $(ONT)-relation-graph.owl
 	$(ROBOT) query \
 	  --input $< \
 	  --query ../sparql/terrestrial-biomes.sparql $@
 
-subsets/soil-environmental-materials.tsv: $(ONT)-relation-graph.ttl
+subsets/soil-environmental-materials.tsv: $(ONT)-relation-graph.owl
 	$(ROBOT) query \
 	  --input $< \
 	  --query ../sparql/soil-environmental-materials.sparql $@
 
-subsets/manufactured-products.tsv: $(ONT)-relation-graph.ttl
+subsets/manufactured-products.tsv: $(ONT)-relation-graph.owl
 	$(ROBOT) query \
 	  --input $< \
 	  --query ../sparql/manufactured-products.sparql $@
