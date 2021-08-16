@@ -272,9 +272,7 @@ mirror/ro.owl: mirror/ro.trigger
 .PRECIOUS: mirror/%.owl
 
 
-# ----------------------------------------
-# Subsets
-# ----------------------------------------
+
 subsets/%.tsv: subsets/%.owl
 	$(ROBOT) query -f tsv -i $< -s ../sparql/labels.sparql $@
 .PRECIOUS: subsets/%.tsv
@@ -391,6 +389,9 @@ $(ONT)-merged.ttl: $(ONT)-merged.owl
 	$(ROBOT) annotate --ontology-iri $(ONTBASE)/$@ --input $< \
 	         convert --output $@
 
+# ----------------------------------------
+# Relation graph
+# ----------------------------------------
 
 $(ONT)-merged-labels.ttl: $(ONT)-merged.ttl
 # create an ontology of just the labels in the merged ontology
@@ -424,9 +425,53 @@ $(ONT)-relation-graph.owl: $(ONT)-relation-graph.ttl
 	$(ROBOT) annotate --ontology-iri $(ONTBASE)/$@ --input $< \
 	         convert --output $@
 
-test-query:
+# ----------------------------------------
+# Subsets
+# ----------------------------------------
+SUBSET_FILES := \
+	subsets/astronomical-body-parts.tsv \
+	subsets/astronomical-body-parts-and-manufactured-products.tsv \
+	subsets/non-terrestrial-biomes.tsv \
+	subsets/terrestrial-biomes.tsv \
+	soil-environmental-materials.tsv \
+	subsets/manufactured-products.tsv 
+
+test-query: $(ONT)-relation-graph.ttl .FORCE
+# a simple query to very that I can run a query
 	$(ROBOT) query \
-	  --input $(ONT)-relation-graph.owl \
+	  --input $< \
 	  --query ../sparql/nmdco-test.sparql temp.tsv
+
+subsets/astronomical-body-parts.tsv: $(ONT)-relation-graph.ttl
+	$(ROBOT) query \
+	  --input $<
+	  --query ../sparql/astronomical-body-parts.sparql $@
+
+subsets/astronomical-body-parts-and-manufactured-products.tsv: $(ONT)-relation-graph.ttl 
+	$(ROBOT) query \
+	  --input $< \
+	  --query ../sparql/astronomical-body-parts-and-manufactured-products.sparql $@
+
+subsets/non-terrestrial-biomes.tsv: $(ONT)-relation-graph.ttl
+	$(ROBOT) query \
+	  --input $< \
+	  --query ../sparql/non-terrestrial-biomes.sparql $@
+
+subsets/terrestrial-biomes.tsv: $(ONT)-relation-graph.ttl
+	$(ROBOT) query \
+	  --input $< \
+	  --query ../sparql/terrestrial-biomes.sparql $@
+
+subsets/soil-environmental-materials.tsv: $(ONT)-relation-graph.ttl
+	$(ROBOT) query \
+	  --input $< \
+	  --query ../sparql/soil-environmental-materials.sparql $@
+
+subsets/manufactured-products.tsv: $(ONT)-relation-graph.ttl
+	$(ROBOT) query \
+	  --input $< \
+	  --query ../sparql/manufactured-products.sparql $@
+
+
 
 include nmdco.Makefile
