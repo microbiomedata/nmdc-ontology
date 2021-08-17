@@ -54,33 +54,48 @@ SUBSETS := \
 	subsets/soil-environmental-materials.tsv \
 	subsets/manufactured-products.tsv
 
-RELEASE_ARTEFACTS = $(ONT)-relation-graph.owl
+RELEASE_ARTEFACTS = $(ONT)-relation-graph.owl $(ONT).json
 
 # ----------------------------------------
 # Top-level targets
 # ----------------------------------------
 
-.PHONY: .FORCE all all_imports all_main all_subsets test test-query test-subsets refresh-imports refresh-% release imports/%_import.owl
+.PHONY: .FORCE all all_imports all_main all_subsets clean test test-query test-subsets release
+.PHONY: refresh-imports refresh-% imports/%_import.owl refresh-all refresh-all-%
 
 all: all_imports all_main all_subsets
 
 all_main: $(RELEASE_ARTEFACTS)
 
+refresh-all:
+	make -B all_imports
+	make -B all_main
+	make -B all_subsets
+
+refresh-all-%:
+	make -B all_$*
+
 # ----------------------------------------
 # Release Management
 # ----------------------------------------
 
-CLEANFILES=$(MAIN_FILES)
-# This should be executed by the release manager whenever time comes to make a release.
-# It will ensure that all assets/files are fresh, and will copy to release folder
+release: $(RELEASE_ARTEFACTS) all_subsets
+# copy artefacts to release directory
+	cp $(RELEASE_ARTEFACTS) $(RELEASEDIR)
+# filter subsets directory and copy to the release directory
+	$(foreach subset, \
+	    $(filter $(SUBSETS), $(wildcard subsets/*)), \
+	    $(shell cp $(subset) $(RELEASEDIR)/subsets))
 
-release: $(ONT).owl $(ONT)-relation-graph.owl
-	cp $^ $(RELEASEDIR)
-
+clean:
+	rm -f $(RELEASE_ARTEFACTS)
+	rm -f $(SUBSETS)
+	rm -f $(IMPORT_FILES)
 
 # ----------------------------------------
 # Import modules
 # ----------------------------------------
+
 # Most ontologies are modularly constructed using portions of other ontologies
 # These live in the imports/ folder
 all_imports: $(IMPORT_FILES)
@@ -100,8 +115,9 @@ refresh-%:
 	make -B imports/$*_import.owl
 
 # -------------------------------------------
-# Release artefacts: main release artefacts
+# Main release artefacts
 # -------------------------------------------
+
 $(ONT).owl: $(ONT)-full.owl
 	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		convert -o $@.tmp.owl && mv $@.tmp.owl $@
@@ -126,9 +142,13 @@ $(ONT)-relation-graph.owl: $(ONT)-merged.owl $(ONT)-merged-labels.ttl
 # copy relation-graph to release directory
 	cp $@ $(RELEASEDIR)
 
+$(ONT).json: $(ONT)-relation-graph.owl
+# convert ontology to json
+	$(ROBOT) annotate --ontology-iri $(ONTBASE)/$@ --input $< \
+	         convert --output $@
 
 # -----------------------------------------------------
-# Release artefacts: variants
+# Variant artefacts
 # -----------------------------------------------------
 
 # Full: The full artefacts with imports merged, reasoned
@@ -171,8 +191,6 @@ $(ONT)-merged-labels.ttl: $(ONT)-merged.ttl
 # create an ontology of just the labels in the merged ontology
 # this is needed so that we can easily view the ontology in protege
 	$(ROBOT) query --format ttl -i $< --query ../sparql/all-labels.sparql $@
-
-
 
 $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
 	touch $(ONTOLOGYTERMS) && \
