@@ -60,7 +60,7 @@ RELEASE_ARTEFACTS = $(ONT)-relation-graph.owl $(ONT).json $(ONT)-classes.json
 # Top-level targets
 # ----------------------------------------
 
-.PHONY: .FORCE all all_imports all_main all_subsets clean test test-query test-subsets release
+.PHONY: .FORCE all all_imports all_main all_subsets clean test test-query test-subsets release release-subsets release-artefacts
 .PHONY: refresh-imports refresh-% imports/%_import.owl refresh-all refresh-all-%
 
 all: all_imports all_main all_subsets
@@ -79,13 +79,17 @@ refresh-all-%:
 # Release Management
 # ----------------------------------------
 
-release: $(RELEASE_ARTEFACTS) all_subsets
+release: release-artefacts release-subsets
+
+release-artefacts: $(RELEASE_ARTEFACTS)
 # copy artefacts to release directory
-	@cp $(RELEASE_ARTEFACTS) $(RELEASEDIR)
-# filter subsets directory and copy to the release directory
-	$(foreach subset, \
-	    $(filter $(SUBSETS), $(wildcard subsets/*)), \
-	    $(shell cp $(subset) $(RELEASEDIR)/subsets))
+	@echo "\n** releasing $@ **"
+	cp $^ $(RELEASEDIR)
+
+release-subsets: $(SUBSETS)
+# copy subsets to the release directory
+	@echo "\n** releasing $@ **"
+	cp $^ $(RELEASEDIR)/subsets
 
 clean:
 	rm -f $(RELEASE_ARTEFACTS)
@@ -102,6 +106,7 @@ all_imports: $(IMPORT_FILES)
 
 # -- Generate Import Modules --
 imports/%_import.owl:
+	@echo "\n** building $@ **"
 	$(ROBOT) merge -I $(URIBASE)/$*.owl \
 	  annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 	  --output $@.tmp.owl && mv $@.tmp.owl $@
@@ -119,6 +124,7 @@ refresh-%:
 # -------------------------------------------
 
 $(ONT).owl: $(ONT)-full.owl
+	@echo "\n** building $@ **"
 	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		convert -o $@.tmp.owl && mv $@.tmp.owl $@
 
@@ -126,6 +132,7 @@ $(ONT)-relation-graph.owl: $(ONT)-merged.owl $(ONT)-merged-labels.ttl
 # build relation-graph from nmdc-merged.ttl file
 # for relation-graph see https://github.com/balhoff/relation-graph	
 # note, you may need to increase Java memory: export JAVA_OPTS=-Xmx16G
+	@echo "\n** building $@ **"
 	relation-graph --ontology-file $< \
 	    --reflexive-subclasses false \
 	    --equivalence-as-subclass true \
@@ -139,17 +146,17 @@ $(ONT)-relation-graph.owl: $(ONT)-merged.owl $(ONT)-merged-labels.ttl
 	    annotate --ontology-iri $(ONTBASE)/$@ \
 	    $(ANNOTATE_ONTOLOGY_VERSION) \
 	    --output $@
-# copy relation-graph to release directory
-	cp $@ $(RELEASEDIR)
 
 $(ONT).json: $(ONT)-relation-graph.owl
 # convert ontology to json
+	@echo "\n** building $@ **"
 	$(ROBOT) annotate --ontology-iri $(ONTBASE)/$@ --input $< \
 	    $(ANNOTATE_ONTOLOGY_VERSION) \
 	    convert --output $@
 
 $(ONT)-classes.json: $(ONT)-relation-graph.owl $(ONT)-merged-labels.ttl
 # select classes, merge with the labels, and convert ontology to json
+	@echo "\n** building $@ **"
 	$(ROBOT) filter --input $< \
 	    --select classes \
 	    merge --input $(word 2, $^) \
@@ -164,6 +171,7 @@ $(ONT)-classes.json: $(ONT)-relation-graph.owl $(ONT)-merged-labels.ttl
 # Full: The full artefacts with imports merged, reasoned
 $(ONT)-full.owl: $(ONT)-merged.owl
 # reason over the merged file
+	@echo "\n** building $@ **"
 	$(ROBOT) reason --input $< --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural \
 		relax \
 		reduce -r ELK \
@@ -177,6 +185,7 @@ $(ONT)-full.owl: $(ONT)-merged.owl
 
 $(ONT)-merged.owl: $(SRC) $(IMPORT_FILES)
 # merge imports into single owl file
+	@echo "\n** building $@ **"
 	$(ROBOT) merge --input $< $(patsubst %, --input %, $(IMPORT_FILES)) \
 	    annotate --ontology-iri $(ONTBASE)/$@ \
 	    $(ANNOTATE_ONTOLOGY_VERSION) \
@@ -194,15 +203,18 @@ refresh-merged:
 
 $(ONT)-merged.ttl: $(ONT)-merged.owl
 # convert merged owl file to ttl
+	@echo "\n** building $@ **"
 	$(ROBOT) annotate --ontology-iri $(ONTBASE)/$@ --input $< \
 	         convert --output $@
 
 $(ONT)-merged-labels.ttl: $(ONT)-merged.ttl
 # create an ontology of just the labels in the merged ontology
 # this is needed so that we can easily view the ontology in protege
+	@echo "\n** building $@ **"
 	$(ROBOT) query --format ttl -i $< --query ../sparql/all-labels.sparql $@
 
 $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
+	@echo "\n** building $@ **"
 	touch $(ONTOLOGYTERMS) && \
 	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/nmdco_terms.sparql $@
 
@@ -221,35 +233,41 @@ test-query: $(ONT)-relation-graph.owl .FORCE
 test-subsets: $(SUBSETS) .FORCE
 # test creating all subsets
 
-subsets/astronomical-body-parts.tsv: $(ONT)-relation-graph.owl
+subsets/astronomical-body-parts.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/astronomical-body-parts.sparql
+	@echo "\n** building $@ **"
 	$(ROBOT) query \
 	  --input $< \
-	  --query ../sparql/astronomical-body-parts.sparql $@
+	  --query $(word 2, $^) $@
 
-subsets/astronomical-body-parts-and-manufactured-products.tsv: $(ONT)-relation-graph.owl
+subsets/astronomical-body-parts-and-manufactured-products.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/astronomical-body-parts-and-manufactured-products.sparql
+	@echo "\n** building $@ **"
 	$(ROBOT) query \
 	  --input $< \
-	  --query ../sparql/astronomical-body-parts-and-manufactured-products.sparql $@
+	  --query $(word 2, $^) $@
 
-subsets/non-terrestrial-biomes.tsv: $(ONT)-relation-graph.owl
+subsets/non-terrestrial-biomes.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/non-terrestrial-biomes.sparql
+	@echo "\n** building $@ **"
 	$(ROBOT) query \
 	  --input $< \
-	  --query ../sparql/non-terrestrial-biomes.sparql $@
+	  --query $(word 2, $^) $@
 
-subsets/terrestrial-biomes.tsv: $(ONT)-relation-graph.owl
+subsets/terrestrial-biomes.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/terrestrial-biomes.sparql
+	@echo "\n** building $@ **"
 	$(ROBOT) query \
 	  --input $< \
-	  --query ../sparql/terrestrial-biomes.sparql $@
+	  --query $(word 2, $^) $@
 
-subsets/soil-environmental-materials.tsv: $(ONT)-relation-graph.owl
+subsets/soil-environmental-materials.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/soil-environmental-materials.sparql
+	@echo "\n** building $@ **"
 	$(ROBOT) query \
 	  --input $< \
-	  --query ../sparql/soil-environmental-materials.sparql $@
+	  --query $(word 2, $^) $@
 
-subsets/manufactured-products.tsv: $(ONT)-relation-graph.owl
+subsets/manufactured-products.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/manufactured-products.sparql
+	@echo "\n** building $@ **"
 	$(ROBOT) query \
 	  --input $< \
-	  --query ../sparql/manufactured-products.sparql $@
+	  --query $(word 2, $^) $@
 
 
 
