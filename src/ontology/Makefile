@@ -157,7 +157,6 @@ $(ONT)-classes.json: $(ONT)-relation-graph.owl $(ONT)-merged-labels.ttl
 	    $(ANNOTATE_ONTOLOGY_VERSION) \
 	    convert --output $@
 
-# 	    --select annotations \
 # -----------------------------------------------------
 # Variant artefacts
 # -----------------------------------------------------
