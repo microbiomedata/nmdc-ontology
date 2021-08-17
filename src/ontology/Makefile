@@ -54,7 +54,7 @@ SUBSETS := \
 	subsets/soil-environmental-materials.tsv \
 	subsets/manufactured-products.tsv
 
-RELEASE_ARTEFACTS = $(ONT)-relation-graph.owl $(ONT).json
+RELEASE_ARTEFACTS = $(ONT)-relation-graph.owl $(ONT).json $(ONT)-classes.json
 
 # ----------------------------------------
 # Top-level targets
@@ -81,7 +81,7 @@ refresh-all-%:
 
 release: $(RELEASE_ARTEFACTS) all_subsets
 # copy artefacts to release directory
-	cp $(RELEASE_ARTEFACTS) $(RELEASEDIR)
+	@cp $(RELEASE_ARTEFACTS) $(RELEASEDIR)
 # filter subsets directory and copy to the release directory
 	$(foreach subset, \
 	    $(filter $(SUBSETS), $(wildcard subsets/*)), \
@@ -127,26 +127,37 @@ $(ONT)-relation-graph.owl: $(ONT)-merged.owl $(ONT)-merged-labels.ttl
 # for relation-graph see https://github.com/balhoff/relation-graph	
 # note, you may need to increase Java memory: export JAVA_OPTS=-Xmx16G
 	relation-graph --ontology-file $< \
-	  --reflexive-subclasses false \
-	  --equivalence-as-subclass true \
-	  --non-redundant-output-file $(ONT)-nonredundant.ttl \
-	  --redundant-output-file $(ONT)-redundant.ttl \
-	  --mode rdf
+	    --reflexive-subclasses false \
+	    --equivalence-as-subclass true \
+	    --non-redundant-output-file $(ONT)-nonredundant.ttl \
+	    --redundant-output-file $(ONT)-redundant.ttl \
+	    --mode rdf
 # merge in nmdco-merged for annotations
 	$(ROBOT) merge \
-	  --input $(word 2, $^) \
-	  --input $(ONT)-nonredundant.ttl \
-	  annotate --ontology-iri $(ONTBASE)/$@ \
-	  $(ANNOTATE_ONTOLOGY_VERSION) \
-	  --output $@
+	    --input $(word 2, $^) \
+	    --input $(ONT)-nonredundant.ttl \
+	    annotate --ontology-iri $(ONTBASE)/$@ \
+	    $(ANNOTATE_ONTOLOGY_VERSION) \
+	    --output $@
 # copy relation-graph to release directory
 	cp $@ $(RELEASEDIR)
 
 $(ONT).json: $(ONT)-relation-graph.owl
 # convert ontology to json
 	$(ROBOT) annotate --ontology-iri $(ONTBASE)/$@ --input $< \
-	         convert --output $@
+	    $(ANNOTATE_ONTOLOGY_VERSION) \
+	    convert --output $@
 
+$(ONT)-classes.json: $(ONT)-relation-graph.owl $(ONT)-merged-labels.ttl
+# select classes, merge with the labels, and convert ontology to json
+	$(ROBOT) filter --input $< \
+	    --select classes \
+	    merge --input $(word 2, $^) \
+	    annotate --ontology-iri $(ONTBASE)/$@ \
+	    $(ANNOTATE_ONTOLOGY_VERSION) \
+	    convert --output $@
+
+# 	    --select annotations \
 # -----------------------------------------------------
 # Variant artefacts
 # -----------------------------------------------------
@@ -168,13 +179,13 @@ $(ONT)-full.owl: $(ONT)-merged.owl
 $(ONT)-merged.owl: $(SRC) $(IMPORT_FILES)
 # merge imports into single owl file
 	$(ROBOT) merge --input $< $(patsubst %, --input %, $(IMPORT_FILES)) \
-	  annotate --ontology-iri $(ONTBASE)/$@ \
-	  $(ANNOTATE_ONTOLOGY_VERSION) \
-	  --output $@.tmp.owl
+	    annotate --ontology-iri $(ONTBASE)/$@ \
+	    $(ANNOTATE_ONTOLOGY_VERSION) \
+	    --output $@.tmp.owl
 # remove obsolete classes
 	robot remove --input $@.tmp.owl \
-	  --select "owl:deprecated='true'^^xsd:boolean" \
-	  --output $@
+	    --select "owl:deprecated='true'^^xsd:boolean" \
+	    --output $@
 # clean up
 	rm -f $@.tmp.owl
 
