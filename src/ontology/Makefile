@@ -43,13 +43,8 @@ VERSION=                    $(TODAY)
 ANNOTATION_PROPERTIES=rdfs:label IAO:0000115 
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 OTHER_SRC =                 $(IMPORTS_DIR)/po_import.owl $(IMPORTS_DIR)/envo_import.owl $(IMPORTS_DIR)/ro_import.owl
-#IMPORTS =  					ro envo po
-#IMPORT_FILES =              $(IMPORTS_DIR)/po_import.owl $(IMPORTS_DIR)/envo_import.owl $(IMPORTS_DIR)/ro_import.owl
-
-# removing ro import, the domains and ranges in ro result (correctly) in reasoning errors
-IMPORTS =  					envo po
-IMPORT_FILES =              $(IMPORTS_DIR)/po_import.owl $(IMPORTS_DIR)/envo_import.owl
-ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
+IMPORTS =  					ro envo po
+IMPORT_FILES =              $(IMPORTS_DIR)/po_import.owl $(IMPORTS_DIR)/envo_import.owl $(IMPORTS_DIR)/ro_import.owl
 
 FORMATS = $(sort  owl)
 FORMATS_INCL_TSV = $(sort $(FORMATS) tsv)
