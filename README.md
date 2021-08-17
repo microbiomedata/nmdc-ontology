@@ -1,10 +1,18 @@
 
-![Build Status](https://github.com/microbiomedata/nmdc-ontology/workflows/CI/badge.svg)
+<!-- ![Build Status](https://github.com/microbiomedata/nmdc-ontology/workflows/CI/badge.svg) -->
 # NMDC Ontology
 
-This ontology... YOUR DESCRIPTION HERE
+The NMDC Ontology (NMDCO) is used  by the [National Micrbiome Data Collaborative (NMDC)](https://microbiomedata.org) to provide values for [Minimum Information about any (x) Sequence (MIxS)](https://gensc.org/mixs) terms.
 
-More information can be found at http://obofoundry.org/ontology/nmdco
+<!-- More information can be found at http://obofoundry.org/ontology/nmdco -->
+
+
+## Term subsets
+Sets of MIxS terms are provided 
+
+
+## Creating term subsets
+Term subsets are created by running `make` on the `query.Makefile` targets. For example, to create the (i.e., `make -f query.Makefile`).
 
 ## Versions
 
