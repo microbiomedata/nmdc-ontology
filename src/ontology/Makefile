@@ -54,7 +54,7 @@ SUBSETS := \
 	subsets/soil-environmental-materials.tsv \
 	subsets/manufactured-products.tsv
 
-RELEASE_ARTEFACTS = $(ONT)-relation-graph.owl $(ONT).json $(ONT)-classes.json
+RELEASE_ARTEFACTS = $(ONT)-relation-graph.owl $(ONT).json $(ONT)-classes.json $(ONT).owl
 
 # ----------------------------------------
 # Top-level targets
@@ -123,12 +123,13 @@ refresh-%:
 # Main release artefacts
 # -------------------------------------------
 
-$(ONT).owl: $(ONT)-full.owl
+##$(ONT).owl: $(ONT)-full.owl # reasoning is currently broken will need to fix!!!
+$(ONT).owl: $(ONT)-merged.owl
 	@echo "\n** building $@ **"
 	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		convert -o $@.tmp.owl && mv $@.tmp.owl $@
 
-$(ONT)-relation-graph.owl: $(ONT)-merged.owl $(ONT)-merged-labels.ttl
+$(ONT)-relation-graph.owl: $(ONT).owl $(ONT)-merged-labels.ttl
 # build relation-graph from nmdc-merged.ttl file
 # for relation-graph see https://github.com/balhoff/relation-graph	
 # note, you may need to increase Java memory: export JAVA_OPTS=-Xmx16G
