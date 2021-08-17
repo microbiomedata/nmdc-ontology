@@ -9,9 +9,9 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/nmdco.owl>
-Import(<http://purl.obolibrary.org/obo/nmdco/imports/ro_import.owl>)
-Import(<http://purl.obolibrary.org/obo/nmdco/releases/2021-05-03/components/envo.owl>)
-Import(<http://purl.obolibrary.org/obo/nmdco/releases/2021-05-03/components/po.owl>)
+Import(<http://purl.obolibrary.org/obo/nmdco/imports/envo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/nmdco/releases/2021-08-16/imports/po_import.owl>)
+Import(<http://purl.obolibrary.org/obo/nmdco/releases/2021-08-16/imports/ro_import.owl>)
 Annotation(dce:description "The NMDC Ontology (NMDCO) is used  by the National Micrbiome Data Collaborative (NMDC, https://microbiomedata.org) to provide values for Minimum Information about any (x) Sequence (MIxS, https://gensc.org/mixs) terms.")
 Annotation(dce:title "NMDC Ontology")
 Annotation(dcterms:creator "Bill Duncan (https://orcid.org/0000-0001-9625-1899)")

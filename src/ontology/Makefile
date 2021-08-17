@@ -28,7 +28,7 @@ TEMPLATEDIR=                ../templates
 TMPDIR=                     tmp
 SCRIPTSDIR=                 ../scripts
 SPARQLDIR =                 ../sparql
-COMPONENTSDIR =             components
+IMPORTS_DIR =             	imports
 REPORT_FAIL_ON =            None
 REPORT_LABEL =              -l true
 REPORT_PROFILE_OPTS =       
@@ -40,406 +40,235 @@ ODK_VERSION_MAKEFILE =      v1.2.27
 TODAY ?=                    $(shell date +%Y-%m-%d)
 OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
+ANNOTATION_PROPERTIES=rdfs:label IAO:0000115 
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
-OTHER_SRC =                 $(COMPONENTSDIR)/po.owl $(COMPONENTSDIR)/envo.owl 
-ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
+OTHER_SRC =                 $(IMPORTS_DIR)/po_import.owl $(IMPORTS_DIR)/envo_import.owl $(IMPORTS_DIR)/ro_import.owl
+IMPORTS =  					ro envo po
+IMPORT_FILES =              $(IMPORTS_DIR)/po_import.owl $(IMPORTS_DIR)/envo_import.owl $(IMPORTS_DIR)/ro_import.owl
 
-FORMATS = $(sort  owl owl)
-FORMATS_INCL_TSV = $(sort $(FORMATS) tsv)
-RELEASE_ARTEFACTS = $(sort $(ONT)-base $(ONT)-full $(ONT)-non-classified $(ONT)-base $(ONT)-full)
+SUBSETS := \
+	subsets/astronomical-body-parts.tsv \
+	subsets/astronomical-body-parts-and-manufactured-products.tsv \
+	subsets/non-terrestrial-biomes.tsv \
+	subsets/terrestrial-biomes.tsv \
+	subsets/soil-environmental-materials.tsv \
+	subsets/manufactured-products.tsv
+
+RELEASE_ARTEFACTS = $(ONT)-relation-graph.owl $(ONT).json $(ONT)-classes.json
 
 # ----------------------------------------
 # Top-level targets
 # ----------------------------------------
 
-.PHONY: .FORCE
+.PHONY: .FORCE all all_imports all_main all_subsets clean test test-query test-subsets release release-subsets release-artefacts
+.PHONY: refresh-imports refresh-% imports/%_import.owl refresh-all refresh-all-%
 
-.PHONY: all
-all: odkversion all_imports all_main all_subsets sparql_test all_reports all_assets
+all: all_imports all_main all_subsets
 
-.PHONY: test
-test: odkversion sparql_test all_reports 
-	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed all --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
+all_main: $(RELEASE_ARTEFACTS)
 
-.PHONY: odkversion
-odkversion:
-	echo "ODK Makefile version: $(ODK_VERSION_MAKEFILE) (this is the version of the ODK with which this Makefile was generated, not the version of the ODK you are running)" &&\
-	echo "ROBOT version (ODK): " && $(ROBOT) --version
+refresh-all:
+	make -B all_imports
+	make -B all_main
+	make -B all_subsets
 
-$(TMPDIR) $(REPORTDIR) :
-	mkdir -p $@
-
-## -- main targets --
-##
-## By default this is the cross-product of {ont, ont-base} x FORMATS
-
-MAIN_PRODUCTS = $(sort $(foreach r,$(RELEASE_ARTEFACTS), $(r)) $(ONT))
-MAIN_GZIPPED = 
-MAIN_FILES = $(foreach n,$(MAIN_PRODUCTS), $(foreach f,$(FORMATS), $(n).$(f))) $(MAIN_GZIPPED)
-
-.PHONY: all_main
-all_main: $(MAIN_FILES)
-
-## -- import targets --
-##
-## By default this is the cross-product of IMPORT_MODULES x FORMATS
-
-
-IMPORTS =  ro
-
-IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
-IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
-IMPORT_FILES = $(IMPORT_OWL_FILES)
-
-
-.PHONY: all_imports
-all_imports: $(IMPORT_FILES)
-
-## -- subset targets --
-##
-## By default this is the cross-product of SUBSETS x FORMATS
-## Note we also include TSV as a format
-
-
-SUBSETS = 
-
-SUBSET_ROOTS = $(patsubst %, subsets/%, $(SUBSETS))
-SUBSET_FORMATS = $(sort tsv owl)
-SUBSET_FILES = $(foreach n,$(SUBSET_ROOTS), $(foreach f,$(SUBSET_FORMATS), $(n).$(f)))
-
-.PHONY: all_subsets
-all_subsets: $(SUBSET_FILES)
-
-OBO_REPORT =  $(SRC)-obo-report
-REPORTS = $(OBO_REPORT)
-REPORT_FILES = $(patsubst %, $(REPORTDIR)/%.tsv, $(REPORTS))
-
-.PHONY: robot_reports
-robot_reports: $(REPORT_FILES)
-
-.PHONY: all_reports
-all_reports: all_reports_onestep $(REPORT_FILES)
-
-$(REPORTDIR)/validate_profile_owl2dl_%.txt: % | $(REPORTDIR)
-	$(ROBOT) validate-profile --profile DL -i $< -o $@
-.PRECIOUS: $(REPORTDIR)/validate_profile_owl2dl_%.txt
-
-.PHONY: validate_profile_%
-validate_profile_%: $(REPORTDIR)/validate_profile_owl2dl_%.txt
-
-## -- all files/assets --
-
-ASSETS = \
-  $(IMPORT_FILES) \
-  $(MAIN_FILES) \
-  $(REPORT_FILES) \
-  $(SUBSET_FILES)
-
-RELEASE_ASSETS = \
-  $(MAIN_FILES) \
-  $(SUBSET_FILES)
-
-.PHONY: all_assets
-all_assets: $(ASSETS)
-
-
-.PHONY: show_assets
-show_assets:
-	echo $(ASSETS)
-	du -sh $(ASSETS)
-
+refresh-all-%:
+	make -B all_$*
 
 # ----------------------------------------
 # Release Management
 # ----------------------------------------
 
-CLEANFILES=$(MAIN_FILES) $(SRCMERGED)
-# This should be executed by the release manager whenever time comes to make a release.
-# It will ensure that all assets/files are fresh, and will copy to release folder
+release: release-artefacts release-subsets
 
-.PHONY: prepare_release
-prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
-	rsync -R $(RELEASE_ASSETS) $(RELEASEDIR) &&\
-  rm -f $(CLEANFILES) &&\
-  echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
+release-artefacts: $(RELEASE_ARTEFACTS)
+# copy artefacts to release directory
+	@echo "\n** releasing $@ **"
+	cp $^ $(RELEASEDIR)
 
-.PHONY: prepare_initial_release
-prepare_initial_release: prepare_release
-	cd $(RELEASEDIR) && git add $(RELEASE_ASSETS)
+release-subsets: $(SUBSETS)
+# copy subsets to the release directory
+	@echo "\n** releasing $@ **"
+	cp $^ $(RELEASEDIR)/subsets
+
+clean:
+	rm -f $(RELEASE_ARTEFACTS)
+	rm -f $(SUBSETS)
+	rm -f $(IMPORT_FILES)
 
 # ----------------------------------------
 # Import modules
 # ----------------------------------------
+
 # Most ontologies are modularly constructed using portions of other ontologies
 # These live in the imports/ folder
-
-# ------------------------
-# Imports: Seeding system 
-# ------------------------
-
-# seed.txt contains all referenced entities
-IMPORTSEED=$(TMPDIR)/seed.txt
-SRCMERGED=$(TMPDIR)/merged-$(SRC)
-PRESEED=$(TMPDIR)/pre_seed.txt
-
-$(SRCMERGED): $(SRC)
-	$(ROBOT) remove --input $< --select imports --trim false \
-		merge  $(patsubst %, -i %, $(OTHER_SRC)) -o $@
-
-$(PRESEED): $(SRCMERGED)
-	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@.tmp &&\
-	cat $@.tmp | sort | uniq >  $@
-
-
-
-ALLSEED = $(PRESEED) \
-
-
-$(IMPORTSEED):  $(ALLSEED) 
-	if [ $(IMP) = true ]; then cat $(ALLSEED) | sort | uniq > $@; fi
-
-
-ANNOTATION_PROPERTIES=rdfs:label IAO:0000115 
+all_imports: $(IMPORT_FILES)
 
 # -- Generate Import Modules --
-#
-# This pattern uses ROBOT to generate an import module
-# Generate terms.txt for each import.  (Assume OBO-style Possibly hacky step?)
-# Should be able to drop this if robot can just take a big messy list of terms as input.
-imports/%_terms_combined.txt: $(IMPORTSEED) imports/%_terms.txt
-	if [ $(IMP) = true ]; then cat $^ | grep -v ^# | sort | uniq >  $@; fi
+imports/%_import.owl:
+	@echo "\n** building $@ **"
+	$(ROBOT) merge -I $(URIBASE)/$*.owl \
+	  annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+	  --output $@.tmp.owl && mv $@.tmp.owl $@
 
-
-imports/%_import.owl: mirror/%.owl imports/%_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		extract -T imports/$*_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-.PRECIOUS: imports/%_import.owl
-
-## Module for ontology: ro
-
-imports/ro_import.owl: mirror/ro.owl imports/ro_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query  -i $< --update ../sparql/preprocess-module.ru \
-		extract -T imports/ro_terms_combined.txt --force true --individuals exclude --method BOT \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-.PHONY: refresh-imports
 refresh-imports:
-	make IMP=true MIR=true PAT=false IMP_LARGE=true all_imports -B
+# force rebuild of all imports
+	make -B $(IMPORT_FILES)
 
-.PHONY: refresh-imports-excluding-large
-refresh-imports-excluding-large:
-	make IMP=true MIR=true PAT=false IMP_LARGE=false all_imports -B
-
-.PHONY: refresh-%
 refresh-%:
-	make IMP=true IMP_LARGE=true MIR=true PAT=false imports/$*_import.owl -B
+# force rebuild a single import
+	make -B imports/$*_import.owl
 
+# -------------------------------------------
+# Main release artefacts
+# -------------------------------------------
 
-# ----------------------------------------
-# Components
-# ----------------------------------------
-# Some ontologies contain external and internal components. A component is included in the ontology in its entirety.
+$(ONT).owl: $(ONT)-full.owl
+	@echo "\n** building $@ **"
+	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+		convert -o $@.tmp.owl && mv $@.tmp.owl $@
 
-$(COMPONENTSDIR)/%: .FORCE
-	touch $@
-.PRECIOUS: $(COMPONENTSDIR)/%
+$(ONT)-relation-graph.owl: $(ONT)-merged.owl $(ONT)-merged-labels.ttl
+# build relation-graph from nmdc-merged.ttl file
+# for relation-graph see https://github.com/balhoff/relation-graph	
+# note, you may need to increase Java memory: export JAVA_OPTS=-Xmx16G
+	@echo "\n** building $@ **"
+	relation-graph --ontology-file $< \
+	    --reflexive-subclasses false \
+	    --equivalence-as-subclass true \
+	    --non-redundant-output-file $(ONT)-nonredundant.ttl \
+	    --redundant-output-file $(ONT)-redundant.ttl \
+	    --mode rdf
+# merge in nmdco-merged for annotations
+	$(ROBOT) merge \
+	    --input $(word 2, $^) \
+	    --input $(ONT)-nonredundant.ttl \
+	    annotate --ontology-iri $(ONTBASE)/$@ \
+	    $(ANNOTATE_ONTOLOGY_VERSION) \
+	    --output $@
 
+$(ONT).json: $(ONT)-relation-graph.owl
+# convert ontology to json
+	@echo "\n** building $@ **"
+	$(ROBOT) annotate --ontology-iri $(ONTBASE)/$@ --input $< \
+	    $(ANNOTATE_ONTOLOGY_VERSION) \
+	    convert --output $@
 
+$(ONT)-classes.json: $(ONT)-relation-graph.owl $(ONT)-merged-labels.ttl
+# select classes, merge with the labels, and convert ontology to json
+	@echo "\n** building $@ **"
+	$(ROBOT) filter --input $< \
+	    --select classes \
+	    merge --input $(word 2, $^) \
+	    annotate --ontology-iri $(ONTBASE)/$@ \
+	    $(ANNOTATE_ONTOLOGY_VERSION) \
+	    convert --output $@
 
+# -----------------------------------------------------
+# Variant artefacts
+# -----------------------------------------------------
 
-$(COMPONENTSDIR)/po.owl: .FORCE
-	if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/po.owl \
-	annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) -o $@; fi
-.PRECIOUS: $(COMPONENTSDIR)/po.owl
+# Full: The full artefacts with imports merged, reasoned
+$(ONT)-full.owl: $(ONT)-merged.owl
+# reason over the merged file
+	@echo "\n** building $@ **"
+	$(ROBOT) reason --input $< --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural \
+		relax \
+		reduce -r ELK \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
+# remove obsolete classes
+	robot remove --input $@.tmp.owl \
+	  --select "owl:deprecated='true'^^xsd:boolean" \
+	  --output $@
+# clean up
+	rm -f $@.tmp.owl
 
+$(ONT)-merged.owl: $(SRC) $(IMPORT_FILES)
+# merge imports into single owl file
+	@echo "\n** building $@ **"
+	$(ROBOT) merge --input $< $(patsubst %, --input %, $(IMPORT_FILES)) \
+	    annotate --ontology-iri $(ONTBASE)/$@ \
+	    $(ANNOTATE_ONTOLOGY_VERSION) \
+	    --output $@.tmp.owl
+# remove obsolete classes
+	robot remove --input $@.tmp.owl \
+	    --select "owl:deprecated='true'^^xsd:boolean" \
+	    --output $@
+# clean up
+	rm -f $@.tmp.owl
 
+refresh-merged:
+# force rebuild of merged ontology
+	make -B $(ONT)-merged.owl
 
-$(COMPONENTSDIR)/envo.owl: .FORCE
-	if [ $(IMP) = true ]; then $(ROBOT) merge -I http://purl.obolibrary.org/obo/envo.owl \
-	annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) -o $@; fi
-.PRECIOUS: $(COMPONENTSDIR)/envo.owl
+$(ONT)-merged.ttl: $(ONT)-merged.owl
+# convert merged owl file to ttl
+	@echo "\n** building $@ **"
+	$(ROBOT) annotate --ontology-iri $(ONTBASE)/$@ --input $< \
+	         convert --output $@
 
+$(ONT)-merged-labels.ttl: $(ONT)-merged.ttl
+# create an ontology of just the labels in the merged ontology
+# this is needed so that we can easily view the ontology in protege
+	@echo "\n** building $@ **"
+	$(ROBOT) query --format ttl -i $< --query ../sparql/all-labels.sparql $@
 
-
-
-# ----------------------------------------
-# Mirroring upstream ontologies
-# ----------------------------------------
-#
-
-IMP=true # Global parameter to bypass import generation
-MIR=true # Global parameter to bypass mirror generation
-IMP_LARGE=true # Global parameter to bypass handling of large imports
-
-
-## ONTOLOGY: ro
-## Copy of ro is re-downloaded whenever source changes
-mirror/ro.trigger: $(SRC)
-
-mirror/ro.owl: mirror/ro.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/ro.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
-.PRECIOUS: mirror/%.owl
-
-
+$(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
+	@echo "\n** building $@ **"
+	touch $(ONTOLOGYTERMS) && \
+	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/nmdco_terms.sparql $@
 
 # ----------------------------------------
 # Subsets
 # ----------------------------------------
-subsets/%.tsv: subsets/%.owl
-	$(ROBOT) query -f tsv -i $< -s ../sparql/labels.sparql $@
-.PRECIOUS: subsets/%.tsv
 
-subsets/%.owl: $(ONT).owl
-	owltools --use-catalog $< --extract-ontology-subset --fill-gaps --subset $* -o $@.tmp.owl && mv $@.tmp.owl $@
-.PRECIOUS: subsets/%.owl
+all_subsets: $(SUBSETS)
 
-
-# ----------------------------------------
-# Release
-# ----------------------------------------
-# copy from staging area (this directory) to top-level
-.PHONY: release
-release: $(ONT).owl $(ONT).obo
-	cp $^ $(RELEASEDIR) && cp imports/* $(RELEASEDIR)/imports
-
-# ----------------------------------------
-# Sparql queries: Q/C
-# ----------------------------------------
-
-# these live in the ../sparql directory, and have suffix -violation.sparql
-# adding the name here will make the violation check live.
-# NOTE: these will soon be phased out and replaced by robot-report
-
-#  run all violation checks
-SPARQL_VALIDATION_QUERIES = $(foreach V,$(SPARQL_VALIDATION_CHECKS),$(SPARQLDIR)/$(V)-violation.sparql)
-sparql_test: $(SRC) catalog-v001.xml | $(REPORTDIR)
-ifneq ($(SPARQL_VALIDATION_QUERIES),)
-	$(ROBOT) verify  --catalog catalog-v001.xml -i $< --queries $(SPARQL_VALIDATION_QUERIES) -O $(REPORTDIR)
-endif
-
-# ----------------------------------------
-# ROBOT report
-# ----------------------------------------
-$(REPORTDIR)/%-obo-report.tsv: % | $(REPORTDIR)
-	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --print 5 -o $@
-
-# ----------------------------------------
-# Sparql queries: Exports
-# ----------------------------------------
-
-SPARQL_EXPORTS_ARGS = $(foreach V,$(SPARQL_EXPORTS),-s $(SPARQLDIR)/$(V).sparql $(REPORTDIR)/$(V).tsv)
-# This combines all into one single command
-
-.PHONY: all_reports_onestep
-all_reports_onestep: $(SRC)
-ifneq ($(SPARQL_EXPORTS_ARGS),)
-	$(ROBOT) query -f tsv -i $< $(SPARQL_EXPORTS_ARGS)
-endif
-
-# ----------------------------------------
-# Release artefacts: export formats
-# ----------------------------------------
-
-
-# We always want a base - even if it is not explicitly configured..
-# We always want a full release - even if it is not explicitly configured..
-# ----------------------------------------
-# Release artefacts: main release artefacts
-# ----------------------------------------
-
-$(ONT).owl: $(ONT)-full.owl
-	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		convert -o $@.tmp.owl && mv $@.tmp.owl $@
-
-# -----------------------------------------------------
-# Release artefacts: variants (base, full, simple, etc)
-# -----------------------------------------------------
-
-$(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
-	touch $(ONTOLOGYTERMS) && \
-	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/nmdco_terms.sparql $@
-
-
-
-
-
-
-# base: OTHER sources of interest, such as definitions owl
-$(ONT)-base.owl: $(SRC) $(OTHER_SRC)
-	$(ROBOT) remove --input $< --select imports --trim false \
-		merge $(patsubst %, -i %, $(OTHER_SRC)) \
-		annotate --link-annotation http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 \
-		--ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		--output $@.tmp.owl && mv $@.tmp.owl $@
-
-# Full: The full artefacts with imports merged, reasoned
-$(ONT)-full.owl: $(SRC) $(OTHER_SRC)
-	$(ROBOT) merge --input $< \
-		reason --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural \
-		relax \
-		reduce -r ELK \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
-
-# foo-non-classified: (edit->imports-merged)
-$(ONT)-non-classified.owl: $(SRC) $(OTHER_SRC)
-	$(ROBOT) merge --input $< \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
-
-
-
-
-.PHONY: validate_idranges
-validate_idranges:
-	amm $(SCRIPTSDIR)/validate_id_ranges.sc nmdco-idranges.owl
-
-.PHONY: update_repo
-update_repo:
-	sh $(SCRIPTSDIR)/update_repo.sh
-
-## -- cusotom targets -- ##
-.PHONY: test-query
-
-$(ONT)-merged.owl: $(SRC)
-
-
-$(ONT)-merged.ttl: $(SRC) 
-# merge imports into single owl file
-	$(ROBOT) merge --input $< \
-	  annotate --ontology-iri $(ONTBASE)/$@ \
-	  $(ANNOTATE_ONTOLOGY_VERSION) \
-	  --output $@.tmp.ttl
-# remove obsolete classes
-	robot remove --input $@.tmp.ttl \
-	  --select "owl:deprecated='true'^^xsd:boolean" \
-	  --output $@
-# clean up
-	rm -f $@.tmp.ttl
-
-$(ONT)-rg.ttl: $(ONT)-merged.ttl .FORCE
-# build relation-graph from nmdc-merged file
-# for relation-graph see https://github.com/balhoff/relation-graph	
-# note, you may need to increase Java memory: export JAVA_OPTS=-Xmx16G
-	relation-graph --ontology-file $< \
-	  --non-redundant-output-file $(ONT)-nonredundant.ttl \
-	  --redundant-output-file $(ONT)-redundant.ttl \
-	  --mode rdf
-# merge in nmdco-merged for annotations
-	$(ROBOT) merge --include-annotations true \
-	  --input $< \
-	  --input $(ONT)-nonredundant.ttl \
-	  annotate --ontology-iri $(ONTBASE)/$@ \
-	  $(ANNOTATE_ONTOLOGY_VERSION) \
-	  --output $@
-# copy relation-graph to release directory
-	cp $@ $(RELEASEDIR)
-
-test-query:
+test-query: $(ONT)-relation-graph.owl .FORCE
+# a simple query to very that I can run a query
 	$(ROBOT) query \
-	  --input $(ONT)-rg.ttl \
+	  --input $< \
 	  --query ../sparql/nmdco-test.sparql temp.tsv
+
+test-subsets: $(SUBSETS) .FORCE
+# test creating all subsets
+
+subsets/astronomical-body-parts.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/astronomical-body-parts.sparql
+	@echo "\n** building $@ **"
+	$(ROBOT) query \
+	  --input $< \
+	  --query $(word 2, $^) $@
+
+subsets/astronomical-body-parts-and-manufactured-products.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/astronomical-body-parts-and-manufactured-products.sparql
+	@echo "\n** building $@ **"
+	$(ROBOT) query \
+	  --input $< \
+	  --query $(word 2, $^) $@
+
+subsets/non-terrestrial-biomes.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/non-terrestrial-biomes.sparql
+	@echo "\n** building $@ **"
+	$(ROBOT) query \
+	  --input $< \
+	  --query $(word 2, $^) $@
+
+subsets/terrestrial-biomes.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/terrestrial-biomes.sparql
+	@echo "\n** building $@ **"
+	$(ROBOT) query \
+	  --input $< \
+	  --query $(word 2, $^) $@
+
+subsets/soil-environmental-materials.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/soil-environmental-materials.sparql
+	@echo "\n** building $@ **"
+	$(ROBOT) query \
+	  --input $< \
+	  --query $(word 2, $^) $@
+
+subsets/manufactured-products.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/manufactured-products.sparql
+	@echo "\n** building $@ **"
+	$(ROBOT) query \
+	  --input $< \
+	  --query $(word 2, $^) $@
+
+
 
 include nmdco.Makefile

@@ -4,9 +4,9 @@ github_org: microbiomedata
 repo: nmdc-ontology
 report_fail_on: none
 release_artefacts: 
-  - base
   - full
   - non-classified
+  - relation-graph
 primary_release: full
 export_formats:
   - owl

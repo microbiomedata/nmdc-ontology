@@ -7,36 +7,36 @@ ROBOT=	robot
 
 test-query:
 	$(ROBOT) query \
-	  --input $(ONT)-rg.ttl \
+	  --input $(ONT)-relation-graph.owl \
 	  --query src/sparql/nmdco-test.sparql subset-files/temp.tsv
 
 subset-files/astronomical-body-parts.tsv: .FORCE
 	$(ROBOT) query \
-	  --input $(ONT)-rg.ttl \
+	  --input $(ONT)-relation-graph.owl \
 	  --query src/sparql/astronomical-body-parts.sparql $@
 
 subset-files/astronomical-body-parts-and-manufactured-products.tsv: .FORCE
 	$(ROBOT) query \
-	  --input $(ONT)-rg.ttl \
+	  --input $(ONT)-relation-graph.owl \
 	  --query src/sparql/astronomical-body-parts-and-manufactured-products.sparql $@
 
 subset-files/non-terrestrial-biomes.tsv: .FORCE
 	$(ROBOT) query \
-	  --input $(ONT)-rg.ttl \
+	  --input $(ONT)-relation-graph.owl \
 	  --query src/sparql/non-terrestrial-biomes.sparql $@
 
 subset-files/terrestrial-biomes.tsv: .FORCE
 	$(ROBOT) query \
-	  --input $(ONT)-rg.ttl \
+	  --input $(ONT)-relation-graph.owl \
 	  --query src/sparql/terrestrial-biomes.sparql $@
 
 subset-files/soil-environmental-materials.tsv: .FORCE
 	$(ROBOT) query \
-	  --input $(ONT)-rg.ttl \
+	  --input $(ONT)-relation-graph.owl \
 	  --query src/sparql/soil-environmental-materials.sparql $@
 
 subset-files/manufactured-products.tsv: .FORCE
 	$(ROBOT) query \
-	  --input $(ONT)-rg.ttl \
+	  --input $(ONT)-relation-graph.owl \
 	  --query src/sparql/manufactured-products.sparql $@
 
