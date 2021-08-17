@@ -42,7 +42,13 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATION_PROPERTIES=rdfs:label IAO:0000115 
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
-OTHER_SRC =                 $(IMPORTS_DIR)/po_import.owl $(IMPORTS_DIR)/envo_import.owl $(IMPORTS_DIR)/ro_import.owl 
+OTHER_SRC =                 $(IMPORTS_DIR)/po_import.owl $(IMPORTS_DIR)/envo_import.owl $(IMPORTS_DIR)/ro_import.owl
+#IMPORTS =  					ro envo po
+#IMPORT_FILES =              $(IMPORTS_DIR)/po_import.owl $(IMPORTS_DIR)/envo_import.owl $(IMPORTS_DIR)/ro_import.owl
+
+# removing ro import, the domains and ranges in ro result (correctly) in reasoning errors
+IMPORTS =  					envo po
+IMPORT_FILES =              $(IMPORTS_DIR)/po_import.owl $(IMPORTS_DIR)/envo_import.owl
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 
 FORMATS = $(sort  owl)
@@ -53,7 +59,7 @@ RELEASE_ARTEFACTS = $(sort $(ONT)-full $(ONT)-non-classified $(ONT)-relation-gra
 # Top-level targets
 # ----------------------------------------
 
-.PHONY: .FORCE all all_imports all_subsets test refresh-imports refresh-% release
+.PHONY: .FORCE all all_imports all_subsets test test-query test-subsets refresh-imports refresh-% release imports/%_import.owl
 
 all: all_imports all_main all_subsets
 
@@ -68,7 +74,7 @@ all_main: $(MAIN_FILES)
 # Release Management
 # ----------------------------------------
 
-CLEANFILES=$(MAIN_FILES) $(SRCMERGED)
+CLEANFILES=$(MAIN_FILES)
 # This should be executed by the release manager whenever time comes to make a release.
 # It will ensure that all assets/files are fresh, and will copy to release folder
 
@@ -76,144 +82,35 @@ release: $(ONT).owl $(ONT)-relation-graph.owl
 	cp $^ $(RELEASEDIR)
 
 
-
 # ----------------------------------------
 # Import modules
 # ----------------------------------------
 # Most ontologies are modularly constructed using portions of other ontologies
 # These live in the imports/ folder
-
-IMPORTS =  ro envo po
-IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
-IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
-IMPORT_FILES = $(IMPORT_OWL_FILES)
-
 all_imports: $(IMPORT_FILES)
 
-$(SRCMERGED): $(SRC)
-	$(ROBOT) remove --input $< --select imports --trim false \
-		merge  $(patsubst %, -i %, $(OTHER_SRC)) -o $@
-
-$(PRESEED): $(SRCMERGED)
-	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@.tmp &&\
-	cat $@.tmp | sort | uniq >  $@
-
-ALLSEED = $(PRESEED)
-$(IMPORTSEED):  $(ALLSEED) 
-	if [ $(IMP) = true ]; then cat $(ALLSEED) | sort | uniq > $@; fi
-
-
 # -- Generate Import Modules --
-imports/%_import.owl: mirror/%.owl #imports/%_terms_combined.txt
-	$(ROBOT) annotate --input $< \
-	  --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
-
-.PRECIOUS: imports/%_import.owl
-
+imports/%_import.owl:
+	$(ROBOT) merge -I $(URIBASE)/$*.owl \
+	  annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+	  --output $@.tmp.owl && mv $@.tmp.owl $@
 
 refresh-imports:
-	make all_imports -B
+# force rebuild of all imports
+	make -B $(IMPORT_FILES)
 
 refresh-%:
-	make imports/$*_import.owl -B
+# force rebuild a single import
+	make -B imports/$*_import.owl
 
-
-# ----------------------------------------
-# Mirroring upstream ontologies
-# ----------------------------------------
-#
-
-IMP=true # Global parameter to bypass import generation
-MIR=true # Global parameter to bypass mirror generation
-IMP_LARGE=true # Global parameter to bypass handling of large imports
-
-
-## ONTOLOGY: ro
-## Copy is re-downloaded whenever source changes
-mirror/ro.trigger: $(SRC)
-mirror/po.trigger: $(SRC)
-mirror/envo.trigger: $(SRC)
-
-mirror/ro.owl: mirror/ro.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/ro.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-mirror/po.owl: mirror/po.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/po.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-mirror/envo.owl: mirror/envo.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/envo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
-.PRECIOUS: mirror/%.owl
-
-
-# ----------------------------------------
+# -------------------------------------------
 # Release artefacts: main release artefacts
-# ----------------------------------------
-
+# -------------------------------------------
 $(ONT).owl: $(ONT)-full.owl
 	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		convert -o $@.tmp.owl && mv $@.tmp.owl $@
 
-# -----------------------------------------------------
-# Release artefacts: variants (base, full, simple, etc)
-# -----------------------------------------------------
-
-$(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
-	touch $(ONTOLOGYTERMS) && \
-	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/nmdco_terms.sparql $@
-
-
-# Full: The full artefacts with imports merged, reasoned
-$(ONT)-full.owl: $(SRC) $(OTHER_SRC)
-	$(ROBOT) merge --input $< \
-		reason --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural \
-		relax \
-		reduce -r ELK \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
-
-
-# foo-non-classified: (edit->imports-merged)
-$(ONT)-non-classified.owl: $(SRC) $(OTHER_SRC)
-	$(ROBOT) merge --input $< \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
-
-
-.PHONY: update_repo
-update_repo:
-	sh $(SCRIPTSDIR)/update_repo.sh
-
-## -- cusotom targets -- ##
-.PHONY: test-query
-
-$(ONT)-merged.owl: $(SRC) $(OTHER_SRC)
-# merge imports into single owl file
-	$(ROBOT) merge --input $< $(patsubst %, --input %, $(OTHER_SRC)) \
-	  annotate --ontology-iri $(ONTBASE)/$@ \
-	  $(ANNOTATE_ONTOLOGY_VERSION) \
-	  --output $@.tmp.owl
-# remove obsolete classes
-	robot remove --input $@.tmp.owl \
-	  --select "owl:deprecated='true'^^xsd:boolean" \
-	  --output $@
-# clean up
-	rm -f $@.tmp.owl
-
-
-$(ONT)-merged.ttl: $(ONT)-merged.owl
-# convert merged owl file to ttl
-	$(ROBOT) annotate --ontology-iri $(ONTBASE)/$@ --input $< \
-	         convert --output $@
-
-# ----------------------------------------
-# Relation graph
-# ----------------------------------------
-
-$(ONT)-merged-labels.ttl: $(ONT)-merged.ttl
-# create an ontology of just the labels in the merged ontology
-# this is needed so that we can easily view the ontology in protege
-	$(ROBOT) query --format ttl -i $< --query ../sparql/all-labels.sparql $@
-
-
-$(ONT)-relation-graph.ttl: $(ONT)-merged.ttl $(ONT)-merged-labels.ttl
+$(ONT)-relation-graph.owl: $(ONT)-merged.owl $(ONT)-merged-labels.ttl
 # build relation-graph from nmdc-merged.ttl file
 # for relation-graph see https://github.com/balhoff/relation-graph	
 # note, you may need to increase Java memory: export JAVA_OPTS=-Xmx16G
@@ -234,16 +131,60 @@ $(ONT)-relation-graph.ttl: $(ONT)-merged.ttl $(ONT)-merged-labels.ttl
 	cp $@ $(RELEASEDIR)
 
 
-$(ONT)-relation-graph.owl: $(ONT)-relation-graph.ttl
-# convert file to owl
+# -----------------------------------------------------
+# Release artefacts: variants
+# -----------------------------------------------------
+
+# Full: The full artefacts with imports merged, reasoned
+$(ONT)-full.owl: $(ONT)-merged.owl
+# reason over the merged file
+	$(ROBOT) reason --input $< --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural \
+		relax \
+		reduce -r ELK \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
+# remove obsolete classes
+	robot remove --input $@.tmp.owl \
+	  --select "owl:deprecated='true'^^xsd:boolean" \
+	  --output $@
+# clean up
+	rm -f $@.tmp.owl
+
+$(ONT)-merged.owl: $(SRC) $(IMPORT_FILES)
+# merge imports into single owl file
+	$(ROBOT) merge --input $< $(patsubst %, --input %, $(IMPORT_FILES)) \
+	  annotate --ontology-iri $(ONTBASE)/$@ \
+	  $(ANNOTATE_ONTOLOGY_VERSION) \
+	  --output $@.tmp.owl
+# remove obsolete classes
+	robot remove --input $@.tmp.owl \
+	  --select "owl:deprecated='true'^^xsd:boolean" \
+	  --output $@
+# clean up
+	rm -f $@.tmp.owl
+
+refresh-merged:
+# force rebuild of merged ontology
+	make -B $(ONT)-merged.owl
+
+$(ONT)-merged.ttl: $(ONT)-merged.owl
+# convert merged owl file to ttl
 	$(ROBOT) annotate --ontology-iri $(ONTBASE)/$@ --input $< \
 	         convert --output $@
+
+$(ONT)-merged-labels.ttl: $(ONT)-merged.ttl
+# create an ontology of just the labels in the merged ontology
+# this is needed so that we can easily view the ontology in protege
+	$(ROBOT) query --format ttl -i $< --query ../sparql/all-labels.sparql $@
+
+
+
+$(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
+	touch $(ONTOLOGYTERMS) && \
+	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/nmdco_terms.sparql $@
 
 # ----------------------------------------
 # Subsets
 # ----------------------------------------
-.PHONEY: test-query test-subsets subsets
-
 SUBSETS := \
 	subsets/astronomical-body-parts.tsv \
 	subsets/astronomical-body-parts-and-manufactured-products.tsv \
@@ -252,6 +193,7 @@ SUBSETS := \
 	subsets/soil-environmental-materials.tsv \
 	subsets/manufactured-products.tsv
 
+all_subsets: $(SUBSETS)
 
 test-query: $(ONT)-relation-graph.owl .FORCE
 # a simple query to very that I can run a query
@@ -261,9 +203,6 @@ test-query: $(ONT)-relation-graph.owl .FORCE
 
 test-subsets: $(SUBSETS) .FORCE
 # test creating all subsets
-
-subsets:
-# create all subset files
 
 subsets/astronomical-body-parts.tsv: $(ONT)-relation-graph.owl
 	$(ROBOT) query \
