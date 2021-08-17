@@ -46,24 +46,25 @@ OTHER_SRC =                 $(IMPORTS_DIR)/po_import.owl $(IMPORTS_DIR)/envo_imp
 IMPORTS =  					ro envo po
 IMPORT_FILES =              $(IMPORTS_DIR)/po_import.owl $(IMPORTS_DIR)/envo_import.owl $(IMPORTS_DIR)/ro_import.owl
 
-FORMATS = $(sort  owl)
-FORMATS_INCL_TSV = $(sort $(FORMATS) tsv)
-RELEASE_ARTEFACTS = $(sort $(ONT)-full $(ONT)-non-classified $(ONT)-relation-graph)
+SUBSETS := \
+	subsets/astronomical-body-parts.tsv \
+	subsets/astronomical-body-parts-and-manufactured-products.tsv \
+	subsets/non-terrestrial-biomes.tsv \
+	subsets/terrestrial-biomes.tsv \
+	subsets/soil-environmental-materials.tsv \
+	subsets/manufactured-products.tsv
+
+RELEASE_ARTEFACTS = $(ONT)-relation-graph.owl
 
 # ----------------------------------------
 # Top-level targets
 # ----------------------------------------
 
-.PHONY: .FORCE all all_imports all_subsets test test-query test-subsets refresh-imports refresh-% release imports/%_import.owl
+.PHONY: .FORCE all all_imports all_main all_subsets test test-query test-subsets refresh-imports refresh-% release imports/%_import.owl
 
 all: all_imports all_main all_subsets
 
-MAIN_PRODUCTS = $(sort $(foreach r,$(RELEASE_ARTEFACTS), $(r)) $(ONT))
-MAIN_GZIPPED = 
-MAIN_FILES = $(foreach n,$(MAIN_PRODUCTS), $(foreach f,$(FORMATS), $(n).$(f))) $(MAIN_GZIPPED)
-
-.PHONY: all_main
-all_main: $(MAIN_FILES)
+all_main: $(RELEASE_ARTEFACTS)
 
 # ----------------------------------------
 # Release Management
@@ -180,13 +181,6 @@ $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
 # ----------------------------------------
 # Subsets
 # ----------------------------------------
-SUBSETS := \
-	subsets/astronomical-body-parts.tsv \
-	subsets/astronomical-body-parts-and-manufactured-products.tsv \
-	subsets/non-terrestrial-biomes.tsv \
-	subsets/terrestrial-biomes.tsv \
-	subsets/soil-environmental-materials.tsv \
-	subsets/manufactured-products.tsv
 
 all_subsets: $(SUBSETS)
 
