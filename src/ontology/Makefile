@@ -108,7 +108,10 @@ all_imports: $(IMPORT_FILES)
 imports/%_import.owl:
 	@echo "\n** building $@ **"
 	$(ROBOT) merge -I $(URIBASE)/$*.owl \
-	  annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+	  annotate --remove-annotations \
+	           --ontology-iri $(ONTBASE)/$@  \
+	           --version-iri $(ONTBASE)/releases/$(VERSION)/$@ \
+	           --annotation owl:versionInfo $(VERSION) \
 	  --output $@.tmp.owl && mv $@.tmp.owl $@
 
 refresh-imports:
