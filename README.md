@@ -8,7 +8,7 @@
 
 # NMDC Ontology
 
-The NMDC Ontology (NMDCO) is used  by the [National Micrbiome Data Collaborative (NMDC)](https://microbiomedata.org) to annotate metagemoic metadata. The ontlogy products are built by merging a number of relevant ontologies (see the [import directory](src/ontology/imports/)) into a single ontology, and then converted into the appropriate product.
+The NMDC Ontology (NMDCO) is used  by the [National Microbiome Data Collaborative (NMDC)](https://microbiomedata.org) to annotate metagenomoic metadata. The ontology products are built by merging a number of relevant ontologies (see the [import directory](src/ontology/imports/)) into a single ontology, and then converted into the appropriate product.
 
 ## Ontology Products
 
