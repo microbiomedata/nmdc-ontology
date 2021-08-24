@@ -1,5 +1,11 @@
 
 <!-- ![Build Status](https://github.com/microbiomedata/nmdc-ontology/workflows/CI/badge.svg) -->
+[![PyPI - License](https://img.shields.io/pypi/l/nmdc-ontology)](https://github.com/microbiomedata/nmdc-ontology/blob/main/LICENSE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/microbiomedata/nmdc-ontology?branch=main&kill_cache=1)](https://github.com/microbiomedata/nmdc-ontology/commits)
+[![GitHub issues](https://img.shields.io/github/issues/microbiomedata/nmdc-ontology?branch=master&kill_cache=1)](https://github.com/microbiomedata/nmdc-ontology/issues)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/microbiomedata/nmdc-ontology?branch=main&kill_cache=1)](https://github.com/microbiomedata/nmdc-ontology/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/microbiomedata/nmdc-ontology?branch=main&kill_cache=1)](https://github.com/microbiomedata/nmdc-ontology/pulls)
+
 # NMDC Ontology
 
 The NMDC Ontology (NMDCO) is used  by the [National Micrbiome Data Collaborative (NMDC)](https://microbiomedata.org) to annotate metagemoic metadata. The ontlogy products are built by merging a number of relevant ontologies (see the [import directory](src/ontology/imports/)) into a single ontology, and then converted into the appropriate product.
