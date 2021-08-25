@@ -158,15 +158,21 @@ $(ONT).json: $(ONT)-relation-graph.owl
 	    $(ANNOTATE_ONTOLOGY_VERSION) \
 	    convert --output $@
 
-$(ONT)-classes.json: $(ONT)-relation-graph.owl $(ONT)-merged-labels.ttl
-# select classes, merge with the labels, and convert ontology to json
+$(ONT)-classes.owl: $(ONT)-relation-graph.owl $(ONT)-merged-labels.ttl
+# select classes and merge with the labels
 	@echo "\n** building $@ **"
 	$(ROBOT) filter --input $< \
 	    --select classes \
 	    merge --input $(word 2, $^) \
 	    annotate --ontology-iri $(ONTBASE)/$@ \
 	    $(ANNOTATE_ONTOLOGY_VERSION) \
-	    convert --output $@
+	    --output $@
+
+$(ONT)-classes.json: $(ONT)-classes.owl
+# convert ontology to json
+	@echo "\n** building $@ **"
+	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+		convert -o $@.tmp.owl && mv $@.tmp.owl $@
 
 # -----------------------------------------------------
 # Variant artefacts
