@@ -139,7 +139,7 @@ $(ONT)-relation-graph.owl: $(ONT).owl $(ONT)-merged-labels.ttl
 	@echo "\n** building $@ **"
 	relation-graph --ontology-file $< \
 	    --reflexive-subclasses false \
-	    --equivalence-as-subclass true \
+	    --equivalence-as-subclass false \
 	    --non-redundant-output-file $(ONT)-nonredundant.ttl \
 	    --redundant-output-file $(ONT)-redundant.ttl \
 	    --mode rdf
@@ -172,7 +172,7 @@ $(ONT)-classes.json: $(ONT)-classes.owl
 # convert ontology to json
 	@echo "\n** building $@ **"
 	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		convert -o $@.tmp.owl && mv $@.tmp.owl $@
+		convert -o $@.tmp.json && mv $@.tmp.json $@
 
 # -----------------------------------------------------
 # Variant artefacts
