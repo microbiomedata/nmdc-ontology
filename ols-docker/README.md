@@ -7,8 +7,9 @@ In order to view the NMDC Ontology in a local [EBI's Ontology Lookup Service](ht
 To run the EMBL-EBI OLS service:
 1. Build the Docker image by either using the shell script `docker-build.sh`, or executing the command `cp ../nmdco.owl .; docker build -t nmdco .`.
 2. Start the Docker container by either using the shell script `docker-run.sh`, or executing the command `docker run -dtp 8080:8080 --rm --name nmdco nmdco`.
-3. Access the OLS through your browser on http://localhost:8080.
+3. Access the OLS through your browser on http://localhost:8080. It may take a **minute or two** for the OLS to start up.
 4. After you are finished browsing, you stop the container by either using the shell script `docker-stop.sh`, or executing the command `docker container stop nmdco`.
+
 
 ## Configuration 
 
