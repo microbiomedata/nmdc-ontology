@@ -25,7 +25,7 @@ As you type a term (such as 'soil') into the search box, this will bring a list 
 ![](images/ols_search2_width_600.png)
 
 
-After you select the term you want, you will be taken to a screen with the term's definition and a view of the term in the taxonomic tree (see below). The ![](images/part_of.png) means the child term is "part of" the parent term. 
+After you select the term you want, you will be taken to a screen with the term's definition and a view of the term in the taxonomic tree (see below). The ![](images/part_of_width_20.png) means the child term is "part of" the parent term. 
 
 
 ![](images/ols_definition_soil_width_600.png)
