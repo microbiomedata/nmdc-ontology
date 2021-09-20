@@ -1,0 +1,19 @@
+
+"@context":
+
+ontologies:
+
+  - id: nmdco
+    preferredPrefix: nmdco
+    title: NMDC Ontology
+    uri: http://purl.obolibrary.org/obo/nmdco.owl
+    description: "The NMDC Ontology (NMDCO) is used by the National Microbiome Data Collaborative (NMDC, https://microbiomedata.org) to annotate metagenomic metadata."
+    definition_property:
+      - http://purl.obolibrary.org/obo/IAO_0000115
+    synonym_property:
+      - http://www.geneontology.org/formats/oboInOwl#hasExactSynonym
+    base_uri:
+      - http://purl.obolibrary.org/obo/
+    reasoner: EL
+    oboSlims: false
+    ontology_purl: file:///opt/ols/nmdco.owl
