@@ -7,7 +7,7 @@ ENV SOLR_VERSION 5.5.3
 # ADD *.owl ${OLS_HOME}
 
 # For a single ontology file, you don't put the '/' after ${OLS_HOME}
-ADD ../nmdco.owl ${OLS_HOME}
+ADD nmdco.owl ${OLS_HOME}
 
 ADD ols-config.yaml ${OLS_HOME}
 
