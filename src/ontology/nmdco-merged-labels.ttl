@@ -281,8 +281,6 @@
 <http://purl.obolibrary.org/obo/ENVO_03000004>
         rdfs:label  "glacial ice"@en .
 
-[ rdfs:label  "inferring direct neg reg edge from input to regulatory subfunction" ] .
-
 <http://purl.obolibrary.org/obo/PO_0025429>
         rdfs:label  "leaf plate meristem" .
 
@@ -303,6 +301,8 @@
 
 <http://purl.obolibrary.org/obo/PO_0006061>
         rdfs:label  "stigma epidermis" .
+
+[ rdfs:label  "'causally downstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties)." ] .
 
 <http://purl.obolibrary.org/obo/UBERON_0036303>
         rdfs:label  "vasculature of central nervous system" .
@@ -2899,8 +2899,6 @@
 <http://purl.obolibrary.org/obo/FOODON_03302001>
         rdfs:label  "animal-derived food"@en .
 
-[ rdfs:label  "involved in BP" ] .
-
 <http://purl.obolibrary.org/obo/ENVO_00000217>
         rdfs:label  "solfatara" .
 
@@ -4217,8 +4215,6 @@
 
 <http://purl.obolibrary.org/obo/NCBITaxon_314146>
         rdfs:label  "Euarchontoglires" .
-
-[ rdfs:label  "enabling an MF enables its parts" ] .
 
 <http://purl.obolibrary.org/obo/CHEBI_33559>
         rdfs:label  "s-block element atom" .
@@ -7430,8 +7426,6 @@
 <http://purl.obolibrary.org/obo/ENVO_00000505>
         rdfs:label  "underground irrigation canal" .
 
-[ rdfs:label  "'causally upstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties)." ] .
-
 <http://purl.obolibrary.org/obo/ENVO_03000066>
         rdfs:label  "sea ice floe"@en .
 
@@ -7557,8 +7551,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_03000029>
         rdfs:label  "glacial ice gain"@en .
-
-[ rdfs:label  "Input of effector is input of its parent MF" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_3100008>
         rdfs:label  "concentration of chlorophyll a in liquid water" .
@@ -8780,8 +8772,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0025063>
         rdfs:label  "subterranean tuber perimedullary zone" .
-
-[ rdfs:label  "'causally downstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties)." ] .
 
 <http://purl.obolibrary.org/obo/RO_0002228>
         rdfs:label  "facultative parasite of" .
@@ -12476,6 +12466,8 @@
 <http://purl.obolibrary.org/obo/PO_0007046>
         rdfs:label  "IL.01 1/4 inflorescence length reached stage" .
 
+[ rdfs:label  "infer input from direct reg" ] .
+
 <http://purl.obolibrary.org/obo/ENVO_01001563>
         rdfs:label  "quicksand"@en .
 
@@ -14759,6 +14751,8 @@
 <http://purl.obolibrary.org/obo/PO_0000053>
         rdfs:label  "petiole cortex" .
 
+[ rdfs:label  "effector input is compound function input" ] .
+
 <http://purl.obolibrary.org/obo/ENVO_01001397>
         rdfs:label  "ultisol"@en .
 
@@ -15944,6 +15938,8 @@
 <http://purl.obolibrary.org/obo/RO_0013009>
         rdfs:label  "sends synaptic output to cell"@en .
 
+[ rdfs:label  "if effector directly negatively regulates X,  its parent MF directly negatively regulates X" ] .
+
 <http://purl.obolibrary.org/obo/UBERON_0004529>
         rdfs:label  "anatomical projection" .
 
@@ -16043,6 +16039,8 @@
 <http://purl.obolibrary.org/obo/PO_0008015>
         rdfs:label  "hypocotyl vascular system" .
 
+[ rdfs:label  "inferring direct positive reg edge from input to regulatory subfunction" ] .
+
 <http://purl.obolibrary.org/obo/ENVO_01001388>
         rdfs:label  "oceanic mussel bed"@en .
 
@@ -16123,6 +16121,8 @@
 
 <http://purl.obolibrary.org/obo/GO_0019412>
         rdfs:label  "aerobic respiration, using hydrogen as electron donor" .
+
+[ rdfs:label  "inferring direct reg edge from input to regulatory subfunction" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_00005762>
         rdfs:label  "chloropicrin enriched soil" .
@@ -17315,11 +17315,13 @@
 <http://purl.obolibrary.org/obo/ENVO_01000475>
         rdfs:label  "brick" .
 
+<http://purl.obolibrary.org/obo/ENVO_00000391>
+        rdfs:label  "land bridge" .
+
 <http://purl.obolibrary.org/obo/PO_0008006>
         rdfs:label  "nucellar epidermis" .
 
-<http://purl.obolibrary.org/obo/ENVO_00000391>
-        rdfs:label  "land bridge" .
+[ rdfs:label  "inferring direct neg reg edge from input to regulatory subfunction" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01001379>
         rdfs:label  "mussel bed"@en .
@@ -19973,6 +19975,8 @@
 <http://purl.obolibrary.org/obo/PATO_0000982>
         rdfs:label  "permeable" .
 
+[ rdfs:label  "involved in BP" ] .
+
 <http://purl.obolibrary.org/obo/ENVO_01001583>
         rdfs:label  "Afrotropical Ecoregion"@en .
 
@@ -20888,8 +20892,6 @@
 <http://purl.obolibrary.org/obo/PO_0025613>
         rdfs:label  "spine petiole" .
 
-[ rdfs:label  "infer input from direct reg" ] .
-
 <http://purl.obolibrary.org/obo/RO_0001025>
         rdfs:label  "located in"@en , "located_in" .
 
@@ -21267,6 +21269,8 @@
 
 <http://purl.obolibrary.org/obo/UBERON_0007269>
         rdfs:label  "pectoral appendage musculature" .
+
+[ rdfs:label  "enabling an MF enables its parts" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01001574>
         rdfs:label  "Pilbara Shrublands Ecoregion"@en .
@@ -23173,8 +23177,6 @@
 <http://purl.obolibrary.org/obo/PO_0020149>
         rdfs:label  "quiescent center" .
 
-[ rdfs:label  "effector input is compound function input" ] .
-
 <http://purl.obolibrary.org/obo/PO_0025447>
         rdfs:label  "secondary xylem tracheid" .
 
@@ -24438,13 +24440,11 @@
 <http://purl.obolibrary.org/obo/UBERON_0035965>
         rdfs:label  "wall of blood vessel" .
 
-<http://purl.obolibrary.org/obo/RO_0002221>
-        rdfs:label  "surrounds"@en .
-
 <http://purl.obolibrary.org/obo/ENVO_03000050>
         rdfs:label  "atmosphere-exposed melt pond"@en .
 
-[ rdfs:label  "if effector directly negatively regulates X,  its parent MF directly negatively regulates X" ] .
+<http://purl.obolibrary.org/obo/RO_0002221>
+        rdfs:label  "surrounds"@en .
 
 <http://purl.obolibrary.org/obo/PO_0025475>
         rdfs:label  "coleorhiza emergence stage" .
@@ -24566,8 +24566,6 @@
 <http://purl.obolibrary.org/obo/ENVO_03000013>
         rdfs:label  "cirque glacier"@en .
 
-[ rdfs:label  "inferring direct positive reg edge from input to regulatory subfunction" ] .
-
 <http://purl.obolibrary.org/obo/PO_0025438>
         rdfs:label  "root vascular cambium" .
 
@@ -24591,6 +24589,8 @@
 
 <http://purl.obolibrary.org/obo/PO_0006070>
         rdfs:label  "mesophyll" .
+
+[ rdfs:label  "'causally upstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties)." ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01001681>
         rdfs:label  "weather front"@en .
@@ -24651,8 +24651,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_00000434>
         rdfs:label  "outwash fan" .
-
-[ rdfs:label  "inferring direct reg edge from input to regulatory subfunction" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_00000244>
         rdfs:label  "abyssal plain" .
@@ -24717,11 +24715,13 @@
 <http://purl.obolibrary.org/obo/ENVO_01000740>
         rdfs:label  "area of perennial water ice"@en .
 
+<http://purl.obolibrary.org/obo/UBERON_0001606>
+        rdfs:label  "muscle of iris" .
+
 <http://purl.obolibrary.org/obo/PO_0006033>
         rdfs:label  "palea apiculus" .
 
-<http://purl.obolibrary.org/obo/UBERON_0001606>
-        rdfs:label  "muscle of iris" .
+[ rdfs:label  "Input of effector is input of its parent MF" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01001644>
         rdfs:label  "material primarily composed of biogenic carbonates"@en .
