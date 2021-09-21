@@ -12,7 +12,7 @@ Ontology(<http://purl.obolibrary.org/obo/nmdco.owl>
 Import(<http://purl.obolibrary.org/obo/nmdco/imports/envo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/nmdco/imports/po_import.owl>)
 Import(<http://purl.obolibrary.org/obo/nmdco/imports/ro_import.owl>)
-Annotation(dce:description "The NMDC Ontology (NMDCO) is used  by the National Micrbiome Data Collaborative (NMDC, https://microbiomedata.org) to to annotate metagemoic metadata. 
+Annotation(dce:description "The NMDC Ontology (NMDCO) is used  by the National Micrbiome Data Collaborative (NMDC, https://microbiomedata.org) to annotate multi-omic microbiome metadata. It merges a number of ontologies relevant to the NMDC (such as the plant and environment ontologies) into a single ontology.
 
 It is maintained using Github at https://github.com/microbiomedata/nmdc-ontology.
 
