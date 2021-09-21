@@ -7,8 +7,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/nmdco/nmdco-classes.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/nmdco/releases/2021-08-24/nmdco-classes.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-08-24</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/nmdco/releases/2021-09-21/nmdco-classes.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-09-21</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -71428,37 +71428,37 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
     <rdf:Description>
-        <rdfs:label>inferring direct neg reg edge from input to regulatory subfunction</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>inferring direct positive reg edge from input to regulatory subfunction</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>involved in BP</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>inferring direct reg edge from input to regulatory subfunction</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>enabling an MF enables its parts</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>&apos;causally upstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
         <rdfs:label>Input of effector is input of its parent MF</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>&apos;causally downstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>infer input from direct reg</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>effector input is compound function input</rdfs:label>
     </rdf:Description>
     <rdf:Description>
+        <rdfs:label>infer input from direct reg</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>&apos;causally upstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>&apos;causally downstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>inferring direct neg reg edge from input to regulatory subfunction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>inferring direct reg edge from input to regulatory subfunction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>inferring direct positive reg edge from input to regulatory subfunction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
         <rdfs:label>if effector directly negatively regulates X,  its parent MF directly negatively regulates X</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>enabling an MF enables its parts</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>involved in BP</rdfs:label>
     </rdf:Description>
     
 
@@ -71724,8 +71724,8 @@
         <rdfs:label xml:lang="en">has characteristic</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0000056">
-        <rdfs:label>participates_in</rdfs:label>
         <rdfs:label xml:lang="en">participates in</rdfs:label>
+        <rdfs:label>participates_in</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0000057">
         <rdfs:label>has_participant</rdfs:label>
