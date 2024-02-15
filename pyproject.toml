@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "nmdc-ontology"
+version = "0.1.0"
+description = "Build tools for the NMDC Ontology, a colelction of OBO foundry terms that can be used to annotate NMDC biosamples."
+authors = ["Mark A. Miller <MAM@lbl.gov>"]
+license = "CC0-1.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.2.0"
+requests = "^2.31.0"
+pyarrow = "^15.0.0"
+click = "^8.1.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+report-instantiated-traids = "nmdc_ontology.report_instantiated_traids:main"

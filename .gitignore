@@ -1,6 +1,7 @@
 src/ontology/nmdco-redundant.ttl
 
 .DS_Store
+.idea/
 semantic.cache
 bin/
 
