@@ -74,8 +74,8 @@ data-vs-ontology-reports/envo-id-ranges-report.tsv: downloads/envo-idranges.owl.
 data-vs-ontology-reports/biosample-triad-counts.tsv:
 	@echo "Generating report..."
 	$(RUN) report-instantiated-traids \
-		--output $@ \
-		--counts-output $(subst counts.tsv,report.tsv,$@)
+		--output $(subst counts.tsv,report.tsv,$@)  \
+		--counts-output $@
 
 data-vs-ontology-reports/fma-usage-report.tsv: data-vs-ontology-reports/biosample-triad-counts.tsv
 	grep 'FMA:' $< > $@
