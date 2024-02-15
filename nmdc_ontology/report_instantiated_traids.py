@@ -8,9 +8,9 @@ from collections import Counter
 @click.option('--api-url',
               default="https://api.microbiomedata.org/nmdcschema/biosample_set?max_page_size=9999&projection=env_broad_scale%2Cenv_local_scale%2Cenv_medium",
               help='URL of the API endpoint')
-@click.option('--output-file', default="biosample_triad_report.tsv", help='Output file name')
-@click.option('--counts-output-file', default="triad_term_counts.tsv", help='Output file name for value counts')
-def main(api_url, output_file, counts_output_file):
+@click.option('--output', default="biosample_triad_report.tsv", help='Output file name')
+@click.option('--counts-output', default="triad_term_counts.tsv", help='Output file name for value counts')
+def main(api_url, output, counts_output):
     # Send the GET request
     response = requests.get(api_url)
 
@@ -39,7 +39,7 @@ def main(api_url, output_file, counts_output_file):
         df = pd.DataFrame(rows)
 
         # Save the DataFrame to a TSV file
-        df.to_csv(output_file, sep="\t", index=False)
+        df.to_csv(output, sep="\t", index=False)
 
         # Combine all values into a single list
         combined_values = []
@@ -60,7 +60,7 @@ def main(api_url, output_file, counts_output_file):
         counts_df[['ontology', 'local_id']] = counts_df['Value'].str.split(':', n=1, expand=True)
 
         # Save counts DataFrame to a TSV file
-        counts_df.to_csv(counts_output_file, sep="\t", index=False)
+        counts_df.to_csv(counts_output, sep="\t", index=False)
     else:
         print("Failed to fetch data from the API:", response.status_code)
 
