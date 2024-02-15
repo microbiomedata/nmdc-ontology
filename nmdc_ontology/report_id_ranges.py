@@ -4,7 +4,7 @@ import pandas as pd
 
 
 @click.command()
-@click.option("--id-ranges-ttl", "-i", default="local/envo-idranges.owl.ttl", help="Input file path")
+@click.option("--id-ranges-ttl", "-i", default="downloads/envo-idranges.owl.ttl", help="Input file path")
 @click.option("--output", "-o", default="envo_id_ranges_report.tsv", help="Output file path")
 def generate_id_ranges(id_ranges_ttl, output):
     # Load the Turtle content into an RDF graph
