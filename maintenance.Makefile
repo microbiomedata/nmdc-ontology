@@ -19,3 +19,12 @@ envo_id_ranges_report.tsv: local/envo-idranges.owl.ttl
 	$(RUN) report-id-ranges \
 		--id-ranges-ttl $< \
 		--output $@
+
+biosample_triad_counts.tsv:
+	@echo "Generating report..."
+	$(RUN) report-instantiated-traids \
+		--output $@ \
+		--counts-output $(subst counts.tsv,report_counts.tsv,$@)
+
+fma_usage_report.tsv: biosample_triad_counts.tsv
+	grep 'FMA:' $< > $@
