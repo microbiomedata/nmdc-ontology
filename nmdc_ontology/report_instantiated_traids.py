@@ -57,7 +57,7 @@ def main(api_url, output_file, counts_output_file):
         counts_df = pd.DataFrame(value_counts.items(), columns=['Value', 'Count'])
 
         # Split the 'Value' column into two parts before and after the colon
-        counts_df[['Before Colon', 'After Colon']] = counts_df['Value'].str.split(':', n=1, expand=True)
+        counts_df[['ontology', 'local_id']] = counts_df['Value'].str.split(':', n=1, expand=True)
 
         # Save counts DataFrame to a TSV file
         counts_df.to_csv(counts_output_file, sep="\t", index=False)
