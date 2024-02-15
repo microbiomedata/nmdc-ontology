@@ -1,4 +1,5 @@
 src/ontology/nmdco-redundant.ttl
+local/
 
 .DS_Store
 .idea/
