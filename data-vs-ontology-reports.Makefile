@@ -1,5 +1,12 @@
 RUN=poetry run
 
+.PHONY: data-vs-ontology-all data-vs-ontology-clean
+
+
+data-vs-ontology-all: data-vs-ontology-clean \
+	data-vs-ontology-reports/envo-id-ranges-report.tsv \
+	data-vs-ontology-reports/fma-usage-report.tsv
+
 data-vs-ontology-clean:
 	rm -rf data-vs-ontology-reports/*
 	mkdir -p data-vs-ontology-reports
