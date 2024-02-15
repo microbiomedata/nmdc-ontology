@@ -12,6 +12,7 @@ pandas = "^2.2.0"
 requests = "^2.31.0"
 pyarrow = "^15.0.0"
 click = "^8.1.7"
+rdflib = "^7.0.0"
 
 
 [build-system]
@@ -20,3 +21,4 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 report-instantiated-traids = "nmdc_ontology.report_instantiated_traids:main"
+report-id-ranges = "nmdc_ontology.report_id_ranges:generate_id_ranges"
