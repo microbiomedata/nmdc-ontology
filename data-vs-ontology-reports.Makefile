@@ -35,15 +35,17 @@ data-vs-ontology-reports/report-class-ids.tsv: downloads/envo.owl
 		--input $< \
 		--query $(subst .tsv,.rq,$(subst data-vs-ontology-reports,data-vs-ontology-sparql,$@)) $@
 
-# requires a newer version of relation-graph from the rest of this repo?! Like 2+
-# sbt is required for building relation-graph
-# requires sqlite. ubuntu calls sqlite3 sqlite3 and an alisa/link is required
-# requires robot
-# building rdftab.rs requires rustup
-downloads/envo.db: downloads/envo.owl
-	@echo "Converting..."
-	cd $(dir $@) ; $(RUN) semsql make $(notdir $@)
+## requires relation-graph 2+, but the ontology build requires ~ 1.2
+## sbt is required for building relation-graph
+## requires sqlite. ubuntu calls sqlite3 'sqlite3' (not 'sqlite') and an alias/link is required
+## requires robot
+## building rdftab.rs requires rustup
+#downloads/envo.db: downloads/envo.owl
+#	@echo "Converting..."
+#	cd $(dir $@) ; $(RUN) semsql make $(notdir $@)
 
+downloads/envo.db:
+	poetry run semsql download envo -o $@
 
 downloads/envo-idranges.owl.omn:
 	@echo "Downloading..."
