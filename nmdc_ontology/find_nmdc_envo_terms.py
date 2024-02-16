@@ -50,15 +50,17 @@ def filter_class_nodes(id_range_tsv_input, nmdco_classes_json_input, output):
                 'Owner': node_owner
             })
 
-    # Write filtered nodes to TSV file
+    # Sort filtered nodes by 'Owner' and then by 'LBL'
+    sorted_nodes = sorted(filtered_nodes, key=lambda x: (x['Owner'], x['LBL']))
+
+    # Write sorted nodes to TSV file
     fieldnames = ['ID', 'LBL', 'Owner']
     with open(output, 'w', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter='\t')
         writer.writeheader()
-        writer.writerows(filtered_nodes)
+        writer.writerows(sorted_nodes)
 
-    print("Filtered class nodes written to", output)
+    print("Filtered and sorted class nodes written to", output)
 
-
-if __name__ == '__main__':
-    filter_class_nodes()
+    if __name__ == '__main__':
+        filter_class_nodes()

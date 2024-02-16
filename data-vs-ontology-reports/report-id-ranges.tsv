@@ -3,8 +3,8 @@
 <http://purl.obolibrary.org/obo/ro/idrange/21>	"Brandon Whitehead"	6000000	6100000
 <http://purl.obolibrary.org/obo/ro/idrange/26>	"Agronomy Ontology"	6105201	6105499
 <http://purl.obolibrary.org/obo/ro/idrange/28>	"Alicia Clum"	3600100	3604999
-<http://purl.obolibrary.org/obo/ro/idrange/9>	"ENVO-P, E-Content-E"	9300000	9399999
 <http://purl.obolibrary.org/obo/ro/idrange/7>	"ENVO-P, E-A"	9200000	9299999
+<http://purl.obolibrary.org/obo/ro/idrange/9>	"ENVO-P, E-Content-E"	9300000	9399999
 <http://purl.obolibrary.org/obo/ro/idrange/2>	"Pier Luigi Buttigieg"	1000000	1999999
 <http://purl.obolibrary.org/obo/ro/idrange/4>	"TermGenie"	8000000	8999999
 <http://purl.obolibrary.org/obo/ro/idrange/10>	"ENVO-P, E-NumberOf-E"	9400000	9499999
@@ -12,8 +12,8 @@
 <http://purl.obolibrary.org/obo/ro/idrange/25>	"National Microbiome Data Collaborative"	3600000	3600099
 <http://purl.obolibrary.org/obo/ro/idrange/20>	"Raissa Meyer"	3520000	3529999
 <http://purl.obolibrary.org/obo/ro/idrange/1>	"Norman Morrison"	1	999999
-<http://purl.obolibrary.org/obo/ro/idrange/13>	"chemical_concentration.yaml yaml design pattern"	3200001	3300000
 <http://purl.obolibrary.org/obo/ro/idrange/11>	"Kai Blumberg pattern generated terms"	3100001	3200000
+<http://purl.obolibrary.org/obo/ro/idrange/13>	"chemical_concentration.yaml yaml design pattern"	3200001	3300000
 <http://purl.obolibrary.org/obo/ro/idrange/6>	"ENVO-P, E-Q-L"	9100000	9199999
 <http://purl.obolibrary.org/obo/ro/idrange/8>	"Kai Blumberg"	3000000	3100000
 <http://purl.obolibrary.org/obo/ro/idrange/14>	"ebi_biomes.csv robot design pattern"	3300001	3400000
@@ -21,7 +21,7 @@
 <http://purl.obolibrary.org/obo/ro/idrange/29>	"Mark Andrew Miller"	3605000	3609999
 <http://purl.obolibrary.org/obo/ro/idrange/22>	"Jimena Linares"	6100001	6105000
 <http://purl.obolibrary.org/obo/ro/idrange/24>	"Isabella Maria Wilkie"	6105101	6105200
-<http://purl.obolibrary.org/obo/ro/idrange/3>	"Chris Mungall"	2000000	2999999
 <http://purl.obolibrary.org/obo/ro/idrange/5>	"ENVO-P, E-A-L"	9000000	9099999
+<http://purl.obolibrary.org/obo/ro/idrange/3>	"Chris Mungall"	2000000	2999999
 <http://purl.obolibrary.org/obo/ro/idrange/15>	"Ruth Duerr"	3400001	3500000
 <http://purl.obolibrary.org/obo/ro/idrange/17>	"Anton Van de Putte"	3501001	3501100
