@@ -7,8 +7,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/nmdco/nmdco-classes.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/nmdco/releases/2024-02-15/nmdco-classes.owl"/>
-        <owl:versionInfo>2024-02-15</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/nmdco/releases/2024-02-16/nmdco-classes.owl"/>
+        <owl:versionInfo>2024-02-16</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -61169,6 +61169,15 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PO_0008037 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0008037">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0000003"/>
+        <rdfs:label>seedling</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PO_0008039 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0008039">
@@ -68598,6 +68607,15 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PO_0025626 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025626">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009007"/>
+        <rdfs:label>plant gall</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PO_0028002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0028002">
@@ -75616,85 +75634,85 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:Class>
     <rdf:Description>
-        <rdfs:label>BIRC2/3 (cIAP1/2) is autoubiquitinated</rdfs:label>
+        <rdfs:label>SIAH1, SIAH2 ubiquitinate SNCAIP</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>CHIP (STUB1) mediates ubiquitination of ERBB2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>DTX4 ubiquitinates p-S172-TBK1 within NLRP4:DTX4:dsDNA:ZBP1:TBK1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Beta-TrCP ubiquitinates NFKB p50:p65:phospho IKBA complex</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>BTRC:CUL1:SKP1 (SCF-beta-TrCP1) ubiquitinylates PER proteins</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>DTX4 ubiquitinates p-S172-TBK1 within NLRP4:DTX4:STING:TBK1:IRF3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>ARRB mediates NOTCH1 ubiquitination</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>ISGylation of host protein filamin B</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Nuclear VBC complex ubiquitinylates HIF-alpha</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>involved in BP</rdfs:label>
+        <rdfs:label>SCF(beta-TrCP) ubiquitinates p-GLI2</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>Ubiquitination of phosphorylated Cdc25A</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>DDX58 is K63 polyubiquitinated</rdfs:label>
+        <rdfs:label>BIRC2/3 (cIAP1/2) is autoubiquitinated</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>PRKN polyubiquitinates RIPK3</rdfs:label>
+        <rdfs:label>ISGylation of host protein filamin B</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>TRAF2,6 ubiquitinates NLRC5</rdfs:label>
+        <rdfs:label>effector input is compound function input</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>CBL-mediated ubiquitination of CIN85</rdfs:label>
+        <rdfs:label>inferring direct positive reg edge from input to regulatory subfunction</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Ubiquitination of cell cycle proteins targeted by the APC/C:Cdh1complex</rdfs:label>
+        <rdfs:label>MIB2 ubiquitinates CYLD at K338, K530</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Pellino ubiquitinates IRAK1</rdfs:label>
+        <rdfs:label>CHIP (STUB1) mediates ubiquitination of ERBB2</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Autoubiquitination of phospho-COP1(Ser-387 )</rdfs:label>
+        <rdfs:label>CBL binds and ubiquitinates phosphorylated Sprouty</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>SCF-beta-TRCP ubiquitinates p-7S-p100:RELB in active NIK:p-176,S180-IKKA dimer:p-7S-p100:SCF-beta-TRCP</rdfs:label>
+        <rdfs:label>Ubiquitination of Cyclin B by phospho-APC/C:Cdc20 complex</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 HD+PEST domain mutants</rdfs:label>
+        <rdfs:label>inferring direct positive reg edge from input to regulatory subfunction</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Multiubiquitination of APC/C-associated Cdh1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>RNF41 ubiquitinates activated ERBB3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>The geminin component of geminin:Cdt1 complexes is ubiquitinated, releasing Cdt1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>cIAP1,2 ubiquitinates NIK in cIAP1,2:TRAF2::TRAF3:NIK</rdfs:label>
+        <rdfs:label>&apos;causally upstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>Input of effector is input of its parent MF</rdfs:label>
     </rdf:Description>
     <rdf:Description>
+        <rdfs:label>Ubiquitination of stimulated EGFR (CBL)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Defective NHLRC1 does not ubiquitinate EPM2A (laforin) and PPP1R3C (PTG) (type 2B disease)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SMURF2 monoubiquitinates SMAD3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Activated TRAF6 synthesizes unanchored polyubiquitin chains upon TLR3 stimulation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>K63-linked ubiquitination of RIP1 bound to the activated TLR complex</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>DDX41 ubiquitination by TRIM21</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>TRAF6 polyubiquitinates NRIF</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitin-dependent degradation of the SMAD complex terminates TGF-beta signaling</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>RNF41 ubiquitinates ERBB3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Activated TRAF6 synthesizes unanchored polyubiquitin chains upon TLR stimulation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Auto-ubiquitination of TRAF3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
         <rdfs:label>Polyubiquitination of substrate</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>effector input is compound function input</rdfs:label>
+        <rdfs:label>MIB2 ubiquitinates CFLAR</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>Ubiquitination of NOTCH1 by ITCH in the absence of ligand</rdfs:label>
@@ -75703,343 +75721,97 @@
         <rdfs:label>CBL escapes CDC42-mediated inhibition by down-regulating the adaptor molecule Beta-Pix</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>SCF(beta-TrCP) ubiquitinates p-GLI1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>MIB2 ubiquitinates CFLAR</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
         <rdfs:label>SIAH1:UBE2L6:Ubiquitin ubiquitinates SNCA</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>RNF41 ubiquitinates ERBB3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Activated TRAF6 synthesizes unanchored polyubiquitin chains upon TLR3 stimulation</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SMURF2 monoubiquitinates SMAD3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>DDX41 ubiquitination by TRIM21</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>K63-linked ubiquitination of RIP1 bound to the activated TLR complex</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Defective NHLRC1 does not ubiquitinate EPM2A (laforin) and PPP1R3C (PTG) (type 2B disease)</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>infer input from direct reg</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Activation of ISG15 by UBA7 E1 ligase</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>TRAF6 polyubiquitinates NRIF</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>Cytosolic VBC complex ubiquitinylates hydroxyprolyl-HIF-alpha</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>MIB2 ubiquitinates CYLD at K338, K530</rdfs:label>
+        <rdfs:label>&apos;causally upstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>involved in BP</rdfs:label>
+        <rdfs:label>cIAP1,2 ubiquitinates NIK in cIAP1,2:TRAF2::TRAF3:NIK</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>CBL binds and ubiquitinates phosphorylated Sprouty</rdfs:label>
+        <rdfs:label>Activation of ISG15 by UBA7 E1 ligase</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Ubiquitination of p130 (RBL2) by SCF (Skp2)</rdfs:label>
+        <rdfs:label>The geminin component of geminin:Cdt1 complexes is ubiquitinated, releasing Cdt1</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>enabling an MF enables its parts</rdfs:label>
+        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 HD+PEST domain mutants</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>CBL neddylates TGFBR2</rdfs:label>
+        <rdfs:label>Pellino ubiquitinates IRAK1</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>RNF125 mediated ubiquitination of DDX58, IFIH1 and MAVS</rdfs:label>
+        <rdfs:label>TRAF2,6 ubiquitinates NLRC5</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>NHLRC1 mediated ubiquitination of EPM2A (laforin) and PPP1RC3 (PTG) associated with glycogen-GYG2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>VHL:EloB,C:NEDD8-CUL2:RBX1 complex ubiquitinylates HIF-alpha</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of PAK-2p34</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>RAF1:SGK:TSC22D3:WPP ubiquitinates SCNN channels</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of SKI/SKIL by RNF111/SMURF2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of Cyclin A by APC/C:Cdc20 complex</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Self-ubiquitination of RNF41</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>STUB1 ubiquitinates RIPK3 at K55, K363</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of IKBKG by TRAF6</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 HD domain mutants</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SYVN1 ubiquitinates Hh C-terminal fragments</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>TRAF6 is K63 poly-ubiquitinated</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>inferring direct neg reg edge from input to regulatory subfunction</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SMURF2 ubiquitinates SMAD2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>STUB1 (CHIP) ubiquitinates SMAD3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Multi-ubiquitination of APOBEC3G</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>CBL ubiquitinates Sprouty</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>RAD18:UBE2B or RBX1:CUL4:DDB1:DTL monoubiquitinates PCNA</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of Cyclin D1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>FN3KRP phosphorylates PsiAm, RibAm</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>NEDD4 ubiquitinates ERBB4jmAcyt1s80 dimer</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SKP1:FBXL5:CUL1:NEDD8 ubiquitinylates IREB2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Transfer of Ub from E2 to substrate and release of E2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of phospho-p27/p21</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>MIB2 ubiquitinates RIPK1 at K377, K604, K634</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>K63polyUb-cIAP1,2 ubiquitinates TRAF3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>inferring direct reg edge from input to regulatory subfunction</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>E1 mediated ubiquitin activation</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>ITCH ubiquitinates DTX</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>RCHY1 monoubiquitinates POLH</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>STUB1 ubiquitinates RIPK1 at K571, K604, K627</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>K63polyUb-TRAF6 ubiquitinates TAK1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>FN3K phosphorylates ketosamines</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>TNFAIP3 (A20) ubiquitinates RIPK1 with K48-linked Ub chains</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>TRIM33 monoubiquitinates SMAD4</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Cdh1:APC/C ubiquitinates EHMT1 and EHMT2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Auto-ubiquitination of TRAF3 within activated TLR3 complex</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>inferring direct reg edge from input to regulatory subfunction</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of NEMO by TRAF6</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>STING ubiquitination by TRIM32 or TRIM56</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>ISGylation of viral protein NS1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>ISGylation of host proteins</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Myristoylation of Nef</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Activated TRAF6 synthesizes unanchored polyubiquitin chains</rdfs:label>
+        <rdfs:label>SCF-beta-TRCP ubiquitinates p-7S-p100:RELB in active NIK:p-176,S180-IKKA dimer:p-7S-p100:SCF-beta-TRCP</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>&apos;causally downstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Ubiquitination of stimulated EGFR (CBL:GRB2)</rdfs:label>
+        <rdfs:label>SCF(beta-TrCP) ubiquitinates p-GLI1</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>&apos;causally downstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
+        <rdfs:label>Ubiquitination of cell cycle proteins targeted by the APC/C:Cdh1complex</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Multiubiquitination of Nek2A</rdfs:label>
+        <rdfs:label>PRKN polyubiquitinates RIPK3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>CBL-mediated ubiquitination of CIN85</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>if effector directly negatively regulates X,  its parent MF directly negatively regulates X</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>effector input is compound function input</rdfs:label>
+        <rdfs:label>ARRB mediates NOTCH1 ubiquitination</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>PARK2 K63-Ubiquitinates SNCAIP</rdfs:label>
+        <rdfs:label>Beta-TrCP ubiquitinates NFKB p50:p65:phospho IKBA complex</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>SPATA2:CYLD-bound LUBAC ubiquitinates RIPK1 at K627 within the TNFR1 signaling complex</rdfs:label>
+        <rdfs:label>Nuclear VBC complex ubiquitinylates HIF-alpha</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>SCF(beta-TrCP) ubiquitinates p-GLI3</rdfs:label>
+        <rdfs:label>Multiubiquitination of APC/C-associated Cdh1</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>LUBAC ubiquitinates RIPK1 at K627</rdfs:label>
+        <rdfs:label>RNF41 ubiquitinates activated ERBB3</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>SCF betaTrCP ubiquitinates NFKB p105 within p-S927, S932-NFkB p105:TPL2:ABIN2</rdfs:label>
+        <rdfs:label>Autoubiquitination of phospho-COP1(Ser-387 )</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>RIP2 induces K63-linked ubiquitination of NEMO</rdfs:label>
+        <rdfs:label>DTX4 ubiquitinates p-S172-TBK1 within NLRP4:DTX4:STING:TBK1:IRF3</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>&apos;causally upstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
+        <rdfs:label>DTX4 ubiquitinates p-S172-TBK1 within NLRP4:DTX4:dsDNA:ZBP1:TBK1</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>CUL5 mediates ubiquitination of ERBB2</rdfs:label>
+        <rdfs:label>DDX58 is K63 polyubiquitinated</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Input of effector is input of its parent MF</rdfs:label>
+        <rdfs:label>BTRC:CUL1:SKP1 (SCF-beta-TrCP1) ubiquitinylates PER proteins</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Ubiquitination of NICD1 by FBWX7</rdfs:label>
+        <rdfs:label>Ubiquitination of p130 (RBL2) by SCF (Skp2)</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Ubiquitin-dependent degradation of the Smad complex terminates BMP2 signalling</rdfs:label>
+        <rdfs:label>Ubiquitination of SKI/SKIL by RNF111/SMURF2</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>ERBB4 ubiquitination by WWP1/ITCH</rdfs:label>
+        <rdfs:label>&apos;causally downstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Myristoylation of tBID by NMT1</rdfs:label>
+        <rdfs:label>Ubiquitination of Cyclin A by APC/C:Cdc20 complex</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>ISGylation of E2 conjugating enzymes</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>ISGylation of protein phosphatase 1 beta (PP2CB)</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Auto-ubiquitination of TRAF6</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>ISGylation of IRF3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>K63-linked ubiquitination of RIP1 bound to the activated TLR complex</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Auto ubiquitination of oligo-TRAF6 bound to p-IRAK2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>inferring direct positive reg edge from input to regulatory subfunction</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>NHLRC1 mediated ubiquitination of EPM2A and PPP1RC3 associated with glycogen-GYG1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SCF-beta-TrCp1/2 ubiquitinates phosphorylated BORA</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SMURFs/NEDD4L ubiquitinate phosphorylated TGFBR1 and SMAD7</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of Securin by phospho-APC/C:Cdc20 complex</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Auto-ubiquitination of TRAF6</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>&apos;causally upstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>RNF111 ubiquitinates SMAD7</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Auto ubiquitination of oligo-TRAF6 bound to p-IRAK2 at endosome membrane</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>inferring direct positive reg edge from input to regulatory subfunction</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>TRAF6 oligomer autoubiquitinates</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>inferring direct neg reg edge from input to regulatory subfunction</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>BIRC(cIAP1/2) ubiquitinates RIPK1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Auto ubiquitination of TRAF6 bound to ALPK1:ADP-heptose:TIFA oligomer</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of stimulated EGFR (CBL)</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SCF(beta-TrCP) ubiquitinates p-GLI2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of Cyclin B by phospho-APC/C:Cdc20 complex</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>enabling an MF enables its parts</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SIAH1, SIAH2 ubiquitinate SNCAIP</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>beta-TRCP ubiquitinates IkB-alpha in p-S32,33-IkB-alpha:NF-kB complex</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>TRAF6 ubiquitinqtes IRF7 within the activated TLR7/8 or 9 complex</rdfs:label>
+        <rdfs:label>RAF1:SGK:TSC22D3:WPP ubiquitinates SCNN channels</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>Parkin promotes the ubiquitination of mitochondrial substrates</rdfs:label>
@@ -76048,7 +75820,235 @@
         <rdfs:label>Activated TRAF6 synthesizes unanchored polyubiquitin chains upon ALPK1:ADP-heptose stimulation</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Ubiquitination of CD4 by Vpu:CD4:beta-TrCP:SKP1 complex</rdfs:label>
+        <rdfs:label>beta-TRCP ubiquitinates IkB-alpha in p-S32,33-IkB-alpha:NF-kB complex</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>TRAF6 ubiquitinqtes IRF7 within the activated TLR7/8 or 9 complex</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>ISGylation of E2 conjugating enzymes</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Myristoylation of tBID by NMT1</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>ERBB4 ubiquitination by WWP1/ITCH</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitin-dependent degradation of the Smad complex terminates BMP2 signalling</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>NHLRC1 mediated ubiquitination of EPM2A (laforin) and PPP1RC3 (PTG) associated with glycogen-GYG2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of PAK-2p34</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>CBL neddylates TGFBR2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>VHL:EloB,C:NEDD8-CUL2:RBX1 complex ubiquitinylates HIF-alpha</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>inferring direct neg reg edge from input to regulatory subfunction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>RNF125 mediated ubiquitination of DDX58, IFIH1 and MAVS</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of Securin by phospho-APC/C:Cdc20 complex</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>RNF111 ubiquitinates SMAD7</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>BIRC(cIAP1/2) ubiquitinates RIPK1</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Auto-ubiquitination of TRAF6</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>TRAF6 oligomer autoubiquitinates</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Auto ubiquitination of TRAF6 bound to ALPK1:ADP-heptose:TIFA oligomer</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>inferring direct reg edge from input to regulatory subfunction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Auto ubiquitination of oligo-TRAF6 bound to p-IRAK2 at endosome membrane</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of stimulated EGFR (CBL:GRB2)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Multiubiquitination of Nek2A</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SCF(beta-TrCP) ubiquitinates p-GLI3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>PARK2 K63-Ubiquitinates SNCAIP</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>LUBAC ubiquitinates RIPK1 at K627</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>inferring direct reg edge from input to regulatory subfunction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SPATA2:CYLD-bound LUBAC ubiquitinates RIPK1 at K627 within the TNFR1 signaling complex</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>CUL5 mediates ubiquitination of ERBB2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of NICD1 by FBWX7</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>RIP2 induces K63-linked ubiquitination of NEMO</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SCF betaTrCP ubiquitinates NFKB p105 within p-S927, S932-NFkB p105:TPL2:ABIN2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>inferring direct neg reg edge from input to regulatory subfunction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>MIB2 ubiquitinates RIPK1 at K377, K604, K634</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>RAD18:UBE2B or RBX1:CUL4:DDB1:DTL monoubiquitinates PCNA</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Transfer of Ub from E2 to substrate and release of E2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>K63polyUb-cIAP1,2 ubiquitinates TRAF3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>NEDD4 ubiquitinates ERBB4jmAcyt1s80 dimer</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of phospho-p27/p21</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of Cyclin D1</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SKP1:FBXL5:CUL1:NEDD8 ubiquitinylates IREB2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>ISGylation of IRF3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>FN3KRP phosphorylates PsiAm, RibAm</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>CBL ubiquitinates Sprouty</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Input of effector is input of its parent MF</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Auto-ubiquitination of TRAF6</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>ISGylation of protein phosphatase 1 beta (PP2CB)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SMURFs/NEDD4L ubiquitinate phosphorylated TGFBR1 and SMAD7</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SCF-beta-TrCp1/2 ubiquitinates phosphorylated BORA</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>NHLRC1 mediated ubiquitination of EPM2A and PPP1RC3 associated with glycogen-GYG1</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>infer input from direct reg</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Auto ubiquitination of oligo-TRAF6 bound to p-IRAK2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>K63-linked ubiquitination of RIP1 bound to the activated TLR complex</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>if effector directly negatively regulates X,  its parent MF directly negatively regulates X</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of NEMO by TRAF6</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>STING ubiquitination by TRIM32 or TRIM56</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>involved in BP</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Cdh1:APC/C ubiquitinates EHMT1 and EHMT2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Myristoylation of Nef</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Auto-ubiquitination of TRAF3 within activated TLR3 complex</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>ISGylation of viral protein NS1</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>FN3K phosphorylates ketosamines</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>ISGylation of host proteins</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SMURF2 ubiquitinates SMAD2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>STUB1 (CHIP) ubiquitinates SMAD3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>effector input is compound function input</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 HD domain mutants</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>TRAF6 is K63 poly-ubiquitinated</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>STUB1 ubiquitinates RIPK3 at K55, K363</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SYVN1 ubiquitinates Hh C-terminal fragments</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Multi-ubiquitination of APOBEC3G</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of IKBKG by TRAF6</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Self-ubiquitination of RNF41</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Activated TRAF6 synthesizes unanchored polyubiquitin chains</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>enabling an MF enables its parts</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 PEST domain mutants</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>BRCA1:BARD1 heterodimer autoubiquitinates</rdfs:label>
@@ -76063,19 +76063,37 @@
         <rdfs:label>ITCH polyubiquitinates MLKL at K50</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Auto-ubiquitination of TRAF3</rdfs:label>
+        <rdfs:label>STUB1 ubiquitinates RIPK1 at K571, K604, K627</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Ubiquitin-dependent degradation of the SMAD complex terminates TGF-beta signaling</rdfs:label>
+        <rdfs:label>ITCH ubiquitinates DTX</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 PEST domain mutants</rdfs:label>
+        <rdfs:label>E1 mediated ubiquitin activation</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Activated TRAF6 synthesizes unanchored polyubiquitin chains upon TLR stimulation</rdfs:label>
+        <rdfs:label>involved in BP</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>if effector directly negatively regulates X,  its parent MF directly negatively regulates X</rdfs:label>
+        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH1</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>TRIM33 monoubiquitinates SMAD4</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>TNFAIP3 (A20) ubiquitinates RIPK1 with K48-linked Ub chains</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>K63polyUb-TRAF6 ubiquitinates TAK1</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of CD4 by Vpu:CD4:beta-TrCP:SKP1 complex</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>RCHY1 monoubiquitinates POLH</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>enabling an MF enables its parts</rdfs:label>
     </rdf:Description>
     
 
@@ -78684,9 +78702,6 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/po#Japanese">
         <rdfs:label>Japanese synonym (exact)</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/po#Plural">
-        <rdfs:label>Plural</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/po#Spanish">
         <rdfs:label>Spanish synonym (exact)</rdfs:label>
