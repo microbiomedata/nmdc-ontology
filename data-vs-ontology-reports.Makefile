@@ -6,11 +6,12 @@ ENVO_SEMSQL=downlaods/envo.db
 
 
 data-vs-ontology-all: data-vs-ontology-clean \
+	data-vs-ontology-reports/report-class-ids.tsv \
+	downloads/envo.db \
+	data-vs-ontology-reports/report-id-ranges.tsv \
 	data-vs-ontology-reports/envo-id-ranges-report.tsv \
 	data-vs-ontology-reports/fma-usage-report.tsv \
-	data-vs-ontology-reports/report-class-ids.tsv \
-	data-vs-ontology-reports/report-id-ranges.tsv
-
+	data-vs-ontology-reports/nmdco-envo-classes-with-id-owner.tsv
 
 data-vs-ontology-clean:
 	rm -rf data-vs-ontology-reports/*
@@ -81,3 +82,10 @@ data-vs-ontology-reports/biosample-triad-counts.tsv:
 
 data-vs-ontology-reports/fma-usage-report.tsv: data-vs-ontology-reports/biosample-triad-counts.tsv
 	grep 'FMA:' $< > $@
+
+data-vs-ontology-reports/nmdco-envo-classes-with-id-owner.tsv: data-vs-ontology-reports/envo-id-ranges-report.tsv nmdco-classes.json
+	$(RUN) report-nmdco-envo-classes-by-id-owners \
+		--id-range-tsv-input $(word 1,$^) \
+		--nmdco-classes-json-input $(word 2,$^) \
+		--output $@
+

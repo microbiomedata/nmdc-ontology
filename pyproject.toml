@@ -23,3 +23,4 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.scripts]
 report-instantiated-traids = "nmdc_ontology.report_instantiated_traids:main"
 report-id-ranges = "nmdc_ontology.report_id_ranges:generate_id_ranges"
+report-nmdco-envo-classes-by-id-owners = "nmdc_ontology.find_nmdc_envo_terms:filter_class_nodes"
