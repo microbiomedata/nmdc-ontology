@@ -4,9 +4,9 @@
     "meta" : {
       "basicPropertyValues" : [ {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2024-02-15"
+        "val" : "2024-02-16"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/nmdco/releases/2024-02-15/nmdco-classes.json"
+      "version" : "http://purl.obolibrary.org/obo/nmdco/releases/2024-02-16/nmdco-classes.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000001",
@@ -26984,6 +26984,10 @@
       "lbl" : "periblem",
       "type" : "CLASS"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PO_0008037",
+      "lbl" : "seedling",
+      "type" : "CLASS"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PO_0008039",
       "lbl" : "stem base",
       "type" : "CLASS"
@@ -30210,6 +30214,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PO_0025625",
       "lbl" : "cortex-endodermis initial cell",
+      "type" : "CLASS"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PO_0025626",
+      "lbl" : "plant gall",
       "type" : "CLASS"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PO_0028002",
@@ -35306,9 +35314,6 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/po#Japanese",
       "lbl" : "Japanese synonym (exact)"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/po#Plural",
-      "lbl" : "Plural"
     }, {
       "id" : "http://purl.obolibrary.org/obo/po#Spanish",
       "lbl" : "Spanish synonym (exact)"
@@ -67541,6 +67546,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PO_0009013"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PO_0008037",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PO_0000003"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PO_0008039",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PO_0025001"
@@ -71432,6 +71441,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PO_0025625",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PO_0004011"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PO_0025626",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PO_0009007"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PO_0028002",
       "pred" : "is_a",
