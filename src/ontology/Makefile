@@ -136,20 +136,24 @@ $(ONT)-relation-graph.owl: $(ONT).owl $(ONT)-merged-labels.ttl
 # build relation-graph from nmdc-merged.ttl file
 # for relation-graph see https://github.com/balhoff/relation-graph	
 # note, you may need to increase Java memory: export JAVA_OPTS=-Xmx16G
+
+#	    --non-redundant-output-file $(ONT)-nonredundant.ttl \
+#	    --redundant-output-file $(ONT)-redundant.ttl
+
 	@echo "\n** building $@ **"
 	relation-graph --ontology-file $< \
 	    --reflexive-subclasses false \
 	    --equivalence-as-subclass false \
-	    --non-redundant-output-file $(ONT)-nonredundant.ttl \
-	    --redundant-output-file $(ONT)-redundant.ttl \
-	    --mode rdf
+	    --mode rdf \
+	    --output-file $(ONT)-relation-graph-raw.ttl
 # merge in nmdco-merged for annotations
 	$(ROBOT) merge \
 	    --input $(word 2, $^) \
-	    --input $(ONT)-nonredundant.ttl \
+	    --input $(ONT)-relation-graph-raw.ttl \
 	    annotate --ontology-iri $(ONTBASE)/$@ \
 	    $(ANNOTATE_ONTOLOGY_VERSION) \
 	    --output $@
+	 rm -f $(ONT)-relation-graph-raw.ttl
 
 $(ONT).json: $(ONT)-relation-graph.owl
 # convert ontology to json
