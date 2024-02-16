@@ -81,8 +81,8 @@ data-vs-ontology-reports/biosample-triad-counts.tsv:
 		--output $(subst counts.tsv,report.tsv,$@)  \
 		--counts-output $@
 
-data-vs-ontology-reports/fma-usage-report.tsv: data-vs-ontology-reports/biosample-triad-counts.tsv
-	grep 'FMA:' $< > $@
+#data-vs-ontology-reports/fma-usage-report.tsv: data-vs-ontology-reports/biosample-triad-counts.tsv
+#	grep 'FMA:' $< > $@
 
 data-vs-ontology-reports/nmdco-envo-classes-with-id-owner.tsv: data-vs-ontology-reports/envo-id-ranges-report.tsv nmdco-classes.json
 	$(RUN) report-nmdco-envo-classes-by-id-owners \
