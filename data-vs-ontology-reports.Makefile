@@ -11,7 +11,8 @@ data-vs-ontology-all: data-vs-ontology-clean \
 	data-vs-ontology-reports/report-id-ranges.tsv \
 	data-vs-ontology-reports/envo-id-ranges-report.tsv \
 	data-vs-ontology-reports/fma-usage-report.tsv \
-	data-vs-ontology-reports/nmdco-envo-classes-with-id-owner.tsv
+	data-vs-ontology-reports/nmdco-envo-classes-with-id-owner.tsv \
+	data-vs-ontology-reports/problematic_triads.tsv
 
 data-vs-ontology-clean:
 	rm -rf data-vs-ontology-reports/*
