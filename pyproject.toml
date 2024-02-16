@@ -14,6 +14,7 @@ pyarrow = "^15.0.0"
 click = "^8.1.7"
 rdflib = "^7.0.0"
 semsql = "^0.3.3"
+oaklib = "^0.5.25"
 
 
 [build-system]
@@ -24,3 +25,5 @@ build-backend = "poetry.core.masonry.api"
 report-instantiated-traids = "nmdc_ontology.report_instantiated_traids:main"
 report-id-ranges = "nmdc_ontology.report_id_ranges:generate_id_ranges"
 report-nmdco-envo-classes-by-id-owners = "nmdc_ontology.find_nmdc_envo_terms:filter_class_nodes"
+find-biosamples-with-problematic-triads = "nmdc_ontology.find_biosamples_with_problematic_triads:validate_biosamples"
+

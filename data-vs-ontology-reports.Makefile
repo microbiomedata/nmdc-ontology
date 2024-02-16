@@ -89,3 +89,27 @@ data-vs-ontology-reports/nmdco-envo-classes-with-id-owner.tsv: data-vs-ontology-
 		--nmdco-classes-json-input $(word 2,$^) \
 		--output $@
 
+data-vs-ontology-reports/envo-biomes.txt: downloads/envo.db
+	$(RUN) runoak \
+		--input $< descendants -p i biome | sort -t '!' -k2,2 > $@
+
+data-vs-ontology-reports/envo-environmental-materials.txt: downloads/envo.db
+	$(RUN) runoak \
+		--input $< descendants -p i 'environmental material' | sort -t '!' -k2,2 > $@
+
+
+data-vs-ontology-reports/envo-all-classes.txt: downloads/envo.db
+	$(RUN) runoak \
+		--input $< descendants -p i entity | sort -t '!' -k2,2 > $@
+
+data-vs-ontology-reports/problematic_triads.tsv: data-vs-ontology-reports/envo-all-classes.txt \
+data-vs-ontology-reports/envo-biomes.txt \
+data-vs-ontology-reports/biosample-triad-report.tsv \
+data-vs-ontology-reports/envo-environmental-materials.txt
+	$(RUN) find-biosamples-with-problematic-triads \
+		--all-envo-classes-file $(word 1, $^) \
+		--biomes-file  $(word 2, $^) \
+		--biosamples-file  $(word 3, $^) \
+		--materials-file  $(word 4, $^) \
+		--output $@ \
+		--output-summary data-vs-ontology-reports/problematic_triad_summary.yaml
