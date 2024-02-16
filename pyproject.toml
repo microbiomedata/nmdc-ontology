@@ -8,14 +8,8 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-pandas = "^2.2.0"
-requests = "^2.31.0"
-pyarrow = "^15.0.0"
-click = "^8.1.7"
-rdflib = "^7.0.0"
-semsql = "^0.3.3"
 oaklib = "^0.5.25"
-
+pyarrow = "^15.0.0"
 
 [build-system]
 requires = ["poetry-core"]

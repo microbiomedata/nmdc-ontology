@@ -783,12 +783,12 @@ i18n = ["Babel (>=2.7)"]
 
 [[package]]
 name = "jsbeautifier"
-version = "1.15.0"
+version = "1.15.1"
 description = "JavaScript unobfuscator and beautifier."
 optional = false
 python-versions = "*"
 files = [
-    {file = "jsbeautifier-1.15.0.tar.gz", hash = "sha256:b44acb3e890799985999fa38247b6ed5766d8a7de912b6f1ff8d41ca3cd1b53f"},
+    {file = "jsbeautifier-1.15.1.tar.gz", hash = "sha256:ebd733b560704c602d744eafc839db60a1ee9326e30a2a80c4adb8718adc1b24"},
 ]
 
 [package.dependencies]
@@ -3024,4 +3024,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "c936869117b60811496447d8b88cbae4dab3f066db9697efcb4f3906b524b6bb"
+content-hash = "d5b07e3d2be4cfc92e022645e253397c355f130adf0ab0924e9c5728c99f7126"
