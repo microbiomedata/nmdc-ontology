@@ -15,7 +15,7 @@ robot diff --left nmdco-classes.owl --right nmdco-classes-no-rg.owl | grep -v An
 - SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_50906> <http://purl.obolibrary.org/obo/BFO_0000017>) # role sco realizable entity
 - SubClassOf(<http://purl.obolibrary.org/obo/COB_0000121> owl:Thing)
 
-
+58 lost <ENVO> sco <ANYTHING>
 - SubClassOf(<http://purl.obolibrary.org/obo/ENVO_00000078> <http://purl.obolibrary.org/obo/ENVO_01000813>) # farm sco ABP
 - SubClassOf(<http://purl.obolibrary.org/obo/ENVO_00000133> <http://purl.obolibrary.org/obo/ENVO_01001687>) # glacier sco mass of solid material
 - SubClassOf(<http://purl.obolibrary.org/obo/ENVO_00000380> <http://purl.obolibrary.org/obo/UBERON_0000061>) # ice shelf sco anatomical structure
