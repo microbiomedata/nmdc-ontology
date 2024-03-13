@@ -78,7 +78,7 @@ def validate_biosamples(biomes_file, materials_file, all_envo_classes_file, bios
 
     # Write summary to YAML file
     summary = {
-        "problematic_env_local_scale_term_ids": [{"term": term_id, "label": get_label(term_id, valid_biomes)} for
+        "problematic_env_broad_scale_term_ids": [{"term": term_id, "label": get_label(term_id, valid_biomes)} for
                                                  term_id in problematic_env_broad_scale],
         "problematic_env_medium_rm_ids": [{"term": term_id, "label": get_label(term_id, valid_env_materials)} for
                                           term_id in problematic_env_medium]

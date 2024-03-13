@@ -54,7 +54,8 @@ SUBSETS := \
 	subsets/soil-environmental-materials.tsv \
 	subsets/manufactured-products.tsv
 
-RELEASE_ARTEFACTS = $(ONT)-relation-graph.owl $(ONT).json $(ONT)-classes.json $(ONT).owl
+#RELEASE_ARTEFACTS = $(ONT)-relation-graph.owl $(ONT).json $(ONT)-classes.json $(ONT).owl
+RELEASE_ARTEFACTS = $(ONT).json $(ONT)-classes.json $(ONT).owl
 
 # ----------------------------------------
 # Top-level targets
@@ -126,40 +127,19 @@ refresh-%:
 # Main release artefacts
 # -------------------------------------------
 
-##$(ONT).owl: $(ONT)-full.owl # reasoning is currently broken will need to fix!!!
 $(ONT).owl: $(ONT)-merged.owl
 	@echo "\n** building $@ **"
 	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		convert -o $@.tmp.owl && mv $@.tmp.owl $@
 
-$(ONT)-relation-graph.owl: $(ONT).owl $(ONT)-merged-labels.ttl
-# build relation-graph from nmdc-merged.ttl file
-# for relation-graph see https://github.com/balhoff/relation-graph	
-# note, you may need to increase Java memory: export JAVA_OPTS=-Xmx16G
-	@echo "\n** building $@ **"
-	relation-graph --ontology-file $< \
-	    --reflexive-subclasses false \
-	    --equivalence-as-subclass false \
-	    --non-redundant-output-file $(ONT)-nonredundant.ttl \
-	    --redundant-output-file $(ONT)-redundant.ttl \
-	    --mode rdf
-# merge in nmdco-merged for annotations
-	$(ROBOT) merge \
-	    --input $(word 2, $^) \
-	    --input $(ONT)-nonredundant.ttl \
-	    annotate --ontology-iri $(ONTBASE)/$@ \
-	    $(ANNOTATE_ONTOLOGY_VERSION) \
-	    --output $@
-
-$(ONT).json: $(ONT)-relation-graph.owl
+$(ONT).json: $(ONT).owl
 # convert ontology to json
 	@echo "\n** building $@ **"
 	$(ROBOT) annotate --ontology-iri $(ONTBASE)/$@ --input $< \
 	    $(ANNOTATE_ONTOLOGY_VERSION) \
 	    convert --output $@
 
-$(ONT)-classes.owl: $(ONT)-relation-graph.owl $(ONT)-merged-labels.ttl
-# select classes and merge with the labels
+$(ONT)-classes.owl: $(ONT).owl $(ONT)-merged-labels.ttl $(ONT)-merged-labels.ttl
 	@echo "\n** building $@ **"
 	$(ROBOT) filter --input $< \
 	    --select classes \
@@ -234,7 +214,7 @@ $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
 
 all_subsets: $(SUBSETS)
 
-test-query: $(ONT)-relation-graph.owl .FORCE
+test-query: $(ONT).owl .FORCE
 # a simple query to very that I can run a query
 	$(ROBOT) query \
 	  --input $< \
@@ -243,37 +223,37 @@ test-query: $(ONT)-relation-graph.owl .FORCE
 test-subsets: $(SUBSETS) .FORCE
 # test creating all subsets
 
-subsets/astronomical-body-parts.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/astronomical-body-parts.sparql
+subsets/astronomical-body-parts.tsv: $(ONT).owl $(SPARQLDIR)/astronomical-body-parts.sparql
 	@echo "\n** building $@ **"
 	$(ROBOT) query \
 	  --input $< \
 	  --query $(word 2, $^) $@
 
-subsets/astronomical-body-parts-and-manufactured-products.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/astronomical-body-parts-and-manufactured-products.sparql
+subsets/astronomical-body-parts-and-manufactured-products.tsv: $(ONT).owl $(SPARQLDIR)/astronomical-body-parts-and-manufactured-products.sparql
 	@echo "\n** building $@ **"
 	$(ROBOT) query \
 	  --input $< \
 	  --query $(word 2, $^) $@
 
-subsets/non-terrestrial-biomes.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/non-terrestrial-biomes.sparql
+subsets/non-terrestrial-biomes.tsv: $(ONT).owl $(SPARQLDIR)/non-terrestrial-biomes.sparql
 	@echo "\n** building $@ **"
 	$(ROBOT) query \
 	  --input $< \
 	  --query $(word 2, $^) $@
 
-subsets/terrestrial-biomes.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/terrestrial-biomes.sparql
+subsets/terrestrial-biomes.tsv: $(ONT).owl $(SPARQLDIR)/terrestrial-biomes.sparql
 	@echo "\n** building $@ **"
 	$(ROBOT) query \
 	  --input $< \
 	  --query $(word 2, $^) $@
 
-subsets/soil-environmental-materials.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/soil-environmental-materials.sparql
+subsets/soil-environmental-materials.tsv: $(ONT).owl $(SPARQLDIR)/soil-environmental-materials.sparql
 	@echo "\n** building $@ **"
 	$(ROBOT) query \
 	  --input $< \
 	  --query $(word 2, $^) $@
 
-subsets/manufactured-products.tsv: $(ONT)-relation-graph.owl $(SPARQLDIR)/manufactured-products.sparql
+subsets/manufactured-products.tsv: $(ONT).owl $(SPARQLDIR)/manufactured-products.sparql
 	@echo "\n** building $@ **"
 	$(ROBOT) query \
 	  --input $< \

@@ -7,8 +7,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/nmdco/nmdco-classes.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/nmdco/releases/2024-02-16/nmdco-classes.owl"/>
-        <owl:versionInfo>2024-02-16</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/nmdco/releases/2024-03-13/nmdco-classes.owl"/>
+        <owl:versionInfo>2024-03-13</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -27,7 +27,6 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000001">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label xml:lang="en">entity</rdfs:label>
     </owl:Class>
     
@@ -37,6 +36,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
         <rdfs:label xml:lang="en">continuant</rdfs:label>
     </owl:Class>
     
@@ -55,6 +55,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
         <rdfs:label xml:lang="en">independent continuant</rdfs:label>
     </owl:Class>
     
@@ -64,6 +66,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000029"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
         <rdfs:label xml:lang="en">spatial region</rdfs:label>
     </owl:Class>
     
@@ -73,6 +77,9 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
         <rdfs:label xml:lang="en">temporal region</rdfs:label>
     </owl:Class>
     
@@ -100,6 +107,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <rdfs:label xml:lang="en">disposition</rdfs:label>
     </owl:Class>
     
@@ -109,6 +117,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000017">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <rdfs:label xml:lang="en">realizable</rdfs:label>
         <rdfs:label xml:lang="en">realizable entity</rdfs:label>
     </owl:Class>
@@ -128,6 +137,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000020">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
         <rdfs:label xml:lang="en">characteristic</rdfs:label>
         <rdfs:label xml:lang="en">specifically dependent continuant</rdfs:label>
     </owl:Class>
@@ -139,7 +149,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023">
         <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50906"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50906"/>
         <rdfs:label xml:lang="en">role</rdfs:label>
     </owl:Class>
     
@@ -222,6 +232,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
         <rdfs:label xml:lang="en">material entity</rdfs:label>
         <rdfs:label>material entity</rdfs:label>
     </owl:Class>
@@ -250,6 +261,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000142">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000146"/>
         <rdfs:label xml:lang="en">one-dimensional continuant fiat boundary</rdfs:label>
     </owl:Class>
     
@@ -266,33 +278,25 @@
 
     <!-- http://purl.obolibrary.org/obo/CARO_0000000 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0000000">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0000000"/>
     
 
 
     <!-- http://purl.obolibrary.org/obo/CARO_0000003 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0000003">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0000003"/>
     
 
 
     <!-- http://purl.obolibrary.org/obo/CARO_0001010 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0001010">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0001010"/>
     
 
 
     <!-- http://purl.obolibrary.org/obo/CARO_0010000 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0010000">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0010000"/>
     
 
 
@@ -1732,6 +1736,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_24432">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50906"/>
         <rdfs:label>biological role</rdfs:label>
     </owl:Class>
     
@@ -3667,6 +3672,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33232">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50906"/>
         <rdfs:label>application</rdfs:label>
     </owl:Class>
     
@@ -7719,7 +7725,7 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_50906 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50906">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <rdfs:label>role</rdfs:label>
     </owl:Class>
@@ -7768,6 +7774,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_51086">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50906"/>
         <rdfs:label>chemical role</rdfs:label>
     </owl:Class>
     
@@ -9132,7 +9139,6 @@
     <!-- http://purl.obolibrary.org/obo/COB_0000121 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/COB_0000121">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label>measurement datum</rdfs:label>
     </owl:Class>
     
@@ -9408,6 +9414,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000030">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000067"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000323"/>
         <rdfs:label>dead cave</rdfs:label>
     </owl:Class>
     
@@ -9580,6 +9587,11 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000051">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000027"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00002119"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00002120"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00002181"/>
+        </owl:disjointUnionOf>
         <rdfs:label>hot spring</rdfs:label>
     </owl:Class>
     
@@ -9827,7 +9839,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000078">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:label>farm</rdfs:label>
     </owl:Class>
     
@@ -9981,6 +9992,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000096">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000514"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000246"/>
         <rdfs:label>caldera</rdfs:label>
     </owl:Class>
     
@@ -10163,6 +10175,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000117">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:label>plantation</rdfs:label>
     </owl:Class>
     
@@ -10298,7 +10311,6 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_00000133 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000133">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001687"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001691"/>
         <rdfs:label>glacier</rdfs:label>
     </owl:Class>
@@ -10888,6 +10900,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000199">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000020"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000285"/>
         <rdfs:label>meromictic lake</rdfs:label>
     </owl:Class>
     
@@ -10951,6 +10964,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000206">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000295"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000207"/>
         <rdfs:label>marine neritic zone</rdfs:label>
     </owl:Class>
     
@@ -11979,6 +11993,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000320">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000667"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000294"/>
         <rdfs:label>crevasse</rdfs:label>
     </owl:Class>
     
@@ -12153,6 +12168,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000340">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01003002"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000017"/>
         <rdfs:label xml:lang="en">particle of sand</rdfs:label>
     </owl:Class>
     
@@ -12511,7 +12527,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000380">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000003"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001547"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
         <rdfs:label>ice shelf</rdfs:label>
     </owl:Class>
     
@@ -12924,6 +12939,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000428">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001110"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000276"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000280"/>
         <rdfs:label>biome</rdfs:label>
     </owl:Class>
     
@@ -14057,6 +14074,11 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000552">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001781"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001884"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000134"/>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:label>talik</rdfs:label>
     </owl:Class>
     
@@ -14283,6 +14305,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00001995">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000814"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000256"/>
         <rdfs:label>rock</rdfs:label>
     </owl:Class>
     
@@ -14902,8 +14925,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002132">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002269"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001479"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001784"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:label>metalimnion</rdfs:label>
     </owl:Class>
     
@@ -15061,7 +15083,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002149">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002010"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001479"/>
         <rdfs:label>sea water</rdfs:label>
     </owl:Class>
     
@@ -15134,7 +15155,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002158">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002011"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001479"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:label>ditch water</rdfs:label>
     </owl:Class>
     
@@ -15598,7 +15619,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002228">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002011"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001479"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:label>pond water</rdfs:label>
     </owl:Class>
     
@@ -16124,6 +16145,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002982">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000060"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000016"/>
         <rdfs:label>clay</rdfs:label>
     </owl:Class>
     
@@ -17633,6 +17655,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000016">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000060"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000017"/>
         <rdfs:label>silt</rdfs:label>
     </owl:Class>
     
@@ -17761,6 +17784,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000032">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000023"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000033"/>
         <rdfs:label>neritic pelagic zone biome</rdfs:label>
     </owl:Class>
     
@@ -18086,7 +18110,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01000071 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000071">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001676"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000258"/>
         <rdfs:label>oceanic front</rdfs:label>
     </owl:Class>
     
@@ -18105,7 +18129,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000073">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000686"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001308"/>
         <rdfs:label>marine oligotrophic desert</rdfs:label>
     </owl:Class>
     
@@ -18424,7 +18447,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000108">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000686"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001308"/>
         <rdfs:label>marine cold-water sphere</rdfs:label>
     </owl:Class>
     
@@ -19847,9 +19869,8 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01000260 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000260">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001479"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001675"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001784"/>
         <rdfs:label>nutricline within a water body</rdfs:label>
     </owl:Class>
     
@@ -19940,6 +19961,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000272">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000271"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000273"/>
         <rdfs:label>mudstone</rdfs:label>
     </owl:Class>
     
@@ -20052,6 +20074,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000284">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000020"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000285"/>
         <rdfs:label>amictic lake</rdfs:label>
     </owl:Class>
     
@@ -20070,6 +20093,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000286">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000285"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000287"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000288"/>
         <rdfs:label>dimictic lake</rdfs:label>
     </owl:Class>
     
@@ -20079,6 +20104,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000287">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000285"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000288"/>
         <rdfs:label>polymictic lake</rdfs:label>
     </owl:Class>
     
@@ -20210,7 +20236,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000301">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002019"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001479"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:label>estuarine water</rdfs:label>
     </owl:Class>
     
@@ -20394,7 +20420,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000321">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000307"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:label>sea water environment</rdfs:label>
     </owl:Class>
     
@@ -20412,7 +20437,6 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01000323 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000323">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000543"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000544"/>
         <rdfs:label>atmospheric boundary layer</rdfs:label>
     </owl:Class>
@@ -20522,7 +20546,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000335">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000355"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:label>understory</rdfs:label>
     </owl:Class>
     
@@ -20532,7 +20555,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000336">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000355"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:label>shrub layer</rdfs:label>
     </owl:Class>
     
@@ -20542,7 +20564,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000337">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000355"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:label>herb and fern layer</rdfs:label>
     </owl:Class>
     
@@ -20553,8 +20574,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000338">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000355"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>litter layer</rdfs:label>
     </owl:Class>
     
@@ -23185,7 +23204,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000628">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label xml:lang="en">plant litter</rdfs:label>
     </owl:Class>
     
@@ -23530,6 +23548,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000665">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50906"/>
         <rdfs:label xml:lang="en">waste role</rdfs:label>
     </owl:Class>
     
@@ -24199,6 +24218,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01000739 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000739">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000254"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001110"/>
         <rdfs:label xml:lang="en">habitat</rdfs:label>
@@ -24348,7 +24368,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000760">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001008"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001686"/>
         <rdfs:label xml:lang="en">cloud</rdfs:label>
     </owl:Class>
     
@@ -24385,6 +24404,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000764">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001829"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000765"/>
         <rdfs:label xml:lang="en">formal settlement</rdfs:label>
     </owl:Class>
     
@@ -24403,6 +24423,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000766">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001829"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000767"/>
         <rdfs:label xml:lang="en">legal settlement</rdfs:label>
     </owl:Class>
     
@@ -25559,7 +25580,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000893">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000043"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001293"/>
         <rdfs:label xml:lang="en">area of woody wetland</rdfs:label>
     </owl:Class>
     
@@ -25797,7 +25817,6 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01000919 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000919">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001622"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000017"/>
         <rdfs:label xml:lang="en">glacial ice ablation process</rdfs:label>
     </owl:Class>
@@ -26153,7 +26172,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000958">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000800"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001686"/>
         <rdfs:label xml:lang="en">terrestrial planet</rdfs:label>
     </owl:Class>
     
@@ -26625,7 +26643,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001010">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001008"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001686"/>
         <rdfs:label xml:lang="en">hydrometeor</rdfs:label>
     </owl:Class>
     
@@ -26735,6 +26752,11 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001022">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000020"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000377"/>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">natural lake</rdfs:label>
     </owl:Class>
     
@@ -27162,7 +27184,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001068">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000799"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001686"/>
         <rdfs:label xml:lang="en">meteoroid</rdfs:label>
     </owl:Class>
     
@@ -28000,6 +28021,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001160">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000293"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001010"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001428"/>
         <rdfs:label xml:lang="en">cirrus cloud</rdfs:label>
     </owl:Class>
@@ -28424,6 +28446,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001207">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:label xml:lang="en">ranch</rdfs:label>
     </owl:Class>
     
@@ -28893,7 +28916,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001257">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002010"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001479"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:label xml:lang="en">saline shrimp pond water</rdfs:label>
     </owl:Class>
     
@@ -29233,7 +29256,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001294">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000877"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01003010"/>
         <rdfs:label xml:lang="en">convective storm</rdfs:label>
     </owl:Class>
     
@@ -29318,6 +29340,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001303">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50906"/>
         <rdfs:label>environmental role</rdfs:label>
     </owl:Class>
     
@@ -29373,6 +29396,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001310">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001273"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001673"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001677"/>
         <rdfs:label xml:lang="en">liquid surface layer</rdfs:label>
     </owl:Class>
     
@@ -29608,7 +29632,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001335">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000003"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000293"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
         <rdfs:label xml:lang="en">anchor ice</rdfs:label>
     </owl:Class>
     
@@ -30135,7 +30158,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01001394 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001394">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001856"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000009"/>
         <rdfs:label xml:lang="en">accumulation of matter on aerosolised particles</rdfs:label>
     </owl:Class>
     
@@ -30256,6 +30279,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001407">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000293"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001010"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001428"/>
         <rdfs:label xml:lang="en">cirrocumulus cloud</rdfs:label>
     </owl:Class>
@@ -30266,6 +30290,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001408">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000293"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001010"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001428"/>
         <rdfs:label xml:lang="en">cirrostratus cloud</rdfs:label>
     </owl:Class>
@@ -30275,6 +30300,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01001409 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001409">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001010"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001428"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001690"/>
         <rdfs:label xml:lang="en">altocumulus cloud</rdfs:label>
@@ -30303,6 +30329,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01001412 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001412">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001010"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001428"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001690"/>
         <rdfs:label xml:lang="en">stratocumulus cloud</rdfs:label>
@@ -30313,6 +30340,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01001413 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001413">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001010"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001428"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001690"/>
         <rdfs:label xml:lang="en">stratus cloud</rdfs:label>
@@ -30323,6 +30351,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01001414 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001414">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001010"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001428"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001690"/>
         <rdfs:label xml:lang="en">cumulus cloud</rdfs:label>
@@ -30451,7 +30480,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001428">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000760"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001010"/>
         <rdfs:label xml:lang="en">water-based cloud</rdfs:label>
     </owl:Class>
     
@@ -30496,7 +30524,6 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01001433 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001433">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001431"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001437"/>
         <rdfs:label xml:lang="en">terrestrial mining</rdfs:label>
     </owl:Class>
@@ -30955,7 +30982,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001483">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010504"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001784"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:label xml:lang="en">surface of an astronomical body</rdfs:label>
     </owl:Class>
     
@@ -31036,7 +31063,6 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01001492 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001492">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <rdfs:label xml:lang="en">satellite imaging</rdfs:label>
     </owl:Class>
@@ -31047,6 +31073,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001493">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001492"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
         <rdfs:label xml:lang="en">satellite imaging of a planet</rdfs:label>
     </owl:Class>
     
@@ -31065,7 +31092,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001495">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15379"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:label xml:lang="en">dioxygen dissolved in marine water</rdfs:label>
     </owl:Class>
     
@@ -31188,7 +31214,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001508">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000003"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001506"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
         <rdfs:label xml:lang="en">anchored ice calf</rdfs:label>
     </owl:Class>
     
@@ -31321,7 +31346,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001522">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000003"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001536"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
         <rdfs:label xml:lang="en">fast ice</rdfs:label>
     </owl:Class>
     
@@ -31764,7 +31788,6 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01001581 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001581">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000295"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001554"/>
         <rdfs:label xml:lang="en">sea surface layer</rdfs:label>
     </owl:Class>
@@ -31903,7 +31926,6 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01001619 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001619">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001617"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500031"/>
         <rdfs:label xml:lang="en">snow and ice accumulation process</rdfs:label>
     </owl:Class>
@@ -31914,7 +31936,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001620">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000293"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000111"/>
         <rdfs:label xml:lang="en">mass of ice and snow</rdfs:label>
     </owl:Class>
     
@@ -32006,7 +32027,6 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01001633 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001633">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001246"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500036"/>
         <rdfs:label xml:lang="en">agricultural pollution</rdfs:label>
     </owl:Class>
@@ -32073,6 +32093,24 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001639"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500031"/>
         <rdfs:label xml:lang="en">glaciation of water droplets in a cloud</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001641 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001641">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <rdfs:label xml:lang="en">glaciation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001642 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001642">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <rdfs:label xml:lang="en">interglacial</rdfs:label>
     </owl:Class>
     
 
@@ -32354,7 +32392,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001673">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010504"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001677"/>
         <rdfs:label xml:lang="en">fluid surface layer</rdfs:label>
     </owl:Class>
     
@@ -32382,8 +32419,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001676">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000258"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001479"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001784"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:label xml:lang="en">marine cline</rdfs:label>
     </owl:Class>
     
@@ -32392,7 +32428,6 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01001677 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001677">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001678"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001684"/>
         <rdfs:label xml:lang="en">fluid interface layer</rdfs:label>
     </owl:Class>
@@ -32420,6 +32455,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01001680 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001680">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001678"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001679"/>
         <rdfs:label xml:lang="en">gaseous front</rdfs:label>
     </owl:Class>
@@ -32449,6 +32485,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001683">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001673"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001677"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001678"/>
         <rdfs:label xml:lang="en">gaseous surface layer</rdfs:label>
     </owl:Class>
     
@@ -34663,7 +34701,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02000020">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000019"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>blood material</rdfs:label>
     </owl:Class>
     
@@ -34747,7 +34784,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02000029">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000019"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>cerebrospinal fluid material</rdfs:label>
     </owl:Class>
     
@@ -34758,7 +34794,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02000030">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000019"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>chyle material</rdfs:label>
     </owl:Class>
     
@@ -34787,7 +34822,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02000033">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000019"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>pleural effusion material</rdfs:label>
     </owl:Class>
     
@@ -34843,7 +34877,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02000039">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000019"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>synovial fluid material</rdfs:label>
     </owl:Class>
     
@@ -34863,7 +34896,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02000041">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000019"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>lymph material</rdfs:label>
     </owl:Class>
     
@@ -35435,6 +35467,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02000136">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000133"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000137"/>
         <rdfs:label xml:lang="en">research nuclear reactor</rdfs:label>
     </owl:Class>
     
@@ -35885,7 +35918,6 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_02500041 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02500041">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500027"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <rdfs:label>environmental monitoring</rdfs:label>
     </owl:Class>
@@ -37175,7 +37207,6 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_03400011 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_03400011">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
         <rdfs:label xml:lang="en">hail</rdfs:label>
     </owl:Class>
     
@@ -37229,7 +37260,6 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_03400017 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_03400017">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001595"/>
         <rdfs:label xml:lang="en">depth of water ice</rdfs:label>
     </owl:Class>
     
@@ -41119,7 +41149,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_03605006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002006"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001479"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:label xml:lang="en">stream water</rdfs:label>
     </owl:Class>
     
@@ -41221,7 +41251,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_04000007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002006"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001479"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:label xml:lang="en">lake water</rdfs:label>
     </owl:Class>
     
@@ -41632,6 +41662,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_06105109">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50906"/>
         <rdfs:label xml:lang="en">litter role</rdfs:label>
     </owl:Class>
     
@@ -48420,6 +48451,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0003674">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <rdfs:label xml:lang="en">gene product or complex activity</rdfs:label>
         <rdfs:label>molecular_function</rdfs:label>
     </owl:Class>
@@ -48916,7 +48948,6 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000078 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000078">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label xml:lang="en">curation status specification</rdfs:label>
     </owl:Class>
     
@@ -50826,7 +50857,6 @@
     <!-- http://purl.obolibrary.org/obo/NMDCO_00000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NMDCO_00000000">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label xml:lang="en">root node</rdfs:label>
     </owl:Class>
     
@@ -51338,6 +51368,7 @@
     <!-- http://purl.obolibrary.org/obo/PATO_0000402 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000402">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002009"/>
         <rdfs:label>branched</rdfs:label>
     </owl:Class>
@@ -51529,6 +51560,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000608">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000136"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PATO_0000610"/>
         <rdfs:label>closed</rdfs:label>
     </owl:Class>
     
@@ -51774,6 +51806,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000982">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000970"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PATO_0000983"/>
         <rdfs:label>permeable</rdfs:label>
     </owl:Class>
     
@@ -51792,6 +51825,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000984">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000973"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PATO_0000985"/>
         <rdfs:label>porous</rdfs:label>
     </owl:Class>
     
@@ -51956,6 +51990,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001171">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001031"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PATO_0001172"/>
         <rdfs:label>elastic</rdfs:label>
     </owl:Class>
     
@@ -52000,6 +52035,7 @@
     <!-- http://purl.obolibrary.org/obo/PATO_0001199 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001199">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000052"/>
         <rdfs:label>linear</rdfs:label>
     </owl:Class>
@@ -52055,6 +52091,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001236">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
         <rdfs:label>process quality</rdfs:label>
     </owl:Class>
     
@@ -52374,6 +52411,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001455">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001454"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PATO_0001456"/>
         <rdfs:label>aerobic</rdfs:label>
     </owl:Class>
     
@@ -52569,6 +52607,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001566">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000060"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PATO_0001629"/>
         <rdfs:label>distributed</rdfs:label>
     </owl:Class>
     
@@ -53184,6 +53223,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001823">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001822"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PATO_0001824"/>
         <rdfs:label>wet</rdfs:label>
     </owl:Class>
     
@@ -53324,6 +53364,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001884">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001018"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PATO_0001886"/>
         <rdfs:label>hydrophobicity</rdfs:label>
     </owl:Class>
     
@@ -53717,6 +53758,7 @@
     <!-- http://purl.obolibrary.org/obo/PATO_0002124 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002124">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000141"/>
         <rdfs:label>laminar</rdfs:label>
     </owl:Class>
@@ -53736,6 +53778,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002139">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002138"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PATO_0002140"/>
         <rdfs:label>edible</rdfs:label>
     </owl:Class>
     
@@ -54612,7 +54655,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0001010"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000018"/>
         <rdfs:label xml:lang="en">population of organisms</rdfs:label>
     </owl:Class>
@@ -54770,10 +54812,8 @@
     <!-- http://purl.obolibrary.org/obo/PO_0000011 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000011">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0000010"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025302"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>cultured somatic plant embryo</rdfs:label>
     </owl:Class>
     
@@ -54782,9 +54822,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0000012 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000012">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025001"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>apical hook</rdfs:label>
     </owl:Class>
     
@@ -54920,9 +54958,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0000032 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000032">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009007"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>tetrad of microspores</rdfs:label>
     </owl:Class>
     
@@ -54941,6 +54977,11 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000034">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009015"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0009002"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0009008"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0025001"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0025007"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0025269"/>
         <rdfs:label>vascular system</rdfs:label>
     </owl:Class>
     
@@ -55169,6 +55210,10 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000059">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0004011"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0000295"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0000349"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0030067"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0030086"/>
         <rdfs:label>root initial cell</rdfs:label>
     </owl:Class>
     
@@ -55321,9 +55366,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0000084 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000084">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025006"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>plant sperm cell</rdfs:label>
     </owl:Class>
     
@@ -55341,9 +55384,8 @@
     <!-- http://purl.obolibrary.org/obo/PO_0000115 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000115">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025165"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0000332"/>
         <rdfs:label>socket cell</rdfs:label>
     </owl:Class>
     
@@ -55505,9 +55547,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0000256 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000256">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025164"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>root hair cell</rdfs:label>
     </owl:Class>
     
@@ -55525,9 +55565,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0000262 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000262">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025164"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>trichoblast</rdfs:label>
     </owl:Class>
     
@@ -55536,9 +55574,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0000263 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000263">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025164"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>non-hair root epidermal cell</rdfs:label>
     </owl:Class>
     
@@ -55565,9 +55601,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0000282 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000282">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009011"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>trichome</rdfs:label>
     </owl:Class>
     
@@ -55586,6 +55620,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000284">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025165"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0000332"/>
         <rdfs:label>subsidiary cell</rdfs:label>
     </owl:Class>
     
@@ -55604,6 +55639,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000290">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025606"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0025032"/>
         <rdfs:label>tracheary element</rdfs:label>
     </owl:Class>
     
@@ -55612,9 +55648,8 @@
     <!-- http://purl.obolibrary.org/obo/PO_0000293 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000293">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025165"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0000332"/>
         <rdfs:label>guard cell</rdfs:label>
     </owl:Class>
     
@@ -55624,6 +55659,9 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000295">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0004011"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0000349"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0030067"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0030086"/>
         <rdfs:label>cambial initial cell</rdfs:label>
     </owl:Class>
     
@@ -55650,9 +55688,8 @@
     <!-- http://purl.obolibrary.org/obo/PO_0000332 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000332">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025165"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0008030"/>
         <rdfs:label>shoot epidermal pavement cell</rdfs:label>
     </owl:Class>
     
@@ -55662,6 +55699,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000349">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0004011"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0030067"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0030086"/>
         <rdfs:label>plant epidermal initial cell</rdfs:label>
     </owl:Class>
     
@@ -55670,9 +55709,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0000351 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000351">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025165"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>guard mother cell</rdfs:label>
     </owl:Class>
     
@@ -56356,9 +56393,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0002002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0002002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025028"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>embryo basal cell</rdfs:label>
     </owl:Class>
     
@@ -56484,9 +56519,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0003023 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0003023">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025001"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>root nodule</rdfs:label>
     </owl:Class>
     
@@ -56711,9 +56744,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0004518 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0004518">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009007"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>bark</rdfs:label>
     </owl:Class>
     
@@ -56785,9 +56816,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0004526 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0004526">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0004525"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>axial secondary xylem parenchyma cell</rdfs:label>
     </owl:Class>
     
@@ -56796,9 +56825,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0004527 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0004527">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0004525"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>ray secondary xylem parenchyma cell</rdfs:label>
     </owl:Class>
     
@@ -56870,9 +56897,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0004535 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0004535">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0020001"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>fruit placenta</rdfs:label>
     </owl:Class>
     
@@ -56881,9 +56906,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0004536 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0004536">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0030114"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>infructescence fruit pedicel</rdfs:label>
     </owl:Class>
     
@@ -56937,10 +56960,8 @@
     <!-- http://purl.obolibrary.org/obo/PO_0004543 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0004543">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025029"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025522"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>shoot axis tuber</rdfs:label>
     </owl:Class>
     
@@ -57447,9 +57468,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0005029 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0005029">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025127"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>root primordium</rdfs:label>
     </owl:Class>
     
@@ -57485,9 +57504,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0005039 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0005039">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0006344"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>primary thickening meristem</rdfs:label>
     </owl:Class>
     
@@ -57615,6 +57632,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0005352">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009015"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0030047"/>
         <rdfs:label>xylem</rdfs:label>
     </owl:Class>
     
@@ -57642,6 +57660,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0005417">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009015"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0030048"/>
         <rdfs:label>phloem</rdfs:label>
     </owl:Class>
     
@@ -57785,9 +57804,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0005679 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0005679">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009007"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>epidermis</rdfs:label>
         <rdfs:label>plant epidermis</rdfs:label>
     </owl:Class>
@@ -57834,9 +57851,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0005849 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0005849">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0005352"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>primary xylem</rdfs:label>
     </owl:Class>
     
@@ -57845,9 +57860,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0006000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0006000">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025023"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>caryopsis hull</rdfs:label>
     </owl:Class>
     
@@ -57856,9 +57869,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0006001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0006001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009008"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>phyllome</rdfs:label>
     </owl:Class>
     
@@ -57939,9 +57950,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0006010 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0006010">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025606"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>primary parietal cell</rdfs:label>
     </owl:Class>
     
@@ -58403,9 +58412,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0006075 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0006075">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0005417"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>primary phloem</rdfs:label>
     </owl:Class>
     
@@ -58486,9 +58493,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0006088 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0006088">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025606"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>primary sporogenous cell</rdfs:label>
     </owl:Class>
     
@@ -58569,9 +58574,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0006204 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0006204">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025606"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>sporocyte</rdfs:label>
     </owl:Class>
     
@@ -58742,9 +58745,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0006309 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0006309">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009051"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>tassel spikelet</rdfs:label>
     </owl:Class>
     
@@ -58917,9 +58918,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0006331 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0006331">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025498"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>seed raphe</rdfs:label>
     </owl:Class>
     
@@ -58928,9 +58927,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0006332 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0006332">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025498"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>seed funicle</rdfs:label>
     </owl:Class>
     
@@ -58939,9 +58936,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0006333 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0006333">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009007"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>seed chalaza</rdfs:label>
     </owl:Class>
     
@@ -58950,9 +58945,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0006334 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0006334">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025117"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>seed micropyle</rdfs:label>
     </owl:Class>
     
@@ -58961,9 +58954,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0006336 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0006336">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009007"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>seed obturator</rdfs:label>
     </owl:Class>
     
@@ -59009,7 +59000,6 @@
     <!-- http://purl.obolibrary.org/obo/PO_0006342 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0006342">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025082"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>infructescence</rdfs:label>
@@ -59020,9 +59010,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0006343 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0006343">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0004545"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>axillary shoot system</rdfs:label>
     </owl:Class>
     
@@ -61134,9 +61122,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0008030 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0008030">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025606"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>trichome cell</rdfs:label>
     </owl:Class>
     
@@ -61246,9 +61232,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0009001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025496"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>fruit</rdfs:label>
     </owl:Class>
     
@@ -61258,6 +61242,11 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009011"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0009007"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0009008"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0025001"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0025007"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0025269"/>
         <rdfs:label>plant cell</rdfs:label>
     </owl:Class>
     
@@ -61266,9 +61255,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0009005 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009005">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025004"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>root</rdfs:label>
     </owl:Class>
     
@@ -61278,6 +61265,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025007"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0025025"/>
         <rdfs:label>shoot system</rdfs:label>
     </owl:Class>
     
@@ -61287,6 +61275,10 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009011"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0009008"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0025001"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0025007"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0025269"/>
         <rdfs:label>portion of plant tissue</rdfs:label>
     </owl:Class>
     
@@ -61313,9 +61305,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0009010 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009010">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025496"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>seed</rdfs:label>
     </owl:Class>
     
@@ -61610,9 +61600,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0009046 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009046">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025082"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>flower</rdfs:label>
     </owl:Class>
     
@@ -61630,7 +61618,6 @@
     <!-- http://purl.obolibrary.org/obo/PO_0009049 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009049">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025082"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>inflorescence</rdfs:label>
@@ -61705,6 +61692,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009058">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025023"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0030031"/>
         <rdfs:label>perianth</rdfs:label>
     </owl:Class>
     
@@ -61731,9 +61719,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0009061 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009061">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025023"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>androecium</rdfs:label>
     </owl:Class>
     
@@ -61742,9 +61728,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0009062 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009062">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025023"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>gynoecium</rdfs:label>
     </owl:Class>
     
@@ -61780,9 +61764,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0009066 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009066">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025007"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>anther</rdfs:label>
     </owl:Class>
     
@@ -61954,9 +61936,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0009090 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009090">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0019022"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>aril</rdfs:label>
     </owl:Class>
     
@@ -61974,9 +61954,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0009101 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009101">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0006323"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>long lateral tassel branch</rdfs:label>
     </owl:Class>
     
@@ -61985,9 +61963,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0009102 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009102">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0006323"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>short tassel branch</rdfs:label>
     </owl:Class>
     
@@ -62042,10 +62018,8 @@
     <!-- http://purl.obolibrary.org/obo/PO_0009108 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0009108">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0000230"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0008028"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>inflorescence apical meristem</rdfs:label>
     </owl:Class>
     
@@ -62146,9 +62120,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0020003 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0020003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009008"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>plant ovule</rdfs:label>
     </owl:Class>
     
@@ -62275,9 +62247,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0020029 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0020029">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009007"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>obturator</rdfs:label>
     </owl:Class>
     
@@ -62540,6 +62510,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0020061">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0006048"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>coma</rdfs:label>
     </owl:Class>
     
@@ -62692,9 +62663,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0020108 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0020108">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025099"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>suspensor</rdfs:label>
     </owl:Class>
     
@@ -62802,9 +62771,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0020132 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0020132">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025030"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>columella root cap cell</rdfs:label>
     </owl:Class>
     
@@ -63231,6 +63198,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025033">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025606"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0025406"/>
         <rdfs:label>leptoid</rdfs:label>
     </owl:Class>
     
@@ -63464,9 +63432,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025059 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025059">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009007"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>portion of ground tissue</rdfs:label>
     </owl:Class>
     
@@ -63603,9 +63569,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025074 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025074">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025279"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>embryo sac</rdfs:label>
     </owl:Class>
     
@@ -63995,9 +63959,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025122 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025122">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0020094"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>archegonium egg cell</rdfs:label>
     </owl:Class>
     
@@ -64034,9 +63996,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025126 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025126">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025124"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>archegonium</rdfs:label>
     </owl:Class>
     
@@ -64054,9 +64014,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025128 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025128">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025127"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>phyllome primordium</rdfs:label>
     </owl:Class>
     
@@ -64129,6 +64087,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025136">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009033"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0025137"/>
         <rdfs:label>free tepal</rdfs:label>
     </owl:Class>
     
@@ -64666,9 +64625,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025195 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025195">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025606"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>pollen tube cell</rdfs:label>
     </owl:Class>
     
@@ -64963,9 +64920,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025227 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025227">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009007"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>tetrad of megaspores</rdfs:label>
     </owl:Class>
     
@@ -65074,7 +65029,6 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025240 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025240">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025082"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>second order inflorescence</rdfs:label>
@@ -65085,7 +65039,6 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025241 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025241">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025082"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>second order infructescence</rdfs:label>
@@ -65096,9 +65049,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025242 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025242">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025029"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>infructescence axis</rdfs:label>
     </owl:Class>
     
@@ -65278,9 +65229,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025262 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025262">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0000030"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>plant ovary septum</rdfs:label>
     </owl:Class>
     
@@ -65334,9 +65283,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025268 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025268">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0000030"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>fruit septum</rdfs:label>
     </owl:Class>
     
@@ -65354,9 +65301,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025270 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025270">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025263"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>fruit locule</rdfs:label>
     </owl:Class>
     
@@ -65446,9 +65391,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025281 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025281">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025280"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>pollen</rdfs:label>
     </owl:Class>
     
@@ -65457,7 +65400,6 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025282 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025282">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025279"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>archegonium megagametophyte</rdfs:label>
@@ -65477,10 +65419,8 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025284 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025284">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025028"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0030015"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>embryo apical cell</rdfs:label>
     </owl:Class>
     
@@ -65508,9 +65448,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025287 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025287">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0020033"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>seedling coleoptile</rdfs:label>
     </owl:Class>
     
@@ -65529,9 +65467,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025289 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025289">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0020034"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>seedling coleorhiza</rdfs:label>
     </owl:Class>
     
@@ -65550,9 +65486,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025291 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025291">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0020100"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>seedling hypocotyl</rdfs:label>
     </owl:Class>
     
@@ -65571,9 +65505,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025293 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025293">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0020035"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>seedling epicotyl</rdfs:label>
     </owl:Class>
     
@@ -65592,9 +65524,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025295 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025295">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0020037"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>seedling mesocotyl</rdfs:label>
     </owl:Class>
     
@@ -65623,6 +65553,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025298">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025269"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0030044"/>
         <rdfs:label>fruit operculum</rdfs:label>
     </owl:Class>
     
@@ -65641,9 +65572,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025301 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025301">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0004724"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>seedling hypocotyl-root junction</rdfs:label>
     </owl:Class>
     
@@ -66612,9 +66541,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025408 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025408">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009015"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>primary vascular tissue</rdfs:label>
     </owl:Class>
     
@@ -66623,9 +66550,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025409 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025409">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009015"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>secondary vascular tissue</rdfs:label>
     </owl:Class>
     
@@ -67539,9 +67464,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025509 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025509">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025606"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>archegonium central cell</rdfs:label>
     </owl:Class>
     
@@ -67677,9 +67600,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025524 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025524">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025606"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>ventral canal cell</rdfs:label>
     </owl:Class>
     
@@ -67769,9 +67690,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025534 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025534">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025029"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>adventitious shoot axis</rdfs:label>
     </owl:Class>
     
@@ -68413,9 +68332,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025605 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025605">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0000146"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>fruit pedicel abscission zone</rdfs:label>
     </owl:Class>
     
@@ -68433,9 +68350,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025607 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025607">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009006"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>vegetative shoot system</rdfs:label>
     </owl:Class>
     
@@ -68453,7 +68368,6 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025609 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025609">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009007"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>shoot axis tegument layer</rdfs:label>
@@ -68590,9 +68504,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0025624 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025624">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025030"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>endodermis cell</rdfs:label>
     </owl:Class>
     
@@ -68763,10 +68675,8 @@
     <!-- http://purl.obolibrary.org/obo/PO_0030013 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0030013">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0030011"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0030019"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>non-vascular leaf meristematic apical cell</rdfs:label>
     </owl:Class>
     
@@ -68811,9 +68721,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0030018 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0030018">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009006"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>gametophore</rdfs:label>
     </owl:Class>
     
@@ -68889,9 +68797,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0030026 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0030026">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0000058"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>gametophore bud</rdfs:label>
     </owl:Class>
     
@@ -68936,7 +68842,6 @@
     <!-- http://purl.obolibrary.org/obo/PO_0030031 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0030031">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025023"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>gametophyte perianth</rdfs:label>
@@ -68965,7 +68870,6 @@
     <!-- http://purl.obolibrary.org/obo/PO_0030034 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0030034">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025066"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>archegoniophore</rdfs:label>
@@ -68994,9 +68898,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0030037 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0030037">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025001"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>spore capsule calyptra</rdfs:label>
     </owl:Class>
     
@@ -69105,6 +69007,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0030049">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025059"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PO_0030085"/>
         <rdfs:label>sporangium wall endothecium</rdfs:label>
     </owl:Class>
     
@@ -69248,9 +69151,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0030065 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0030065">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025606"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>archegonium neck canal cell</rdfs:label>
     </owl:Class>
     
@@ -69304,9 +69205,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0030071 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0030071">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0030078"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>epidermal rhizoid</rdfs:label>
     </owl:Class>
     
@@ -69351,7 +69250,6 @@
     <!-- http://purl.obolibrary.org/obo/PO_0030076 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0030076">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025001"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>archegonium head</rdfs:label>
@@ -69380,9 +69278,7 @@
     <!-- http://purl.obolibrary.org/obo/PO_0030079 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0030079">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0030078"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
         <rdfs:label>protonemal rhizoid</rdfs:label>
     </owl:Class>
     
@@ -69904,7 +69800,6 @@
     <!-- http://purl.obolibrary.org/obo/RO_0002532 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/RO_0002532">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label>sequentially ordered entity</rdfs:label>
     </owl:Class>
     
@@ -69949,6 +69844,7 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0000014 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004121"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0034944"/>
         <rdfs:label>zone of skin</rdfs:label>
@@ -69959,6 +69855,7 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0000019 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000047"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004121"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010314"/>
@@ -70054,6 +69951,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000062">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010000"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0034921"/>
         <rdfs:label>organ</rdfs:label>
     </owl:Class>
     
@@ -70128,6 +70026,7 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0000122 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000122">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005162"/>
         <rdfs:label>neuron projection bundle</rdfs:label>
     </owl:Class>
@@ -70137,6 +70036,7 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0000125 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000125">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0011215"/>
         <rdfs:label>neural nucleus</rdfs:label>
     </owl:Class>
@@ -70191,7 +70091,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0000164 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000164">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002050"/>
         <rdfs:label>primitive urogenital sinus</rdfs:label>
     </owl:Class>
@@ -70201,7 +70100,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0000165 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000165">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004921"/>
         <rdfs:label>mouth</rdfs:label>
     </owl:Class>
@@ -70274,8 +70172,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0000178 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000178">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000179"/>
         <rdfs:label>blood</rdfs:label>
     </owl:Class>
@@ -70294,7 +70190,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0000307 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000307">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000922"/>
         <rdfs:label>blastula</rdfs:label>
     </owl:Class>
@@ -70380,6 +70275,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000465">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001062"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000466"/>
         <rdfs:label>material anatomical entity</rdfs:label>
     </owl:Class>
     
@@ -70426,6 +70322,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000476">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010000"/>
         <rdfs:label>acellular anatomical structure</rdfs:label>
     </owl:Class>
     
@@ -70638,6 +70535,7 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0000948 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000948">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004120"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005181"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007100"/>
@@ -70690,6 +70588,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000982">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004905"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001474"/>
         <rdfs:label>skeletal joint</rdfs:label>
     </owl:Class>
     
@@ -70700,6 +70599,17 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000990">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001004"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001007"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001009"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001016"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001434"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002204"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002390"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002405"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002416"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004456"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_8450002"/>
         <rdfs:label>reproductive system</rdfs:label>
     </owl:Class>
     
@@ -70708,7 +70618,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0000991 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000991">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003133"/>
         <rdfs:label>gonad</rdfs:label>
     </owl:Class>
@@ -70729,6 +70638,16 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001007"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001009"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001016"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001434"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002204"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002390"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002405"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002416"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004456"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_8450002"/>
         <rdfs:label>respiratory system</rdfs:label>
     </owl:Class>
     
@@ -70738,6 +70657,15 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001009"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001016"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001434"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002204"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002390"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002405"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002416"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004456"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_8450002"/>
         <rdfs:label>digestive system</rdfs:label>
     </owl:Class>
     
@@ -70756,6 +70684,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001016"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001434"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002204"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002390"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002405"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002416"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004456"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_8450002"/>
         <rdfs:label>circulatory system</rdfs:label>
     </owl:Class>
     
@@ -70765,6 +70701,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0011822"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003714"/>
         <rdfs:label>adipose tissue</rdfs:label>
     </owl:Class>
     
@@ -70783,8 +70720,14 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0001016 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001016">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001434"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002204"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002390"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002405"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002416"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004456"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_8450002"/>
         <rdfs:label>nervous system</rdfs:label>
     </owl:Class>
     
@@ -70830,7 +70773,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0001046 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001046">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004921"/>
         <rdfs:label>hindgut</rdfs:label>
     </owl:Class>
@@ -70994,6 +70936,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001421">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007823"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0015212"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007831"/>
         <rdfs:label>pectoral girdle region</rdfs:label>
     </owl:Class>
     
@@ -71021,6 +70964,13 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001434">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0011216"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001474"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002204"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002390"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002405"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002416"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004456"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_8450002"/>
         <rdfs:label>skeletal system</rdfs:label>
     </owl:Class>
     
@@ -71050,6 +71000,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001473">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000055"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001981"/>
         <rdfs:label>lymphatic vessel</rdfs:label>
     </owl:Class>
     
@@ -71059,6 +71010,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001474">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004765"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001630"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005090"/>
         <rdfs:label>bone element</rdfs:label>
     </owl:Class>
     
@@ -71067,7 +71020,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0001555 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001555">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000025"/>
         <rdfs:label>digestive tract</rdfs:label>
     </owl:Class>
@@ -71138,6 +71090,7 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0001768 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001768">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004121"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004923"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010314"/>
@@ -71159,6 +71112,7 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0001775 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001775">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000481"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004121"/>
         <rdfs:label>ciliary body</rdfs:label>
@@ -71170,6 +71124,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001776">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002203"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0011892"/>
         <rdfs:label>optic choroid</rdfs:label>
     </owl:Class>
     
@@ -71229,6 +71184,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001801">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000063"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004121"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001802"/>
         <rdfs:label>anterior segment of eyeball</rdfs:label>
     </owl:Class>
     
@@ -71356,6 +71312,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001981">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000055"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004120"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010000"/>
         <rdfs:label>blood vessel</rdfs:label>
     </owl:Class>
     
@@ -71439,7 +71396,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0002090 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002090">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010912"/>
         <rdfs:label>postcranial axial skeleton</rdfs:label>
     </owl:Class>
@@ -71458,6 +71414,7 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0002097 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002097">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000062"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004121"/>
         <rdfs:label>skin of body</rdfs:label>
@@ -71543,7 +71500,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0002203 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002203">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002200"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006876"/>
         <rdfs:label>vasculature of eye</rdfs:label>
@@ -71556,6 +71512,11 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002204">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002390"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002405"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002416"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004456"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_8450002"/>
         <rdfs:label>musculoskeletal system</rdfs:label>
     </owl:Class>
     
@@ -71565,6 +71526,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002217">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000982"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0011134"/>
         <rdfs:label>synovial joint</rdfs:label>
     </owl:Class>
     
@@ -71621,7 +71583,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0002329 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002329">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005423"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007503"/>
         <rdfs:label>somite</rdfs:label>
@@ -71664,6 +71625,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002385">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000479"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004120"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003714"/>
         <rdfs:label>muscle tissue</rdfs:label>
     </owl:Class>
     
@@ -71674,6 +71636,10 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002390">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004120"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002405"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002416"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004456"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_8450002"/>
         <rdfs:label>hematopoietic system</rdfs:label>
     </owl:Class>
     
@@ -71682,7 +71648,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0002391 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002391">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000179"/>
         <rdfs:label>lymph</rdfs:label>
     </owl:Class>
@@ -71693,6 +71658,9 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002405">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0015203"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002416"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004456"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_8450002"/>
         <rdfs:label>immune system</rdfs:label>
     </owl:Class>
     
@@ -71703,6 +71671,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002416">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004456"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_8450002"/>
         <rdfs:label>integumental system</rdfs:label>
     </owl:Class>
     
@@ -71741,6 +71711,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002481">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004755"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005090"/>
         <rdfs:label>bone tissue</rdfs:label>
     </owl:Class>
     
@@ -71835,8 +71806,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0003059 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003059">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006598"/>
         <rdfs:label>presomitic mesoderm</rdfs:label>
     </owl:Class>
@@ -71846,7 +71815,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0003061 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003061">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006598"/>
         <rdfs:label>blood island</rdfs:label>
     </owl:Class>
@@ -71856,7 +71824,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0003063 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003063">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002050"/>
         <rdfs:label>prechordal plate</rdfs:label>
     </owl:Class>
@@ -71866,7 +71833,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0003064 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003064">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002050"/>
         <rdfs:label>intermediate mesoderm</rdfs:label>
     </owl:Class>
@@ -71876,7 +71842,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0003068 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003068">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002050"/>
         <rdfs:label>axial mesoderm</rdfs:label>
     </owl:Class>
@@ -71932,7 +71897,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0003077 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003077">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005291"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007524"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0015212"/>
@@ -71944,7 +71908,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0003080 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003080">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002050"/>
         <rdfs:label>anterior neural tube</rdfs:label>
     </owl:Class>
@@ -71966,7 +71929,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0003084 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003084">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001048"/>
         <rdfs:label>heart primordium</rdfs:label>
     </owl:Class>
@@ -71976,7 +71938,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0003089 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003089">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005856"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0007530"/>
         <rdfs:label>sclerotome</rdfs:label>
@@ -72128,7 +72089,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0003324 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003324">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010314"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0034995"/>
         <rdfs:label>mesenchyme of lower jaw</rdfs:label>
@@ -72309,7 +72269,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0003566 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003566">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002384"/>
         <rdfs:label>head connective tissue</rdfs:label>
     </owl:Class>
@@ -72348,6 +72307,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003714">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000479"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004755"/>
         <rdfs:label>neural tissue</rdfs:label>
     </owl:Class>
     
@@ -72469,7 +72429,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0004016 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004016">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0017650"/>
         <rdfs:label>dermatome</rdfs:label>
     </owl:Class>
@@ -72516,7 +72475,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0004119 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004119">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
         <rdfs:label>endoderm-derived structure</rdfs:label>
     </owl:Class>
@@ -72526,7 +72484,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0004120 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004120">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
         <rdfs:label>mesoderm-derived structure</rdfs:label>
     </owl:Class>
@@ -72536,7 +72493,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0004121 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004121">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
         <rdfs:label>ectoderm-derived structure</rdfs:label>
     </owl:Class>
@@ -72566,7 +72522,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0004139 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004139">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002050"/>
         <rdfs:label>cardiogenic plate</rdfs:label>
     </owl:Class>
@@ -72722,6 +72677,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004288">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0034925"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004770"/>
         <rdfs:label>skeleton</rdfs:label>
     </owl:Class>
     
@@ -72730,7 +72686,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0004290 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004290">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000486"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0016888"/>
         <rdfs:label>dermomyotome</rdfs:label>
@@ -72780,6 +72735,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004456">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000467"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_8450002"/>
         <rdfs:label>entire sense organ system</rdfs:label>
     </owl:Class>
     
@@ -72909,7 +72865,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0004734 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004734">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000922"/>
         <rdfs:label>gastrula</rdfs:label>
     </owl:Class>
@@ -73438,7 +73393,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0005867 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0005867">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0012314"/>
         <rdfs:label>mandibular prominence</rdfs:label>
     </owl:Class>
@@ -73458,7 +73412,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0005944 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0005944">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010912"/>
         <rdfs:label>axial skeleton plus cranial skeleton</rdfs:label>
     </owl:Class>
@@ -73808,6 +73761,7 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0007245 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0007245">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002020"/>
         <rdfs:label>nuclear complex of neuraxis</rdfs:label>
     </owl:Class>
@@ -73817,7 +73771,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0007282 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0007282">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006598"/>
         <rdfs:label>presumptive segmental plate</rdfs:label>
     </owl:Class>
@@ -73940,7 +73893,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0007779 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0007779">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006314"/>
         <rdfs:label>transudate</rdfs:label>
     </owl:Class>
@@ -74201,7 +74153,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0009676 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0009676">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0013150"/>
         <rdfs:label>early telencephalic vesicle</rdfs:label>
     </owl:Class>
@@ -74308,7 +74259,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0010083 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0010083">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003104"/>
         <rdfs:label>future dermis</rdfs:label>
     </owl:Class>
@@ -74387,7 +74337,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0010312 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0010312">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005423"/>
         <rdfs:label>immature eye</rdfs:label>
     </owl:Class>
@@ -74416,7 +74365,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0010316 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0010316">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002050"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005291"/>
         <rdfs:label>germ layer / neural crest</rdfs:label>
@@ -74612,7 +74560,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0011138 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0011138">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000075"/>
         <rdfs:label>postcranial axial skeletal system</rdfs:label>
     </owl:Class>
@@ -74806,6 +74753,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0011823">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002384"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0011825"/>
         <rdfs:label>dense connective tissue</rdfs:label>
     </owl:Class>
     
@@ -74841,6 +74789,7 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0011892 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0011892">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000481"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004121"/>
         <rdfs:label>anterior uvea</rdfs:label>
@@ -75201,7 +75150,6 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0016879 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0016879">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006598"/>
         <rdfs:label>future central nervous system</rdfs:label>
     </owl:Class>
@@ -75276,6 +75224,7 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0019207 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0019207">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000481"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004121"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010314"/>
@@ -75406,6 +75355,7 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0035965 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0035965">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000060"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004120"/>
         <rdfs:label>wall of blood vessel</rdfs:label>
@@ -75630,188 +75580,66 @@
 
     <!-- http://xmlns.com/foaf/0.1/image -->
 
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/image">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/image"/>
     <rdf:Description>
-        <rdfs:label>SIAH1, SIAH2 ubiquitinate SNCAIP</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SCF(beta-TrCP) ubiquitinates p-GLI2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of phosphorylated Cdc25A</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>BIRC2/3 (cIAP1/2) is autoubiquitinated</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>ISGylation of host protein filamin B</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>effector input is compound function input</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>inferring direct positive reg edge from input to regulatory subfunction</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>MIB2 ubiquitinates CYLD at K338, K530</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>CHIP (STUB1) mediates ubiquitination of ERBB2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>CBL binds and ubiquitinates phosphorylated Sprouty</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of Cyclin B by phospho-APC/C:Cdc20 complex</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>inferring direct positive reg edge from input to regulatory subfunction</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>&apos;causally upstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Input of effector is input of its parent MF</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of stimulated EGFR (CBL)</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Defective NHLRC1 does not ubiquitinate EPM2A (laforin) and PPP1R3C (PTG) (type 2B disease)</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SMURF2 monoubiquitinates SMAD3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Activated TRAF6 synthesizes unanchored polyubiquitin chains upon TLR3 stimulation</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>K63-linked ubiquitination of RIP1 bound to the activated TLR complex</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>DDX41 ubiquitination by TRIM21</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>TRAF6 polyubiquitinates NRIF</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitin-dependent degradation of the SMAD complex terminates TGF-beta signaling</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>RNF41 ubiquitinates ERBB3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Activated TRAF6 synthesizes unanchored polyubiquitin chains upon TLR stimulation</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Auto-ubiquitination of TRAF3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Polyubiquitination of substrate</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>MIB2 ubiquitinates CFLAR</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of NOTCH1 by ITCH in the absence of ligand</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>CBL escapes CDC42-mediated inhibition by down-regulating the adaptor molecule Beta-Pix</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SIAH1:UBE2L6:Ubiquitin ubiquitinates SNCA</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Cytosolic VBC complex ubiquitinylates hydroxyprolyl-HIF-alpha</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>&apos;causally upstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>cIAP1,2 ubiquitinates NIK in cIAP1,2:TRAF2::TRAF3:NIK</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Activation of ISG15 by UBA7 E1 ligase</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>The geminin component of geminin:Cdt1 complexes is ubiquitinated, releasing Cdt1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 HD+PEST domain mutants</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Pellino ubiquitinates IRAK1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>TRAF2,6 ubiquitinates NLRC5</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SCF-beta-TRCP ubiquitinates p-7S-p100:RELB in active NIK:p-176,S180-IKKA dimer:p-7S-p100:SCF-beta-TRCP</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>&apos;causally downstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SCF(beta-TrCP) ubiquitinates p-GLI1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of cell cycle proteins targeted by the APC/C:Cdh1complex</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>PRKN polyubiquitinates RIPK3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>CBL-mediated ubiquitination of CIN85</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>if effector directly negatively regulates X,  its parent MF directly negatively regulates X</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>ARRB mediates NOTCH1 ubiquitination</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Beta-TrCP ubiquitinates NFKB p50:p65:phospho IKBA complex</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Nuclear VBC complex ubiquitinylates HIF-alpha</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Multiubiquitination of APC/C-associated Cdh1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>RNF41 ubiquitinates activated ERBB3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Autoubiquitination of phospho-COP1(Ser-387 )</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>DTX4 ubiquitinates p-S172-TBK1 within NLRP4:DTX4:STING:TBK1:IRF3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>DTX4 ubiquitinates p-S172-TBK1 within NLRP4:DTX4:dsDNA:ZBP1:TBK1</rdfs:label>
+        <rdfs:label>BTRC:CUL1:SKP1 (SCF-beta-TrCP1) ubiquitinylates PER proteins</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>DDX58 is K63 polyubiquitinated</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>BTRC:CUL1:SKP1 (SCF-beta-TrCP1) ubiquitinylates PER proteins</rdfs:label>
+        <rdfs:label>DTX4 ubiquitinates p-S172-TBK1 within NLRP4:DTX4:dsDNA:ZBP1:TBK1</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Ubiquitination of p130 (RBL2) by SCF (Skp2)</rdfs:label>
+        <rdfs:label>DTX4 ubiquitinates p-S172-TBK1 within NLRP4:DTX4:STING:TBK1:IRF3</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Ubiquitination of SKI/SKIL by RNF111/SMURF2</rdfs:label>
+        <rdfs:label>Pellino ubiquitinates IRAK1</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>&apos;causally downstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
+        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 HD+PEST domain mutants</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Ubiquitination of Cyclin A by APC/C:Cdc20 complex</rdfs:label>
+        <rdfs:label>Multiubiquitination of APC/C-associated Cdh1</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>RAF1:SGK:TSC22D3:WPP ubiquitinates SCNN channels</rdfs:label>
+        <rdfs:label>Autoubiquitination of phospho-COP1(Ser-387 )</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>enabling an MF enables its parts</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>RNF41 ubiquitinates activated ERBB3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>&apos;causally upstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>CBL binds and ubiquitinates phosphorylated Sprouty</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>MIB2 ubiquitinates CYLD at K338, K530</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Beta-TrCP ubiquitinates NFKB p50:p65:phospho IKBA complex</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>ARRB mediates NOTCH1 ubiquitination</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Nuclear VBC complex ubiquitinylates HIF-alpha</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of phosphorylated Cdc25A</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>ISGylation of host protein filamin B</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>CHIP (STUB1) mediates ubiquitination of ERBB2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>BIRC2/3 (cIAP1/2) is autoubiquitinated</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>Parkin promotes the ubiquitination of mitochondrial substrates</rdfs:label>
@@ -75820,268 +75648,112 @@
         <rdfs:label>Activated TRAF6 synthesizes unanchored polyubiquitin chains upon ALPK1:ADP-heptose stimulation</rdfs:label>
     </rdf:Description>
     <rdf:Description>
+        <rdfs:label>SCF(beta-TrCP) ubiquitinates p-GLI2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SIAH1, SIAH2 ubiquitinate SNCAIP</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of Cyclin B by phospho-APC/C:Cdc20 complex</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of stimulated EGFR (CBL)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>if effector directly negatively regulates X,  its parent MF directly negatively regulates X</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>&apos;causally downstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
         <rdfs:label>beta-TRCP ubiquitinates IkB-alpha in p-S32,33-IkB-alpha:NF-kB complex</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>TRAF6 ubiquitinqtes IRF7 within the activated TLR7/8 or 9 complex</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>ISGylation of E2 conjugating enzymes</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Myristoylation of tBID by NMT1</rdfs:label>
+        <rdfs:label>RAF1:SGK:TSC22D3:WPP ubiquitinates SCNN channels</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>ERBB4 ubiquitination by WWP1/ITCH</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Ubiquitin-dependent degradation of the Smad complex terminates BMP2 signalling</rdfs:label>
+        <rdfs:label>Ubiquitination of SKI/SKIL by RNF111/SMURF2</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>NHLRC1 mediated ubiquitination of EPM2A (laforin) and PPP1RC3 (PTG) associated with glycogen-GYG2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of PAK-2p34</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>CBL neddylates TGFBR2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>VHL:EloB,C:NEDD8-CUL2:RBX1 complex ubiquitinylates HIF-alpha</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>inferring direct neg reg edge from input to regulatory subfunction</rdfs:label>
+        <rdfs:label>Ubiquitination of Cyclin A by APC/C:Cdc20 complex</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>RNF125 mediated ubiquitination of DDX58, IFIH1 and MAVS</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Ubiquitination of Securin by phospho-APC/C:Cdc20 complex</rdfs:label>
+        <rdfs:label>Ubiquitination of p130 (RBL2) by SCF (Skp2)</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>RNF111 ubiquitinates SMAD7</rdfs:label>
+        <rdfs:label>VHL:EloB,C:NEDD8-CUL2:RBX1 complex ubiquitinylates HIF-alpha</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>BIRC(cIAP1/2) ubiquitinates RIPK1</rdfs:label>
+        <rdfs:label>CBL neddylates TGFBR2</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Auto-ubiquitination of TRAF6</rdfs:label>
+        <rdfs:label>Ubiquitination of PAK-2p34</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>TRAF6 oligomer autoubiquitinates</rdfs:label>
+        <rdfs:label>NHLRC1 mediated ubiquitination of EPM2A (laforin) and PPP1RC3 (PTG) associated with glycogen-GYG2</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Auto ubiquitination of TRAF6 bound to ALPK1:ADP-heptose:TIFA oligomer</rdfs:label>
+        <rdfs:label>ISGylation of E2 conjugating enzymes</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>inferring direct reg edge from input to regulatory subfunction</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Auto ubiquitination of oligo-TRAF6 bound to p-IRAK2 at endosome membrane</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of stimulated EGFR (CBL:GRB2)</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Multiubiquitination of Nek2A</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SCF(beta-TrCP) ubiquitinates p-GLI3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>PARK2 K63-Ubiquitinates SNCAIP</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>LUBAC ubiquitinates RIPK1 at K627</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>inferring direct reg edge from input to regulatory subfunction</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SPATA2:CYLD-bound LUBAC ubiquitinates RIPK1 at K627 within the TNFR1 signaling complex</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>CUL5 mediates ubiquitination of ERBB2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of NICD1 by FBWX7</rdfs:label>
+        <rdfs:label>Ubiquitin-dependent degradation of the Smad complex terminates BMP2 signalling</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>RIP2 induces K63-linked ubiquitination of NEMO</rdfs:label>
     </rdf:Description>
     <rdf:Description>
+        <rdfs:label>Myristoylation of tBID by NMT1</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>CUL5 mediates ubiquitination of ERBB2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
         <rdfs:label>SCF betaTrCP ubiquitinates NFKB p105 within p-S927, S932-NFkB p105:TPL2:ABIN2</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>inferring direct neg reg edge from input to regulatory subfunction</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>MIB2 ubiquitinates RIPK1 at K377, K604, K634</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>RAD18:UBE2B or RBX1:CUL4:DDB1:DTL monoubiquitinates PCNA</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Transfer of Ub from E2 to substrate and release of E2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>K63polyUb-cIAP1,2 ubiquitinates TRAF3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>NEDD4 ubiquitinates ERBB4jmAcyt1s80 dimer</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of phospho-p27/p21</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of Cyclin D1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SKP1:FBXL5:CUL1:NEDD8 ubiquitinylates IREB2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>ISGylation of IRF3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>FN3KRP phosphorylates PsiAm, RibAm</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>CBL ubiquitinates Sprouty</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Input of effector is input of its parent MF</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Auto-ubiquitination of TRAF6</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>ISGylation of protein phosphatase 1 beta (PP2CB)</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SMURFs/NEDD4L ubiquitinate phosphorylated TGFBR1 and SMAD7</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SCF-beta-TrCp1/2 ubiquitinates phosphorylated BORA</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>NHLRC1 mediated ubiquitination of EPM2A and PPP1RC3 associated with glycogen-GYG1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>infer input from direct reg</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Auto ubiquitination of oligo-TRAF6 bound to p-IRAK2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH3</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>K63-linked ubiquitination of RIP1 bound to the activated TLR complex</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>if effector directly negatively regulates X,  its parent MF directly negatively regulates X</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of NEMO by TRAF6</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>STING ubiquitination by TRIM32 or TRIM56</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>involved in BP</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Cdh1:APC/C ubiquitinates EHMT1 and EHMT2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Myristoylation of Nef</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Auto-ubiquitination of TRAF3 within activated TLR3 complex</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>ISGylation of viral protein NS1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>FN3K phosphorylates ketosamines</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>ISGylation of host proteins</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>SMURF2 ubiquitinates SMAD2</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>STUB1 (CHIP) ubiquitinates SMAD3</rdfs:label>
+        <rdfs:label>Ubiquitination of NICD1 by FBWX7</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>effector input is compound function input</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 HD domain mutants</rdfs:label>
+        <rdfs:label>PARK2 K63-Ubiquitinates SNCAIP</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>TRAF6 is K63 poly-ubiquitinated</rdfs:label>
+        <rdfs:label>SPATA2:CYLD-bound LUBAC ubiquitinates RIPK1 at K627 within the TNFR1 signaling complex</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>STUB1 ubiquitinates RIPK3 at K55, K363</rdfs:label>
+        <rdfs:label>LUBAC ubiquitinates RIPK1 at K627</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>SYVN1 ubiquitinates Hh C-terminal fragments</rdfs:label>
+        <rdfs:label>Ubiquitination of stimulated EGFR (CBL:GRB2)</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Multi-ubiquitination of APOBEC3G</rdfs:label>
+        <rdfs:label>SCF(beta-TrCP) ubiquitinates p-GLI3</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Ubiquitination of IKBKG by TRAF6</rdfs:label>
+        <rdfs:label>Multiubiquitination of Nek2A</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Self-ubiquitination of RNF41</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Activated TRAF6 synthesizes unanchored polyubiquitin chains</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>enabling an MF enables its parts</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 PEST domain mutants</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>BRCA1:BARD1 heterodimer autoubiquitinates</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Hh processing variants are ubiquitinated</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Ubiquitination of Emi1 by SCF-beta-TrCP</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>ITCH polyubiquitinates MLKL at K50</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>STUB1 ubiquitinates RIPK1 at K571, K604, K627</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>ITCH ubiquitinates DTX</rdfs:label>
+        <rdfs:label>inferring direct positive reg edge from input to regulatory subfunction</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>E1 mediated ubiquitin activation</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>involved in BP</rdfs:label>
+        <rdfs:label>STUB1 ubiquitinates RIPK1 at K571, K604, K627</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH1</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>TRIM33 monoubiquitinates SMAD4</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>TNFAIP3 (A20) ubiquitinates RIPK1 with K48-linked Ub chains</rdfs:label>
+        <rdfs:label>RCHY1 monoubiquitinates POLH</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>K63polyUb-TRAF6 ubiquitinates TAK1</rdfs:label>
@@ -76090,10 +75762,286 @@
         <rdfs:label>Ubiquitination of CD4 by Vpu:CD4:beta-TrCP:SKP1 complex</rdfs:label>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>RCHY1 monoubiquitinates POLH</rdfs:label>
+        <rdfs:label>Ubiquitination of Emi1 by SCF-beta-TrCP</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>ITCH polyubiquitinates MLKL at K50</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>BRCA1:BARD1 heterodimer autoubiquitinates</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Hh processing variants are ubiquitinated</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 PEST domain mutants</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Activated TRAF6 synthesizes unanchored polyubiquitin chains upon TLR stimulation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Auto-ubiquitination of TRAF3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitin-dependent degradation of the SMAD complex terminates TGF-beta signaling</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>RNF41 ubiquitinates ERBB3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Activated TRAF6 synthesizes unanchored polyubiquitin chains upon TLR3 stimulation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>effector input is compound function input</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>K63-linked ubiquitination of RIP1 bound to the activated TLR complex</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Defective NHLRC1 does not ubiquitinate EPM2A (laforin) and PPP1R3C (PTG) (type 2B disease)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SMURF2 monoubiquitinates SMAD3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>DDX41 ubiquitination by TRIM21</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Cytosolic VBC complex ubiquitinylates hydroxyprolyl-HIF-alpha</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>involved in BP</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Activation of ISG15 by UBA7 E1 ligase</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>if effector directly negatively regulates X,  its parent MF directly negatively regulates X</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>The geminin component of geminin:Cdt1 complexes is ubiquitinated, releasing Cdt1</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>cIAP1,2 ubiquitinates NIK in cIAP1,2:TRAF2::TRAF3:NIK</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of NOTCH1 by ITCH in the absence of ligand</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>CBL escapes CDC42-mediated inhibition by down-regulating the adaptor molecule Beta-Pix</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>TRAF6 polyubiquitinates NRIF</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>involved in BP</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SIAH1:UBE2L6:Ubiquitin ubiquitinates SNCA</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SCF(beta-TrCP) ubiquitinates p-GLI1</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>CBL-mediated ubiquitination of CIN85</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of cell cycle proteins targeted by the APC/C:Cdh1complex</rdfs:label>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>enabling an MF enables its parts</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>PRKN polyubiquitinates RIPK3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>TRAF2,6 ubiquitinates NLRC5</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SCF-beta-TRCP ubiquitinates p-7S-p100:RELB in active NIK:p-176,S180-IKKA dimer:p-7S-p100:SCF-beta-TRCP</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Polyubiquitination of substrate</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>MIB2 ubiquitinates CFLAR</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>RNF111 ubiquitinates SMAD7</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>K63-linked ubiquitination of RIP1 bound to the activated TLR complex</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Auto ubiquitination of oligo-TRAF6 bound to p-IRAK2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>&apos;causally downstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>NHLRC1 mediated ubiquitination of EPM2A and PPP1RC3 associated with glycogen-GYG1</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SMURFs/NEDD4L ubiquitinate phosphorylated TGFBR1 and SMAD7</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>inferring direct neg reg edge from input to regulatory subfunction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SCF-beta-TrCp1/2 ubiquitinates phosphorylated BORA</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Auto-ubiquitination of TRAF6</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>ISGylation of protein phosphatase 1 beta (PP2CB)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>ISGylation of IRF3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>FN3KRP phosphorylates PsiAm, RibAm</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of Cyclin D1</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SKP1:FBXL5:CUL1:NEDD8 ubiquitinylates IREB2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>NEDD4 ubiquitinates ERBB4jmAcyt1s80 dimer</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>inferring direct neg reg edge from input to regulatory subfunction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of phospho-p27/p21</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Transfer of Ub from E2 to substrate and release of E2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>K63polyUb-cIAP1,2 ubiquitinates TRAF3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>MIB2 ubiquitinates RIPK1 at K377, K604, K634</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>RAD18:UBE2B or RBX1:CUL4:DDB1:DTL monoubiquitinates PCNA</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>CBL ubiquitinates Sprouty</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>inferring direct reg edge from input to regulatory subfunction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Multi-ubiquitination of APOBEC3G</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of IKBKG by TRAF6</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>STUB1 ubiquitinates RIPK3 at K55, K363</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SYVN1 ubiquitinates Hh C-terminal fragments</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 HD domain mutants</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>TRAF6 is K63 poly-ubiquitinated</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>STUB1 (CHIP) ubiquitinates SMAD3</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>inferring direct reg edge from input to regulatory subfunction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>SMURF2 ubiquitinates SMAD2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Self-ubiquitination of RNF41</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Activated TRAF6 synthesizes unanchored polyubiquitin chains</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Myristoylation of Nef</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Auto-ubiquitination of TRAF3 within activated TLR3 complex</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Cdh1:APC/C ubiquitinates EHMT1 and EHMT2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH2</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>STING ubiquitination by TRIM32 or TRIM56</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of NEMO by TRAF6</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>ISGylation of host proteins</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>ISGylation of viral protein NS1</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>infer input from direct reg</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>FN3K phosphorylates ketosamines</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>TRIM33 monoubiquitinates SMAD4</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Input of effector is input of its parent MF</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>TNFAIP3 (A20) ubiquitinates RIPK1 with K48-linked Ub chains</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of DLL/JAG ligands upon binding to NOTCH1</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>ITCH ubiquitinates DTX</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Ubiquitination of Securin by phospho-APC/C:Cdc20 complex</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Auto-ubiquitination of TRAF6</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>inferring direct positive reg edge from input to regulatory subfunction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>&apos;causally upstream of&apos; and &apos;overlaps&apos; should be disjoint properties (a SWRL rule is required because these are non-simple properties).</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Auto ubiquitination of oligo-TRAF6 bound to p-IRAK2 at endosome membrane</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Input of effector is input of its parent MF</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>TRAF6 oligomer autoubiquitinates</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>BIRC(cIAP1/2) ubiquitinates RIPK1</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>Auto ubiquitination of TRAF6 bound to ALPK1:ADP-heptose:TIFA oligomer</rdfs:label>
     </rdf:Description>
     
 
@@ -76250,12 +76198,6 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001628">
         <rdfs:label xml:lang="en">Northwestern Thorn Scrub Forests</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001641">
-        <rdfs:label xml:lang="en">glaciation</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001642">
-        <rdfs:label xml:lang="en">interglacial</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001699">
         <rdfs:label xml:lang="en">Arctic front</rdfs:label>
@@ -78832,6 +78774,42 @@
     </rdf:Description>
     <rdf:Description rdf:about="https://www.wikidata.org/wiki/Q715269">
         <rdfs:label xml:lang="en">World Ocean</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000020"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000006"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000029"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000140"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000008"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000011"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000035"/>
+        </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
