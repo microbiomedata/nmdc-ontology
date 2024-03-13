@@ -151,13 +151,13 @@ $(ONT).owl: $(ONT)-merged.owl
 #	    annotate --ontology-iri $(ONTBASE)/$@ \
 #	    $(ANNOTATE_ONTOLOGY_VERSION) \
 #	    --output $@
-#
-#$(ONT).json: $(ONT)-relation-graph.owl
-## convert ontology to json
-#	@echo "\n** building $@ **"
-#	$(ROBOT) annotate --ontology-iri $(ONTBASE)/$@ --input $< \
-#	    $(ANNOTATE_ONTOLOGY_VERSION) \
-#	    convert --output $@
+
+$(ONT).json: $(ONT).owl
+# convert ontology to json
+	@echo "\n** building $@ **"
+	$(ROBOT) annotate --ontology-iri $(ONTBASE)/$@ --input $< \
+	    $(ANNOTATE_ONTOLOGY_VERSION) \
+	    convert --output $@
 
 $(ONT)-classes.owl: $(ONT).owl $(ONT)-merged-labels.ttl $(ONT)-merged-labels.ttl
 #$(ONT)-classes.owl: $(ONT)-relation-graph.owl $(ONT)-merged-labels.ttl

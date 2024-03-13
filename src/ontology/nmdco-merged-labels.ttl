@@ -11,8 +11,6 @@
 <http://purl.obolibrary.org/obo/ENVO_01000601>
         rdfs:label  "motor vehicle"@en .
 
-[ rdfs:label  "PARK2 K63-Ubiquitinates SNCAIP" ] .
-
 <http://purl.obolibrary.org/obo/ENVO_00000277>
         rdfs:label  "dry lake" .
 
@@ -114,8 +112,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0001047>
         rdfs:label  "lemma development stage" .
-
-[ rdfs:label  "LUBAC ubiquitinates RIPK1 at K627" ] .
 
 <http://purl.obolibrary.org/obo/PO_0025377>
         rdfs:label  "plant embryo dormant stage" .
@@ -242,8 +238,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_2100000>
         rdfs:label  "anatomical entity environment" .
-
-[ rdfs:label  "SCF(beta-TrCP) ubiquitinates p-GLI3" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000356>
         rdfs:label  "granite" .
@@ -434,6 +428,10 @@
 <http://purl.obolibrary.org/obo/PO_0004546>
         rdfs:label  "epicormic shoot system" .
 
+[ rdfs:label  "Auto ubiquitination of oligo-TRAF6 bound to p-IRAK2 at endosome membrane" ] .
+
+[ rdfs:label  "'causally upstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties)." ] .
+
 <http://purl.obolibrary.org/obo/NCBITaxon_436491>
         rdfs:label  "Theropoda" .
 
@@ -478,10 +476,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000541>
         rdfs:label  "thermosphere" .
-
-[ rdfs:label  "Ubiquitination of stimulated EGFR (CBL:GRB2)" ] .
-
-[ rdfs:label  "inferring direct positive reg edge from input to regulatory subfunction" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01001445>
         rdfs:label  "usage of an environment for infrastructure and utilities"@en .
@@ -545,6 +539,10 @@
 
 <http://purl.obolibrary.org/obo/FOODON_00001131>
         rdfs:label  "poultry meat food product"@en .
+
+[ rdfs:label  "TRAF6 oligomer autoubiquitinates" ] .
+
+[ rdfs:label  "Input of effector is input of its parent MF" ] .
 
 <http://purl.obolibrary.org/obo/PO_0030113>
         rdfs:label  "flower pedicel" .
@@ -615,6 +613,8 @@
 <http://purl.obolibrary.org/obo/PO_0030095>
         rdfs:label  "poricidal capsule fruit" .
 
+[ rdfs:label  "Auto ubiquitination of TRAF6 bound to ALPK1:ADP-heptose:TIFA oligomer" ] .
+
 <http://purl.obolibrary.org/obo/PO_0006349>
         rdfs:label  "ear sessile spikelet" .
 
@@ -659,8 +659,6 @@
 
 <http://purl.obolibrary.org/obo/UBERON_0008229>
         rdfs:label  "craniocervical region musculature" .
-
-[ rdfs:label  "Multiubiquitination of Nek2A" ] .
 
 <http://purl.obolibrary.org/obo/PATO_0000599>
         rdfs:label  "decreased width" .
@@ -740,14 +738,16 @@
 <http://purl.obolibrary.org/obo/PO_0030058>
         rdfs:label  "brachycyte" .
 
+<http://purl.obolibrary.org/obo/PO_0004504>
+        rdfs:label  "ovule differentiation and expansion stage" .
+
 <http://purl.obolibrary.org/obo/PO_0007095>
         rdfs:label  "LP.08 eight leaves visible stage" .
 
 <http://purl.obolibrary.org/obo/UBERON_0004906>
         rdfs:label  "ectodermal part of digestive tract" .
 
-<http://purl.obolibrary.org/obo/PO_0004504>
-        rdfs:label  "ovule differentiation and expansion stage" .
+[ rdfs:label  "BIRC(cIAP1/2) ubiquitinates RIPK1" ] .
 
 <http://purl.obolibrary.org/obo/NCBITaxon_41378>
         rdfs:label  "Avicennia germinans" .
@@ -850,6 +850,8 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001023>
         rdfs:label  "radiation"@en .
+
+[ rdfs:label  "Auto-ubiquitination of TRAF6" ] .
 
 <http://purl.obolibrary.org/obo/PO_0030090>
         rdfs:label  "root periderm scar" .
@@ -992,6 +994,10 @@
 <http://purl.obolibrary.org/obo/FOODON_00001071>
         rdfs:label  "grape must"@en .
 
+[ rdfs:label  "Ubiquitination of Securin by phospho-APC/C:Cdc20 complex" ] .
+
+[ rdfs:label  "inferring direct positive reg edge from input to regulatory subfunction" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030053>
         rdfs:label  "antheridium jacket layer" .
 
@@ -1102,6 +1108,8 @@
 
 <http://purl.obolibrary.org/obo/CHEBI_29337>
         rdfs:label  "azanide" .
+
+[ rdfs:label  "RNF111 ubiquitinates SMAD7" ] .
 
 <http://purl.obolibrary.org/obo/CHEBI_45696>
         rdfs:label  "hydrogensulfate" .
@@ -1217,6 +1225,8 @@
 <http://purl.obolibrary.org/obo/CHEBI_30513>
         rdfs:label  "antimony atom" .
 
+[ rdfs:label  "K63-linked ubiquitination of RIP1 bound to the activated TLR complex" ] .
+
 <http://purl.obolibrary.org/obo/ENVO_01000959>
         rdfs:label  "primary atmosphere"@en .
 
@@ -1246,10 +1256,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0007016>
         rdfs:label  "whole plant flowering stage" .
-
-[ rdfs:label  "Auto ubiquitination of oligo-TRAF6 bound to p-IRAK2 at endosome membrane" ] .
-
-[ rdfs:label  "'causally upstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties)." ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000389>
         rdfs:label  "temperate mixed broadleaf forest" .
@@ -1365,10 +1371,6 @@
 <http://purl.obolibrary.org/obo/RO_0002430>
         rdfs:label  "involved in negative regulation of" .
 
-[ rdfs:label  "TRAF6 oligomer autoubiquitinates" ] .
-
-[ rdfs:label  "Input of effector is input of its parent MF" ] .
-
 <http://purl.obolibrary.org/obo/RO_0002240>
         rdfs:label  "has exposure receptor" .
 
@@ -1458,8 +1460,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0009009>
         rdfs:label  "plant embryo" .
-
-[ rdfs:label  "Auto ubiquitination of TRAF6 bound to ALPK1:ADP-heptose:TIFA oligomer" ] .
 
 <http://purl.obolibrary.org/obo/PO_0025368>
         rdfs:label  "trichome development stage" .
@@ -1581,8 +1581,6 @@
 <http://purl.obolibrary.org/obo/ENVO_00000453>
         rdfs:label  "liman" .
 
-[ rdfs:label  "BIRC(cIAP1/2) ubiquitinates RIPK1" ] .
-
 <http://purl.obolibrary.org/obo/ENVO_01000347>
         rdfs:label  "montane conifer woodland" .
 
@@ -1670,8 +1668,6 @@
 <http://purl.obolibrary.org/obo/ENVO_01001663>
         rdfs:label  "frost wedging"@en .
 
-[ rdfs:label  "Auto-ubiquitination of TRAF6" ] .
-
 <http://purl.obolibrary.org/obo/UBERON_0006264>
         rdfs:label  "mouth-foregut junction" .
 
@@ -1741,6 +1737,10 @@
 <http://purl.obolibrary.org/obo/PO_0004537>
         rdfs:label  "nucellar plant embryo" .
 
+[ rdfs:label  "Auto ubiquitination of oligo-TRAF6 bound to p-IRAK2" ] .
+
+[ rdfs:label  "'causally downstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties)." ] .
+
 <http://purl.obolibrary.org/obo/ENVO_00005797>
         rdfs:label  "lake bottom mud" .
 
@@ -1779,10 +1779,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000532>
         rdfs:label  "covered pit latrine" .
-
-[ rdfs:label  "Ubiquitination of Securin by phospho-APC/C:Cdc20 complex" ] .
-
-[ rdfs:label  "inferring direct positive reg edge from input to regulatory subfunction" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_3200075>
         rdfs:label  "concentration of residual water in soil" .
@@ -1868,8 +1864,6 @@
 <http://purl.obolibrary.org/obo/RO_0011004>
         rdfs:label  "indirectly regulates activity of"@en .
 
-[ rdfs:label  "RNF111 ubiquitinates SMAD7" ] .
-
 <http://purl.obolibrary.org/obo/ENVO_03600017>
         rdfs:label  "slurry"@en .
 
@@ -1954,6 +1948,8 @@
 <http://purl.obolibrary.org/obo/PO_0030086>
         rdfs:label  "protonema sub-apical initial cell" .
 
+[ rdfs:label  "Ubiquitination of DLL/JAG ligands upon binding to NOTCH3" ] .
+
 <http://purl.obolibrary.org/obo/PO_0004532>
         rdfs:label  "secondary xylem parenchyma" .
 
@@ -1998,8 +1994,6 @@
 
 <http://purl.obolibrary.org/obo/UBERON_0006222>
         rdfs:label  "future diencephalon" .
-
-[ rdfs:label  "K63-linked ubiquitination of RIP1 bound to the activated TLR complex" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000287>
         rdfs:label  "polymictic lake" .
@@ -2118,6 +2112,8 @@
 <http://purl.obolibrary.org/obo/PO_0007086>
         rdfs:label  "SE.05 five nodes or internodes visible stage" .
 
+[ rdfs:label  "NHLRC1 mediated ubiquitination of EPM2A and PPP1RC3 associated with glycogen-GYG1" ] .
+
 <http://purl.obolibrary.org/obo/ENVO_00005755>
         rdfs:label  "field soil" .
 
@@ -2189,6 +2185,8 @@
 
 <http://purl.obolibrary.org/obo/IAO_0100001>
         rdfs:label  "term replaced by" , "term replaced by"@en .
+
+[ rdfs:label  "SMURFs/NEDD4L ubiquitinate phosphorylated TGFBR1 and SMAD7" ] .
 
 <http://purl.obolibrary.org/obo/CHEBI_30356>
         rdfs:label  "isobutyl group" .
@@ -2340,11 +2338,15 @@
 <http://purl.obolibrary.org/obo/FOODON_00001062>
         rdfs:label  "fermented millet food product"@en .
 
+[ rdfs:label  "inferring direct neg reg edge from input to regulatory subfunction" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030044>
         rdfs:label  "spore capsule operculum" .
 
 <http://purl.obolibrary.org/obo/PO_0007081>
         rdfs:label  "early rosette growth stage" .
+
+[ rdfs:label  "SCF-beta-TrCp1/2 ubiquitinates phosphorylated BORA" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_02500008>
         rdfs:label  "ecosystem-wide respiration" .
@@ -2438,6 +2440,8 @@
 
 <http://purl.obolibrary.org/obo/CHEBI_35789>
         rdfs:label  "oxo steroid" .
+
+[ rdfs:label  "Auto-ubiquitination of TRAF6" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_03501218>
         rdfs:label  "toilet bowl"@en .
@@ -2580,6 +2584,8 @@
 <http://purl.obolibrary.org/obo/FOODON_00002151>
         rdfs:label  "plant seed based bakery food product"@en .
 
+[ rdfs:label  "ISGylation of protein phosphatase 1 beta (PP2CB)" ] .
+
 <http://purl.obolibrary.org/obo/PO_0009074>
         rdfs:label  "style" .
 
@@ -2606,10 +2612,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000620>
         rdfs:label  "mesocosm"@en .
-
-[ rdfs:label  "Auto ubiquitination of oligo-TRAF6 bound to p-IRAK2" ] .
-
-[ rdfs:label  "'causally downstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties)." ] .
 
 <http://purl.obolibrary.org/obo/ENVO_00000296>
         rdfs:label  "rice field" .
@@ -2812,6 +2814,8 @@
 <http://purl.obolibrary.org/obo/FOODON_00001192>
         rdfs:label  "quinoa food product"@en .
 
+[ rdfs:label  "ISGylation of IRF3" ] .
+
 <http://purl.obolibrary.org/obo/UBERON_0003498>
         rdfs:label  "heart blood vessel" .
 
@@ -2850,8 +2854,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0007002>
         rdfs:label  "IE.03 3/4 of inflorescence emerged from flag leaf sheath stage" .
-
-[ rdfs:label  "Ubiquitination of DLL/JAG ligands upon binding to NOTCH3" ] .
 
 <http://purl.obolibrary.org/obo/PO_0025359>
         rdfs:label  "sorus" .
@@ -2967,8 +2969,6 @@
 <http://purl.obolibrary.org/obo/CL_0000540>
         rdfs:label  "neuron" .
 
-[ rdfs:label  "NHLRC1 mediated ubiquitination of EPM2A and PPP1RC3 associated with glycogen-GYG1" ] .
-
 <http://purl.obolibrary.org/obo/RO_0002176>
         rdfs:label  "connects" , "connects"@en .
 
@@ -3005,6 +3005,8 @@
 <http://purl.obolibrary.org/obo/ENVO_01001102>
         rdfs:label  "tectonic plate subduction"@en .
 
+[ rdfs:label  "FN3KRP phosphorylates PsiAm, RibAm" ] .
+
 <http://purl.obolibrary.org/obo/PATO_0001025>
         rdfs:label  "pressure" .
 
@@ -3040,8 +3042,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000560>
         rdfs:label  "charcoal"@en .
-
-[ rdfs:label  "SMURFs/NEDD4L ubiquitinate phosphorylated TGFBR1 and SMAD7" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01001464>
         rdfs:label  "UNEP-WCMC class 4 mountain"@en .
@@ -3124,6 +3124,8 @@
 <http://purl.obolibrary.org/obo/PO_0004528>
         rdfs:label  "upright ray secondary xylem parenchyma cell" .
 
+[ rdfs:label  "Ubiquitination of Cyclin D1" ] .
+
 <http://purl.obolibrary.org/obo/FOODON_00001150>
         rdfs:label  "cucurbit fruit food product"@en .
 
@@ -3175,13 +3177,11 @@
 <http://purl.obolibrary.org/obo/CHEBI_25940>
         rdfs:label  "peroxides" .
 
-<http://purl.obolibrary.org/obo/ENVO_3200066>
-        rdfs:label  "concentration of organic nitrogen anion in soil" .
-
 <http://purl.obolibrary.org/obo/ENVO_01000523>
         rdfs:label  "pit latrine with slab floor" .
 
-[ rdfs:label  "inferring direct neg reg edge from input to regulatory subfunction" ] .
+<http://purl.obolibrary.org/obo/ENVO_3200066>
+        rdfs:label  "concentration of organic nitrogen anion in soil" .
 
 <http://purl.obolibrary.org/obo/UBERON_0011585>
         rdfs:label  "cell condensation" .
@@ -3194,8 +3194,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0025317>
         rdfs:label  "axillary hair terminal cell" .
-
-[ rdfs:label  "SCF-beta-TrCp1/2 ubiquitinates phosphorylated BORA" ] .
 
 <http://purl.obolibrary.org/obo/RO_0002171>
         rdfs:label  "mutually spatially disjoint with"@en .
@@ -3308,8 +3306,6 @@
 <http://purl.obolibrary.org/obo/ENVO_00005801>
         rdfs:label  "rhizosphere" .
 
-[ rdfs:label  "Auto-ubiquitination of TRAF6" ] .
-
 <http://purl.obolibrary.org/obo/UBERON_0001421>
         rdfs:label  "pectoral girdle region" .
 
@@ -3397,6 +3393,8 @@
 <http://purl.obolibrary.org/obo/PO_0030077>
         rdfs:label  "protonemal side branch rhizoid initial cell" .
 
+[ rdfs:label  "SKP1:FBXL5:CUL1:NEDD8 ubiquitinylates IREB2" ] .
+
 <http://purl.obolibrary.org/obo/PO_0004523>
         rdfs:label  "included vascular cambium" .
 
@@ -3447,8 +3445,6 @@
 
 <http://purl.obolibrary.org/obo/UBERON_0003071>
         rdfs:label  "eye primordium" .
-
-[ rdfs:label  "ISGylation of protein phosphatase 1 beta (PP2CB)" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000278>
         rdfs:label  "pingo scar" .
@@ -3642,6 +3638,8 @@
 <http://purl.obolibrary.org/obo/FOODON_00001280>
         rdfs:label  "chocolate food product"@en .
 
+[ rdfs:label  "NEDD4 ubiquitinates ERBB4jmAcyt1s80 dimer" ] .
+
 <http://purl.obolibrary.org/obo/FOODON_00001090>
         rdfs:label  "sour milk beverage"@en .
 
@@ -3689,8 +3687,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001367>
         rdfs:label  "primary aerosol formation process"@en .
-
-[ rdfs:label  "ISGylation of IRF3" ] .
 
 <http://purl.obolibrary.org/obo/PO_0025257>
         rdfs:label  "primary root elongation zone" .
@@ -3757,6 +3753,8 @@
 
 <http://purl.obolibrary.org/obo/FOODON_00001053>
         rdfs:label  "fermented dairy food product"@en .
+
+[ rdfs:label  "inferring direct neg reg edge from input to regulatory subfunction" ] .
 
 <http://purl.obolibrary.org/obo/PO_0030035>
         rdfs:label  "antheridium stalk" .
@@ -3851,6 +3849,8 @@
 <http://purl.obolibrary.org/obo/PATO_0001303>
         rdfs:label  "variability" .
 
+[ rdfs:label  "Ubiquitination of phospho-p27/p21" ] .
+
 <http://purl.obolibrary.org/obo/ENVO_03501209>
         rdfs:label  "bedrail"@en .
 
@@ -3892,8 +3892,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001742>
         rdfs:label  "warming of a solid"@en .
-
-[ rdfs:label  "FN3KRP phosphorylates PsiAm, RibAm" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01001552>
         rdfs:label  "flaw lead"@en .
@@ -4008,8 +4006,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001705>
         rdfs:label  "temperate environment"@en .
-
-[ rdfs:label  "Ubiquitination of Cyclin D1" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000611>
         rdfs:label  "bus"@en .
@@ -4242,8 +4238,6 @@
 <http://purl.obolibrary.org/obo/ENVO_01000366>
         rdfs:label  "talus cave" .
 
-[ rdfs:label  "SKP1:FBXL5:CUL1:NEDD8 ubiquitinylates IREB2" ] .
-
 <http://purl.obolibrary.org/obo/UBERON_0000328>
         rdfs:label  "gut wall" .
 
@@ -4421,6 +4415,8 @@
 <http://purl.obolibrary.org/obo/ENVO_03501181>
         rdfs:label  "tertiary referral hospital"@en .
 
+[ rdfs:label  "Transfer of Ub from E2 to substrate and release of E2" ] .
+
 <http://purl.obolibrary.org/obo/IAO_0000596>
         rdfs:label  "has ID digit count"@en .
 
@@ -4462,8 +4458,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000551>
         rdfs:label  "paraffin oil"@en .
-
-[ rdfs:label  "NEDD4 ubiquitinates ERBB4jmAcyt1s80 dimer" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01001455>
         rdfs:label  "temperate mountain"@en .
@@ -4552,6 +4546,8 @@
 <http://purl.obolibrary.org/obo/PO_0004709>
         rdfs:label  "axillary bud" .
 
+[ rdfs:label  "K63polyUb-cIAP1,2 ubiquitinates TRAF3" ] .
+
 <http://purl.obolibrary.org/obo/FOODON_00001141>
         rdfs:label  "wheat food product"@en .
 
@@ -4600,19 +4596,17 @@
 <http://purl.obolibrary.org/obo/ENVO_01001608>
         rdfs:label  "kerosene oil"@en .
 
-<http://purl.obolibrary.org/obo/CHEBI_155903>
-        rdfs:label  "copper(II) phthalocyanine" .
-
 <http://purl.obolibrary.org/obo/ENVO_2000021>
         rdfs:label  "magnetic energy" .
 
-<http://purl.obolibrary.org/obo/ENVO_01000514>
-        rdfs:label  "tile" .
+<http://purl.obolibrary.org/obo/CHEBI_155903>
+        rdfs:label  "copper(II) phthalocyanine" .
 
 <http://purl.obolibrary.org/obo/RO_0002352>
         rdfs:label  "input of"@en .
 
-[ rdfs:label  "inferring direct neg reg edge from input to regulatory subfunction" ] .
+<http://purl.obolibrary.org/obo/ENVO_01000514>
+        rdfs:label  "tile" .
 
 <http://purl.obolibrary.org/obo/FOODON_00002787>
         rdfs:label  "vetch food product"@en .
@@ -4683,6 +4677,8 @@
 <http://purl.obolibrary.org/obo/PATO_0001201>
         rdfs:label  "Y-shaped" .
 
+[ rdfs:label  "MIB2 ubiquitinates RIPK1 at K377, K604, K634" ] .
+
 <http://purl.obolibrary.org/obo/NCBITaxon_7004>
         rdfs:label  "Locusta migratoria" .
 
@@ -4727,8 +4723,6 @@
 
 <http://purl.obolibrary.org/obo/CHEBI_88184>
         rdfs:label  "metal allergen" .
-
-[ rdfs:label  "Ubiquitination of phospho-p27/p21" ] .
 
 <http://purl.obolibrary.org/obo/UBERON_0002506>
         rdfs:label  "iris epithelium" .
@@ -4825,6 +4819,8 @@
 
 <http://purl.obolibrary.org/obo/PO_0030068>
         rdfs:label  "epidermal rhizoid initial cell" .
+
+[ rdfs:label  "RAD18:UBE2B or RBX1:CUL4:DDB1:DTL monoubiquitinates PCNA" ] .
 
 <http://purl.obolibrary.org/obo/RO_0018035>
         rdfs:label  "is matched small molecular pair with" .
@@ -5057,6 +5053,8 @@
 <http://purl.obolibrary.org/obo/FOODON_00002175>
         rdfs:label  "prepared hen egg product"@en .
 
+[ rdfs:label  "CBL ubiquitinates Sprouty" ] .
+
 <http://purl.obolibrary.org/obo/FOODON_00001081>
         rdfs:label  "Bondon cheese food product"@en .
 
@@ -5198,6 +5196,8 @@
 <http://purl.obolibrary.org/obo/CHEBI_23044>
         rdfs:label  "carotenoid" .
 
+[ rdfs:label  "inferring direct reg edge from input to regulatory subfunction" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030026>
         rdfs:label  "gametophore bud" .
 
@@ -5288,6 +5288,8 @@
 <http://purl.obolibrary.org/obo/CHEBI_36915>
         rdfs:label  "inorganic cation" .
 
+[ rdfs:label  "Multi-ubiquitination of APOBEC3G" ] .
+
 <http://purl.obolibrary.org/obo/PATO_0002008>
         rdfs:label  "concave 3-D shape" .
 
@@ -5329,8 +5331,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0007026>
         rdfs:label  "FL.00 first flower(s) open stage" .
-
-[ rdfs:label  "Transfer of Ub from E2 to substrate and release of E2" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000399>
         rdfs:label  "tropical needleleaf forest" .
@@ -5407,13 +5407,11 @@
 <http://purl.obolibrary.org/obo/ENVO_2100006>
         rdfs:label  "feather environment" .
 
-<http://purl.obolibrary.org/obo/ENVO_01000602>
-        rdfs:label  "truck"@en .
-
 <http://purl.obolibrary.org/obo/RO_0002440>
         rdfs:label  "symbiotically interacts with" .
 
-[ rdfs:label  "K63polyUb-cIAP1,2 ubiquitinates TRAF3" ] .
+<http://purl.obolibrary.org/obo/ENVO_01000602>
+        rdfs:label  "truck"@en .
 
 <https://orcid.org/0000-0002-5714-991X>
         rdfs:label  "Christian J Stoeckert" .
@@ -5510,8 +5508,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0001048>
         rdfs:label  "palea development stage" .
-
-[ rdfs:label  "MIB2 ubiquitinates RIPK1 at K377, K604, K634" ] .
 
 <http://purl.obolibrary.org/obo/PO_0025378>
         rdfs:label  "arillode" .
@@ -5632,8 +5628,6 @@
 
 <http://purl.obolibrary.org/obo/CHEBI_24870>
         rdfs:label  "ion" .
-
-[ rdfs:label  "RAD18:UBE2B or RBX1:CUL4:DDB1:DTL monoubiquitinates PCNA" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000357>
         rdfs:label  "alkaline water" .
@@ -5812,6 +5806,8 @@
 <http://purl.obolibrary.org/obo/ENVO_03501172>
         rdfs:label  "physiotherapy unit facility"@en .
 
+[ rdfs:label  "Ubiquitination of IKBKG by TRAF6" ] .
+
 <http://purl.obolibrary.org/obo/CHEBI_78433>
         rdfs:label  "refrigerant" .
 
@@ -5856,8 +5852,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001636>
         rdfs:label  "insect conservation process"@en .
-
-[ rdfs:label  "CBL ubiquitinates Sprouty" ] .
 
 <http://purl.obolibrary.org/obo/RO_0002380>
         rdfs:label  "branching part of"@en .
@@ -5985,9 +5979,6 @@
 <http://purl.obolibrary.org/obo/IAO_0000030>
         rdfs:label  "information content entity"@en .
 
-<http://purl.obolibrary.org/obo/FOODON_00002778>
-        rdfs:label  "jack bean (whole)"@en .
-
 <http://purl.obolibrary.org/obo/ENVO_2000012>
         rdfs:label  "anthropogenic generation of energy" .
 
@@ -6000,7 +5991,8 @@
 <http://purl.obolibrary.org/obo/ENVO_01000505>
         rdfs:label  "salt dome"@en .
 
-[ rdfs:label  "inferring direct reg edge from input to regulatory subfunction" ] .
+<http://purl.obolibrary.org/obo/FOODON_00002778>
+        rdfs:label  "jack bean (whole)"@en .
 
 <http://purl.obolibrary.org/obo/ENVO_00000421>
         rdfs:label  "wave-cut platform" .
@@ -6059,6 +6051,8 @@
 <http://purl.obolibrary.org/obo/PO_0004542>
         rdfs:label  "rhizome" .
 
+[ rdfs:label  "STUB1 ubiquitinates RIPK3 at K55, K363" ] .
+
 <http://purl.obolibrary.org/obo/IAO_0000582>
         rdfs:label  "time stamped measurement datum"@en .
 
@@ -6109,8 +6103,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_03605009>
         rdfs:label  "freshwater stream ecosystem"@en .
-
-[ rdfs:label  "Multi-ubiquitination of APOBEC3G" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000297>
         rdfs:label  "freshwater river" .
@@ -6195,6 +6187,8 @@
 
 <http://purl.obolibrary.org/obo/PO_0004505>
         rdfs:label  "fertilized ovule stage" .
+
+[ rdfs:label  "SYVN1 ubiquitinates Hh C-terminal fragments" ] .
 
 <http://purl.obolibrary.org/obo/UBERON_0036244>
         rdfs:label  "secretion of serous membrane" .
@@ -6289,6 +6283,8 @@
 <http://purl.obolibrary.org/obo/UBERON_0015228>
         rdfs:label  "circulatory organ" .
 
+[ rdfs:label  "Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 HD domain mutants" ] .
+
 <http://purl.obolibrary.org/obo/PO_0007629>
         rdfs:label  "G eight nucleate megagametophyte stage" .
 
@@ -6316,11 +6312,11 @@
 <http://purl.obolibrary.org/obo/PO_0000232>
         rdfs:label  "axillary bud meristem" .
 
-<http://purl.obolibrary.org/obo/PATO_0001879>
-        rdfs:label  "U-shaped" .
-
 <http://purl.obolibrary.org/obo/CHEBI_37332>
         rdfs:label  "tropane alkaloid" .
+
+<http://purl.obolibrary.org/obo/PATO_0001879>
+        rdfs:label  "U-shaped" .
 
 <http://purl.obolibrary.org/obo/ENVO_01001576>
         rdfs:label  "Central Ranges Xeric Shrub Ecoregion"@en .
@@ -6427,6 +6423,9 @@
 <http://purl.obolibrary.org/obo/PATO_0045061>
         rdfs:label  "normal width" .
 
+<http://purl.obolibrary.org/obo/PO_0004500>
+        rdfs:label  "formation of vascular leaflet primordia stage" .
+
 <http://purl.obolibrary.org/obo/CHEBI_26214>
         rdfs:label  "porphyrins" .
 
@@ -6442,8 +6441,7 @@
 <http://purl.obolibrary.org/obo/UBERON_0004902>
         rdfs:label  "urogenital sinus epithelium" .
 
-<http://purl.obolibrary.org/obo/PO_0004500>
-        rdfs:label  "formation of vascular leaflet primordia stage" .
+[ rdfs:label  "TRAF6 is K63 poly-ubiquitinated" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_02500018>
         rdfs:label  "algal bloom process" .
@@ -6544,6 +6542,8 @@
 <http://purl.obolibrary.org/obo/PO_0025518>
         rdfs:label  "leaf lamina tooth" .
 
+[ rdfs:label  "STUB1 (CHIP) ubiquitinates SMAD3" ] .
+
 <http://purl.obolibrary.org/obo/ENVO_03501228>
         rdfs:label  "trattoria"@en .
 
@@ -6570,6 +6570,8 @@
 
 <http://purl.obolibrary.org/obo/FOODON_00001035>
         rdfs:label  "new zealand cheddar cheese food product"@en .
+
+[ rdfs:label  "inferring direct reg edge from input to regulatory subfunction" ] .
 
 <http://purl.obolibrary.org/obo/PO_0030017>
         rdfs:label  "spore capsule mouth" .
@@ -6664,6 +6666,8 @@
 <http://purl.obolibrary.org/obo/CHEBI_30514>
         rdfs:label  "caesium atom" .
 
+[ rdfs:label  "SMURF2 ubiquitinates SMAD2" ] .
+
 <http://purl.obolibrary.org/obo/PATO_0000001>
         rdfs:label  "quality" .
 
@@ -6696,8 +6700,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000630>
         rdfs:label  "acidification of an aquatic environment"@en .
-
-[ rdfs:label  "Ubiquitination of IKBKG by TRAF6" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01001534>
         rdfs:label  "tabular iceberg"@en .
@@ -6882,6 +6884,8 @@
 <http://purl.obolibrary.org/obo/CHEBI_35757>
         rdfs:label  "monocarboxylic acid anion" .
 
+[ rdfs:label  "Self-ubiquitination of RNF41" ] .
+
 <http://purl.obolibrary.org/obo/PO_0006438>
         rdfs:label  "lower glume of sessile spikelet of ear" .
 
@@ -6911,8 +6915,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001479>
         rdfs:label  "fluid astronomical body part"@en .
-
-[ rdfs:label  "STUB1 ubiquitinates RIPK3 at K55, K363" ] .
 
 <http://purl.obolibrary.org/obo/PO_0025369>
         rdfs:label  "seed trichome development stage" .
@@ -7025,8 +7027,6 @@
 <http://purl.obolibrary.org/obo/ENVO_00000454>
         rdfs:label  "turlough" .
 
-[ rdfs:label  "SYVN1 ubiquitinates Hh C-terminal fragments" ] .
-
 <http://purl.obolibrary.org/obo/ENVO_01000348>
         rdfs:label  "maize field" .
 
@@ -7101,8 +7101,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000570>
         rdfs:label  "hot-blast paraffin lantern"@en .
-
-[ rdfs:label  "Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 HD domain mutants" ] .
 
 <http://purl.obolibrary.org/obo/PO_0001034>
         rdfs:label  "F bilocular anther stage" .
@@ -7194,14 +7192,16 @@
 <http://purl.obolibrary.org/obo/CHEBI_167564>
         rdfs:label  "paralytic shellfish toxin" .
 
+<http://purl.obolibrary.org/obo/FOODON_00001160>
+        rdfs:label  "pomaceous fruit extract"@en .
+
 <http://purl.obolibrary.org/obo/UBERON_0001798>
         rdfs:label  "vitreous body" .
 
 <http://purl.obolibrary.org/obo/FOODON_03400842>
         rdfs:label  "non alcoholic beverage (eurofir)"@en .
 
-<http://purl.obolibrary.org/obo/FOODON_00001160>
-        rdfs:label  "pomaceous fruit extract"@en .
+[ rdfs:label  "Activated TRAF6 synthesizes unanchored polyubiquitin chains" ] .
 
 <http://purl.obolibrary.org/obo/CHEBI_38496>
         rdfs:label  "electron-transport chain inhibitor" .
@@ -7266,8 +7266,6 @@
 <http://purl.obolibrary.org/obo/ENVO_01001437>
         rdfs:label  "mining"@en .
 
-[ rdfs:label  "TRAF6 is K63 poly-ubiquitinated" ] .
-
 <http://purl.obolibrary.org/obo/PO_0025327>
         rdfs:label  "keel" .
 
@@ -7303,6 +7301,8 @@
 
 <http://purl.obolibrary.org/obo/CHEBI_26284>
         rdfs:label  "propane-1,2-diols" .
+
+[ rdfs:label  "Myristoylation of Nef" ] .
 
 <http://purl.obolibrary.org/obo/PO_0025416>
         rdfs:label  "sieve tube" .
@@ -7343,8 +7343,6 @@
 <http://purl.obolibrary.org/obo/CHEBI_37175>
         rdfs:label  "organic hydride" .
 
-[ rdfs:label  "STUB1 (CHIP) ubiquitinates SMAD3" ] .
-
 <http://purl.obolibrary.org/obo/CHEBI_32999>
         rdfs:label  "europium atom" .
 
@@ -7366,13 +7364,11 @@
 <http://purl.obolibrary.org/obo/ENVO_2000003>
         rdfs:label  "agricultural wastewater treatment plant" .
 
-<http://purl.obolibrary.org/obo/PO_0025588>
-        rdfs:label  "flower meristem transition stage" .
-
 <http://purl.obolibrary.org/obo/RO_0002334>
         rdfs:label  "regulated by"@en .
 
-[ rdfs:label  "inferring direct reg edge from input to regulatory subfunction" ] .
+<http://purl.obolibrary.org/obo/PO_0025588>
+        rdfs:label  "flower meristem transition stage" .
 
 <http://purl.obolibrary.org/obo/ENVO_3200039>
         rdfs:label  "concentration of yttrium in water ice" .
@@ -7430,6 +7426,8 @@
 
 <http://purl.obolibrary.org/obo/PO_0004533>
         rdfs:label  "axial secondary xylem parenchyma" .
+
+[ rdfs:label  "Auto-ubiquitination of TRAF3 within activated TLR3 complex" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_00005793>
         rdfs:label  "muddy water" .
@@ -7490,8 +7488,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000288>
         rdfs:label  "monomictic lake" .
-
-[ rdfs:label  "SMURF2 ubiquitinates SMAD2" ] .
 
 <http://purl.obolibrary.org/obo/CHEBI_50906>
         rdfs:label  "role" .
@@ -7580,6 +7576,8 @@
 <http://purl.obolibrary.org/obo/PO_0007087>
         rdfs:label  "2.01 main shoot and axillary shoots visible at one node stage" .
 
+[ rdfs:label  "Cdh1:APC/C ubiquitinates EHMT1 and EHMT2" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030100>
         rdfs:label  "legume fruit" .
 
@@ -7652,6 +7650,8 @@
 <http://purl.obolibrary.org/obo/FOODON_00001290>
         rdfs:label  "salad dressing"@en .
 
+[ rdfs:label  "Ubiquitination of DLL/JAG ligands upon binding to NOTCH2" ] .
+
 <http://purl.obolibrary.org/obo/CHEBI_16997>
         rdfs:label  "propane-1,2-diol" .
 
@@ -7711,8 +7711,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0025267>
         rdfs:label  "fruit replum" .
-
-[ rdfs:label  "Self-ubiquitination of RNF41" ] .
 
 <http://purl.obolibrary.org/obo/PATO_0000586>
         rdfs:label  "increased size" .
@@ -7794,6 +7792,8 @@
 
 <http://purl.obolibrary.org/obo/CHEBI_25111>
         rdfs:label  "magnesium porphyrin" .
+
+[ rdfs:label  "STING ubiquitination by TRIM32 or TRIM56" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_02500009>
         rdfs:label  "biogeochemical cycling" .
@@ -7887,6 +7887,8 @@
 
 <http://purl.obolibrary.org/obo/CHEBI_36934>
         rdfs:label  "nitrogen-15 atom" .
+
+[ rdfs:label  "Ubiquitination of NEMO by TRAF6" ] .
 
 <http://purl.obolibrary.org/obo/PO_0007615>
         rdfs:label  "flower development stage" .
@@ -8050,6 +8052,8 @@
 <http://purl.obolibrary.org/obo/UBERON_0001886>
         rdfs:label  "choroid plexus" .
 
+[ rdfs:label  "ISGylation of host proteins" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030040>
         rdfs:label  "sporangium base" .
 
@@ -8082,8 +8086,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000621>
         rdfs:label  "microcosm"@en .
-
-[ rdfs:label  "Activated TRAF6 synthesizes unanchored polyubiquitin chains" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_00000297>
         rdfs:label  "paddy field" .
@@ -8202,8 +8204,6 @@
 <http://purl.obolibrary.org/obo/PO_0025397>
         rdfs:label  "palisade mesophyll intercellular space" .
 
-[ rdfs:label  "Myristoylation of Nef" ] .
-
 <http://purl.obolibrary.org/obo/RO_0002802>
         rdfs:label  "reservoir host of" .
 
@@ -8282,6 +8282,8 @@
 <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>
         rdfs:label  "has_related_synonym" , "has related synonym"@en .
 
+[ rdfs:label  "ISGylation of viral protein NS1" ] .
+
 <http://purl.obolibrary.org/obo/UBERON_0003499>
         rdfs:label  "brain blood vessel" .
 
@@ -8317,8 +8319,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000376>
         rdfs:label  "tropical marine semi-evergreen forest" .
-
-[ rdfs:label  "Auto-ubiquitination of TRAF3 within activated TLR3 complex" ] .
 
 <http://purl.obolibrary.org/obo/UBERON_0006311>
         rdfs:label  "chamber of eyeball" .
@@ -8410,6 +8410,8 @@
 <http://purl.obolibrary.org/obo/ENVO_01001882>
         rdfs:label  "surface hoar"@en .
 
+[ rdfs:label  "infer input from direct reg" ] .
+
 <http://purl.obolibrary.org/obo/PO_0006081>
         rdfs:label  "primary root apical meristem" .
 
@@ -8455,8 +8457,6 @@
 <http://purl.obolibrary.org/obo/RO_0002177>
         rdfs:label  "attached to part of"@en .
 
-[ rdfs:label  "Cdh1:APC/C ubiquitinates EHMT1 and EHMT2" ] .
-
 <http://purl.obolibrary.org/obo/ENVO_01000339>
         rdfs:label  "polar biome" .
 
@@ -8493,6 +8493,8 @@
 <http://purl.obolibrary.org/obo/UBERON_0019042>
         rdfs:label  "reproductive system mucosa" .
 
+[ rdfs:label  "FN3K phosphorylates ketosamines" ] .
+
 <http://purl.obolibrary.org/obo/PATO_0000122>
         rdfs:label  "length" .
 
@@ -8525,8 +8527,6 @@
 
 <http://purl.obolibrary.org/obo/PATO_0001958>
         rdfs:label  "increased variability of size" .
-
-[ rdfs:label  "Ubiquitination of DLL/JAG ligands upon binding to NOTCH2" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000561>
         rdfs:label  "paraffin lamp"@en .
@@ -8612,6 +8612,8 @@
 <http://purl.obolibrary.org/obo/PO_0004719>
         rdfs:label  "hilum groove" .
 
+[ rdfs:label  "TRIM33 monoubiquitinates SMAD4" ] .
+
 <http://purl.obolibrary.org/obo/FOODON_00001151>
         rdfs:label  "citrus fruit food product"@en .
 
@@ -8695,8 +8697,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0025318>
         rdfs:label  "axillary hair base" .
-
-[ rdfs:label  "STING ubiquitination by TRIM32 or TRIM56" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000334>
         rdfs:label  "talus slope" .
@@ -8812,8 +8812,6 @@
 <http://purl.obolibrary.org/obo/ENVO_00005802>
         rdfs:label  "bulk soil" .
 
-[ rdfs:label  "Ubiquitination of NEMO by TRAF6" ] .
-
 <http://purl.obolibrary.org/obo/PO_0001020>
         rdfs:label  "hood-shaped primordium stage" .
 
@@ -8910,11 +8908,15 @@
 <http://purl.obolibrary.org/obo/FOODON_00001096>
         rdfs:label  "fermented elaeis palm beverage"@en .
 
+[ rdfs:label  "Input of effector is input of its parent MF" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030078>
         rdfs:label  "rhizoid" .
 
 <http://purl.obolibrary.org/obo/PO_0004524>
         rdfs:label  "included phloem" .
+
+[ rdfs:label  "TNFAIP3 (A20) ubiquitinates RIPK1 with K48-linked Ub chains" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_00005784>
         rdfs:label  "spruce forest soil" .
@@ -8963,8 +8965,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_3200062>
         rdfs:label  "concentration of iron molecular entity in soil" .
-
-[ rdfs:label  "ISGylation of host proteins" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000279>
         rdfs:label  "ice lens" .
@@ -9155,6 +9155,8 @@
 <http://purl.obolibrary.org/obo/FOODON_00001281>
         rdfs:label  "custard dessert food product"@en .
 
+[ rdfs:label  "Ubiquitination of DLL/JAG ligands upon binding to NOTCH1" ] .
+
 <http://purl.obolibrary.org/obo/FOODON_00001091>
         rdfs:label  "dried milk food product"@en .
 
@@ -9220,8 +9222,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001368>
         rdfs:label  "secondary aerosol formation process"@en .
-
-[ rdfs:label  "ISGylation of viral protein NS1" ] .
 
 <http://purl.obolibrary.org/obo/PO_0025258>
         rdfs:label  "procambial cell" .
@@ -9337,13 +9337,11 @@
 <http://purl.obolibrary.org/obo/ENVO_00000533>
         rdfs:label  "landfill" .
 
-<http://purl.obolibrary.org/obo/ENVO_00000343>
-        rdfs:label  "particle of silt" .
-
 <http://purl.obolibrary.org/obo/ENVO_03000094>
         rdfs:label  "methane gas emission process"@en .
 
-[ rdfs:label  "infer input from direct reg" ] .
+<http://purl.obolibrary.org/obo/ENVO_00000343>
+        rdfs:label  "particle of silt" .
 
 <http://purl.obolibrary.org/obo/ENVO_01000427>
         rdfs:label  "carbon nanotube enriched soil" .
@@ -9390,6 +9388,8 @@
 <http://purl.obolibrary.org/obo/CHEBI_26178>
         rdfs:label  "polyester macromolecule" .
 
+[ rdfs:label  "ITCH ubiquitinates DTX" ] .
+
 <http://purl.obolibrary.org/obo/PO_0007606>
         rdfs:label  "gynoecium development stage" .
 
@@ -9431,8 +9431,6 @@
 
 <http://purl.obolibrary.org/obo/PATO_0000952>
         rdfs:label  "brown" .
-
-[ rdfs:label  "FN3K phosphorylates ketosamines" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01001553>
         rdfs:label  "shore lead"@en .
@@ -9542,16 +9540,14 @@
 <http://purl.obolibrary.org/obo/ENVO_01000802>
         rdfs:label  "planetary moon"@en .
 
-<http://purl.obolibrary.org/obo/RO_0002450>
-        rdfs:label  "directly positively regulates activity of" .
-
 <http://purl.obolibrary.org/obo/ENVO_00000478>
         rdfs:label  "range of mounts" .
 
 <http://purl.obolibrary.org/obo/ENVO_01001706>
         rdfs:label  "cold front"@en .
 
-[ rdfs:label  "TRIM33 monoubiquitinates SMAD4" ] .
+<http://purl.obolibrary.org/obo/RO_0002450>
+        rdfs:label  "directly positively regulates activity of" .
 
 <http://purl.obolibrary.org/obo/PO_0005001>
         rdfs:label  "basal axillary shoot system" .
@@ -9778,8 +9774,6 @@
 <http://purl.obolibrary.org/obo/ENVO_01000557>
         rdfs:label  "liquefied natural gas"@en .
 
-[ rdfs:label  "Input of effector is input of its parent MF" ] .
-
 <http://purl.obolibrary.org/obo/ENVO_00000473>
         rdfs:label  "gravel pit" .
 
@@ -9791,8 +9785,6 @@
 
 <http://purl.obolibrary.org/obo/CHEBI_26878>
         rdfs:label  "tertiary alcohol" .
-
-[ rdfs:label  "TNFAIP3 (A20) ubiquitinates RIPK1 with K48-linked Ub chains" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000367>
         rdfs:label  "anchialine cave" .
@@ -9956,6 +9948,8 @@
 <http://purl.obolibrary.org/obo/FOODON_03400861>
         rdfs:label  "prepared food product (eurofir)"@en .
 
+[ rdfs:label  "E1 mediated ubiquitin activation" ] .
+
 <http://purl.obolibrary.org/obo/IAO_0000597>
         rdfs:label  "has ID range allocated to"@en .
 
@@ -9991,8 +9985,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000552>
         rdfs:label  "natural gas"@en .
-
-[ rdfs:label  "Ubiquitination of DLL/JAG ligands upon binding to NOTCH1" ] .
 
 <http://purl.obolibrary.org/obo/PO_0000112>
         rdfs:label  "shoot axis epidermis" .
@@ -10189,6 +10181,8 @@
 <http://purl.obolibrary.org/obo/ENVO_06105109>
         rdfs:label  "litter role"@en .
 
+[ rdfs:label  "STUB1 ubiquitinates RIPK1 at K571, K604, K627" ] .
+
 <http://purl.obolibrary.org/obo/NCBITaxon_6101>
         rdfs:label  "Anthozoa" .
 
@@ -10239,8 +10233,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001641>
         rdfs:label  "glaciation"@en .
-
-[ rdfs:label  "ITCH ubiquitinates DTX" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01001451>
         rdfs:label  "usage of an environment for business"@en .
@@ -10340,6 +10332,8 @@
 
 <http://purl.obolibrary.org/obo/PO_0004515>
         rdfs:label  "early wood" .
+
+[ rdfs:label  "RCHY1 monoubiquitinates POLH" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_00005775>
         rdfs:label  "salt contaminated soil" .
@@ -10562,6 +10556,8 @@
 
 <http://purl.obolibrary.org/obo/RO_0018031>
         rdfs:label  "is direct conjugate base of" .
+
+[ rdfs:label  "K63polyUb-TRAF6 ubiquitinates TAK1" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_02500028>
         rdfs:label  "planetary erosion" .
@@ -10806,6 +10802,8 @@
 <http://purl.obolibrary.org/obo/CHEBI_36916>
         rdfs:label  "cation" .
 
+[ rdfs:label  "Ubiquitination of CD4 by Vpu:CD4:beta-TrCP:SKP1 complex" ] .
+
 <http://purl.obolibrary.org/obo/PATO_0000011>
         rdfs:label  "age" .
 
@@ -10844,8 +10842,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000640>
         rdfs:label  "planetary mantle"@en .
-
-[ rdfs:label  "E1 mediated ubiquitin activation" ] .
 
 <http://purl.obolibrary.org/obo/PO_0000200>
         rdfs:label  "micropylar endosperm" .
@@ -11036,6 +11032,8 @@
 <http://purl.obolibrary.org/obo/ENVO_06105007>
         rdfs:label  "plastic film"@en .
 
+[ rdfs:label  "Ubiquitination of Emi1 by SCF-beta-TrCP" ] .
+
 <http://purl.obolibrary.org/obo/ENVO_01000965>
         rdfs:label  "constructed swimming pool"@en .
 
@@ -11071,8 +11069,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0001049>
         rdfs:label  "lodicule development stage" .
-
-[ rdfs:label  "STUB1 ubiquitinates RIPK1 at K571, K604, K627" ] .
 
 <http://purl.obolibrary.org/obo/PO_0025379>
         rdfs:label  "intercellular space" .
@@ -11193,8 +11189,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_2100002>
         rdfs:label  "intestine environment" .
-
-[ rdfs:label  "RCHY1 monoubiquitinates POLH" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000358>
         rdfs:label  "acidic water" .
@@ -11403,6 +11397,8 @@
 <http://purl.obolibrary.org/obo/PO_0004548>
         rdfs:label  "aerial tuber" .
 
+[ rdfs:label  "ITCH polyubiquitinates MLKL at K50" ] .
+
 <http://purl.obolibrary.org/obo/CHEBI_46717>
         rdfs:label  "sulfide mineral" .
 
@@ -11450,8 +11446,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0001007>
         rdfs:label  "pollen development stage" .
-
-[ rdfs:label  "K63polyUb-TRAF6 ubiquitinates TAK1" ] .
 
 <http://purl.obolibrary.org/obo/PO_0025337>
         rdfs:label  "life of whole plant stage" .
@@ -11609,6 +11603,8 @@
 <http://purl.obolibrary.org/obo/PO_0004543>
         rdfs:label  "shoot axis tuber" .
 
+[ rdfs:label  "BRCA1:BARD1 heterodimer autoubiquitinates" ] .
+
 <http://purl.obolibrary.org/obo/UBERON_0004755>
         rdfs:label  "skeletal tissue" .
 
@@ -11662,8 +11658,6 @@
 
 <http://purl.obolibrary.org/obo/FOODON_00004156>
         rdfs:label  "velvet bean food product"@en .
-
-[ rdfs:label  "Ubiquitination of CD4 by Vpu:CD4:beta-TrCP:SKP1 complex" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000298>
         rdfs:label  "continental margin" .
@@ -11758,14 +11752,16 @@
 <http://purl.obolibrary.org/obo/UBERON_0001766>
         rdfs:label  "anterior chamber of eyeball" .
 
+<http://purl.obolibrary.org/obo/PO_0004506>
+        rdfs:label  "developing seed stage" .
+
 <http://purl.obolibrary.org/obo/PO_0007097>
         rdfs:label  "SE.14 fourteen nodes or internodes visible stage" .
 
 <http://purl.obolibrary.org/obo/RO_0018027>
         rdfs:label  "is agonist of" .
 
-<http://purl.obolibrary.org/obo/PO_0004506>
-        rdfs:label  "developing seed stage" .
+[ rdfs:label  "Hh processing variants are ubiquitinated" ] .
 
 <http://purl.obolibrary.org/obo/PO_0030110>
         rdfs:label  "pome fruit" .
@@ -11836,6 +11832,8 @@
 <http://purl.obolibrary.org/obo/ENVO_01001025>
         rdfs:label  "particle beam radiation"@en .
 
+[ rdfs:label  "Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 PEST domain mutants" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030092>
         rdfs:label  "loculicidal capsule fruit" .
 
@@ -11899,8 +11897,6 @@
 <http://purl.obolibrary.org/obo/ENVO_01000293>
         rdfs:label  "ice mass" .
 
-[ rdfs:label  "Ubiquitination of Emi1 by SCF-beta-TrCP" ] .
-
 <http://purl.obolibrary.org/obo/PATO_0000596>
         rdfs:label  "decreased volume" .
 
@@ -11957,6 +11953,8 @@
 
 <http://purl.obolibrary.org/obo/PO_0004501>
         rdfs:label  "gynoecium differentiation and expansion stage" .
+
+[ rdfs:label  "Activated TRAF6 synthesizes unanchored polyubiquitin chains upon TLR stimulation" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_00005761>
         rdfs:label  "meadow soil" .
@@ -12047,6 +12045,8 @@
 
 <http://purl.obolibrary.org/obo/PO_0025519>
         rdfs:label  "leaf lamina crena" .
+
+[ rdfs:label  "Auto-ubiquitination of TRAF3" ] .
 
 <http://purl.obolibrary.org/obo/PO_0007625>
         rdfs:label  "C tetrad of megaspores stage" .
@@ -12156,6 +12156,8 @@
 <http://purl.obolibrary.org/obo/CHEBI_36907>
         rdfs:label  "neon molecular entity" .
 
+[ rdfs:label  "Ubiquitin-dependent degradation of the SMAD complex terminates TGF-beta signaling" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030050>
         rdfs:label  "stereome" .
 
@@ -12191,8 +12193,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000631>
         rdfs:label  "ocean acidification"@en .
-
-[ rdfs:label  "ITCH polyubiquitinates MLKL at K50" ] .
 
 <http://purl.obolibrary.org/obo/UBERON_0004088>
         rdfs:label  "orbital region" .
@@ -12371,6 +12371,8 @@
 <http://purl.obolibrary.org/obo/CHEBI_36902>
         rdfs:label  "chalcogen hydride" .
 
+[ rdfs:label  "RNF41 ubiquitinates ERBB3" ] .
+
 <http://purl.obolibrary.org/obo/PO_0006439>
         rdfs:label  "upper glume of pedicellate spikelet of ear" .
 
@@ -12385,8 +12387,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000576>
         rdfs:label  "apiary"@en .
-
-[ rdfs:label  "BRCA1:BARD1 heterodimer autoubiquitinates" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_00000492>
         rdfs:label  "resequent stream" .
@@ -12520,8 +12520,6 @@
 <http://purl.obolibrary.org/obo/ENVO_00000455>
         rdfs:label  "tarn" .
 
-[ rdfs:label  "Hh processing variants are ubiquitinated" ] .
-
 <http://purl.obolibrary.org/obo/ENVO_01000349>
         rdfs:label  "root matter" .
 
@@ -12575,8 +12573,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001665>
         rdfs:label  "soil cryoturbate"@en .
-
-[ rdfs:label  "Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 PEST domain mutants" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000571>
         rdfs:label  "cold-blast paraffin lantern"@en .
@@ -12677,6 +12673,8 @@
 <http://purl.obolibrary.org/obo/PO_0004539>
         rdfs:label  "determinate nodule" .
 
+[ rdfs:label  "Activated TRAF6 synthesizes unanchored polyubiquitin chains upon TLR3 stimulation" ] .
+
 <http://purl.obolibrary.org/obo/ENVO_00005799>
         rdfs:label  "rocky sand" .
 
@@ -12730,8 +12728,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0025328>
         rdfs:label  "unifacial vascular leaf" .
-
-[ rdfs:label  "Activated TRAF6 synthesizes unanchored polyubiquitin chains upon TLR stimulation" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000344>
         rdfs:label  "nival" .
@@ -12805,11 +12801,13 @@
 <http://purl.obolibrary.org/obo/ENVO_01000896>
         rdfs:label  "freezing rainfall"@en .
 
+<http://purl.obolibrary.org/obo/UBERON_0009891>
+        rdfs:label  "facial mesenchyme" .
+
 <http://purl.obolibrary.org/obo/FOODON_00001124>
         rdfs:label  "caprine cheese food product"@en .
 
-<http://purl.obolibrary.org/obo/UBERON_0009891>
-        rdfs:label  "facial mesenchyme" .
+[ rdfs:label  "effector input is compound function input" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01001850>
         rdfs:label  "frost"@en .
@@ -12834,8 +12832,6 @@
 
 <http://purl.obolibrary.org/obo/CHEBI_37176>
         rdfs:label  "mononuclear parent hydride" .
-
-[ rdfs:label  "Auto-ubiquitination of TRAF3" ] .
 
 <http://purl.obolibrary.org/obo/UBERON_0001242>
         rdfs:label  "intestinal mucosa" .
@@ -12918,11 +12914,13 @@
 <http://purl.obolibrary.org/obo/PO_0030088>
         rdfs:label  "lateral root spine" .
 
+<http://purl.obolibrary.org/obo/PO_0004534>
+        rdfs:label  "ray secondary xylem parenchyma" .
+
 <http://purl.obolibrary.org/obo/CHEBI_25154>
         rdfs:label  "manganese molecular entity" .
 
-<http://purl.obolibrary.org/obo/PO_0004534>
-        rdfs:label  "ray secondary xylem parenchyma" .
+[ rdfs:label  "K63-linked ubiquitination of RIP1 bound to the activated TLR complex" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_00005794>
         rdfs:label  "water scum" .
@@ -12974,8 +12972,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001623>
         rdfs:label  "glacial summer surface"@en .
-
-[ rdfs:label  "Ubiquitin-dependent degradation of the SMAD complex terminates TGF-beta signaling" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000289>
         rdfs:label  "cold monomictic lake" .
@@ -13076,6 +13072,8 @@
 <http://purl.obolibrary.org/obo/PO_0007088>
         rdfs:label  "2.04 main shoot and axillary shoots visible at four nodes stage" .
 
+[ rdfs:label  "Defective NHLRC1 does not ubiquitinate EPM2A (laforin) and PPP1R3C (PTG) (type 2B disease)" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030101>
         rdfs:label  "loment fruit" .
 
@@ -13160,6 +13158,8 @@
 <http://purl.obolibrary.org/obo/FOODON_00001291>
         rdfs:label  "clam food product"@en .
 
+[ rdfs:label  "SMURF2 monoubiquitinates SMAD3" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030083>
         rdfs:label  "gametophore bud initial cell" .
 
@@ -13180,9 +13180,6 @@
 
 <http://purl.obolibrary.org/obo/UBERON_0007503>
         rdfs:label  "epithelial vesicle" .
-
-<http://purl.obolibrary.org/obo/PO_0025268>
-        rdfs:label  "fruit septum" .
 
 <http://purl.obolibrary.org/obo/ENVO_01001568>
         rdfs:label  "frost heave"@en .
@@ -13211,7 +13208,8 @@
 <http://purl.obolibrary.org/obo/ENVO_01001378>
         rdfs:label  "marine bed"@en .
 
-[ rdfs:label  "RNF41 ubiquitinates ERBB3" ] .
+<http://purl.obolibrary.org/obo/PO_0025268>
+        rdfs:label  "fruit septum" .
 
 <http://purl.obolibrary.org/obo/ENVO_01000284>
         rdfs:label  "amictic lake" .
@@ -13306,6 +13304,8 @@
 <http://purl.obolibrary.org/obo/PO_0007083>
         rdfs:label  "LP.13 thirteen leaves visible stage" .
 
+[ rdfs:label  "DDX41 ubiquitination by TRIM21" ] .
+
 <http://purl.obolibrary.org/obo/ENVO_00005752>
         rdfs:label  "sawah soil" .
 
@@ -13374,6 +13374,8 @@
 
 <http://purl.obolibrary.org/obo/ENVO_02000001>
         rdfs:label  "textile" .
+
+[ rdfs:label  "TRAF6 polyubiquitinates NRIF" ] .
 
 <http://purl.obolibrary.org/obo/PO_0007616>
         rdfs:label  "flowering stage" .
@@ -13525,6 +13527,8 @@
 <http://purl.obolibrary.org/obo/FOODON_00002153>
         rdfs:label  "plant seed vegetable food product"@en .
 
+[ rdfs:label  "Cytosolic VBC complex ubiquitinylates hydroxyprolyl-HIF-alpha" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030041>
         rdfs:label  "sporangium theca" .
 
@@ -13543,17 +13547,14 @@
 <http://purl.obolibrary.org/obo/CHEBI_139291>
         rdfs:label  "chlorophyll(1-)" .
 
-<http://purl.obolibrary.org/obo/FOODON_03302082>
-        rdfs:label  "beef (dehydrated)"@en .
-
 <http://purl.obolibrary.org/obo/NCBITaxon_198592>
         rdfs:label  "Umezakia" .
 
 <http://purl.obolibrary.org/obo/ENVO_01000812>
         rdfs:label  "desert pavement"@en .
 
-<http://purl.obolibrary.org/obo/ENVO_01000622>
-        rdfs:label  "vaporisation"@en .
+<http://purl.obolibrary.org/obo/FOODON_03302082>
+        rdfs:label  "beef (dehydrated)"@en .
 
 <http://purl.obolibrary.org/obo/UBERON_0002271>
         rdfs:label  "periventricular zone of hypothalamus" .
@@ -13573,7 +13574,8 @@
 <http://purl.obolibrary.org/obo/RO_0002460>
         rdfs:label  "has vector" .
 
-[ rdfs:label  "Activated TRAF6 synthesizes unanchored polyubiquitin chains upon TLR3 stimulation" ] .
+<http://purl.obolibrary.org/obo/ENVO_01000622>
+        rdfs:label  "vaporisation"@en .
 
 <http://purl.obolibrary.org/obo/ENVO_00000298>
         rdfs:label  "marine iceberg" .
@@ -13698,19 +13700,17 @@
 <http://purl.obolibrary.org/obo/CHEBI_133331>
         rdfs:label  "metal oxide" .
 
-<http://purl.obolibrary.org/obo/RO_0002423>
-        rdfs:label  "logical macro assertion on an annotation property"@en .
-
 <http://purl.obolibrary.org/obo/PATO_0001481>
         rdfs:label  "sloped" .
 
-<http://purl.obolibrary.org/obo/ENVO_3100041>
-        rdfs:label  "concentration of nitrite in sea water" .
+<http://purl.obolibrary.org/obo/RO_0002423>
+        rdfs:label  "logical macro assertion on an annotation property"@en .
 
 <http://purl.obolibrary.org/obo/ENVO_00003092>
         rdfs:label  "salicylate enriched soil" .
 
-[ rdfs:label  "effector input is compound function input" ] .
+<http://purl.obolibrary.org/obo/ENVO_3100041>
+        rdfs:label  "concentration of nitrite in sea water" .
 
 <http://purl.obolibrary.org/obo/ENVO_00000501>
         rdfs:label  "submerged bed" .
@@ -13769,6 +13769,10 @@
 <http://purl.obolibrary.org/obo/ENVO_1000750>
         rdfs:label  "depositional island"@en .
 
+[ rdfs:label  "involved in BP" ] .
+
+[ rdfs:label  "Activation of ISG15 by UBA7 E1 ligase" ] .
+
 <http://purl.obolibrary.org/obo/PO_0009071>
         rdfs:label  "anther wall tapetum" .
 
@@ -13798,8 +13802,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000377>
         rdfs:label  "humid subtropical" .
-
-[ rdfs:label  "K63-linked ubiquitination of RIP1 bound to the activated TLR complex" ] .
 
 <http://purl.obolibrary.org/obo/UBERON_0006312>
         rdfs:label  "ocular refractive media" .
@@ -13912,8 +13914,6 @@
 <http://purl.obolibrary.org/obo/UBERON_0003133>
         rdfs:label  "reproductive organ" .
 
-[ rdfs:label  "Defective NHLRC1 does not ubiquitinate EPM2A (laforin) and PPP1R3C (PTG) (type 2B disease)" ] .
-
 <http://purl.obolibrary.org/obo/RO_0002178>
         rdfs:label  "supplies"@en .
 
@@ -13992,13 +13992,11 @@
 <http://purl.obolibrary.org/obo/ENVO_01001656>
         rdfs:label  "glacial retreat"@en .
 
-<http://purl.obolibrary.org/obo/ENVO_01000562>
-        rdfs:label  "flat-wick lamp"@en .
-
 <http://purl.obolibrary.org/obo/CHEBI_131621>
         rdfs:label  "C19-steroid" .
 
-[ rdfs:label  "SMURF2 monoubiquitinates SMAD3" ] .
+<http://purl.obolibrary.org/obo/ENVO_01000562>
+        rdfs:label  "flat-wick lamp"@en .
 
 <http://purl.obolibrary.org/obo/ENVO_01001466>
         rdfs:label  "UNEP-WCMC class 6 mountain"@en .
@@ -14090,6 +14088,8 @@
 <http://purl.obolibrary.org/obo/FOODON_00001152>
         rdfs:label  "melon fruit food product"@en .
 
+[ rdfs:label  "if effector directly negatively regulates X,  its parent MF directly negatively regulates X" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030134>
         rdfs:label  "bostryx inflorescence" .
 
@@ -14140,8 +14140,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001429>
         rdfs:label  "land conversion process"@en .
-
-[ rdfs:label  "DDX41 ubiquitination by TRIM21" ] .
 
 <http://purl.obolibrary.org/obo/PO_0025319>
         rdfs:label  "axillary hair basal cell" .
@@ -14229,8 +14227,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_00005803>
         rdfs:label  "animal habitation" .
-
-[ rdfs:label  "TRAF6 polyubiquitinates NRIF" ] .
 
 <http://purl.obolibrary.org/obo/PO_0003019>
         rdfs:label  "central root cap of lateral root" .
@@ -14331,6 +14327,8 @@
 <http://purl.obolibrary.org/obo/PO_0030079>
         rdfs:label  "protonemal rhizoid" .
 
+[ rdfs:label  "The geminin component of geminin:Cdt1 complexes is ubiquitinated, releasing Cdt1" ] .
+
 <http://purl.obolibrary.org/obo/PO_0004525>
         rdfs:label  "secondary xylem parenchyma cell" .
 
@@ -14372,8 +14370,6 @@
 
 <http://purl.obolibrary.org/obo/UBERON_0003073>
         rdfs:label  "lens placode" .
-
-[ rdfs:label  "Cytosolic VBC complex ubiquitinylates hydroxyprolyl-HIF-alpha" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000520>
         rdfs:label  "latrine slab" .
@@ -14573,6 +14569,8 @@
 <http://purl.obolibrary.org/obo/CHEBI_49470>
         rdfs:label  "aluminium(3+)" .
 
+[ rdfs:label  "cIAP1,2 ubiquitinates NIK in cIAP1,2:TRAF2::TRAF3:NIK" ] .
+
 <http://purl.obolibrary.org/obo/PO_0004520>
         rdfs:label  "libriform fiber cell" .
 
@@ -14618,8 +14616,6 @@
 <http://purl.obolibrary.org/obo/UBERON_0013765>
         rdfs:label  "digestive system element" .
 
-[ rdfs:label  "involved in BP" ] .
-
 <http://purl.obolibrary.org/obo/PO_0000025>
         rdfs:label  "root tip" .
 
@@ -14628,8 +14624,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001369>
         rdfs:label  "tidal mangrove shrubland"@en .
-
-[ rdfs:label  "Activation of ISG15 by UBA7 E1 ligase" ] .
 
 <http://purl.obolibrary.org/obo/PO_0025259>
         rdfs:label  "leaf procambium" .
@@ -14789,6 +14783,8 @@
 
 <http://purl.obolibrary.org/obo/PATO_0001305>
         rdfs:label  "increased temperature" .
+
+[ rdfs:label  "Ubiquitination of NOTCH1 by ITCH in the absence of ligand" ] .
 
 <http://purl.obolibrary.org/obo/PO_0007607>
         rdfs:label  "sepal primordium visible stage" .
@@ -14970,8 +14966,6 @@
 <http://purl.obolibrary.org/obo/ENVO_01000613>
         rdfs:label  "watercraft"@en .
 
-[ rdfs:label  "if effector directly negatively regulates X,  its parent MF directly negatively regulates X" ] .
-
 <http://purl.obolibrary.org/obo/UBERON_0002072>
         rdfs:label  "hypodermis" .
 
@@ -15031,6 +15025,8 @@
 
 <http://purl.obolibrary.org/obo/PATO_0001300>
         rdfs:label  "optical quality" .
+
+[ rdfs:label  "CBL escapes CDC42-mediated inhibition by down-regulating the adaptor molecule Beta-Pix" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_03501206>
         rdfs:label  "shopping center"@en .
@@ -15161,6 +15157,8 @@
 <http://purl.obolibrary.org/obo/FOODON_03411016>
         rdfs:label  "starch-producing plant"@en .
 
+[ rdfs:label  "involved in BP" ] .
+
 <http://purl.obolibrary.org/obo/CHEBI_39285>
         rdfs:label  "chloropicrin" .
 
@@ -15193,8 +15191,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001702>
         rdfs:label  "subtropical environment"@en .
-
-[ rdfs:label  "The geminin component of geminin:Cdt1 complexes is ubiquitinated, releasing Cdt1" ] .
 
 <http://purl.obolibrary.org/obo/PATO_0000911>
         rdfs:label  "decreased rate" .
@@ -15379,11 +15375,13 @@
 <http://purl.obolibrary.org/obo/PATO_0000304>
         rdfs:label  "decreased speed" .
 
+<http://purl.obolibrary.org/obo/FOODON_00001180>
+        rdfs:label  "prepared food product"@en .
+
 <http://purl.obolibrary.org/obo/PATO_0001208>
         rdfs:label  "odorless" .
 
-<http://purl.obolibrary.org/obo/FOODON_00001180>
-        rdfs:label  "prepared food product"@en .
+[ rdfs:label  "Polyubiquitination of substrate" ] .
 
 <http://purl.obolibrary.org/obo/IAO_0000598>
         rdfs:label  "has ID policy for"@en .
@@ -15435,8 +15433,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0025347>
         rdfs:label  "thallus vegetative whole plant development stage" .
-
-[ rdfs:label  "cIAP1,2 ubiquitinates NIK in cIAP1,2:TRAF2::TRAF3:NIK" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000363>
         rdfs:label  "erosional cave" .
@@ -15576,6 +15572,8 @@
 <http://purl.obolibrary.org/obo/PO_0005647>
         rdfs:label  "spongy mesophyll" .
 
+[ rdfs:label  "MIB2 ubiquitinates CFLAR" ] .
+
 <http://purl.obolibrary.org/obo/CHEBI_28315>
         rdfs:label  "alloxanthine" .
 
@@ -15632,8 +15630,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001642>
         rdfs:label  "interglacial"@en .
-
-[ rdfs:label  "Ubiquitination of NOTCH1 by ITCH in the absence of ligand" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01001452>
         rdfs:label  "Calyptra habitat"@en .
@@ -15728,11 +15724,13 @@
 <http://purl.obolibrary.org/obo/UBERON_0001776>
         rdfs:label  "optic choroid" .
 
+<http://purl.obolibrary.org/obo/PO_0004516>
+        rdfs:label  "late wood" .
+
 <http://purl.obolibrary.org/obo/RO_0018037>
         rdfs:label  "is substitutent group from"@en .
 
-<http://purl.obolibrary.org/obo/PO_0004516>
-        rdfs:label  "late wood" .
+[ rdfs:label  "SIAH1:UBE2L6:Ubiquitin ubiquitinates SNCA" ] .
 
 <http://purl.obolibrary.org/obo/UBERON_0003824>
         rdfs:label  "nerve of thoracic segment" .
@@ -15884,8 +15882,6 @@
 <http://purl.obolibrary.org/obo/PO_0025287>
         rdfs:label  "seedling coleoptile" .
 
-[ rdfs:label  "CBL escapes CDC42-mediated inhibition by down-regulating the adaptor molecule Beta-Pix" ] .
-
 <http://purl.obolibrary.org/obo/PO_0003005>
         rdfs:label  "shoot-borne nodal root" .
 
@@ -15961,11 +15957,13 @@
 <http://purl.obolibrary.org/obo/PO_0030065>
         rdfs:label  "archegonium neck canal cell" .
 
+<http://purl.obolibrary.org/obo/PO_0004511>
+        rdfs:label  "seed trichome" .
+
 <http://purl.obolibrary.org/obo/RO_0018032>
         rdfs:label  "is direct conjugate acid of" .
 
-<http://purl.obolibrary.org/obo/PO_0004511>
-        rdfs:label  "seed trichome" .
+[ rdfs:label  "SCF(beta-TrCP) ubiquitinates p-GLI1" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_02500029>
         rdfs:label  "bedrock dissolution" .
@@ -16002,8 +16000,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0000016>
         rdfs:label  "lateral root primordium" .
-
-[ rdfs:label  "involved in BP" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_00000372>
         rdfs:label  "pyroclastic shield volcano" .
@@ -16182,6 +16178,8 @@
 <http://purl.obolibrary.org/obo/CHEBI_47909>
         rdfs:label  "3-oxo-Delta(4) steroid" .
 
+[ rdfs:label  "CBL-mediated ubiquitination of CIN85" ] .
+
 <http://purl.obolibrary.org/obo/UBERON_1100000>
         rdfs:label  "digestive tract junction" .
 
@@ -16238,8 +16236,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000641>
         rdfs:label  "planetary core"@en .
-
-[ rdfs:label  "Polyubiquitination of substrate" ] .
 
 <http://purl.obolibrary.org/obo/PO_0000201>
         rdfs:label  "chalazal cyst" .
@@ -16424,6 +16420,8 @@
 <http://purl.obolibrary.org/obo/ENVO_06105008>
         rdfs:label  "plastic fragment"@en .
 
+[ rdfs:label  "Ubiquitination of cell cycle proteins targeted by the APC/C:Cdh1complex" ] .
+
 <http://purl.obolibrary.org/obo/PATO_0002005>
         rdfs:label  "concavity" .
 
@@ -16465,8 +16463,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0007023>
         rdfs:label  "IE.04 inflorescence fully emerged from flag leaf sheath stage" .
-
-[ rdfs:label  "MIB2 ubiquitinates CFLAR" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000396>
         rdfs:label  "tropical sclerophyllous dry forest" .
@@ -16558,6 +16554,8 @@
 <http://purl.obolibrary.org/obo/FOODON_00001176>
         rdfs:label  "invertebrate animal food product"@en .
 
+[ rdfs:label  "enabling an MF enables its parts" ] .
+
 <http://purl.obolibrary.org/obo/CHEBI_50996>
         rdfs:label  "tertiary amino compound" .
 
@@ -16596,8 +16594,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_2100003>
         rdfs:label  "skin environment" .
-
-[ rdfs:label  "SIAH1:UBE2L6:Ubiquitin ubiquitinates SNCA" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000359>
         rdfs:label  "limestone cave" .
@@ -16776,6 +16772,8 @@
 <http://purl.obolibrary.org/obo/FOODON_00002265>
         rdfs:label  "soybean seed (field) food product"@en .
 
+[ rdfs:label  "PRKN polyubiquitinates RIPK3" ] .
+
 <http://purl.obolibrary.org/obo/FOODON_00001171>
         rdfs:label  "cruciferous inflorescence food product"@en .
 
@@ -16829,8 +16827,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0001008>
         rdfs:label  "C callose wall formation in pollen mother cells stage" .
-
-[ rdfs:label  "SCF(beta-TrCP) ubiquitinates p-GLI1" ] .
 
 <http://purl.obolibrary.org/obo/PO_0025338>
         rdfs:label  "collective plant organ structure development stage" .
@@ -17030,6 +17026,8 @@
 <http://purl.obolibrary.org/obo/PO_0030098>
         rdfs:label  "schizocarp fruit" .
 
+[ rdfs:label  "TRAF2,6 ubiquitinates NLRC5" ] .
+
 <http://purl.obolibrary.org/obo/PO_0004544>
         rdfs:label  "root-borne shoot system" .
 
@@ -17080,8 +17078,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001633>
         rdfs:label  "agricultural pollution"@en .
-
-[ rdfs:label  "CBL-mediated ubiquitination of CIN85" ] .
 
 <http://purl.obolibrary.org/obo/CHEBI_83348>
         rdfs:label  "chlorophyllide a(2-)" .
@@ -17152,6 +17148,9 @@
 <http://purl.obolibrary.org/obo/UBERON_0006596>
         rdfs:label  "presumptive blood" .
 
+<http://purl.obolibrary.org/obo/PO_0004507>
+        rdfs:label  "plant embryo bilateral stage" .
+
 <http://purl.obolibrary.org/obo/PO_0007098>
         rdfs:label  "LP.02 two leaves visible stage" .
 
@@ -17161,8 +17160,7 @@
 <http://purl.obolibrary.org/obo/RO_0018028>
         rdfs:label  "is inverse agonist of" .
 
-<http://purl.obolibrary.org/obo/PO_0004507>
-        rdfs:label  "plant embryo bilateral stage" .
+[ rdfs:label  "SCF-beta-TRCP ubiquitinates p-7S-p100:RELB in active NIK:p-176,S180-IKKA dimer:p-7S-p100:SCF-beta-TRCP" ] .
 
 <http://purl.obolibrary.org/obo/PO_0030111>
         rdfs:label  "pepo fruit" .
@@ -17233,6 +17231,8 @@
 <http://purl.obolibrary.org/obo/ENVO_01001026>
         rdfs:label  "electromagnetic radiation"@en .
 
+[ rdfs:label  "Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 HD+PEST domain mutants" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030093>
         rdfs:label  "septicidal capsule fruit" .
 
@@ -17283,8 +17283,6 @@
 
 <http://purl.obolibrary.org/obo/UBERON_0005085>
         rdfs:label  "ectodermal placode" .
-
-[ rdfs:label  "Ubiquitination of cell cycle proteins targeted by the APC/C:Cdh1complex" ] .
 
 <http://purl.obolibrary.org/obo/PO_0025278>
         rdfs:label  "rhizome scale leaf" .
@@ -17355,11 +17353,13 @@
 <http://purl.obolibrary.org/obo/PATO_0000008>
         rdfs:label  "speed" .
 
+<http://purl.obolibrary.org/obo/CHEBI_38460>
+        rdfs:label  "methylindole" .
+
 <http://purl.obolibrary.org/obo/PO_0007093>
         rdfs:label  "2.05 main shoot and axillary shoots visible at five nodes stage" .
 
-<http://purl.obolibrary.org/obo/CHEBI_38460>
-        rdfs:label  "methylindole" .
+[ rdfs:label  "Pellino ubiquitinates IRAK1" ] .
 
 <http://purl.obolibrary.org/obo/PO_0004502>
         rdfs:label  "closure of carpel(s) stage" .
@@ -17394,13 +17394,11 @@
 <http://purl.obolibrary.org/obo/ENVO_00000553>
         rdfs:label  "multipurpose dam" .
 
-<http://purl.obolibrary.org/obo/ENVO_01000447>
-        rdfs:label  "roadside" .
-
 <http://purl.obolibrary.org/obo/RO_0002285>
         rdfs:label  "developmentally replaces"@en .
 
-[ rdfs:label  "enabling an MF enables its parts" ] .
+<http://purl.obolibrary.org/obo/ENVO_01000447>
+        rdfs:label  "roadside" .
 
 <http://purl.obolibrary.org/obo/PO_0000007>
         rdfs:label  "leaf-derived cultured plant cell" .
@@ -17446,6 +17444,8 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001021>
         rdfs:label  "humic lake"@en .
+
+[ rdfs:label  "Autoubiquitination of phospho-COP1(Ser-387 )" ] .
 
 <http://purl.obolibrary.org/obo/PO_0007626>
         rdfs:label  "D megaspore degeneration stage" .
@@ -17564,6 +17564,8 @@
 <http://purl.obolibrary.org/obo/CHEBI_36908>
         rdfs:label  "argon molecular entity" .
 
+[ rdfs:label  "Multiubiquitination of APC/C-associated Cdh1" ] .
+
 <http://purl.obolibrary.org/obo/CHEBI_16966>
         rdfs:label  "heteroglycan" .
 
@@ -17588,17 +17590,14 @@
 <http://purl.obolibrary.org/obo/RO_0004005>
         rdfs:label  "has major susceptibility factor" .
 
-<http://purl.obolibrary.org/obo/UBERON_0005423>
-        rdfs:label  "developing anatomical structure" .
-
 <http://purl.obolibrary.org/obo/ENVO_01000822>
         rdfs:label  "planetary photic zone"@en .
 
 <http://purl.obolibrary.org/obo/CHEBI_36338>
         rdfs:label  "lepton" .
 
-<http://purl.obolibrary.org/obo/RO_0002470>
-        rdfs:label  "eats" .
+<http://purl.obolibrary.org/obo/UBERON_0005423>
+        rdfs:label  "developing anatomical structure" .
 
 <http://purl.obolibrary.org/obo/ENVO_00000498>
         rdfs:label  "volcanic dike" .
@@ -17612,7 +17611,8 @@
 <http://purl.obolibrary.org/obo/PO_0005021>
         rdfs:label  "sepal margin" .
 
-[ rdfs:label  "PRKN polyubiquitinates RIPK3" ] .
+<http://purl.obolibrary.org/obo/RO_0002470>
+        rdfs:label  "eats" .
 
 <http://purl.obolibrary.org/obo/ENVO_01000632>
         rdfs:label  "chonolith"@en .
@@ -17818,6 +17818,8 @@
 <http://purl.obolibrary.org/obo/CHEBI_25442>
         rdfs:label  "mycotoxin" .
 
+[ rdfs:label  "RNF41 ubiquitinates activated ERBB3" ] .
+
 <http://purl.obolibrary.org/obo/PO_0009081>
         rdfs:label  "higher order inflorescence axis" .
 
@@ -17859,8 +17861,6 @@
 
 <http://purl.obolibrary.org/obo/UBERON_0005178>
         rdfs:label  "thoracic cavity element" .
-
-[ rdfs:label  "TRAF2,6 ubiquitinates NLRC5" ] .
 
 <http://purl.obolibrary.org/obo/UBERON_0000349>
         rdfs:label  "limbic system" .
@@ -17940,6 +17940,8 @@
 <http://purl.obolibrary.org/obo/ENVO_01001893>
         rdfs:label  "salt spring"@en .
 
+[ rdfs:label  "enabling an MF enables its parts" ] .
+
 <http://purl.obolibrary.org/obo/UBERON_0004807>
         rdfs:label  "respiratory system epithelium" .
 
@@ -17960,8 +17962,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_00000456>
         rdfs:label  "tidewater glacier" .
-
-[ rdfs:label  "SCF-beta-TRCP ubiquitinates p-7S-p100:RELB in active NIK:p-176,S180-IKKA dimer:p-7S-p100:SCF-beta-TRCP" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_00000266>
         rdfs:label  "pasture" .
@@ -18040,8 +18040,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001666>
         rdfs:label  "glacial run"@en .
-
-[ rdfs:label  "Ubiquitination of DLL/JAG ligands upon binding to NOTCH1 HD+PEST domain mutants" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000572>
         rdfs:label  "electric lamp"@en .
@@ -18184,8 +18182,6 @@
 <http://purl.obolibrary.org/obo/PO_0025329>
         rdfs:label  "calyptra calyx" .
 
-[ rdfs:label  "Pellino ubiquitinates IRAK1" ] .
-
 <http://purl.obolibrary.org/obo/UBERON_0000307>
         rdfs:label  "blastula" .
 
@@ -18282,8 +18278,6 @@
 <http://purl.obolibrary.org/obo/ENVO_01001661>
         rdfs:label  "frost jacking"@en .
 
-[ rdfs:label  "Autoubiquitination of phospho-COP1(Ser-387 )" ] .
-
 <http://purl.obolibrary.org/obo/PO_0009002>
         rdfs:label  "plant cell" .
 
@@ -18371,6 +18365,8 @@
 <http://purl.obolibrary.org/obo/PO_0004535>
         rdfs:label  "fruit placenta" .
 
+[ rdfs:label  "DDX58 is K63 polyubiquitinated" ] .
+
 <http://purl.obolibrary.org/obo/CHEBI_24061>
         rdfs:label  "fluorine atom" .
 
@@ -18415,8 +18411,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000530>
         rdfs:label  "ventilated improved pit latrine" .
-
-[ rdfs:label  "Multiubiquitination of APC/C-associated Cdh1" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_3200073>
         rdfs:label  "concentration of sulfate in soil" .
@@ -18507,6 +18501,8 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001796>
         rdfs:label  "temperate mixed forest"@en .
+
+[ rdfs:label  "BTRC:CUL1:SKP1 (SCF-beta-TrCP1) ubiquitinylates PER proteins" ] .
 
 <http://purl.obolibrary.org/obo/PO_0007089>
         rdfs:label  "stem elongation stage" .
@@ -18619,6 +18615,8 @@
 <http://purl.obolibrary.org/obo/PO_0030084>
         rdfs:label  "amphithecium" .
 
+[ rdfs:label  "DTX4 ubiquitinates p-S172-TBK1 within NLRP4:DTX4:STING:TBK1:IRF3" ] .
+
 <http://purl.obolibrary.org/obo/PO_0004530>
         rdfs:label  "tile cell" .
 
@@ -18666,8 +18664,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001379>
         rdfs:label  "mussel bed"@en .
-
-[ rdfs:label  "RNF41 ubiquitinates activated ERBB3" ] .
 
 <http://purl.obolibrary.org/obo/PO_0025269>
         rdfs:label  "collective organ part structure" .
@@ -18759,6 +18755,8 @@
 <http://purl.obolibrary.org/obo/PO_0007084>
         rdfs:label  "SE.10 ten nodes or internodes visible stage" .
 
+[ rdfs:label  "DTX4 ubiquitinates p-S172-TBK1 within NLRP4:DTX4:dsDNA:ZBP1:TBK1" ] .
+
 <http://purl.obolibrary.org/obo/NCBITaxon_6993>
         rdfs:label  "Orthoptera" .
 
@@ -18783,16 +18781,14 @@
 <http://purl.obolibrary.org/obo/ENVO_00000544>
         rdfs:label  "leat" .
 
-<http://purl.obolibrary.org/obo/CHEBI_155827>
-        rdfs:label  "argon-39 atom" .
-
 <http://purl.obolibrary.org/obo/ENVO_00010442>
         rdfs:label  "midden" .
 
 <http://purl.obolibrary.org/obo/ENVO_01000438>
         rdfs:label  "lava flow" .
 
-[ rdfs:label  "enabling an MF enables its parts" ] .
+<http://purl.obolibrary.org/obo/CHEBI_155827>
+        rdfs:label  "argon-39 atom" .
 
 <http://purl.obolibrary.org/obo/ENVO_00000354>
         rdfs:label  "volcanic field" .
@@ -18844,6 +18840,8 @@
 
 <http://purl.obolibrary.org/obo/PATO_0002219>
         rdfs:label  "fan-shaped" .
+
+[ rdfs:label  "Beta-TrCP ubiquitinates NFKB p50:p65:phospho IKBA complex" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_09100004>
         rdfs:label  "dissolved nitrogen atom in environmental material" .
@@ -18998,6 +18996,8 @@
 <http://purl.obolibrary.org/obo/FOODON_00001060>
         rdfs:label  "awamori food product"@en .
 
+[ rdfs:label  "Nuclear VBC complex ubiquitinylates HIF-alpha" ] .
+
 <http://www.geneontology.org/formats/oboInOwl#hasSynonymType>
         rdfs:label  "has_synonym_type" .
 
@@ -19093,6 +19093,8 @@
 
 <http://purl.obolibrary.org/obo/UBERON_0004872>
         rdfs:label  "splanchnic layer of lateral plate mesoderm" .
+
+[ rdfs:label  "ARRB mediates NOTCH1 ubiquitination" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_03501216>
         rdfs:label  "stainless steel"@en .
@@ -19208,6 +19210,8 @@
 <http://purl.obolibrary.org/obo/ENVO_1000751>
         rdfs:label  "barrier island"@en .
 
+[ rdfs:label  "ISGylation of host protein filamin B" ] .
+
 <http://purl.obolibrary.org/obo/PO_0009072>
         rdfs:label  "plant ovary" .
 
@@ -19237,8 +19241,6 @@
 
 <http://purl.obolibrary.org/obo/PATO_0000921>
         rdfs:label  "width" .
-
-[ rdfs:label  "DDX58 is K63 polyubiquitinated" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000378>
         rdfs:label  "arid subtropical" .
@@ -19351,8 +19353,6 @@
 <http://purl.obolibrary.org/obo/RO_0002179>
         rdfs:label  "drains"@en .
 
-[ rdfs:label  "BTRC:CUL1:SKP1 (SCF-beta-TrCP1) ubiquitinylates PER proteins" ] .
-
 <http://purl.obolibrary.org/obo/ENVO_00000257>
         rdfs:label  "flood fringe" .
 
@@ -19427,8 +19427,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001467>
         rdfs:label  "UNEP-WCMC class 7 mountain"@en .
-
-[ rdfs:label  "DTX4 ubiquitinates p-S172-TBK1 within NLRP4:DTX4:STING:TBK1:IRF3" ] .
 
 <http://purl.obolibrary.org/obo/PO_0025357>
         rdfs:label  "pneumatophore" .
@@ -19550,8 +19548,6 @@
 <http://purl.obolibrary.org/obo/ENVO_3200069>
         rdfs:label  "concentration of potassium molecular entity in soil" .
 
-[ rdfs:label  "DTX4 ubiquitinates p-S172-TBK1 within NLRP4:DTX4:dsDNA:ZBP1:TBK1" ] .
-
 <http://purl.obolibrary.org/obo/RO_0002174>
         rdfs:label  "dubious for taxon"@en .
 
@@ -19633,8 +19629,6 @@
 <http://purl.obolibrary.org/obo/CHEBI_35170>
         rdfs:label  "vanadium(0)" .
 
-[ rdfs:label  "Beta-TrCP ubiquitinates NFKB p50:p65:phospho IKBA complex" ] .
-
 <http://purl.obolibrary.org/obo/ENVO_01001462>
         rdfs:label  "UNEP-WCMC class 2 mountain"@en .
 
@@ -19713,6 +19707,8 @@
 <http://purl.obolibrary.org/obo/FOODON_00001098>
         rdfs:label  "fermented apple beverage"@en .
 
+[ rdfs:label  "Ubiquitination of phosphorylated Cdc25A" ] .
+
 <http://purl.obolibrary.org/obo/PO_0004526>
         rdfs:label  "axial secondary xylem parenchyma cell" .
 
@@ -19763,8 +19759,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000521>
         rdfs:label  "batholith"@en .
-
-[ rdfs:label  "Nuclear VBC complex ubiquitinylates HIF-alpha" ] .
 
 <http://purl.obolibrary.org/obo/GO_0004842>
         rdfs:label  "ubiquitin-protein transferase activity" .
@@ -19892,8 +19886,6 @@
 <http://purl.obolibrary.org/obo/CHEBI_37163>
         rdfs:label  "glucan" .
 
-[ rdfs:label  "ARRB mediates NOTCH1 ubiquitination" ] .
-
 <http://purl.obolibrary.org/obo/PO_0025297>
         rdfs:label  "seedling radicle" .
 
@@ -19969,6 +19961,8 @@
 <http://purl.obolibrary.org/obo/UBERON_0004923>
         rdfs:label  "organ component layer" .
 
+[ rdfs:label  "BIRC2/3 (cIAP1/2) is autoubiquitinated" ] .
+
 <http://purl.obolibrary.org/obo/PO_0004521>
         rdfs:label  "septate fiber cell" .
 
@@ -20007,8 +20001,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001610>
         rdfs:label  "active layer in a cryosphere"@en .
-
-[ rdfs:label  "ISGylation of host protein filamin B" ] .
 
 <http://purl.obolibrary.org/obo/UBERON_0006211>
         rdfs:label  "buccopharyngeal membrane" .
@@ -20198,6 +20190,8 @@
 
 <http://purl.obolibrary.org/obo/CHEBI_36927>
         rdfs:label  "carbon-14 atom" .
+
+[ rdfs:label  "CHIP (STUB1) mediates ubiquitination of ERBB2" ] .
 
 <http://purl.obolibrary.org/obo/PO_0007608>
         rdfs:label  "petal primordium visible stage" .
@@ -20430,6 +20424,8 @@
 <http://purl.obolibrary.org/obo/PO_0025028>
         rdfs:label  "embryo plant cell" .
 
+[ rdfs:label  "CBL binds and ubiquitinates phosphorylated Sprouty" ] .
+
 <http://purl.obolibrary.org/obo/ENVO_03501207>
         rdfs:label  "shopping mall"@en .
 
@@ -20571,6 +20567,8 @@
 <http://purl.obolibrary.org/obo/FOODON_00001186>
         rdfs:label  "buckewheat food product"@en .
 
+[ rdfs:label  "'causally upstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties)." ] .
+
 <http://purl.obolibrary.org/obo/PO_0005708>
         rdfs:label  "cortex" .
 
@@ -20604,9 +20602,6 @@
 <http://purl.obolibrary.org/obo/ENVO_01000559>
         rdfs:label  "compressed biogas"@en .
 
-<http://purl.obolibrary.org/obo/CHEBI_51580>
-        rdfs:label  "phthalocyanines" .
-
 <http://purl.obolibrary.org/obo/ENVO_00000475>
         rdfs:label  "inlet" .
 
@@ -20616,13 +20611,14 @@
 <http://purl.obolibrary.org/obo/CHEBI_34970>
         rdfs:label  "saxitoxin" .
 
+<http://purl.obolibrary.org/obo/CHEBI_51580>
+        rdfs:label  "phthalocyanines" .
+
 <http://purl.obolibrary.org/obo/PATO_0000912>
         rdfs:label  "increased rate" .
 
 <http://purl.obolibrary.org/obo/CHEBI_36125>
         rdfs:label  "cyclitol carboxylic acid anion" .
-
-[ rdfs:label  "Ubiquitination of phosphorylated Cdc25A" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000369>
         rdfs:label  "vadose cave" .
@@ -20840,8 +20836,6 @@
 <http://purl.obolibrary.org/obo/PO_0001018>
         rdfs:label  "B formation of primary parietal and sporogenous cells stage" .
 
-[ rdfs:label  "BIRC2/3 (cIAP1/2) is autoubiquitinated" ] .
-
 <http://purl.obolibrary.org/obo/PO_0025348>
         rdfs:label  "phyllome lamina vein" .
 
@@ -21022,6 +21016,8 @@
 <http://purl.obolibrary.org/obo/PO_0005648>
         rdfs:label  "palisade mesophyll" .
 
+[ rdfs:label  "MIB2 ubiquitinates CYLD at K338, K530" ] .
+
 <http://purl.obolibrary.org/obo/UBERON_0004766>
         rdfs:label  "cranial bone" .
 
@@ -21066,8 +21062,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001643>
         rdfs:label  "ice age"@en .
-
-[ rdfs:label  "CHIP (STUB1) mediates ubiquitination of ERBB2" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01001453>
         rdfs:label  "terrestrial mountain"@en .
@@ -21173,6 +21167,8 @@
 
 <http://purl.obolibrary.org/obo/PO_0004517>
         rdfs:label  "growth ring boundary" .
+
+[ rdfs:label  "SIAH1, SIAH2 ubiquitinate SNCAIP" ] .
 
 <http://purl.obolibrary.org/obo/PO_0030121>
         rdfs:label  "capitulum inflorescence" .
@@ -21333,8 +21329,6 @@
 <http://purl.obolibrary.org/obo/ENVO_01001398>
         rdfs:label  "aerosolisation of dust"@en .
 
-[ rdfs:label  "CBL binds and ubiquitinates phosphorylated Sprouty" ] .
-
 <http://purl.obolibrary.org/obo/PO_0025288>
         rdfs:label  "embryo coleorhiza" .
 
@@ -21410,6 +21404,8 @@
 <http://purl.obolibrary.org/obo/RO_0018033>
         rdfs:label  "is deprotonated form of" .
 
+[ rdfs:label  "SCF(beta-TrCP) ubiquitinates p-GLI2" ] .
+
 <http://purl.obolibrary.org/obo/PO_0004512>
         rdfs:label  "heartwood" .
 
@@ -21428,13 +21424,11 @@
 <http://purl.obolibrary.org/obo/RO_0002485>
         rdfs:label  "receives input from" .
 
-<http://purl.obolibrary.org/obo/PO_0000207>
-        rdfs:label  "nectary epidermis" .
-
 <http://purl.obolibrary.org/obo/ENVO_01000647>
         rdfs:label  "asthenosphere"@en .
 
-[ rdfs:label  "'causally upstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties)." ] .
+<http://purl.obolibrary.org/obo/PO_0000207>
+        rdfs:label  "nectary epidermis" .
 
 <http://purl.obolibrary.org/obo/ENVO_00000563>
         rdfs:label  "pier" .
@@ -21609,6 +21603,8 @@
 
 <http://purl.obolibrary.org/obo/NCBITaxon_58023>
         rdfs:label  "Tracheophyta" .
+
+[ rdfs:label  "Ubiquitination of stimulated EGFR (CBL)" ] .
 
 <http://purl.obolibrary.org/obo/PO_0030061>
         rdfs:label  "tmema" .
@@ -21820,6 +21816,8 @@
 <http://purl.obolibrary.org/obo/ENVO_06105009>
         rdfs:label  "plastic line"@en .
 
+[ rdfs:label  "Ubiquitination of Cyclin B by phospho-APC/C:Cdc20 complex" ] .
+
 <http://purl.obolibrary.org/obo/PATO_0002006>
         rdfs:label  "2-D shape" .
 
@@ -21858,8 +21856,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0007024>
         rdfs:label  "FL.04 end of flowering stage" .
-
-[ rdfs:label  "MIB2 ubiquitinates CYLD at K338, K530" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000397>
         rdfs:label  "temperate broadleaf evergreen forest" .
@@ -21957,6 +21953,8 @@
 <http://purl.obolibrary.org/obo/FOODON_00001177>
         rdfs:label  "insect food product"@en .
 
+[ rdfs:label  "'causally downstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties)." ] .
+
 <http://purl.obolibrary.org/obo/FOODON_00002131>
         rdfs:label  "plant based refined or partially-refined food product"@en .
 
@@ -21998,8 +21996,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000600>
         rdfs:label  "rainwater"@en .
-
-[ rdfs:label  "SIAH1, SIAH2 ubiquitinate SNCAIP" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_00000276>
         rdfs:label  "drumlin" .
@@ -22235,8 +22231,6 @@
 <http://purl.obolibrary.org/obo/PO_0025339>
         rdfs:label  "plant organ development stage" .
 
-[ rdfs:label  "SCF(beta-TrCP) ubiquitinates p-GLI2" ] .
-
 <http://purl.obolibrary.org/obo/ENVO_01000355>
         rdfs:label  "vegetation layer" .
 
@@ -22417,8 +22411,12 @@
 <http://purl.obolibrary.org/obo/CHEBI_25355>
         rdfs:label  "mitochondrial respiratory-chain inhibitor" .
 
+[ rdfs:label  "if effector directly negatively regulates X,  its parent MF directly negatively regulates X" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030099>
         rdfs:label  "samara fruit" .
+
+[ rdfs:label  "TRAF6 ubiquitinqtes IRF7 within the activated TLR7/8 or 9 complex" ] .
 
 <http://purl.obolibrary.org/obo/PO_0004545>
         rdfs:label  "shoot-borne shoot system" .
@@ -22458,8 +22456,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001634>
         rdfs:label  "agricultural landscape diversification process"@en .
-
-[ rdfs:label  "Ubiquitination of stimulated EGFR (CBL)" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000540>
         rdfs:label  "troposphere" .
@@ -22542,14 +22538,16 @@
 <http://purl.obolibrary.org/obo/UBERON_0001768>
         rdfs:label  "uvea" .
 
-<http://purl.obolibrary.org/obo/PO_0007099>
-        rdfs:label  "SE.97 flag leaf visible stage" .
-
 <http://purl.obolibrary.org/obo/RO_0018029>
         rdfs:label  "is antagonist of" .
 
+<http://purl.obolibrary.org/obo/PO_0007099>
+        rdfs:label  "SE.97 flag leaf visible stage" .
+
 <http://purl.obolibrary.org/obo/FOODON_00001130>
         rdfs:label  "sheep milk cheese food product"@en .
+
+[ rdfs:label  "beta-TRCP ubiquitinates IkB-alpha in p-S32,33-IkB-alpha:NF-kB complex" ] .
 
 <http://purl.obolibrary.org/obo/PO_0000272>
         rdfs:label  "protoxylem" .
@@ -22644,6 +22642,8 @@
 <http://purl.obolibrary.org/obo/PO_0004540>
         rdfs:label  "fruit columella" .
 
+[ rdfs:label  "Activated TRAF6 synthesizes unanchored polyubiquitin chains upon ALPK1:ADP-heptose stimulation" ] .
+
 <http://purl.obolibrary.org/obo/PO_0006348>
         rdfs:label  "ear pedicellate spikelet" .
 
@@ -22691,8 +22691,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0025279>
         rdfs:label  "megagametophyte" .
-
-[ rdfs:label  "Ubiquitination of Cyclin B by phospho-APC/C:Cdc20 complex" ] .
 
 <http://purl.obolibrary.org/obo/UBERON_0015833>
         rdfs:label  "foregut epithelium" .
@@ -22763,6 +22761,8 @@
 <http://purl.obolibrary.org/obo/PO_0030057>
         rdfs:label  "alar cell" .
 
+[ rdfs:label  "Parkin promotes the ubiquitination of mitochondrial substrates" ] .
+
 <http://purl.obolibrary.org/obo/PO_0007094>
         rdfs:label  "LP.01 one leaf visible stage" .
 
@@ -22790,9 +22790,6 @@
 <http://purl.obolibrary.org/obo/ENVO_03600020>
         rdfs:label  "tailings dam"@en .
 
-<http://purl.obolibrary.org/obo/ENVO_00000554>
-        rdfs:label  "saddle dam" .
-
 <http://purl.obolibrary.org/obo/PO_0005027>
         rdfs:label  "root syncytium cell" .
 
@@ -22802,7 +22799,8 @@
 <http://purl.obolibrary.org/obo/ENVO_01000638>
         rdfs:label  "planetary crust"@en .
 
-[ rdfs:label  "'causally downstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties)." ] .
+<http://purl.obolibrary.org/obo/ENVO_00000554>
+        rdfs:label  "saddle dam" .
 
 <http://purl.obolibrary.org/obo/UBERON_0002097>
         rdfs:label  "skin of body" .
@@ -22866,6 +22864,8 @@
 
 <http://purl.obolibrary.org/obo/NCBITaxon_33090>
         rdfs:label  "Viridiplantae" .
+
+[ rdfs:label  "RAF1:SGK:TSC22D3:WPP ubiquitinates SCNN channels" ] .
 
 <http://purl.obolibrary.org/obo/PO_0007627>
         rdfs:label  "E two nucleate megagametophyte stage" .
@@ -23002,6 +23002,8 @@
 <http://purl.obolibrary.org/obo/FOODON_00001070>
         rdfs:label  "miso food product"@en .
 
+[ rdfs:label  "Ubiquitination of Cyclin A by APC/C:Cdc20 complex" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030052>
         rdfs:label  "antheridium jacket layer cell" .
 
@@ -23116,6 +23118,8 @@
 <http://purl.obolibrary.org/obo/GO_0043447>
         rdfs:label  "alkane biosynthetic process" .
 
+[ rdfs:label  "Ubiquitination of SKI/SKIL by RNF111/SMURF2" ] .
+
 <http://purl.obolibrary.org/obo/ENVO_03501226>
         rdfs:label  "greasy spoon"@en .
 
@@ -23218,6 +23222,8 @@
 <http://purl.obolibrary.org/obo/CHEBI_30512>
         rdfs:label  "silver atom" .
 
+[ rdfs:label  "Ubiquitination of p130 (RBL2) by SCF (Skp2)" ] .
+
 <http://purl.obolibrary.org/obo/PO_0009082>
         rdfs:label  "spikelet floret" .
 
@@ -23239,8 +23245,6 @@
 <http://purl.obolibrary.org/obo/ENVO_01000578>
         rdfs:label  "cassette player"@en .
 
-[ rdfs:label  "if effector directly negatively regulates X,  its parent MF directly negatively regulates X" ] .
-
 <http://purl.obolibrary.org/obo/ENVO_00000494>
         rdfs:label  "insequent stream" .
 
@@ -23249,8 +23253,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0007015>
         rdfs:label  "radicle emergence stage" .
-
-[ rdfs:label  "TRAF6 ubiquitinqtes IRF7 within the activated TLR7/8 or 9 complex" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000388>
         rdfs:label  "tropical semi-deciduous broadleaf forest" .
@@ -23375,8 +23377,6 @@
 <http://purl.obolibrary.org/obo/ENVO_00000457>
         rdfs:label  "plateau glacier" .
 
-[ rdfs:label  "beta-TRCP ubiquitinates IkB-alpha in p-S32,33-IkB-alpha:NF-kB complex" ] .
-
 <http://purl.obolibrary.org/obo/UBERON_0002050>
         rdfs:label  "embryonic structure" .
 
@@ -23466,8 +23466,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0025367>
         rdfs:label  "prophyll tendril" .
-
-[ rdfs:label  "Activated TRAF6 synthesizes unanchored polyubiquitin chains upon ALPK1:ADP-heptose stimulation" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000383>
         rdfs:label  "temperate evergreen needleleaf forest" .
@@ -23583,8 +23581,6 @@
 <http://purl.obolibrary.org/obo/ENVO_00000452>
         rdfs:label  "ribbon lake" .
 
-[ rdfs:label  "Parkin promotes the ubiquitination of mitochondrial substrates" ] .
-
 <http://purl.obolibrary.org/obo/ENVO_01000346>
         rdfs:label  "lower montane" .
 
@@ -23677,8 +23673,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001662>
         rdfs:label  "frost sorting"@en .
-
-[ rdfs:label  "RAF1:SGK:TSC22D3:WPP ubiquitinates SCNN channels" ] .
 
 <http://purl.obolibrary.org/obo/UBERON_0001434>
         rdfs:label  "skeletal system" .
@@ -23773,6 +23767,8 @@
 <http://purl.obolibrary.org/obo/PO_0004536>
         rdfs:label  "infructescence fruit pedicel" .
 
+[ rdfs:label  "RNF125 mediated ubiquitination of DDX58, IFIH1 and MAVS" ] .
+
 <http://purl.obolibrary.org/obo/CHEBI_24062>
         rdfs:label  "fluorine molecular entity" .
 
@@ -23823,8 +23819,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000531>
         rdfs:label  "covered latrine" .
-
-[ rdfs:label  "Ubiquitination of Cyclin A by APC/C:Cdc20 complex" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_3200074>
         rdfs:label  "concentration of exchangeable potassium in soil" .
@@ -23916,6 +23910,8 @@
 <http://purl.obolibrary.org/obo/CHEBI_143005>
         rdfs:label  "ultra-long-chain fatty acid anion" .
 
+[ rdfs:label  "CBL neddylates TGFBR2" ] .
+
 <http://purl.obolibrary.org/obo/FOODON_00001121>
         rdfs:label  "equine milk beverage"@en .
 
@@ -23942,8 +23938,6 @@
 
 <http://purl.obolibrary.org/obo/CHEBI_15734>
         rdfs:label  "primary alcohol" .
-
-[ rdfs:label  "Ubiquitination of SKI/SKIL by RNF111/SMURF2" ] .
 
 <http://purl.obolibrary.org/obo/CHEBI_38077>
         rdfs:label  "polypyrrole" .
@@ -24026,6 +24020,8 @@
 <http://purl.obolibrary.org/obo/PO_0030085>
         rdfs:label  "protosporangium endothecium" .
 
+[ rdfs:label  "VHL:EloB,C:NEDD8-CUL2:RBX1 complex ubiquitinylates HIF-alpha" ] .
+
 <http://purl.obolibrary.org/obo/PO_0004531>
         rdfs:label  "sheath cell" .
 
@@ -24079,8 +24075,6 @@
 
 <http://purl.obolibrary.org/obo/CHEBI_50904>
         rdfs:label  "allergen" .
-
-[ rdfs:label  "Ubiquitination of p130 (RBL2) by SCF (Skp2)" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000286>
         rdfs:label  "dimictic lake" .
@@ -24178,6 +24172,8 @@
 <http://purl.obolibrary.org/obo/PO_0007085>
         rdfs:label  "LP.14 fourteen leaves visible stage" .
 
+[ rdfs:label  "NHLRC1 mediated ubiquitination of EPM2A (laforin) and PPP1RC3 (PTG) associated with glycogen-GYG2" ] .
+
 <http://purl.obolibrary.org/obo/ENVO_00005754>
         rdfs:label  "fertilized soil" .
 
@@ -24255,6 +24251,8 @@
 
 <http://purl.obolibrary.org/obo/ENVO_02000003>
         rdfs:label  "pockmark field" .
+
+[ rdfs:label  "Ubiquitination of PAK-2p34" ] .
 
 <http://purl.obolibrary.org/obo/PO_0007618>
         rdfs:label  "carpel primordium visible stage" .
@@ -24418,6 +24416,8 @@
 <http://purl.obolibrary.org/obo/FOODON_00001061>
         rdfs:label  "bacon food product"@en .
 
+[ rdfs:label  "ERBB4 ubiquitination by WWP1/ITCH" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030043>
         rdfs:label  "peristome tooth" .
 
@@ -24528,6 +24528,8 @@
 
 <http://purl.obolibrary.org/obo/ENVO_06105028>
         rdfs:label  "fragmentation due to weathering"@en .
+
+[ rdfs:label  "Ubiquitin-dependent degradation of the Smad complex terminates BMP2 signalling" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_03501217>
         rdfs:label  "tissue paper"@en .
@@ -24658,6 +24660,8 @@
 <http://purl.obolibrary.org/obo/GO_0007588>
         rdfs:label  "excretion" .
 
+[ rdfs:label  "ISGylation of E2 conjugating enzymes" ] .
+
 <http://purl.obolibrary.org/obo/NCBITaxon_2881377>
         rdfs:label  "Pseudanabaenales" .
 
@@ -24693,8 +24697,6 @@
 
 <http://purl.obolibrary.org/obo/UBERON_0006314>
         rdfs:label  "bodily fluid" .
-
-[ rdfs:label  "RNF125 mediated ubiquitination of DDX58, IFIH1 and MAVS" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000379>
         rdfs:label  "highland subtropical" .
@@ -24840,8 +24842,6 @@
 <http://purl.obolibrary.org/obo/RO_0002420>
         rdfs:label  "logical macro assertion on a class"@en .
 
-[ rdfs:label  "CBL neddylates TGFBR2" ] .
-
 <http://purl.obolibrary.org/obo/ENVO_00000258>
         rdfs:label  "alluvial plain" .
 
@@ -24880,6 +24880,8 @@
 
 <http://purl.obolibrary.org/obo/FOODON_00001191>
         rdfs:label  "barley food product"@en .
+
+[ rdfs:label  "Myristoylation of tBID by NMT1" ] .
 
 <http://purl.obolibrary.org/obo/PATO_0000125>
         rdfs:label  "mass" .
@@ -24931,8 +24933,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0025358>
         rdfs:label  "pneumatorhiza" .
-
-[ rdfs:label  "VHL:EloB,C:NEDD8-CUL2:RBX1 complex ubiquitinylates HIF-alpha" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000374>
         rdfs:label  "dry woodland" .
@@ -25057,8 +25057,6 @@
 <http://purl.obolibrary.org/obo/RO_0002175>
         rdfs:label  "present in taxon"@en .
 
-[ rdfs:label  "NHLRC1 mediated ubiquitination of EPM2A (laforin) and PPP1RC3 (PTG) associated with glycogen-GYG2" ] .
-
 <http://purl.obolibrary.org/obo/ENVO_01000337>
         rdfs:label  "herb and fern layer" .
 
@@ -25118,8 +25116,6 @@
 
 <http://purl.obolibrary.org/obo/CHEBI_35171>
         rdfs:label  "elemental vanadium" .
-
-[ rdfs:label  "Ubiquitination of PAK-2p34" ] .
 
 <http://purl.obolibrary.org/obo/UBERON_0001425>
         rdfs:label  "pectoral lymphatic vessel" .
@@ -25217,6 +25213,8 @@
 <http://purl.obolibrary.org/obo/PO_0004527>
         rdfs:label  "ray secondary xylem parenchyma cell" .
 
+[ rdfs:label  "RIP2 induces K63-linked ubiquitination of NEMO" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030131>
         rdfs:label  "rhipidium inflorescence" .
 
@@ -25247,9 +25245,6 @@
 <http://purl.obolibrary.org/obo/RO_0002550>
         rdfs:label  "end, weeks post birth" .
 
-<http://purl.obolibrary.org/obo/UBERON_0003075>
-        rdfs:label  "neural plate" .
-
 <http://purl.obolibrary.org/obo/ENVO_01000712>
         rdfs:label  "riverine flood"@en .
 
@@ -25259,8 +25254,8 @@
 <http://purl.obolibrary.org/obo/PO_0006005>
         rdfs:label  "carpel anlagen" .
 
-<http://purl.obolibrary.org/obo/ENVO_00000198>
-        rdfs:label  "ice-covered lake" .
+<http://purl.obolibrary.org/obo/UBERON_0003075>
+        rdfs:label  "neural plate" .
 
 <http://purl.obolibrary.org/obo/ENVO_01001616>
         rdfs:label  "bare soil"@en .
@@ -25268,13 +25263,14 @@
 <http://purl.obolibrary.org/obo/FOODON_00001891>
         rdfs:label  "fruit salad food product"@en .
 
+<http://purl.obolibrary.org/obo/ENVO_00000198>
+        rdfs:label  "ice-covered lake" .
+
 <http://purl.obolibrary.org/obo/RO_0002360>
         rdfs:label  "has dendrite location"@en .
 
 <http://purl.obolibrary.org/obo/ENVO_01000522>
         rdfs:label  "latrine pit" .
-
-[ rdfs:label  "ERBB4 ubiquitination by WWP1/ITCH" ] .
 
 <http://purl.obolibrary.org/obo/PATO_0001729>
         rdfs:label  "shedability" .
@@ -25405,8 +25401,6 @@
 <http://purl.obolibrary.org/obo/PO_0025298>
         rdfs:label  "fruit operculum" .
 
-[ rdfs:label  "Ubiquitin-dependent degradation of the Smad complex terminates BMP2 signalling" ] .
-
 <http://purl.obolibrary.org/obo/CHEBI_32988>
         rdfs:label  "amide" .
 
@@ -25485,6 +25479,8 @@
 <http://purl.obolibrary.org/obo/PO_0004522>
         rdfs:label  "outer vascular cambium" .
 
+[ rdfs:label  "SCF betaTrCP ubiquitinates NFKB p105 within p-S927, S932-NFkB p105:TPL2:ABIN2" ] .
+
 <http://purl.obolibrary.org/obo/PO_0005426>
         rdfs:label  "chlorenchyma" .
 
@@ -25535,8 +25531,6 @@
 
 <http://purl.obolibrary.org/obo/UBERON_0005068>
         rdfs:label  "neural rod" .
-
-[ rdfs:label  "ISGylation of E2 conjugating enzymes" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000277>
         rdfs:label  "water ice" .
@@ -25751,6 +25745,10 @@
 <http://purl.obolibrary.org/obo/CHEBI_27325>
         rdfs:label  "xanthophyll" .
 
+[ rdfs:label  "CUL5 mediates ubiquitination of ERBB2" ] .
+
+[ rdfs:label  "effector input is compound function input" ] .
+
 <http://purl.obolibrary.org/obo/PO_0030071>
         rdfs:label  "epidermal rhizoid" .
 
@@ -25769,16 +25767,14 @@
 <http://purl.obolibrary.org/obo/RO_0004025>
         rdfs:label  "disease causes dysfunction of" .
 
-<http://purl.obolibrary.org/obo/UBERON_0001708>
-        rdfs:label  "jaw skeleton" .
-
 <http://purl.obolibrary.org/obo/ENVO_01000842>
         rdfs:label  "smog"@en .
 
 <http://purl.obolibrary.org/obo/CHEBI_36358>
         rdfs:label  "polyatomic ion" .
 
-[ rdfs:label  "Myristoylation of tBID by NMT1" ] .
+<http://purl.obolibrary.org/obo/UBERON_0001708>
+        rdfs:label  "jaw skeleton" .
 
 <http://purl.obolibrary.org/obo/ENVO_01001746>
         rdfs:label  "glacier wind"@en .
@@ -25993,6 +25989,8 @@
 <http://purl.obolibrary.org/obo/UBERON_0004864>
         rdfs:label  "vasculature of retina" .
 
+[ rdfs:label  "Ubiquitination of NICD1 by FBWX7" ] .
+
 <http://purl.obolibrary.org/obo/ENVO_03501208>
         rdfs:label  "air vent"@en .
 
@@ -26172,8 +26170,6 @@
 
 <http://purl.obolibrary.org/obo/CHEBI_35222>
         rdfs:label  "inhibitor" .
-
-[ rdfs:label  "RIP2 induces K63-linked ubiquitination of NEMO" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000610>
         rdfs:label  "motor"@en .
@@ -26379,9 +26375,6 @@
 <http://purl.obolibrary.org/obo/ENVO_01001649>
         rdfs:label  "heavy fraction material"@en .
 
-<http://purl.obolibrary.org/obo/PO_0025349>
-        rdfs:label  "awn" .
-
 <http://purl.obolibrary.org/obo/PO_0000115>
         rdfs:label  "socket cell" .
 
@@ -26406,7 +26399,8 @@
 <http://purl.obolibrary.org/obo/FOODON_03315904>
         rdfs:label  "sausage (whole)"@en .
 
-[ rdfs:label  "SCF betaTrCP ubiquitinates NFKB p105 within p-S927, S932-NFkB p105:TPL2:ABIN2" ] .
+<http://purl.obolibrary.org/obo/PO_0025349>
+        rdfs:label  "awn" .
 
 <http://purl.obolibrary.org/obo/ENVO_01000365>
         rdfs:label  "ice cave" .
@@ -26585,6 +26579,8 @@
 <http://purl.obolibrary.org/obo/CHEBI_24271>
         rdfs:label  "glucosamines" .
 
+[ rdfs:label  "SPATA2:CYLD-bound LUBAC ubiquitinates RIPK1 at K627 within the TNFR1 signaling complex" ] .
+
 <http://purl.obolibrary.org/obo/CHEBI_26079>
         rdfs:label  "phosphoric acid derivative" .
 
@@ -26626,10 +26622,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01000550>
         rdfs:label  "composting toilet"@en .
-
-[ rdfs:label  "CUL5 mediates ubiquitination of ERBB2" ] .
-
-[ rdfs:label  "effector input is compound function input" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01001454>
         rdfs:label  "polar mountain"@en .
@@ -26726,6 +26718,8 @@
 
 <http://purl.obolibrary.org/obo/PO_0004518>
         rdfs:label  "bark" .
+
+[ rdfs:label  "PARK2 K63-Ubiquitinates SNCAIP" ] .
 
 <http://purl.obolibrary.org/obo/RO_0018039>
         rdfs:label  "is enantiomer of"@en .
@@ -26829,6 +26823,8 @@
 <http://purl.obolibrary.org/obo/ENVO_06105107>
         rdfs:label  "marine anthropogenic litter"@en .
 
+[ rdfs:label  "LUBAC ubiquitinates RIPK1 at K627" ] .
+
 <http://purl.obolibrary.org/obo/CHEBI_60029>
         rdfs:label  "homopolymer" .
 
@@ -26885,8 +26881,6 @@
 
 <http://purl.obolibrary.org/obo/ENVO_01001399>
         rdfs:label  "atmospheric aerosolisation of dust"@en .
-
-[ rdfs:label  "Ubiquitination of NICD1 by FBWX7" ] .
 
 <http://purl.obolibrary.org/obo/PO_0025289>
         rdfs:label  "seedling coleorhiza" .
@@ -26989,6 +26983,8 @@
 
 <http://purl.obolibrary.org/obo/PO_0004513>
         rdfs:label  "sapwood" .
+
+[ rdfs:label  "SCF(beta-TrCP) ubiquitinates p-GLI3" ] .
 
 <http://purl.obolibrary.org/obo/PO_0005417>
         rdfs:label  "phloem" .
@@ -27209,8 +27205,12 @@
 <http://purl.obolibrary.org/obo/ENVO_00002005>
         rdfs:label  "air" .
 
+[ rdfs:label  "Ubiquitination of stimulated EGFR (CBL:GRB2)" ] .
+
 <http://purl.obolibrary.org/obo/FOODON_00001080>
         rdfs:label  "tape kefan food product"@en .
+
+[ rdfs:label  "inferring direct positive reg edge from input to regulatory subfunction" ] .
 
 <http://purl.obolibrary.org/obo/PO_0030062>
         rdfs:label  "gametophore axillary hair terminal cell" .
@@ -27413,6 +27413,8 @@
 <http://purl.obolibrary.org/obo/CHEBI_36914>
         rdfs:label  "inorganic ion" .
 
+[ rdfs:label  "Multiubiquitination of Nek2A" ] .
+
 <http://purl.obolibrary.org/obo/PATO_0002007>
         rdfs:label  "convex 3-D shape" .
 
@@ -27454,8 +27456,6 @@
 
 <http://purl.obolibrary.org/obo/PO_0007025>
         rdfs:label  "IE.00 inflorescence tip just visible above flag leaf sheath stage" .
-
-[ rdfs:label  "SPATA2:CYLD-bound LUBAC ubiquitinates RIPK1 at K627 within the TNFR1 signaling complex" ] .
 
 <http://purl.obolibrary.org/obo/ENVO_01000398>
         rdfs:label  "temperate freshwater swamp forest" .
