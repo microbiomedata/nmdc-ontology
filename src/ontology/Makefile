@@ -127,30 +127,10 @@ refresh-%:
 # Main release artefacts
 # -------------------------------------------
 
-##$(ONT).owl: $(ONT)-full.owl # reasoning is currently broken will need to fix!!!
 $(ONT).owl: $(ONT)-merged.owl
 	@echo "\n** building $@ **"
 	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		convert -o $@.tmp.owl && mv $@.tmp.owl $@
-
-#$(ONT)-relation-graph.owl: $(ONT).owl $(ONT)-merged-labels.ttl
-## build relation-graph from nmdc-merged.ttl file
-## for relation-graph see https://github.com/balhoff/relation-graph
-## note, you may need to increase Java memory: export JAVA_OPTS=-Xmx16G
-#	@echo "\n** building $@ **"
-#	relation-graph --ontology-file $< \
-#	    --reflexive-subclasses false \
-#	    --equivalence-as-subclass false \
-#	    --non-redundant-output-file $(ONT)-nonredundant.ttl \
-#	    --redundant-output-file $(ONT)-redundant.ttl \
-#	    --mode rdf
-## merge in nmdco-merged for annotations
-#	$(ROBOT) merge \
-#	    --input $(word 2, $^) \
-#	    --input $(ONT)-nonredundant.ttl \
-#	    annotate --ontology-iri $(ONTBASE)/$@ \
-#	    $(ANNOTATE_ONTOLOGY_VERSION) \
-#	    --output $@
 
 $(ONT).json: $(ONT).owl
 # convert ontology to json
@@ -160,8 +140,6 @@ $(ONT).json: $(ONT).owl
 	    convert --output $@
 
 $(ONT)-classes.owl: $(ONT).owl $(ONT)-merged-labels.ttl $(ONT)-merged-labels.ttl
-#$(ONT)-classes.owl: $(ONT)-relation-graph.owl $(ONT)-merged-labels.ttl
-# select classes and merge with the labels
 	@echo "\n** building $@ **"
 	$(ROBOT) filter --input $< \
 	    --select classes \
