@@ -1,0 +1,17 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+SELECT ?range ?owner ?min ?max
+WHERE {
+    ?range a rdfs:Datatype ;
+           owl:equivalentClass ?ec ;
+           obo:IAO_0000597 ?owner .
+    ?ec owl:withRestrictions ?restrictions .
+    ?restrictions rdf:first ?first ;
+                  rdf:rest ?rest .
+    ?first xsd:minInclusive ?min .
+    ?rest rdf:first ?rest_first .
+    ?rest_first xsd:maxInclusive ?max .
+}
