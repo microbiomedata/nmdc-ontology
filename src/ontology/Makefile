@@ -173,10 +173,10 @@ $(ONT)-full.owl: $(ONT)-merged.owl
 # clean up
 	rm -f $@.tmp.owl
 
-$(ONT)-merged.owl: $(SRC) $(IMPORT_FILES)
+$(ONT)-merged.owl: $(SRC) $(IMPORT_FILES) imports/uberon_import.ttl
 # merge imports into single owl file
 	@echo "\n** building $@ **"
-	$(ROBOT) merge --input $< $(patsubst %, --input %, $(IMPORT_FILES)) \
+	$(ROBOT) merge --input $< $(patsubst %, --input %, $(IMPORT_FILES)) --input imports/uberon_import.ttl \
 	    annotate --ontology-iri $(ONTBASE)/$@ \
 	    $(ANNOTATE_ONTOLOGY_VERSION) \
 	    --output $@.tmp.owl
