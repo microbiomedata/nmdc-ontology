@@ -114,3 +114,14 @@ assets/parse_robot_diff.tsv: assets/robot_diff.txt
 	$(RUN) python nmdc_ontology/parse_robot_diff.py \
 		--input $< \
 		--output $@
+
+qc-reports/report-cycles.tsv: mirror/purl.obolibrary.org/obo/nmdco/imports/envo_import.owl
+	robot query \
+		--input $< \
+		--query $(subst .tsv,.rq,$(subst qc-reports,qc-sparql,$@)) $@
+
+
+qc-reports/report-asserted-equivalencies.tsv: mirror/purl.obolibrary.org/obo/nmdco/imports/envo_import.owl
+	robot query \
+		--input $< \
+		--query $(subst .tsv,.rq,$(subst qc-reports,qc-sparql,$@)) $@
