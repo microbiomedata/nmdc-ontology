@@ -1,0 +1,36 @@
+Prefix(:=<http://purl.obolibrary.org/obo/nmdco.owl#>)
+Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(dcterms:=<http://purl.org/dc/terms/>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/nmdco.owl>
+Import(<http://purl.obolibrary.org/obo/nmdco/imports/envo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/nmdco/imports/po_import.owl>)
+Import(<http://purl.obolibrary.org/obo/nmdco/imports/ro_import.owl>)
+Annotation(dce:description "The NMDC Ontology (NMDCO) is used  by the National Micrbiome Data Collaborative (NMDC, https://microbiomedata.org) to annotate multi-omic microbiome metadata. It merges a number of ontologies relevant to the NMDC (such as the plant and environment ontologies) into a single ontology.
+
+It is maintained using Github at https://github.com/microbiomedata/nmdc-ontology.
+
+Please use this GitHub repository's Issue tracker to request new terms/classes or report errors or specific concerns related to the ontology.")
+Annotation(dce:title "NMDC Ontology")
+Annotation(dcterms:creator "Bill Duncan (https://orcid.org/0000-0001-9625-1899)")
+Annotation(dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/>)
+
+Declaration(Class(<http://purl.obolibrary.org/obo/NMDCO_00000000>))
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/NMDCO_00000000> (root node)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/NMDCO_00000000> "root node"@en)
+
+
+)

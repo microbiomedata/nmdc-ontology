@@ -1,3 +1,5 @@
+src/ontology/imports/*
+
 src/ontology/nmdco-redundant.ttl
 downloads/
 **/__pycache__/
