@@ -1,0 +1,9 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT
+*
+WHERE {
+    ?s1 owl:equivalentClass ?s2 .
+    filter(isiri(?s1))
+    filter(isiri(?s2))
+}
+
