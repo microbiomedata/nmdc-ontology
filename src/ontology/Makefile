@@ -42,9 +42,9 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATION_PROPERTIES=rdfs:label IAO:0000115 
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
-OTHER_SRC =                 $(IMPORTS_DIR)/po_import.owl $(IMPORTS_DIR)/envo_import.owl $(IMPORTS_DIR)/ro_import.owl
-IMPORTS =  					ro envo po
-IMPORT_FILES =              $(IMPORTS_DIR)/po_import.owl $(IMPORTS_DIR)/envo_import.owl $(IMPORTS_DIR)/ro_import.owl
+OTHER_SRC =                 $(IMPORTS_DIR)/envo_import.owl $(IMPORTS_DIR)/ro_import.owl $(IMPORTS_DIR)/po_import.owl
+IMPORTS =  					envo ro po
+IMPORT_FILES =              $(IMPORTS_DIR)/envo_import.owl $(IMPORTS_DIR)/ro_import.owl $(IMPORTS_DIR)/po_import.owl
 
 SUBSETS := \
 	subsets/astronomical-body-parts.tsv \
@@ -108,12 +108,40 @@ all_imports: $(IMPORT_FILES)
 # -- Generate Import Modules --
 imports/%_import.owl:
 	@echo "\n** building $@ **"
-	$(ROBOT) merge -I $(URIBASE)/$*.owl \
-	  annotate --remove-annotations \
-	           --ontology-iri $(ONTBASE)/$@  \
-	           --version-iri $(ONTBASE)/releases/$(VERSION)/$@ \
-	           --annotation owl:versionInfo $(VERSION) \
-	  --output $@.tmp.owl && mv $@.tmp.owl $@
+	if wget --spider $(URIBASE)/$*/$*-base.owl ; then \
+		$(ROBOT) merge -I $(URIBASE)/$*/$*-base.owl \
+			annotate --remove-annotations \
+				--ontology-iri $(ONTBASE)/$@  \
+				--version-iri $(ONTBASE)/releases/$(VERSION)/$@ \
+				--annotation owl:versionInfo $(VERSION) \
+				--output $@.tmp.owl && mv $@.tmp.owl $@ ; \
+		else \
+		  $(ROBOT) merge -I $(URIBASE)/$*.owl \
+			annotate --remove-annotations \
+				--ontology-iri $(ONTBASE)/$@  \
+				--version-iri $(ONTBASE)/releases/$(VERSION)/$@ \
+				--annotation owl:versionInfo $(VERSION) \
+				--output $@.tmp.owl && mv $@.tmp.owl $@ ; \
+		fi
+
+#imports/%_import.owl:
+##    @echo "\n** building $@ **"
+#    @base_file=$(URIBASE)/$*/$*-base.owl; \
+#    if wget --spider "$${base_file}" >/dev/null 2>&1; then \
+#        $(ROBOT) merge -I $${base_file} \
+#           annotate --remove-annotations \
+#                   --ontology-iri $(ONTBASE)/$@  \
+#                   --version-iri $(ONTBASE)/releases/$(VERSION)/$@ \
+#                   --annotation owl:versionInfo $(VERSION) \
+#            --output $@.tmp.owl && mv $@.tmp.owl $@; \
+#    else \
+#        $(ROBOT) merge -I $(URIBASE)/$*.owl \
+#           annotate --remove-annotations \
+#                   --ontology-iri $(ONTBASE)/$@  \
+#                   --version-iri $(ONTBASE)/releases/$(VERSION)/$@ \
+#                   --annotation owl:versionInfo $(VERSION) \
+#            --output $@.tmp.owl && mv $@.tmp.owl $@; \
+#    fi
 
 refresh-imports:
 # force rebuild of all imports
@@ -173,6 +201,7 @@ $(ONT)-full.owl: $(ONT)-merged.owl
 # clean up
 	rm -f $@.tmp.owl
 
+# TODO: work on uberon import lifecycle including cleaning
 $(ONT)-merged.owl: $(SRC) $(IMPORT_FILES) imports/uberon_import.ttl
 # merge imports into single owl file
 	@echo "\n** building $@ **"
