@@ -10,62 +10,11 @@
 # UBERON:0001153 caecum
 # UBERON:0035118 material entity in digestive tract
 
-#robot extract --method STAR \
-#    --input filtered.owl \
-#    --term-file uberon_module.txt \
-#    --output results/uberon_module.owl
-
-# -a,--annotate-with-source <arg>        if true, annotate terms with
-#                                        rdfs:isDefinedBy
-#    --add-prefix <arg>                  add prefix 'foo: http://bar' to
-#                                        the output
-#    --add-prefixes <arg>                add JSON-LD prefixes to the output
-# -b,--branch-from-term <arg>            root term of branch to extract
-# -B,--branch-from-terms <arg>           root terms of branches to extract
-# -c,--copy-ontology-annotations <arg>   if true, include ontology
-#                                        annotations
-#    --catalog <arg>                     use catalog from provided file
-# -f,--force <arg>                       if true, warn on empty input terms
-#                                        instead of fail
-# -h,--help                              print usage information
-# -i,--input <arg>                       load ontology from a file
-# -I,--input-iri <arg>                   load ontology from an IRI
-# -l,--lower-term <arg>                  lower level term to extract
-# -L,--lower-terms <arg>                 lower level terms to extract
-# -m,--method <arg>                      extract method to use: star, top,
-#                                        bot, mireot, subset
-# -M,--imports <arg>                     handle imports (default: include)
-# -n,--individuals <arg>                 handle individuals (default:
-#                                        include)
-# -N,--intermediates <arg>               specify how to handle intermediate
-#                                        entities
-#    --noprefixes                        do not use default prefixes
-# -o,--output <arg>                      save ontology to a file
-# -O,--output-iri <arg>                  set OntologyIRI for output
-# -p,--prefix <arg>                      add a prefix 'foo: http://bar'
-# -P,--prefixes <arg>                    use prefixes from JSON-LD file
-# -s,--sources <arg>                     specify a mapping file of term to
-#                                        source ontology
-#    --strict                            use strict parsing when loading an
-#                                        ontology
-# -t,--term <arg>                        term to extract
-# -T,--term-file <arg>                   load terms from a file
-# -u,--upper-term <arg>                  upper level term to extract
-# -U,--upper-terms <arg>                 upper level terms to extract
-# -V,--version                           print version information
-# -v,--verbose                           increased logging
-# -vv,--very-verbose                     high logging
-# -vvv,--very-very-verbose               maximum logging, including stack
-#                                        traces
-# -x,--xml-entities                      use entity substitution with
-#                                        ontology XML output
-
-
 #robot mirror --input test.owl \
 #  --directory results/my-cache \
 #  --output results/my-catalog.xml
 
-imports/uberon_import.ttl:
+imports/uberon_import.owl:
 #	rm -f \
 #		nmdco-classes.json \
 #		nmdco.json \
@@ -98,3 +47,28 @@ imports/uberon_import.ttl:
 		   --ontology-iri http://purl.obolibrary.org/obo/nmdco/imports/uberon_import.owl  \
 		   --version-iri http://purl.obolibrary.org/obo/nmdco/releases/2024-03-14/imports/uberon_import.owl \
 		--output $@
+
+imports/%_extract.owl: imports/report-unlabelled-classes.txt
+	# use base ? maybe pato is the only source that asserts relations between chebi role and bfo role
+	robot extract \
+		--method TOP \
+		--input-iri $(subst _extract.owl,.owl,$(subst imports/,https://purl.obolibrary.org/obo/,$@)) \
+		--term-file $< \
+		annotate --remove-annotations --output $@
+
+do-extracts: imports/bfo_extract.owl \
+imports/chebi_extract.owl \
+imports/cob_extract.owl \
+imports/fao_extract.owl \
+imports/foodon_extract.owl \
+imports/go_extract.owl \
+imports/iao_extract.owl \
+imports/ogms_extract.owl \
+imports/pato_extract.owl \
+imports/pco_extract.owl \
+imports/so_extract.owl \
+imports/uberon_extract.owl \
+imports/upheno_extract.owl
+
+# skipping  ncbitaxon for now
+# imports/upheno_extract.owl slow

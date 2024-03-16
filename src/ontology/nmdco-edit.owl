@@ -21,16 +21,65 @@ Annotation(dce:title "NMDC Ontology")
 Annotation(dcterms:creator "Bill Duncan (https://orcid.org/0000-0001-9625-1899)")
 Annotation(dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/>)
 
-Declaration(Class(<http://purl.obolibrary.org/obo/NMDCO_00000000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005326>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0010817>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0050803>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0050878>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051716>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0065007>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0097237>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_Union_0000023>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_Union_0000030>))
+Declaration(Class(<http://purl.obolibrary.org/obo/SO_0000704>))
 
 
 ############################
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/NMDCO_00000000> (root node)
+# Class: <http://purl.obolibrary.org/obo/COB_0000121> (measurement datum)
 
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/NMDCO_00000000> "root node"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/COB_0000121> <http://purl.obolibrary.org/obo/IAO_0000027>)
+
+# Class: <http://purl.obolibrary.org/obo/GO_0005326> (<http://purl.obolibrary.org/obo/GO_0005326>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0005326> <http://purl.obolibrary.org/obo/BFO_0000001>)
+
+# Class: <http://purl.obolibrary.org/obo/GO_0010817> (<http://purl.obolibrary.org/obo/GO_0010817>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0010817> <http://purl.obolibrary.org/obo/GO_0065007>)
+
+# Class: <http://purl.obolibrary.org/obo/GO_0050803> (<http://purl.obolibrary.org/obo/GO_0050803>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0050803> <http://purl.obolibrary.org/obo/GO_0065007>)
+
+# Class: <http://purl.obolibrary.org/obo/GO_0050878> (<http://purl.obolibrary.org/obo/GO_0050878>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0050878> <http://purl.obolibrary.org/obo/GO_0065007>)
+
+# Class: <http://purl.obolibrary.org/obo/GO_0097237> (<http://purl.obolibrary.org/obo/GO_0097237>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0097237> <http://purl.obolibrary.org/obo/GO_0051716>)
+
+# Class: <http://purl.obolibrary.org/obo/NCBITaxon_Union_0000023> (<http://purl.obolibrary.org/obo/NCBITaxon_Union_0000023>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/NCBITaxon_Union_0000023> <http://purl.obolibrary.org/obo/BFO_0000001>)
+
+# Class: <http://purl.obolibrary.org/obo/NCBITaxon_Union_0000030> (<http://purl.obolibrary.org/obo/NCBITaxon_Union_0000030>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/NCBITaxon_Union_0000030> <http://purl.obolibrary.org/obo/BFO_0000001>)
+
+# Class: <http://purl.obolibrary.org/obo/RO_0002532> (sequentially ordered entity)
+
+SubClassOf(<http://purl.obolibrary.org/obo/RO_0002532> <http://purl.obolibrary.org/obo/BFO_0000001>)
+
+# Class: <http://purl.obolibrary.org/obo/SO_0000704> (<http://purl.obolibrary.org/obo/SO_0000704>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/SO_0000704> <http://purl.obolibrary.org/obo/BFO_0000001>)
+
+# Class: <http://xmlns.com/foaf/0.1/image> (<http://xmlns.com/foaf/0.1/image>)
+
+SubClassOf(<http://xmlns.com/foaf/0.1/image> <http://purl.obolibrary.org/obo/BFO_0000001>)
 
 
 )

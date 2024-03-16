@@ -54,6 +54,8 @@ SUBSETS := \
 	subsets/soil-environmental-materials.tsv \
 	subsets/manufactured-products.tsv
 
+EXTRACTS := $(wildcard imports/*.owl)
+
 #RELEASE_ARTEFACTS = $(ONT)-relation-graph.owl $(ONT).json $(ONT)-classes.json $(ONT).owl
 RELEASE_ARTEFACTS = $(ONT).json $(ONT)-classes.json $(ONT).owl
 
@@ -105,43 +107,33 @@ clean:
 # These live in the imports/ folder
 all_imports: $(IMPORT_FILES)
 
-# -- Generate Import Modules --
+## -- Generate Import Modules --
+#imports/%_import.owl:
+#	@echo "\n** building $@ **"
+#	if wget --spider $(URIBASE)/$*/$*-base.owl ; then \
+#		$(ROBOT) merge -I $(URIBASE)/$*/$*-base.owl \
+#			annotate --remove-annotations \
+#				--ontology-iri $(ONTBASE)/$@  \
+#				--version-iri $(ONTBASE)/releases/$(VERSION)/$@ \
+#				--annotation owl:versionInfo $(VERSION) \
+#				--output $@.tmp.owl && mv $@.tmp.owl $@ ; \
+#		else \
+#		  $(ROBOT) merge -I $(URIBASE)/$*.owl \
+#			annotate --remove-annotations \
+#				--ontology-iri $(ONTBASE)/$@  \
+#				--version-iri $(ONTBASE)/releases/$(VERSION)/$@ \
+#				--annotation owl:versionInfo $(VERSION) \
+#				--output $@.tmp.owl && mv $@.tmp.owl $@ ; \
+#		fi
 imports/%_import.owl:
 	@echo "\n** building $@ **"
-	if wget --spider $(URIBASE)/$*/$*-base.owl ; then \
-		$(ROBOT) merge -I $(URIBASE)/$*/$*-base.owl \
-			annotate --remove-annotations \
-				--ontology-iri $(ONTBASE)/$@  \
-				--version-iri $(ONTBASE)/releases/$(VERSION)/$@ \
-				--annotation owl:versionInfo $(VERSION) \
-				--output $@.tmp.owl && mv $@.tmp.owl $@ ; \
-		else \
-		  $(ROBOT) merge -I $(URIBASE)/$*.owl \
-			annotate --remove-annotations \
-				--ontology-iri $(ONTBASE)/$@  \
-				--version-iri $(ONTBASE)/releases/$(VERSION)/$@ \
-				--annotation owl:versionInfo $(VERSION) \
-				--output $@.tmp.owl && mv $@.tmp.owl $@ ; \
-		fi
+	$(ROBOT) merge -I $(URIBASE)/$*.owl \
+	  annotate --remove-annotations \
+	           --ontology-iri $(ONTBASE)/$@  \
+	           --version-iri $(ONTBASE)/releases/$(VERSION)/$@ \
+	           --annotation owl:versionInfo $(VERSION) \
+	           --output $@.tmp.owl && mv $@.tmp.owl $@ ; \
 
-#imports/%_import.owl:
-##    @echo "\n** building $@ **"
-#    @base_file=$(URIBASE)/$*/$*-base.owl; \
-#    if wget --spider "$${base_file}" >/dev/null 2>&1; then \
-#        $(ROBOT) merge -I $${base_file} \
-#           annotate --remove-annotations \
-#                   --ontology-iri $(ONTBASE)/$@  \
-#                   --version-iri $(ONTBASE)/releases/$(VERSION)/$@ \
-#                   --annotation owl:versionInfo $(VERSION) \
-#            --output $@.tmp.owl && mv $@.tmp.owl $@; \
-#    else \
-#        $(ROBOT) merge -I $(URIBASE)/$*.owl \
-#           annotate --remove-annotations \
-#                   --ontology-iri $(ONTBASE)/$@  \
-#                   --version-iri $(ONTBASE)/releases/$(VERSION)/$@ \
-#                   --annotation owl:versionInfo $(VERSION) \
-#            --output $@.tmp.owl && mv $@.tmp.owl $@; \
-#    fi
 
 refresh-imports:
 # force rebuild of all imports
@@ -202,16 +194,17 @@ $(ONT)-full.owl: $(ONT)-merged.owl
 	rm -f $@.tmp.owl
 
 # TODO: work on uberon import lifecycle including cleaning
-$(ONT)-merged.owl: $(SRC) $(IMPORT_FILES) imports/uberon_import.ttl
+$(ONT)-merged.owl: $(SRC) $(IMPORT_FILES) imports/uberon_import.owl
 # merge imports into single owl file
-	@echo "\n** building $@ **"
-	$(ROBOT) merge --input $< $(patsubst %, --input %, $(IMPORT_FILES)) --input imports/uberon_import.ttl \
+	$(ROBOT) merge --input $< $(patsubst %, --input %, $(EXTRACTS)) $(patsubst %, --input %, $(IMPORT_FILES))  --input imports/uberon_import.owl \
 	    annotate --ontology-iri $(ONTBASE)/$@ \
 	    $(ANNOTATE_ONTOLOGY_VERSION) \
 	    --output $@.tmp.owl
 # remove obsolete classes
 	robot remove --input $@.tmp.owl \
 	    --select "owl:deprecated='true'^^xsd:boolean" \
+	    remove --term CHEBI:50906 --term BFO:0000023 --select self --axioms equivalent --axioms subclass --trim false \
+	    remove --select "CARO:*"  --output  removed.owl \
 	    --output $@
 # clean up
 	rm -f $@.tmp.owl
@@ -287,7 +280,5 @@ subsets/manufactured-products.tsv: $(ONT).owl $(SPARQLDIR)/manufactured-products
 	$(ROBOT) query \
 	  --input $< \
 	  --query $(word 2, $^) $@
-
-
 
 include nmdco.Makefile
