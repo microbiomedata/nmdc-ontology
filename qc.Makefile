@@ -125,3 +125,14 @@ qc-reports/report-asserted-equivalencies.tsv: mirror/purl.obolibrary.org/obo/nmd
 	robot query \
 		--input $< \
 		--query $(subst .tsv,.rq,$(subst qc-reports,qc-sparql,$@)) $@
+
+
+qc-reports/report-unlabelled-classes.tsv: nmdco.owl
+	robot query \
+		--input $< \
+		--query $(subst .tsv,.rq,$(subst qc-reports,qc-sparql,$@)) $@
+
+src/ontology/imports/report-unlabelled-classes.txt: qc-reports/report-unlabelled-classes.tsv
+	awk 'NR > 1 ' $< | tr -d '<>' > $@.tmp
+	cat assets/additional-extracts.txt $@.tmp | sort -u > $@
+	rm $@.tmp

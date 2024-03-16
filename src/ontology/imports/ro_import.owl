@@ -20,8 +20,8 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/nmdco/imports/ro_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/nmdco/releases/2024-03-14/imports/ro_import.owl"/>
-        <owl:versionInfo>2024-03-14</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/nmdco/releases/2024-03-15/imports/ro_import.owl"/>
+        <owl:versionInfo>2024-03-15</owl:versionInfo>
     </owl:Ontology>
     
 
