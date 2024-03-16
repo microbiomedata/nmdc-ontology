@@ -1,3 +1,7 @@
+src/ontology/imports/*
+mirror/*
+mirror-catalog.xml
+
 src/ontology/nmdco-redundant.ttl
 downloads/
 **/__pycache__/

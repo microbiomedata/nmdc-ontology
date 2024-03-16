@@ -42,9 +42,9 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATION_PROPERTIES=rdfs:label IAO:0000115 
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
-OTHER_SRC =                 $(IMPORTS_DIR)/po_import.owl $(IMPORTS_DIR)/envo_import.owl $(IMPORTS_DIR)/ro_import.owl
-IMPORTS =  					ro envo po
-IMPORT_FILES =              $(IMPORTS_DIR)/po_import.owl $(IMPORTS_DIR)/envo_import.owl $(IMPORTS_DIR)/ro_import.owl
+OTHER_SRC =                 $(IMPORTS_DIR)/envo_import.owl $(IMPORTS_DIR)/ro_import.owl $(IMPORTS_DIR)/po_import.owl
+IMPORTS =  					envo ro po
+IMPORT_FILES =              $(IMPORTS_DIR)/envo_import.owl $(IMPORTS_DIR)/ro_import.owl $(IMPORTS_DIR)/po_import.owl
 
 SUBSETS := \
 	subsets/astronomical-body-parts.tsv \
@@ -132,11 +132,8 @@ imports/%_import.owl:
 	           --ontology-iri $(ONTBASE)/$@  \
 	           --version-iri $(ONTBASE)/releases/$(VERSION)/$@ \
 	           --annotation owl:versionInfo $(VERSION) \
-	           annotate --remove-annotations \
-				--ontology-iri $(ONTBASE)/$@  \
-				--version-iri $(ONTBASE)/releases/$(VERSION)/$@ \
-				--annotation owl:versionInfo $(VERSION) \
-				--output $@.tmp.owl && mv $@.tmp.owl $@ ; \
+	           --output $@.tmp.owl && mv $@.tmp.owl $@ ; \
+
 
 refresh-imports:
 # force rebuild of all imports
