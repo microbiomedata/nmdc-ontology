@@ -3,8 +3,14 @@ import time
 
 from anthropic import Anthropic
 
-# Set up the Anthropic API client
+from dotenv import load_dotenv
+
+load_dotenv("../local/.env")
+
 api_key = os.environ["ANTHROPIC_API_KEY"]
+
+# Set up the Anthropic API client
+# api_key = os.environ["ANTHROPIC_API_KEY"]
 MODEL_NAME = "claude-3-opus-20240229"
 
 client = Anthropic(api_key=api_key)
@@ -35,9 +41,11 @@ def get_completion(client, prompt):
 completion = get_completion(client,
     f"""Here are the definitions of environments, according to MIxS: {mixs_environments} 
 and the definitions of environmental materials, according to EnvO: {envo_materials}.
-Generate an exhasutive YAML-formatted report of all environmental materials that could reasonalby be found in the Soil environment.
+Generate an exhaustive YAML-formatted report of all environmental materials 
+that could reasonably be found in the Soil environment.
 When associating an environmental material with an environment, 
-report both the environmental material id and the environmental material label for every associated environmental material.
+report both the environmental material id 
+and the environmental material label for every associated environmental material.
 """
 )
 
