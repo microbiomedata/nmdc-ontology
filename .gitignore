@@ -1,3 +1,4 @@
+local
 src/ontology/imports/*
 mirror/*
 mirror-catalog.xml
