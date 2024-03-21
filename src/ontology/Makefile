@@ -204,8 +204,7 @@ $(ONT)-merged.owl: $(SRC) $(IMPORT_FILES) imports/uberon_import.owl
 	robot remove --input $@.tmp.owl \
 	    --select "owl:deprecated='true'^^xsd:boolean" \
 	    remove --term CHEBI:50906 --term BFO:0000023 --select self --axioms equivalent --axioms subclass --trim false \
-	    remove --select "CARO:*"  --output  removed.owl \
-	    --output $@
+	    remove --select "CARO:*" --output $@
 # clean up
 	rm -f $@.tmp.owl
 
