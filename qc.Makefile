@@ -136,3 +136,26 @@ src/ontology/imports/report-unlabelled-classes.txt: qc-reports/report-unlabelled
 	awk 'NR > 1 ' $< | tr -d '<>' > $@.tmp
 	cat assets/additional-extracts.txt $@.tmp | sort -u > $@
 	rm $@.tmp
+
+###
+
+.PHONY: envo_mixs_all
+envo_mixs_all: envo_mixs_clean assets/mixs_environments_env_materials_subsets.yaml.txt
+
+.PHONY: envo_mixs_clean
+envo_mixs_clean:
+	rm -rf assets/extension_report.yaml \
+		assets/report_envo_environmental_material_annotations.tsv \
+		assets/mixs_environments_env_materials_subsets.yaml.txt
+
+assets/extension_report.yaml:
+	$(RUN) python nmdc_ontology/report_mixs_extensions.py
+
+assets/report_envo_biome_annotations.tsv:
+	$(RUN) python nmdc_ontology/report_envo_biome_annotations.py
+
+assets/report_envo_environmental_material_annotations.tsv:
+	$(RUN) python nmdc_ontology/report_envo_environmental_material_annotations.py
+
+assets/mixs_environments_env_materials_subsets.yaml.txt: assets/extension_report.yaml assets/report_envo_environmental_material_annotations.tsv
+	date && time $(RUN) python nmdc_ontology/mixs_environments_extensions_to_envo_envirnmental_materials_by_claude.py

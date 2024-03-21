@@ -1,0 +1,139 @@
+"Here is the exhaustive YAML-formatted report of all environmental materials that\
+  \ could reasonably be found in the Soil environment, with both the environmental\
+  \ material id and label for each associated material:\n\nSoil:\n  environmental\
+  \ materials:\n    - id: ENVO_00001998\n      label: soil\n    - id: ENVO_00002871\n\
+  \      label: alluvial soil\n    - id: ENVO_00003082\n      label: enriched soil\n\
+  \    - id: ENVO_00002229\n      label: arenosol\n    - id: ENVO_00002231\n     \
+  \ label: alisol\n    - id: ENVO_00002232\n      label: andosol\n    - id: ENVO_00002233\n\
+  \      label: albeluvisol\n    - id: ENVO_01001397\n      label: ultisol\n    -\
+  \ id: ENVO_00002235\n      label: cambisol\n    - id: ENVO_01001526\n      label:\
+  \ frozen soil\n    - id: ENVO_00002237\n      label: chernozem\n    - id: ENVO_00002238\n\
+  \      label: durisol\n    - id: ENVO_00002239\n      label: calcisol\n    - id:\
+  \ ENVO_00002240\n      label: kastanozem\n    - id: ENVO_00002241\n      label:\
+  \ leptosol\n    - id: ENVO_00002242\n      label: lixisol\n    - id: ENVO_00002243\n\
+  \      label: histosol\n    - id: ENVO_00002244\n      label: gleysol\n    - id:\
+  \ ENVO_00002245\n      label: gypsisol\n    - id: ENVO_00002246\n      label: ferralsol\n\
+  \    - id: ENVO_00002247\n      label: nitisol\n    - id: ENVO_00002248\n      label:\
+  \ luvisol\n    - id: ENVO_00002249\n      label: phaeozem\n    - id: ENVO_00002250\n\
+  \      label: plinthosol\n    - id: ENVO_00002251\n      label: planosol\n    -\
+  \ id: ENVO_00002252\n      label: solonchak\n    - id: ENVO_00002253\n      label:\
+  \ umbrisol\n    - id: ENVO_00002254\n      label: vertisol\n    - id: ENVO_00002255\n\
+  \      label: solonetz\n    - id: ENVO_00002256\n      label: regosol\n    - id:\
+  \ ENVO_00002257\n      label: podzol\n    - id: ENVO_00002258\n      label: loam\n\
+  \    - id: ENVO_00002259\n      label: agricultural soil\n    - id: ENVO_00005786\n\
+  \      label: upland soil\n    - id: ENVO_00002261\n      label: forest soil\n \
+  \   - id: ENVO_00002262\n      label: clay soil\n    - id: ENVO_00002263\n     \
+  \ label: garden soil\n    - id: ENVO_00002273\n      label: fluvisol\n    - id:\
+  \ ENVO_00002274\n      label: stagnosol\n    - id: ENVO_00002275\n      label: technosol\n\
+  \    - id: ENVO_00005755\n      label: field soil\n    - id: ENVO_00005741\n   \
+  \   label: alpine soil\n    - id: ENVO_00005742\n      label: arable soil\n    -\
+  \ id: ENVO_00005743\n      label: roadside soil\n    - id: ENVO_00005750\n     \
+  \ label: grassland soil\n    - id: ENVO_00005747\n      label: compost soil\n  \
+  \  - id: ENVO_00005748\n      label: dry soil\n    - id: ENVO_00005749\n      label:\
+  \ farm soil\n    - id: ENVO_00005751\n      label: jungle soil\n    - id: ENVO_00005752\n\
+  \      label: sawah soil\n    - id: ENVO_00005754\n      label: fertilized soil\n\
+  \    - id: ENVO_00005756\n      label: lawn soil\n    - id: ENVO_00005760\n    \
+  \  label: burned soil\n    - id: ENVO_00005761\n      label: meadow soil\n    -\
+  \ id: ENVO_00005764\n      label: pond soil\n    - id: ENVO_00005766\n      label:\
+  \ limed soil\n    - id: ENVO_00005767\n      label: manured soil\n    - id: ENVO_00005768\n\
+  \      label: orchid soil\n    - id: ENVO_00005771\n      label: muddy soil\n  \
+  \  - id: ENVO_00005773\n      label: pasture soil\n    - id: ENVO_00005778\n   \
+  \   label: tropical soil\n    - id: ENVO_00005780\n      label: greenhouse soil\n\
+  \    - id: ENVO_00005781\n      label: heat stressed soil\n    - id: ENVO_00005782\n\
+  \      label: ornithogenic soil\n    - id: ENVO_00005790\n      label: red soil\n\
+  \    - id: ENVO_00005802\n      label: bulk soil\n    - id: ENVO_01001185\n    \
+  \  label: acidic soil\n    - id: ENVO_01001616\n      label: bare soil\n    - id:\
+  \ ENVO_01001638\n      label: frost-susceptible soil\n    - id: ENVO_02000059\n\
+  \      label: surface soil\n    - id: ENVO_02000138\n      label: mangrove biome\
+  \ soil\n    - id: ENVO_06105205\n      label: compacted soil\n    - id: ENVO_03600036\n\
+  \      label: pathogen-suppressive soil\n    - id: ENVO_01000018\n      label: gravel\n\
+  \    - id: ENVO_01001125\n      label: ice\n    - id: ENVO_00001995\n      label:\
+  \ rock\n    - id: ENVO_00000194\n      label: scree\n    - id: ENVO_01000660\n \
+  \     label: tephra\n    - id: ENVO_01000256\n      label: mineral material\n  \
+  \  - id: ENVO_00002008\n      label: dust\n    - id: ENVO_00002164\n      label:\
+  \ fossil material\n    - id: ENVO_01000000\n      label: humus\n    - id: ENVO_02000090\n\
+  \      label: ash\n    - id: ENVO_01001646\n      label: amorphous solid\n    -\
+  \ id: ENVO_01000480\n      label: glass\n    - id: ENVO_01000560\n      label: charcoal\n\
+  \    - id: ENVO_01000845\n      label: crystal\n    - id: ENVO_01001121\n      label:\
+  \ plant matter\n    - id: ENVO_01001231\n      label: kerogen\n    - id: ENVO_01001525\n\
+  \      label: hard-frozen soil\n    - id: ENVO_01001528\n      label: friable-frozen\
+  \ soil\n    - id: ENVO_01001561\n      label: gel\n    - id: ENVO_01001850\n   \
+  \   label: frost\n    - id: ENVO_03501307\n      label: ceramic\n    - id: ENVO_00002122\n\
+  \      label: arsenic-rich mud\n    - id: ENVO_00002133\n      label: anaerobic\
+  \ mud\n    - id: ENVO_00002160\n      label: estuarine mud\n    - id: ENVO_00005795\n\
+  \      label: marine mud\n    - id: ENVO_00005797\n      label: lake bottom mud\n\
+  \    - id: ENVO_02000019\n      label: bodily fluid material\n    - id: ENVO_04000008\n\
+  \      label: soil organic matter\n    - id: ENVO_01000063\n      label: planktonic\
+  \ material\n    - id: ENVO_01000156\n      label: biofilm material\n    - id: ENVO_01000157\n\
+  \      label: microbial mat material\n    - id: ENVO_01001103\n      label: detritus\n\
+  \    - id: ENVO_01000628\n      label: plant litter\n    - id: ENVO_01000349\n \
+  \     label: root matter\n    - id: ENVO_02000008\n      label: cell culture\n \
+  \   - id: ENVO_01001395\n      label: necromass\n    - id: ENVO_03501304\n     \
+  \ label: cellophane\n    - id: ENVO_03600084\n      label: lichen material\n   \
+  \ - id: ENVO_1000746\n      label: marine mucilage\n    - id: ENVO_00002001\n  \
+  \    label: waste water\n    - id: ENVO_02000022\n      label: excreta material\n\
+  \    - id: ENVO_00002267\n      label: industrial waste material\n    - id: ENVO_01000371\n\
+  \      label: agricultural waste material\n    - id: ENVO_01000372\n      label:\
+  \ household waste material\n    - id: ENVO_03510070\n      label: toxic waste\n\
+  \    - id: ENVO_03600006\n      label: food waste\n    - id: ENVO_01000017\n   \
+  \   label: sand\n    - id: ENVO_00002007\n      label: sediment\n    - id: ENVO_01001563\n\
+  \      label: quicksand\n    - id: ENVO_01000016\n      label: silt\n    - id: ENVO_00002982\n\
+  \      label: clay\n    - id: ENVO_01000436\n      label: waterborne particulate\
+  \ matter\n    - id: ENVO_03000021\n      label: soot\n    - id: ENVO_03000038\n\
+  \      label: cryoconite deposit\n    - id: ENVO_04000012\n      label: particulate\
+  \ organic matter\n    - id: ENVO_00002170\n      label: compost\n    - id: ENVO_00003031\n\
+  \      label: animal manure\n    - id: ENVO_00002985\n      label: oil\n    - id:\
+  \ ENVO_01000554\n      label: hydrocarbon gas\n    - id: ENVO_01001139\n      label:\
+  \ methane ice\n    - id: ENVO_01001238\n      label: residual kerogen\n    - id:\
+  \ ENVO_00005739\n      label: sea foam\n    - id: ENVO_01001089\n      label: aerosolised\
+  \ solids\n    - id: ENVO_01001088\n      label: aerosolised liquids\n    - id: ENVO_01001652\n\
+  \      label: atmospheric aerosol\n    - id: ENVO_01000797\n      label: gaseous\
+  \ environmental material\n    - id: ENVO_01000815\n      label: liquid environmental\
+  \ material\n    - id: ENVO_01000231\n      label: lava\n    - id: ENVO_01000648\n\
+  \      label: magma\n    - id: ENVO_01000798\n      label: plasma\n    - id: ENVO_03600007\n\
+  \      label: formation fluid\n    - id: ENVO_03600082\n      label: crustal fluid\n\
+  \    - id: ENVO_02000118\n      label: paraffin wax\n    - id: ENVO_02000117\n \
+  \     label: natural wax\n    - id: ENVO_01001155\n      label: astrogeological\
+  \ gas\n    - id: ENVO_01001126\n      label: astrogeological ice\n    - id: ENVO_01001647\n\
+  \      label: colloid suspended in a hydrosphere\n    - id: ENVO_02000047\n    \
+  \  label: animal feed\n    - id: ENVO_02000055\n      label: plant feed\n    - id:\
+  \ FOODON_00001002\n      label: food product\n    - id: ENVO_03000076\n      label:\
+  \ slush ice\n    - id: ENVO_03501259\n      label: litter\n    - id: ENVO_03501303\n\
+  \      label: natural-based polymer\n    - id: ENVO_03501306\n      label: mylar\n\
+  \    - id: ENVO_03510015\n      label: xanthan gum\n    - id: ENVO_03510016\n  \
+  \    label: tragacanth\n    - id: ENVO_03510018\n      label: resin\n    - id: ENVO_03510023\n\
+  \      label: shellac\n    - id: ENVO_03510037\n      label: radioactive material\n\
+  \    - id: ENVO_03510038\n      label: volume of cyanoacrylate\n    - id: ENVO_03510064\n\
+  \      label: emissions from petroleum combustion\n    - id: ENVO_03600013\n   \
+  \   label: bituminous sand\n    - id: ENVO_03600017\n      label: slurry\n    -\
+  \ id: ENVO_06105003\n      label: thermoplastic material\n    - id: ENVO_06105101\n\
+  \      label: plastic\n    - id: ENVO_00000003\n      label: mine tailing\n    -\
+  \ id: ENVO_00002044\n      label: sludge\n    - id: ENVO_00002230\n      label:\
+  \ anthrosol\n    - id: ENVO_00002870\n      label: adobe\n    - id: ENVO_01000458\n\
+  \      label: concrete\n    - id: ENVO_01000462\n      label: masonry cement\n \
+  \   - id: ENVO_01000461\n      label: refined asphalt\n    - id: ENVO_01000474\n\
+  \      label: brick material\n    - id: ENVO_01000476\n      label: plaster\n  \
+  \  - id: ENVO_01001869\n      label: fracking liquid\n    - id: ENVO_02000123\n\
+  \      label: paint\n    - id: ENVO_03501253\n      label: gypsum\n    - id: ENVO_03501324\n\
+  \      label: latex\n    - id: ENVO_03510055\n      label: rubber cement\n    -\
+  \ id: ENVO_03510056\n      label: methyl cellulose paste\n    - id: ENVO_03510057\n\
+  \      label: permanent hair dye\n    - id: ENVO_03510058\n      label: pharmaceutical\
+  \ ink\n    - id: ENVO_03510060\n      label: gel ink\n    - id: ENVO_03510061\n\
+  \      label: soy ink\n    - id: ENVO_03510062\n      label: aqueous inkjet printer\
+  \ ink\n    - id: ENVO_01001876\n      label: graupel\n    - id: ENVO_03000000\n\
+  \      label: neve\n    - id: ENVO_03000027\n      label: powdery snow\n    - id:\
+  \ ENVO_03000002\n      label: firn\n    - id: ENVO_03000108\n      label: slab snow\n\
+  \    - id: ENVO_01001614\n      label: ice-bearing permafrost\n    - id: ENVO_03000088\n\
+  \      label: methane-laden permafrost\n    - id: ENVO_06105274\n      label: sandy\
+  \ loam\n    - id: ENVO_06105275\n      label: silty loam\n    - id: ENVO_06105277\n\
+  \      label: clay loam\n    - id: ENVO_01001841\n      label: volcanic soil\n \
+  \   - id: ENVO_00002234\n      label: acrisol\n    - id: ENVO_00002236\n      label:\
+  \ cryosol\n    - id: ENVO_00005765\n      label: frozen compost soil\n    - id:\
+  \ ENVO_01001527\n      label: plastic-frozen soil\n    - id: ENVO_00005774\n   \
+  \   label: peat soil\n    - id: ENVO_00005740\n      label: paddy field soil\n \
+  \   - id: ENVO_00005789\n      label: bluegrass field soil\n    - id: ENVO_00002260\n\
+  \      label: dune soil\n    - id: ENVO_00005769\n      label: mountain forest soil\n\
+  \    - id: ENVO_00005770\n      label: beech forest soil\n    - id: ENVO_00005783\n\
+  \      label: leafy wood soil\n    - id: ENVO_00005784\n      label: spruce forest\
+  \ soil\n    - id: ENVO_00005787\n      label: eucalyptus forest soil\n    - id:\
+  \ ENVO_00005744\n      "

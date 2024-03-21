@@ -1,11 +1,18 @@
 import os
 import time
 
+import yaml
+
 from anthropic import Anthropic
 
 from dotenv import load_dotenv
 
-load_dotenv("../local/.env")
+load_dotenv("local/.env")
+
+mixs_extension_report_file = "assets/extension_report.yaml"
+envo_class_annotations_file = "assets/report_envo_environmental_material_annotations.tsv"
+envo_classes_description = "environmental materials"
+output_file = "assets/mixs_environments_env_materials_subsets.yaml.txt"
 
 api_key = os.environ["ANTHROPIC_API_KEY"]
 
@@ -15,11 +22,12 @@ MODEL_NAME = "claude-3-opus-20240229"
 
 client = Anthropic(api_key=api_key)
 
-with open('../assets/extension_report.yaml', 'r') as file:
+with open(mixs_extension_report_file, 'r') as file:
     mixs_environments = file.read()
 
-with open('../assets/report_envo_environmental_material_annotations.tsv', 'r') as file:
+with open(envo_class_annotations_file, 'r') as file:
     envo_materials = file.read()
+
 
 def get_completion(client, prompt):
     while True:
@@ -37,16 +45,19 @@ def get_completion(client, prompt):
             time.sleep(5)
 
 
-
 completion = get_completion(client,
-    f"""Here are the definitions of environments, according to MIxS: {mixs_environments} 
-and the definitions of environmental materials, according to EnvO: {envo_materials}.
+                            f"""Here are the definitions of environments, according to MIxS: {mixs_environments} 
+and the definitions of {envo_classes_description}, according to EnvO: {envo_materials}.
 Generate an exhaustive YAML-formatted report of all environmental materials 
 that could reasonably be found in the Soil environment.
 When associating an environmental material with an environment, 
 report both the environmental material id 
 and the environmental material label for every associated environmental material.
-"""
-)
+""")
 
-print(completion)
+# print(completion)
+
+# Open the output file in write mode ('w')
+with open(output_file, 'w') as outfile:
+    # Dump the YAML string to the file
+    yaml.dump(completion, outfile)
