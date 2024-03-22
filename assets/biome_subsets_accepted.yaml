@@ -1,0 +1,241 @@
+Agriculture:
+  - id: ENVO_01000247
+    label: rangeland biome
+  - id: ENVO_01000245
+    label: cropland biome
+  - id: ENVO_01000246
+    label: village biome
+BuiltEnvironment:
+  - id: ENVO_01000249
+    label: urban biome
+  - id: ENVO_01000248
+    label: dense settlement biome
+Sediment:
+  - id: ENVO_00000447
+    label: marine biome
+  - id: ENVO_01000024
+    label: marine benthic biome
+  - id: ENVO_00000873
+    label: freshwater biome
+Soil:
+  - id: ENVO_01000179
+    label: desert biome
+  - id: ENVO_01000183
+    label: tropical desert biome
+  - id: ENVO_01000184
+    label: subtropical desert biome
+  - id: ENVO_01000182
+    label: temperate desert biome
+  - id: ENVO_01000186
+    label: polar desert biome
+  - id: ENVO_01000185
+    label: montane desert biome
+  - id: ENVO_01000180
+    label: tundra biome
+  - id: ENVO_01001505
+    label: alpine tundra biome
+  - id: ENVO_01000177
+    label: grassland biome
+  - id: ENVO_01000192
+    label: tropical grassland biome
+  - id: ENVO_01000191
+    label: subtropical grassland biome
+  - id: ENVO_01000193
+    label: temperate grassland biome
+  - id: ENVO_01000224
+    label: mediterranean grassland biome
+  - id: ENVO_01000194
+    label: montane grassland biome
+  - id: ENVO_01000195
+    label: flooded grassland biome
+  - id: ENVO_01000178
+    label: savanna biome
+  - id: ENVO_01000188
+    label: tropical savanna biome
+  - id: ENVO_01000187
+    label: subtropical savanna biome
+  - id: ENVO_01000189
+    label: temperate savanna biome
+  - id: ENVO_01000229
+    label: mediterranean savanna biome
+  - id: ENVO_01000223
+    label: montane savanna biome
+  - id: ENVO_01000190
+    label: flooded savanna biome
+  - id: ENVO_01000176
+    label: shrubland biome
+  - id: ENVO_01000214
+    label: tropical shrubland biome
+  - id: ENVO_01000213
+    label: subtropical shrubland biome
+  - id: ENVO_01000215
+    label: temperate shrubland biome
+  - id: ENVO_01000217
+    label: mediterranean shrubland biome
+  - id: ENVO_01000216
+    label: montane shrubland biome
+  - id: ENVO_01000218
+    label: xeric shrubland biome
+  - id: ENVO_01000175
+    label: woodland biome
+  - id: ENVO_01000220
+    label: tropical woodland biome
+  - id: ENVO_01000222
+    label: subtropical woodland biome
+  - id: ENVO_01000221
+    label: temperate woodland biome
+  - id: ENVO_01000208
+    label: mediterranean woodland biome
+  - id: ENVO_01000174
+    label: forest biome
+  - id: ENVO_01000197
+    label: broadleaf forest biome
+  - id: ENVO_01000200
+    label: tropical broadleaf forest biome
+  - id: ENVO_01000228
+    label: tropical moist broadleaf forest biome
+  - id: ENVO_01000227
+    label: tropical dry broadleaf forest biome
+  - id: ENVO_01000201
+    label: subtropical broadleaf forest biome
+  - id: ENVO_01000226
+    label: subtropical moist broadleaf forest biome
+  - id: ENVO_01000225
+    label: subtropical dry broadleaf forest biome
+  - id: ENVO_01000202
+    label: temperate broadleaf forest biome
+  - id: ENVO_01000196
+    label: coniferous forest biome
+  - id: ENVO_01000210
+    label: tropical coniferous forest biome
+  - id: ENVO_01000209
+    label: subtropical coniferous forest biome
+  - id: ENVO_01000211
+    label: temperate coniferous forest biome
+  - id: ENVO_01000250
+    label: subpolar coniferous forest biome
+  - id: ENVO_01000198
+    label: mixed forest biome
+  - id: ENVO_01001798
+    label: tropical mixed forest biome
+  - id: ENVO_01000212
+    label: temperate mixed forest biome
+  - id: ENVO_01000199
+    label: mediterranean forest biome
+  - id: ENVO_01000181
+    label: mangrove biome
+Water:
+  - id: ENVO_00002030
+    label: aquatic biome
+  - id: ENVO_00000873
+    label: freshwater biome
+  - id: ENVO_01000253
+    label: freshwater river biome
+  - id: ENVO_00000887
+    label: large river biome
+  - id: ENVO_00000888
+    label: large river headwater biome
+  - id: ENVO_00000889
+    label: large river delta biome
+  - id: ENVO_00000890
+    label: small river biome
+  - id: ENVO_03605008
+    label: freshwater stream biome
+  - id: ENVO_01000252
+    label: freshwater lake biome
+  - id: ENVO_00000891
+    label: large freshwater lake biome
+  - id: ENVO_00000892
+    label: small freshwater lake biome
+  - id: ENVO_00000893
+    label: xeric basin biome
+  - id: ENVO_00000447
+    label: marine biome
+  - id: ENVO_01000048
+    label: ocean biome
+  - id: ENVO_01000046
+    label: marginal sea biome
+  - id: ENVO_01001230
+    label: tropical marginal sea biome
+  - id: ENVO_01000856
+    label: temperate marginal sea biome
+  - id: ENVO_01000047
+    label: mediterranean sea biome
+  - id: ENVO_01000857
+    label: temperate mediterranean sea biome
+  - id: ENVO_01000004
+    label: concentration basin mediterranean sea biome
+  - id: ENVO_01000128
+    label: dilution basin mediterranean sea biome
+  - id: ENVO_01000045
+    label: epeiric sea biome
+  - id: ENVO_01000023
+    label: marine pelagic biome
+  - id: ENVO_01000032
+    label: neritic pelagic zone biome
+  - id: ENVO_01000041
+    label: neritic sea surface microlayer biome
+  - id: ENVO_01000042
+    label: neritic epipelagic zone biome
+  - id: ENVO_01000043
+    label: neritic mesopelagic zone biome
+  - id: ENVO_01000033
+    label: oceanic pelagic zone biome
+  - id: ENVO_01000034
+    label: oceanic sea surface microlayer biome
+  - id: ENVO_01000035
+    label: oceanic epipelagic zone biome
+  - id: ENVO_01000036
+    label: oceanic mesopelagic zone biome
+  - id: ENVO_01000037
+    label: oceanic bathypelagic zone biome
+  - id: ENVO_01000038
+    label: oceanic abyssopelagic zone biome
+  - id: ENVO_01000039
+    label: oceanic hadal pelagic zone biome
+  - id: ENVO_01000040
+    label: oceanic benthopelagic zone biome
+  - id: ENVO_01000024
+    label: marine benthic biome
+  - id: ENVO_01000025
+    label: marine neritic benthic zone biome
+  - id: ENVO_01000026
+    label: marine bathyal zone biome
+  - id: ENVO_01000027
+    label: marine abyssal zone biome
+  - id: ENVO_01000028
+    label: marine hadal zone biome
+  - id: ENVO_01000029
+    label: marine reef biome
+  - id: ENVO_01000049
+    label: marine coral reef biome
+  - id: ENVO_01000854
+    label: tropical marine coral reef biome
+  - id: ENVO_01000123
+    label: marine sponge reef biome
+  - id: ENVO_01000050
+    label: marine subtidal rocky reef biome
+  - id: ENVO_01000030
+    label: marine hydrothermal vent biome
+  - id: ENVO_01000051
+    label: marine black smoker biome
+  - id: ENVO_01000052
+    label: marine white smoker biome
+  - id: ENVO_01000053
+    label: marine ultramafic hydrothermal vent biome
+  - id: ENVO_01000054
+    label: marine basaltic hydrothermal vent biome
+  - id: ENVO_01000127
+    label: marine cold seep biome
+  - id: ENVO_01000022
+    label: marine salt marsh biome
+  - id: ENVO_01000858
+    label: marine upwelling biome
+  - id: ENVO_01000859
+    label: tropical marine upwelling biome
+  - id: ENVO_01000860
+    label: temperate marine upwelling biome
+  - id: ENVO_01000020
+    label: estuarine biome
+  - id: ENVO_01001369
+    label: tidal mangrove shrubland

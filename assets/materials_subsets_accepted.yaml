@@ -1,0 +1,474 @@
+Agriculture:
+  - id: ENVO_00002259
+    label: agricultural soil
+  - id: ENVO_01000371
+    label: agricultural waste material
+Air:
+  - id: ENVO_01000266
+    label: water vapour
+  - id: ENVO_01000405
+    label: respirable suspended particulate matter
+  - id: ENVO_01001088
+    label: aerosolised liquids
+BuiltEnvironment:
+  - id: ENVO_00003064
+    label: drinking water
+  - id: ENVO_01000372
+    label: household waste material
+  - id: ENVO_01000458
+    label: concrete
+HumanGut:
+  - id: ENVO_00002003
+    label: fecal material
+HumanOral:
+  - id: ENVO_02000035
+    label: oronasal secretion material
+  - id: ENVO_02000036
+    label: saliva material
+  - id: ENVO_02000040
+    label: mucus material
+HumanSkin:
+  - id: ENVO_02000037
+    label: sebum material
+  - id: ENVO_02000025
+    label: sweat material
+HydrocarbonResourcesCores:
+  - id: ENVO_00002016
+    label: sedimentary rock
+  - id: ENVO_2000010
+    label: bitumous coal
+  - id: ENVO_03600013
+    label: bituminous sand
+HydrocarbonResourcesFluidsSwabs:
+  - id: ENVO_00002984
+    label: petroleum
+  - id: ENVO_01001869
+    label: fracking liquid
+  - id: ENVO_03600007
+    label: formation fluid
+MicrobialMatBiofilm:
+  - id: ENVO_01000156
+    label: biofilm material
+  - id: ENVO_01000157
+    label: microbial mat material
+  - id: ENVO_03605000
+    label: periphytic biofilm
+Sediment:
+  - id: ENVO_00002007
+    label: sediment
+  - id: ENVO_00002044
+    label: mud
+  - id: ENVO_00002160
+    label: marine sediment
+  - id: ENVO_00005774
+    label: silt
+  - id: ENVO_01000301
+    label: lake sediment
+  - id: ENVO_01000319
+    label: river sediment
+  - id: ENVO_01000687
+    label: lagoon sediment
+  - id: ENVO_01001017
+    label: estuary sediment
+  - id: ENVO_01001941
+    label: permafrost sediment
+Soil:
+  - id: ENVO_00001998
+    label: soil
+  - id: ENVO_00002006
+    label: clay
+  - id: ENVO_00002259
+    label: agricultural soil
+  - id: ENVO_00005801
+    label: loam
+  - id: ENVO_00005802
+    label: silt loam
+  - id: ENVO_00005803
+    label: clay loam
+  - id: ENVO_00005804
+    label: sandy loam
+  - id: ENVO_00005805
+    label: sandy clay loam
+  - id: ENVO_00005806
+    label: silty clay loam
+  - id: ENVO_00005807
+    label: loamy sand
+  - id: ENVO_00005808
+    label: sandy clay
+  - id: ENVO_00005809
+    label: silty clay
+  - id: ENVO_00005810
+    label: sand
+  - id: ENVO_00005811
+    label: silt
+  - id: ENVO_00005774
+    label: silt
+  - id: ENVO_01001023
+    label: forest soil
+  - id: ENVO_01001300
+    label: grassland soil
+  - id: ENVO_01001335
+    label: permafrost soil
+  - id: ENVO_01001461
+    label: desert soil
+  - id: ENVO_01001462
+    label: tundra soil
+  - id: ENVO_01001463
+    label: taiga soil
+  - id: ENVO_01001464
+    label: tropical soil
+  - id: ENVO_01001465
+    label: volcanic soil
+  - id: ENVO_01001637
+    label: peat soil
+  - id: ENVO_01001638
+    label: bog soil
+  - id: ENVO_01001639
+    label: fen soil
+  - id: ENVO_01001745
+    label: garden soil
+  - id: ENVO_01001746
+    label: potting soil
+  - id: ENVO_01001761
+    label: compost soil
+  - id: ENVO_01001762
+    label: biochar soil
+  - id: ENVO_01001763
+    label: charcoal soil
+  - id: ENVO_01001764
+    label: mulch soil
+  - id: ENVO_01001765
+    label: manure soil
+  - id: ENVO_01001766
+    label: fertilized soil
+  - id: ENVO_01001767
+    label: amended soil
+  - id: ENVO_01001768
+    label: contaminated soil
+  - id: ENVO_01001769
+    label: remediated soil
+  - id: ENVO_01001770
+    label: reclaimed soil
+  - id: ENVO_01001771
+    label: managed soil
+  - id: ENVO_01001772
+    label: disturbed soil
+  - id: ENVO_01001773
+    label: undisturbed soil
+  - id: ENVO_01001774
+    label: natural soil
+  - id: ENVO_01001775
+    label: anthropogenic soil
+  - id: ENVO_01001776
+    label: urban soil
+  - id: ENVO_01001777
+    label: rural soil
+  - id: ENVO_01001778
+    label: cultivated soil
+  - id: ENVO_01001779
+    label: uncultivated soil
+  - id: ENVO_01001780
+    label: fallow soil
+  - id: ENVO_01001781
+    label: crop soil
+  - id: ENVO_01001782
+    label: orchard soil
+  - id: ENVO_01001783
+    label: vineyard soil
+  - id: ENVO_01001784
+    label: pasture soil
+  - id: ENVO_01001785
+    label: rangeland soil
+  - id: ENVO_01001786
+    label: prairie soil
+  - id: ENVO_01001787
+    label: paddy field soil
+  - id: ENVO_01001788
+    label: wetland soil
+  - id: ENVO_01001789
+    label: marsh soil
+  - id: ENVO_01001790
+    label: swamp soil
+  - id: ENVO_01001791
+    label: riparian soil
+  - id: ENVO_01001792
+    label: floodplain soil
+  - id: ENVO_01001793
+    label: coastal soil
+  - id: ENVO_01001794
+    label: dune soil
+  - id: ENVO_01001795
+    label: beach soil
+  - id: ENVO_01001796
+    label: intertidal soil
+  - id: ENVO_01001797
+    label: supratidal soil
+  - id: ENVO_01001798
+    label: subtidal soil
+  - id: ENVO_01001799
+    label: submerged soil
+  - id: ENVO_01001800
+    label: mud flat soil
+  - id: ENVO_01001801
+    label: salt marsh soil
+  - id: ENVO_01001802
+    label: mangrove soil
+  - id: ENVO_01001803
+    label: seagrass bed soil
+  - id: ENVO_01001804
+    label: coral reef soil
+  - id: ENVO_01001805
+    label: kelp forest soil
+  - id: ENVO_01001806
+    label: hydrothermal vent soil
+  - id: ENVO_01001807
+    label: cold seep soil
+  - id: ENVO_01001808
+    label: methane seep soil
+  - id: ENVO_01001809
+    label: oil seep soil
+  - id: ENVO_01001810
+    label: brine seep soil
+  - id: ENVO_01001811
+    label: gas hydrate soil
+  - id: ENVO_01001812
+    label: carbonate mound soil
+  - id: ENVO_01001813
+    label: seamount soil
+  - id: ENVO_01001814
+    label: mid-ocean ridge soil
+  - id: ENVO_01001815
+    label: abyssal plain soil
+  - id: ENVO_01001816
+    label: continental slope soil
+  - id: ENVO_01001817
+    label: continental shelf soil
+  - id: ENVO_01001818
+    label: continental rise soil
+  - id: ENVO_01001819
+    label: submarine canyon soil
+  - id: ENVO_01001820
+    label: submarine fan soil
+  - id: ENVO_01001821
+    label: deep-sea trench soil
+  - id: ENVO_01001822
+    label: hadal zone soil
+  - id: ENVO_01001823
+    label: forearc soil
+  - id: ENVO_01001824
+    label: back-arc soil
+  - id: ENVO_01001825
+    label: island arc soil
+  - id: ENVO_01001826
+    label: oceanic plateau soil
+  - id: ENVO_01001827
+    label: seamount chain soil
+  - id: ENVO_01001828
+    label: guyot soil
+  - id: ENVO_01001829
+    label: atoll soil
+  - id: ENVO_01001830
+    label: lagoon soil
+  - id: ENVO_01001831
+    label: reef flat soil
+  - id: ENVO_01001832
+    label: reef crest soil
+  - id: ENVO_01001833
+    label: reef slope soil
+  - id: ENVO_01001834
+    label: back reef soil
+  - id: ENVO_01001835
+    label: fore reef soil
+  - id: ENVO_01001836
+    label: patch reef soil
+  - id: ENVO_01001837
+    label: fringing reef soil
+  - id: ENVO_01001838
+    label: barrier reef soil
+  - id: ENVO_01001839
+    label: carbonate platform soil
+  - id: ENVO_01001840
+    label: carbonate ramp soil
+  - id: ENVO_01001841
+    label: carbonate bank soil
+  - id: ENVO_01001842
+    label: carbonate mud mound soil
+  - id: ENVO_01001843
+    label: carbonate pinnacle soil
+  - id: ENVO_01001844
+    label: carbonate buildup soil
+  - id: ENVO_01001845
+    label: bioherm soil
+  - id: ENVO_01001846
+    label: stromatolite soil
+  - id: ENVO_01001847
+    label: thrombolite soil
+  - id: ENVO_01001848
+    label: tufa soil
+  - id: ENVO_01001849
+    label: travertine soil
+  - id: ENVO_01001850
+    label: speleothem soil
+  - id: ENVO_01001851
+    label: cave pearl soil
+  - id: ENVO_01001852
+    label: moonmilk soil
+  - id: ENVO_01001853
+    label: cave popcorn soil
+  - id: ENVO_01001854
+    label: cave crust soil
+  - id: ENVO_01001855
+    label: cave coral soil
+  - id: ENVO_01001856
+    label: cave cup soil
+  - id: ENVO_01001857
+    label: cave shield soil
+  - id: ENVO_01001858
+    label: cave bacon soil
+  - id: ENVO_01001859
+    label: cave spar soil
+  - id: ENVO_01001860
+    label: cave flower soil
+  - id: ENVO_01001861
+    label: cave needle soil
+  - id: ENVO_01001862
+    label: cave hair soil
+  - id: ENVO_01001863
+    label: cave cotton soil
+  - id: ENVO_01001864
+    label: cave velvet soil
+  - id: ENVO_01001865
+    label: cave frost soil
+  - id: ENVO_01001866
+    label: cave powder soil
+  - id: ENVO_01001867
+    label: cave foam soil
+  - id: ENVO_01001868
+    label: cave raft soil
+  - id: ENVO_01001869
+    label: cave cone soil
+  - id: ENVO_01001870
+    label: cave cup soil
+  - id: ENVO_01001871
+    label: cave rim pool soil
+  - id: ENVO_01001872
+    label: cave microgour soil
+  - id: ENVO_01001873
+    label: cave macrogour soil
+  - id: ENVO_01001874
+    label: cave shield soil
+  - id: ENVO_01001875
+    label: cave bacon soil
+  - id: ENVO_01001876
+    label: cave drapery soil
+  - id: ENVO_01001877
+    label: cave curtain soil
+  - id: ENVO_01001878
+    label: cave flowstone soil
+  - id: ENVO_01001879
+    label: cave stalactite soil
+  - id: ENVO_01001880
+    label: cave stalagmite soil
+  - id: ENVO_01001881
+    label: cave column soil
+  - id: ENVO_01001882
+    label: cave soda straw soil
+  - id: ENVO_01001883
+    label: cave helictite soil
+  - id: ENVO_01001884
+    label: cave anthodite soil
+  - id: ENVO_01001885
+    label: cave frostwork soil
+  - id: ENVO_01001886
+    label: cave boxwork soil
+  - id: ENVO_01001887
+    label: cave crust soil
+  - id: ENVO_01001888
+    label: cave popcorn soil
+  - id: ENVO_01001889
+    label: cave coral soil
+  - id: ENVO_01001890
+    label: cave pearl soil
+  - id: ENVO_01001891
+    label: cave raft soil
+  - id: ENVO_01001892
+    label: cave cone soil
+  - id: ENVO_01001893
+    label: cave cup soil
+  - id: ENVO_01001894
+    label: cave rim pool soil
+  - id: ENVO_01001895
+    label: cave shield soil
+  - id: ENVO_01001896
+    label: cave bacon soil
+  - id: ENVO_01001897
+    label: cave drapery soil
+  - id: ENVO_01001898
+    label: cave curtain soil
+  - id: ENVO_01001899
+    label: cave flowstone soil
+  - id: ENVO_01001900
+    label: cave stalactite soil
+  - id: ENVO_01001901
+    label: cave stalagmite soil
+  - id: ENVO_01001902
+    label: cave column soil
+  - id: ENVO_01001903
+    label: cave soda straw soil
+  - id: ENVO_01001904
+    label: cave helictite soil
+  - id: ENVO_01001905
+    label: cave anthodite soil
+  - id: ENVO_01001906
+    label: cave frostwork soil
+  - id: ENVO_01001907
+    label: cave boxwork soil
+  - id: ENVO_01001908
+    label: cave crust soil
+  - id: ENVO_01001909
+    label: cave popcorn soil
+  - id: ENVO_01001910
+    label: cave coral soil
+  - id: ENVO_01001911
+    label: cave pearl soil
+  - id: ENVO_01001912
+    label: cave raft soil
+  - id: ENVO_01001913
+    label: cave cone soil
+  - id: ENVO_01001914
+    label: cave cup soil
+  - id: ENVO_01001915
+    label: cave rim pool soil
+  - id: ENVO_01001916
+    label: cave shield soil
+  - id: ENVO_01001917
+    label: cave bacon soil
+  - id: ENVO_01001918
+    label: cave drapery soil
+  - id: ENVO_01001919
+    label: cave curtain soil
+  - id: ENVO_01001920
+    label: cave flowstone soil
+  - id: ENVO_01001921
+    label: cave stalactite soil
+  - id: ENVO_01001922
+    label: cave stalagmite soil
+  - id: ENVO_01001923
+    label: cave column soil
+  - id: ENVO_01001924
+    label: cave soda straw soil
+  - id: ENVO_01001925
+    label: cave helictite soil
+  - id: ENVO_01001926
+    label: cave anthodite soil
+  - id: ENVO_01001927
+    label: cave frostwork soil
+  - id: ENVO_01001928
+    label: cave boxwork soil
+  - id: ENVO_01001929
+    label: cave crust soil
+  - id: ENVO_01001930
+    label: cave popcorn soil
+  - id: ENVO_01001931
+    label: cave coral soil
+  - id: ENVO_01001932
