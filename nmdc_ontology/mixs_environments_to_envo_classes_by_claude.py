@@ -7,10 +7,6 @@ from anthropic import Anthropic
 
 from dotenv import load_dotenv
 
-# todo: parse response and write to file
-# todo: try BBOP preferred LLMs
-# todo: look for opportunities for iterative one to many comparisons, with response after each question
-
 load_dotenv("local/.env")
 
 api_key = os.environ["ANTHROPIC_API_KEY"]
@@ -54,12 +50,7 @@ and generates more mappings or asks other QC questions
 The creation of the MIxS and EnvO YAML files is illustrated in qc.Makefile
 This script prints its results to the console
 Manual review and reformatting is recommended
-Please place the reviewed results in the assets directory
-
-Have also tried without providing large/expensive MIxS environment and EnvO class YAML files
-That seemed to cause ID hallucination
-
-Also tried Notebook LM but that only gave short partial results'''
+Please place the reviewed results in the assets directory'''
 
     with open(mixs_file, 'r') as file:
         mixs_environments = file.read()
@@ -78,9 +69,6 @@ Also tried Notebook LM but that only gave short partial results'''
 
     if print_message:
         print(message)
-
-    # Please do not repeat any of completed mappings.
-    # Please do not map any {envo_classes_description} to ENVO_00000428 'biome'.
 
     completion = get_completion(client, message, model, max_tokens, temperature)
 

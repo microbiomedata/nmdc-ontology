@@ -143,7 +143,7 @@ src/ontology/imports/report-unlabelled-classes.txt: qc-reports/report-unlabelled
 envo_mixs_all: envo_mixs_clean assets/mixs_environments_env_materials_subsets.yaml.txt
 
 .PHONY: envo_mixs_clean
-envo_mixs_clean:
+envo_mixs_clean: # todo update
 	rm -rf assets/extension_report.yaml \
 		assets/report_envo_environmental_material_annotations.tsv \
 		assets/mixs_environments_env_materials_subsets.yaml.txt
@@ -192,35 +192,7 @@ assets/materials_subsets_accepted.yaml
 		--model claude-3-opus-20240229 \
 		--suffix "Please generate an exhaustive mapping of environmental materials to the BuiltEnvironment MIxS environment, using the same YAML format. Do not provide any introduction, commentary, summary or anything like that." > $@
 
-# todo what are the top priorities?
-  # HostAssociated... use uberon?
-  # PlantAssociated... use plant ontology?
-  # Soil
-  # Water
-
-  #Agriculture
-  #Air
-  #BuiltEnvironment
-
-  #FoodAnimalAndAnimalFeed
-  #FoodFarmEnvironment
-  #FoodFoodProductionFacility
-  #FoodHumanFoods
-
-  #HumanAssociated
-  #HumanGut
-  #HumanOral
-  #HumanSkin
-  #HumanVaginal
-
-  #HydrocarbonResourcesCores
-  #HydrocarbonResourcesFluidsSwabs
-
-  #MicrobialMatBiofilm
-  #MiscellaneousNaturalOrArtificialEnvironment
-  #Sediment
-  #SymbiontAssociated
-  #WastewaterSludge
-
-
 #		--suffix "Please generate an exhaustive mapping of environmental materials to the MIxS environments that they could reasonably be found in, using the same YAML format. Do not provide any introduction, commentary, summary or anything like that. Do not perform mappings for any environmental materials or environments that are related to food, humans, hosts, or health." > $@
+
+# Please do not repeat any of completed mappings.
+# Please do not map any {envo_classes_description} to ENVO_00000428 'biome'.
