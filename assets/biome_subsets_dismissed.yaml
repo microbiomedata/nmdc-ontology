@@ -1,0 +1,56 @@
+Air:
+  - id: ENVO_01000219
+    label: anthropogenic terrestrial biome
+FoodAnimalAndAnimalFeed:
+  - id: ENVO_01000247
+    label: rangeland biome
+FoodFarmEnvironment:
+  - id: ENVO_01000245
+    label: cropland biome
+  - id: ENVO_01000247
+    label: rangeland biome
+FoodFoodProductionFacility:
+  - id: ENVO_01000248
+    label: dense settlement biome
+FoodHumanFoods:
+  - id: ENVO_01000245
+    label: cropland biome
+HostAssociated:
+  - id: ENVO_00000428
+    label: biome
+HumanAssociated:
+  - id: ENVO_00000428
+    label: biome
+HumanGut:
+  - id: ENVO_00000428
+    label: biome
+HumanOral:
+  - id: ENVO_00000428
+    label: biome
+HumanSkin:
+  - id: ENVO_00000428
+    label: biome
+HumanVaginal:
+  - id: ENVO_00000428
+    label: biome
+HydrocarbonResourcesCores:
+  - id: ENVO_00000428
+    label: biome
+HydrocarbonResourcesFluidsSwabs:
+  - id: ENVO_00000428
+    label: biome
+MicrobialMatBiofilm:
+  - id: ENVO_00000428
+    label: biome
+MiscellaneousNaturalOrArtificialEnvironment:
+  - id: ENVO_00000428
+    label: biome
+PlantAssociated:
+  - id: ENVO_00000428
+    label: biome
+SymbiontAssociated:
+  - id: ENVO_00000428
+    label: biome
+WastewaterSludge:
+  - id: ENVO_00000428
+    label: biome

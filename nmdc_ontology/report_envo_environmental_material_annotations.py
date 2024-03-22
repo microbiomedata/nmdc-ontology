@@ -1,11 +1,13 @@
 import requests
 from collections import defaultdict
 import pandas as pd
+import yaml
 
 endpoint = "http://3.236.215.220/repositories/nmdc-knowledgegraph"
 # https://graphdb-dev.microbiomedata.org/repositories/nmdc-metadata
 
-output_file = "assets/report_envo_environmental_material_annotations.tsv"
+tsv_output_file = "assets/report_envo_environmental_material_annotations.tsv"
+yaml_output_file = "assets/report_envo_environmental_material_annotations.yaml"
 
 query = """
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -71,9 +73,25 @@ if response.status_code == 200:
     df.fillna('', inplace=True)
 
     # Save the DataFrame to a TSV file
-    df.to_csv(output_file, sep="\t")
+    df.to_csv(tsv_output_file, sep="\t")
 
-    print(f"DataFrame saved to {output_file}")
+    print(f"DataFrame saved to {tsv_output_file}")
+
+    # Convert the DataFrame to a dictionary with each row as an outer key
+    data_dict = df.to_dict(orient='index')
+
+    # Remove empty keys from the dictionary
+    for row_key in data_dict:
+        data_dict[row_key] = {
+            k: v
+            for k, v in data_dict[row_key].items()
+            if (isinstance(v, (list, tuple, pd.Series)) and any(x for x in v if pd.notnull(x))) or (
+                    not isinstance(v, (list, tuple, pd.Series)) and pd.notnull(v) and v != '')
+        }
+
+    # Save the dictionary as a YAML file
+    with open(yaml_output_file, 'w') as file:
+        yaml.dump(data_dict, file)
 
 else:
     print(f"Query failed with status code: {response.status_code}")

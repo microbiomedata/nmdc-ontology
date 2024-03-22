@@ -3,8 +3,8 @@ name = "nmdc-ontology"
 version = "0.1.0"
 description = "Build tools for the NMDC Ontology, a colelction of OBO foundry terms that can be used to annotate NMDC biosamples."
 authors = [
-    { name = "Bill Duncan", email = "wdduncan@gmail.com" },
-    { name = "Mark A. Miller", email = "MAM@lbl.gov" }
+  "Bill Duncan <wdduncan@gmail.com>",
+  "Mark A. Miller <MAM@lbl.gov>"
 ]
 
 license = "CC0-1.0"
