@@ -16,14 +16,18 @@ oaklib = "^0.5.25"
 pyarrow = "^15.0.0"
 anthropic = "^0.21.1"
 python-dotenv = "^1.0.1"
+setuptools = "^69.2.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-report-instantiated-traids = "nmdc_ontology.report_instantiated_traids:main"
-report-id-ranges = "nmdc_ontology.report_id_ranges:generate_id_ranges"
-report-nmdco-envo-classes-by-id-owners = "nmdc_ontology.find_nmdc_envo_terms:filter_class_nodes"
 find-biosamples-with-problematic-triads = "nmdc_ontology.find_biosamples_with_problematic_triads:validate_biosamples"
-
+mixs-environments-to-envo-classes-by-claude = "nmdc_ontology.mixs_environments_to_envo_classes_by_claude:main"
+report-envo-biome-annotations = "nmdc_ontology.report_envo_biome_annotations:main"
+report-envo-environmental-material-annotations = "nmdc_ontology.report_envo_environmental_material_annotations:main"
+report-id-ranges = "nmdc_ontology.report_id_ranges:generate_id_ranges"
+report-instantiated-traids = "nmdc_ontology.report_instantiated_traids:main"
+report-mixs-extensions = "nmdc_ontology.report_mixs_extensions:main"
+report-nmdco-envo-classes-by-id-owners = "nmdc_ontology.find_nmdc_envo_terms:filter_class_nodes"

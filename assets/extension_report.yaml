@@ -10,8 +10,8 @@ Agriculture:
     in agricultural sites; long-term ecological research in croplands; eDNA in manure
     samples; describing agricultural microbiome studies
 Air:
-  description: A collection of terms appropriate when collecting and sequencing obtained
-    from a gaseous environment.
+  description: A collection of terms appropriate when collecting and sequencing samples
+    obtained from a gaseous environment.
   title: air
   use_cases: bioaerosol samples, pathogen load in urban air, aerosols
 BuiltEnvironment:
@@ -80,7 +80,7 @@ HumanAssociated:
   use_cases: blood samples or biopsy samples.
 HumanGut:
   description: A collection of terms appropriate when collecting samples and sequencing
-    samples  obtained from a person to examine their oral-associated microbiome.
+    samples  obtained from a person to examine their gut-associated microbiome.
   title: human-gut
   use_cases: human stool or fecal samples, or samples collected directly from the
     gut.

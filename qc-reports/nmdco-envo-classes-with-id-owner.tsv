@@ -463,6 +463,16 @@ http://purl.obolibrary.org/obo/ENVO_3100029	concentration of zeaxanthin in liqui
 http://purl.obolibrary.org/obo/ENVO_3100031	depth of water	Kai Blumberg pattern generated terms
 http://purl.obolibrary.org/obo/ENVO_3100032	fluorescence of water	Kai Blumberg pattern generated terms
 http://purl.obolibrary.org/obo/ENVO_3100033	pressure of water	Kai Blumberg pattern generated terms
+http://purl.obolibrary.org/obo/ENVO_03605001	epilithon	Mark Andrew Miller
+http://purl.obolibrary.org/obo/ENVO_03605002	epipelon	Mark Andrew Miller
+http://purl.obolibrary.org/obo/ENVO_03605003	epiphyton	Mark Andrew Miller
+http://purl.obolibrary.org/obo/ENVO_03605004	epipsammon	Mark Andrew Miller
+http://purl.obolibrary.org/obo/ENVO_03605005	epixylon	Mark Andrew Miller
+http://purl.obolibrary.org/obo/ENVO_03605007	freshwater stream	Mark Andrew Miller
+http://purl.obolibrary.org/obo/ENVO_03605008	freshwater stream biome	Mark Andrew Miller
+http://purl.obolibrary.org/obo/ENVO_03605009	freshwater stream ecosystem	Mark Andrew Miller
+http://purl.obolibrary.org/obo/ENVO_03605000	periphytic biofilm	Mark Andrew Miller
+http://purl.obolibrary.org/obo/ENVO_03605006	stream water	Mark Andrew Miller
 http://purl.obolibrary.org/obo/ENVO_06105024	adhesion	Mei-Chen Liu
 http://purl.obolibrary.org/obo/ENVO_06105021	adsorption	Mei-Chen Liu
 http://purl.obolibrary.org/obo/ENVO_06105014	biodegradation	Mei-Chen Liu
@@ -509,11 +519,6 @@ http://purl.obolibrary.org/obo/ENVO_03600004	drinking water treatment plant	Nati
 http://purl.obolibrary.org/obo/ENVO_03600031	earth-filled dam	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600005	electrical switch	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600032	embankment dam	National Microbiome Data Collaborative
-http://purl.obolibrary.org/obo/ENVO_03605001	epilithon	National Microbiome Data Collaborative
-http://purl.obolibrary.org/obo/ENVO_03605002	epipelon	National Microbiome Data Collaborative
-http://purl.obolibrary.org/obo/ENVO_03605003	epiphyton	National Microbiome Data Collaborative
-http://purl.obolibrary.org/obo/ENVO_03605004	epipsammon	National Microbiome Data Collaborative
-http://purl.obolibrary.org/obo/ENVO_03605005	epixylon	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600037	eutrophic pond	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600038	experimental forest ecosystem	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600039	fermentation pit	National Microbiome Data Collaborative
@@ -521,9 +526,6 @@ http://purl.obolibrary.org/obo/ENVO_03600040	fermentation starter	National Micro
 http://purl.obolibrary.org/obo/ENVO_03600006	food waste	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600007	formation fluid	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600062	fountain	National Microbiome Data Collaborative
-http://purl.obolibrary.org/obo/ENVO_03605007	freshwater stream	National Microbiome Data Collaborative
-http://purl.obolibrary.org/obo/ENVO_03605008	freshwater stream biome	National Microbiome Data Collaborative
-http://purl.obolibrary.org/obo/ENVO_03605009	freshwater stream ecosystem	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600087	greenhouse	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600066	halite	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600068	ice wedge	National Microbiome Data Collaborative
@@ -547,7 +549,6 @@ http://purl.obolibrary.org/obo/ENVO_03600072	ophiolites	National Microbiome Data
 http://purl.obolibrary.org/obo/ENVO_03600044	organic farm	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600018	organic horizon	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600036	pathogen-suppressive soil	National Microbiome Data Collaborative
-http://purl.obolibrary.org/obo/ENVO_03605000	periphytic biofilm	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600077	photobioreactor	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600014	pipeline network	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600045	plant pot	National Microbiome Data Collaborative
@@ -568,7 +569,6 @@ http://purl.obolibrary.org/obo/ENVO_03600065	spring water	National Microbiome Da
 http://purl.obolibrary.org/obo/ENVO_03600096	step pool	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600094	stream pool	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600095	stream run	National Microbiome Data Collaborative
-http://purl.obolibrary.org/obo/ENVO_03605006	stream water	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600019	sugarcane vinasse	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600020	tailings dam	National Microbiome Data Collaborative
 http://purl.obolibrary.org/obo/ENVO_03600021	tailings pond	National Microbiome Data Collaborative
