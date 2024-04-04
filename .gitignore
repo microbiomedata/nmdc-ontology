@@ -1,7 +1,9 @@
 local
+
 src/ontology/imports/*
 mirror/*
 mirror-catalog.xml
+assets/robot_diff.txt
 
 src/ontology/nmdco-redundant.ttl
 downloads/

@@ -1,26 +1,59 @@
 RUN=poetry run
 
-ENVO_SEMSQL=downlaods/envo.db
+#ENVO_SEMSQL=downlaods/envo.db
+SPARQL_ENDPOINT := http://3.236.215.220/repositories/nmdc-knowledgegraph
 
 .PHONY: qc-all qc-clean
 
+mirror/purl.obolibrary.org/obo/nmdco/imports/envo_import.owl: # todo slow
+	robot mirror \
+		-vvv \
+		--input src/ontology/nmdco-edit.owl \
+		--directory mirror
 
 qc-all: qc-clean \
-	qc-reports \
+	mirror/purl.obolibrary.org/obo/nmdco/imports/envo_import.owl \
+	qc-reports/report-asserted-equivalencies.tsv \
+	qc-reports/report-cycles.tsv \
+	downloads/envo-idranges.owl \
+	downloads/envo-idranges.owl.ttl \
 	downloads/envo.db \
-	qc-reports \
-	qc-reports \
-	qc-reports \
-	qc-reports \
-	qc-reports
+	downloads/envo.owl \
+	assets/extension_report.yaml \
+	assets/report_envo_biome_annotations.yaml \
+	assets/report_envo_environmental_material_annotations.yaml \
+	assets/robot_diff.txt \
+	qc-reports/biosample-triad-counts.tsv \
+	qc-reports/envo-all-classes.txt \
+	qc-reports/envo-biomes.txt \
+	qc-reports/envo-environmental-materials.txt \
+	qc-reports/envo-id-ranges-report.tsv \
+	qc-reports/nmdco-envo-classes-with-id-owner.tsv \
+	qc-reports/report-class-ids.tsv \
+	qc-reports/report-id-ranges.tsv \
+	qc-reports/report-unlabelled-classes.tsv \
+	src/ontology/imports/report-unlabelled-classes.txt \
+	qc-reports/problematic_triads.tsv
+
+# todo doesn't include
+# assets/environments_with_no_biome_mappings.raw.txt:
+# assets/environments_with_no_biome_mappings.raw.yaml.txt:
+# assets/material_environment_built_environment_mappings_raw.yaml.txt:
 
 qc-clean:
 	rm -rf qc-reports/*
 	mkdir -p qc-reports
 	touch qc-reports/.gitkeep
-	rm -rf downloads/*owl* downloads/*.db
-	mkdir -p downloads
-	touch downloads/.gitkeep
+#	rm -rf downloads/*owl* downloads/*.db
+#	mkdir -p downloads
+#	touch downloads/.gitkeep
+	rm -rf \
+		assets/extension_report.yaml \
+		assets/parse_robot_diff.tsv \
+		assets/report_envo_biome_annotations.yaml \
+		assets/report_envo_environmental_material_annotations.yaml \
+		assets/robot_diff.txt \
+		src/ontology/imports/report-unlabelled-classes.txt
 
 downloads/envo.owl:
 	@echo "Downloading..."
@@ -110,10 +143,11 @@ assets/robot_diff.txt: nmdco.owl src/ontology/nmdco-classes.owl
 		--right $(word 2,$^) \
 		--output $@
 
-assets/parse_robot_diff.tsv: assets/robot_diff.txt
-	$(RUN) python nmdc_ontology/parse_robot_diff.py \
-		--input $< \
-		--output $@
+## this was a short term hack
+#assets/parse_robot_diff.tsv: assets/robot_diff.txt
+#	$(RUN) python nmdc_ontology/parse_robot_diff.py \
+#		--input-file $< \
+#		--output-file $@
 
 qc-reports/report-cycles.tsv: mirror/purl.obolibrary.org/obo/nmdco/imports/envo_import.owl
 	robot query \
@@ -136,3 +170,71 @@ src/ontology/imports/report-unlabelled-classes.txt: qc-reports/report-unlabelled
 	awk 'NR > 1 ' $< | tr -d '<>' > $@.tmp
 	cat assets/additional-extracts.txt $@.tmp | sort -u > $@
 	rm $@.tmp
+
+###
+
+#.PHONY: envo_mixs_all
+#envo_mixs_all: envo_mixs_clean assets/mixs_environments_env_materials_subsets.yaml.txt
+#
+#.PHONY: envo_mixs_clean
+#envo_mixs_clean: # todo update
+#	rm -rf assets/extension_report.yaml \
+#		assets/report_envo_environmental_material_annotations.tsv \
+#		assets/mixs_environments_env_materials_subsets.yaml.txt
+
+assets/extension_report.yaml: # todo fix these non-ascii characters upstream in MIxS
+	$(RUN) report-mixs-extensions \
+		--url https://raw.githubusercontent.com/GenomicsStandardsConsortium/mixs/main/assets/class_summary_results.tsv \
+		--output-file $@
+
+assets/report_envo_biome_annotations.yaml:
+	$(RUN) report-envo-biome-annotations \
+		--endpoint $(SPARQL_ENDPOINT) \
+		--tsv-output $@ \
+		--yaml-output assets/report_envo_biome_annotations.yaml
+
+assets/report_envo_environmental_material_annotations.yaml:
+	$(RUN) report-envo-environmental-material-annotations \
+		--endpoint $(SPARQL_ENDPOINT) \
+		--tsv-output assets/report_envo_environmental_material_annotations.tsv \
+		--yaml-output $@
+
+assets/environments_with_no_biome_mappings.raw.yaml.txt: assets/extension_report.yaml assets/report_envo_biome_annotations.yaml assets/biome_subsets_accepted.yaml
+	date && time $(RUN) mixs-environments-to-envo-classes-by-claude \
+		--mixs-file $(word 1,$^) \
+		--envo-file $(word 2,$^) \
+		--mappings-file $(word 3,$^) \
+		--envo-description biomes \
+		--temperature 0.1 \
+		--max-tokens 4096 \
+		--model claude-3-opus-20240229 \
+		--suffix "Please list any EnvO biomes that have not been mapped to any MIxS environment. Provide both the id and the label. Do not provide any introduction, commentary, summary or anything like that." > $@
+
+assets/environments_with_no_biome_mappings.raw.txt: assets/extension_report.yaml assets/report_envo_biome_annotations.yaml assets/biome_subsets_accepted.yaml
+	date && time $(RUN) mixs-environments-to-envo-classes-by-claude \
+		--mixs-file $(word 1,$^) \
+		--envo-file $(word 2,$^) \
+		--mappings-file $(word 3,$^) \
+		--envo-description biomes \
+		--temperature 0.1 \
+		--max-tokens 4096 \
+		--model claude-3-opus-20240229 \
+		--suffix "Please list any MIxS environments to which no EnvO biomes have been mapped. Do not provide any introduction, commentary, summary or anything like that." > $@
+
+assets/material_environment_built_environment_mappings_raw.yaml.txt: assets/extension_report.yaml \
+assets/report_envo_biome_annotations.yaml \
+assets/materials_subsets_accepted.yaml
+	date && time $(RUN) mixs-environments-to-envo-classes-by-claude \
+		--mixs-file $(word 1,$^) \
+		--envo-file $(word 2,$^) \
+		--mappings-file $(word 3,$^) \
+		--envo-description "environmental materials" \
+		--temperature 0.01 \
+		--max-tokens 4096 \
+		--model claude-3-opus-20240229 \
+		--suffix "Please generate an exhaustive mapping of environmental materials to the BuiltEnvironment MIxS environment, using the same YAML format. Do not provide any introduction, commentary, summary or anything like that." > $@
+
+#		--suffix "Please generate an exhaustive mapping of environmental materials to the MIxS environments that they could reasonably be found in, using the same YAML format. Do not provide any introduction, commentary, summary or anything like that. Do not perform mappings for any environmental materials or environments that are related to food, humans, hosts, or health." > $@
+
+# Please do not repeat any of completed mappings.
+# Please do not map any {envo_classes_description} to ENVO_00000428 'biome'.

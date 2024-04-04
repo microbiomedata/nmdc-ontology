@@ -1,16 +1,16 @@
 problematic_env_broad_scale_term_ids:
 - label: animal-associated environment
   term: ENVO:01001002
-- label: agriculture
-  term: ENVO:01001442
 - label: meadow ecosystem
   term: ENVO:00000108
+- label: agriculture
+  term: ENVO:01001442
 problematic_env_medium_rm_ids:
-- label: plant-associated environment
-  term: ENVO:01001001
-- label: portion of plant tissue
-  term: PO:0009007
 - label: null
   term: FMA:14541
+- label: portion of plant tissue
+  term: PO:0009007
 - label: leaf
   term: PO:0025034
+- label: plant-associated environment
+  term: ENVO:01001001
