@@ -99,6 +99,7 @@ Soil:
   - id: ENVO_01000201
     label: subtropical broadleaf forest biome
   - id: ENVO_01000226
+  - id: ENVO_01000226
     label: subtropical moist broadleaf forest biome
   - id: ENVO_01000225
     label: subtropical dry broadleaf forest biome

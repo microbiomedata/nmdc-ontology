@@ -199,6 +199,82 @@ assets/report_envo_environmental_material_annotations.yaml:
 		--tsv-output assets/report_envo_environmental_material_annotations.tsv \
 		--yaml-output $@
 
+# 		--print-message
+
+
+assets/iterative_environments_biomes_mappings_json_training.yaml.txt: assets/extension_report.yaml \
+assets/report_envo_biome_annotations.yaml \
+assets/mixs_context_subsets_example.json
+	date && time $(RUN) python nmdc_ontology/iterative_mixs_environments_to_envo_biomes_by_claude.py \
+		--mixs-file $(word 1,$^) \
+		--envo-file $(word 2,$^) \
+		--mappings-file $(word 3,$^) \
+		--envo-description "biomes" \
+		--temperature 0.01 \
+		--max-tokens 4096 \
+		--model claude-3-opus-20240229 \
+		--suffix "" \
+		--print-message
+
+
+assets/iterative_environments_materials_mappings_json_training.yaml.txt: assets/extension_report.yaml \
+assets/report_envo_environmental_material_annotations.yaml \
+assets/mixs_context_subsets_example.json
+	date && time $(RUN) python nmdc_ontology/iterative_mixs_environments_to_envo_materials_by_claude.py \
+		--mixs-file $(word 1,$^) \
+		--envo-file $(word 2,$^) \
+		--mappings-file $(word 3,$^) \
+		--envo-description "environmental materials" \
+		--temperature 0.01 \
+		--max-tokens 4096 \
+		--model claude-3-opus-20240229 \
+		--suffix "" \
+		--print-message
+
+
+
+assets/iterative_environments_biomes_mappings_denovo_raw.yaml.txt: assets/extension_report.yaml \
+assets/report_envo_biome_annotations.yaml \
+assets/biome_subsets_accepted_minimal.yaml
+	date && time $(RUN) python nmdc_ontology/iterative_mixs_environments_to_envo_classes_by_claude.py \
+		--mixs-file $(word 1,$^) \
+		--envo-file $(word 2,$^) \
+		--mappings-file $(word 3,$^) \
+		--envo-description "biomes" \
+		--temperature 0.01 \
+		--max-tokens 4096 \
+		--model claude-3-opus-20240229 \
+		--suffix "Generate a mapping of MIxS environments to EnvO biomes, following the provided YAML format. Include all of the environments and all of the biomes. Many-to-many mappings are ok. The provided examples are incomplete, so fill in any additionally applicable mappings, even if that means repeating mappings from the examples. If you map biome X to environment Y, then also map any variants of X to Y. In a previous conversation you said 'The only EnvO biomes I did not map were the more specific marine biomes like neritic zone, benthic zone, hydrothermal vent, etc. The generic marine biome should cover those environments if needed.' Do not make judgments like that on your own. Include all mappings no matter whether they appear to be included in a more general term. After you provide the mappings, report any cases in which you have not followed these directions verbatim."
+
+
+assets/environments_biomes_mappings_denovo_raw.yaml.txt: assets/extension_report.yaml \
+assets/report_envo_biome_annotations.yaml \
+assets/biome_subsets_accepted_minimal.yaml
+	date && time $(RUN) mixs-environments-to-envo-classes-by-claude \
+		--mixs-file $(word 1,$^) \
+		--envo-file $(word 2,$^) \
+		--mappings-file $(word 3,$^) \
+		--envo-description "biomes" \
+		--temperature 0.01 \
+		--max-tokens 4096 \
+		--model claude-3-opus-20240229 \
+		--suffix "Generate a mapping of MIxS environments to EnvO biomes, following the provided YAML format. Include all of the environments and all of the biomes. Many-to-many mappings are ok. The provided examples are incomplete, so fill in any additionally applicable mappings, even if that means repeating mappings from the examples. If you map biome X to environment Y, then also map any variants of X to Y. In a previous conversation you said 'The only EnvO biomes I did not map were the more specific marine biomes like neritic zone, benthic zone, hydrothermal vent, etc. The generic marine biome should cover those environments if needed.' Do not make judgments like that on your own. Include all mappings no matter whether they appear to be included in a more general term. After you provide the mappings, report any cases in which you have not followed these directions verbatim." > $@
+
+
+assets/environments_biomes_mappings_with_negatives_training_raw.yaml.txt: assets/extension_report.yaml \
+assets/report_envo_biome_annotations.yaml \
+assets/biome_subsets_training_with_unacceptables.yaml
+	date && time $(RUN) mixs-environments-to-envo-classes-by-claude \
+		--mixs-file $(word 1,$^) \
+		--envo-file $(word 2,$^) \
+		--mappings-file $(word 3,$^) \
+		--envo-description "biomes" \
+		--temperature 0.01 \
+		--max-tokens 4096 \
+		--model claude-3-opus-20240229 \
+		--suffix "Generate an exhaustive, completely valid mapping of MIxS environments to EnvO biomes. Include all of the environments and all of the biomes if possible. I have provided some training data, including examples of unacceptable mappings. Please provide your results in the same format, but don't bother returning unacceptable mappings. Do not provide any introduction, commentary, summary or anything like that." > $@
+
+
 assets/environments_with_no_biome_mappings.raw.yaml.txt: assets/extension_report.yaml assets/report_envo_biome_annotations.yaml assets/biome_subsets_accepted.yaml
 	date && time $(RUN) mixs-environments-to-envo-classes-by-claude \
 		--mixs-file $(word 1,$^) \
@@ -238,3 +314,9 @@ assets/materials_subsets_accepted.yaml
 
 # Please do not repeat any of completed mappings.
 # Please do not map any {envo_classes_description} to ENVO_00000428 'biome'.
+
+local/biomes.ttl: downloads/envo.owl
+	robot extract --method STAR \
+		--input $< \
+		--term "ENVO:00000428" \
+		--output $@

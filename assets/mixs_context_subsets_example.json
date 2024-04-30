@@ -1,0 +1,175 @@
+{
+  "context_mappings": [
+    {
+      "mixs_context_label": "env_broad_scale",
+      "environment_mappings": [
+        {
+          "mixs_environment_label": "Soil",
+          "onto_term_mappings": [
+            {
+              "term_id": "ENVO_01000179",
+              "term_label": "desert biome",
+              "accepted": true
+            },
+            {
+              "term_id": "ENVO_01000180",
+              "term_label": "tundra biome",
+              "accepted": true
+            },
+            {
+              "comment": "desert biome is defined in the input, but ENVO_12345678 is not.",
+              "accepted": false,
+              "onto_term_id": "ENVO_12345678",
+              "onto_term_label": "desert biome"
+            },
+            {
+              "comment": "ENVO_01000179 is defined in the input, but bellybutton biome is not.",
+              "accepted": false,
+              "onto_term_id": "ENVO_01000179",
+              "onto_term_label": "bellybutton biome"
+            },
+            {
+              "comment": "ENVO_01000179 and tundra biome are both defined in the input, but tundra biome is not the correct label for ENVO_01000179.",
+              "accepted": false,
+              "onto_term_id": "ENVO_01000179",
+              "onto_term_label": "tundra biome"
+            },
+            {
+              "comment": "The Soil environment and an aquatic environment are disjoint.",
+              "accepted": false,
+              "onto_term_id": "ENVO_00002030",
+              "onto_term_label": "aquatic biome"
+            }
+          ]
+        },
+        {
+          "mixs_environment_label": "Water",
+          "onto_term_mappings": [
+            {
+              "accepted": true,
+              "onto_term_id": "ENVO_01000253",
+              "onto_term_label": "freshwater river biome"
+            },
+            {
+              "accepted": true,
+              "onto_term_id": "ENVO_00000447",
+              "onto_term_label": "marine biome"
+            }
+          ]
+        },
+        {
+          "mixs_environment_label": "Agriculture",
+          "onto_term_mappings": [
+            {
+              "accepted": true,
+              "onto_term_id": "ENVO_01000247",
+              "onto_term_label": "rangeland biome"
+            },
+            {
+              "accepted": true,
+              "onto_term_id": "ENVO_01000245",
+              "onto_term_label": "cropland biome"
+            },
+            {
+              "accepted": true,
+              "onto_term_id": "ENVO_01000246",
+              "onto_term_label": "village biome"
+            }
+          ]
+        },
+        {
+          "mixs_environment_label": "BuiltEnvironment",
+          "onto_term_mappings": [
+            {
+              "accepted": true,
+              "onto_term_id": "ENVO_01000249",
+              "onto_term_label": "urban biome"
+            }
+          ]
+        },
+        {
+          "mixs_environment_label": "Air",
+          "onto_term_mappings": [
+            {
+              "comment": "This is unacceptable for several reasons. ENVO:01000267 is defined in the input but its label is atmosphere, not atmospheric dust. In fact, atmospheric dust is not defined in the input. Even if it were, atmospheric dust is not a biome.",
+              "accepted": false,
+              "onto_term_id": "ENVO_01000267",
+              "onto_term_label": "atmospheric dust"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mixs_context_label": "env_local_scale",
+      "environment_mappings": [
+        {
+          "mixs_environment_label": "Soil",
+          "onto_term_mappings": [
+            {
+              "accepted": true,
+              "onto_term_id": "ENVO_00000178",
+              "onto_term_label": "levee"
+            },
+            {
+              "accepted": true,
+              "onto_term_id": "ENVO_01001582",
+              "onto_term_label": "forest floor"
+            }
+          ]
+        },
+        {
+          "mixs_environment_label": "Water",
+          "onto_term_mappings": [
+            {
+              "accepted": true,
+              "onto_term_id": "ENVO_00000045",
+              "onto_term_label": "estuary"
+            },
+            {
+              "accepted": true,
+              "onto_term_id": "ENVO_00000059",
+              "onto_term_label": "underground river"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mixs_context_label": "env_medium",
+      "environment_mappings": [
+        {
+          "mixs_environment_label": "Soil",
+          "onto_term_mappings": [
+            {
+              "accepted": true,
+              "onto_term_id": "ENVO_00005748",
+              "onto_term_label": "dry soil"
+            },
+            {
+              "accepted": true,
+              "onto_term_id": "ENVO_00005771",
+              "onto_term_label": "muddy soil"
+            }
+          ]
+        },
+        {
+          "mixs_environment_label": "Water",
+          "onto_term_mappings": [
+            {
+              "accepted": true,
+              "onto_term_id": "ENVO_00002228",
+              "onto_term_label": "pond water"
+            },
+            {
+              "accepted": true,
+              "onto_term_id": "ENVO_00002150",
+              "onto_term_label": "coastal sea water"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "@type": "RootMappings"
+}
