@@ -21,6 +21,7 @@ google-cloud-aiplatform = "^1.48.0"
 beautifulsoup4 = "^4.12.3"
 linkml = "^1.7.8"
 linkml-runtime = "^1.7.5"
+llm = "^0.13.1"
 
 [build-system]
 requires = ["poetry-core"]
