@@ -1,14 +1,41 @@
-This may not be the best long term home for this document
+This may not be the best long term home for this document. I have also been using `llm` in the `main` branch
+of `berkeley-schema-fy24`
 
-Have also been using `llm` in berkeley-schema-fy24 main
+See also `mapping_problem_statement.md` in this repo
 
-See also mapping_problem_statement.md
+And
 
-See also
-- https://www.futurepedia.io/
 - https://artificialanalysis.ai/
+- https://llm.datasette.io/en/stable/
+- https://llm.datasette.io/en/stable/plugins/directory.html#plugin-directory
+- https://www.futurepedia.io/
+
+## Ways to use LLMs
+
+- web interface
+- programmatically, esp Python
+- `llm` CLI (or in Python)
+    - prompt mode
+    - chat mode
+
+## Goals
+
+- large input context
+    - What are the densest formats for providing context to LLMs?
+    - How can they be introduced through the different interfaces?
+    - Some (esp web interfaces) may accept JSON, YAML and CSV but not TSV.
+    - Tabular formats introduce a lot of delimiter characters but no repeated field names.
+- high precision and high recall
+    - how good does our training data have to be
+- comprehensive output, either in a single large response or in a series of responses with minimal resubmission of input
+  context
+- emission in a constrained format, according to a LinkML schema (which therefore has to be part of the input)
+
+Not prioritizing speed. Haven't been prioritizing cost but should start monitoring that more carefully.
 
 ## globally exporting environment variables like API keys
+
+Loading from a `.env` file
 
 ```shell
 set -a  # This ensures all variables defined from now on are exported automatically
@@ -16,71 +43,389 @@ source local/.env
 set +a  # Turn off auto-export
 ```
 
-and/or
+Example of loading keys into `llm`
 
 ```shell
 llm keys set openai
 ```
 
-`llm` ssaves keys in `~/.config/io.datasette.llm/keys.json` by default. See also
+`llm` saves keys in `~/.config/io.datasette.llm/keys.json` by default
 
 ```shell
 llm keys path
 ```
 
-However, if the keys were set in one project, running this in another project might not detect the authorized models
+But models have to be installed on a project-by-project basis. See more below.
+
 ```shell
-llm models
+llm models list
 ```
 
-Maybe the plugins need to be installed int eh new project?
+### Here are the plugins for models that perform well on these tasks
 
-## Method for interleaving strings and files for llm
+* `llm-claude-3` supports Anthropic’s Claude 3 family of models.
+* `llm-gemini` adds support for Google’s Gemini models.
+
+```shell
+llm install llm-claude-3
+```
+
+```shell
+llm keys set llm-claude-3
+```
+
+```shell
+llm install llm-gemini
+```
+
+```shell
+llm keys set llm-gemini
+```
+
+### Here are some recommended models
+
+Costs are in USD per million tokens
+
+| vendor      | model                                                                            | aliases                  | quality_index | cost_input | cost_output | max_input_tokens_k |                                                      | notes                    |
+|-------------|----------------------------------------------------------------------------------|--------------------------|---------------|------------|-------------|--------------------|------------------------------------------------------|--------------------------|
+| OpenAI Chat | [gpt-4-turbo-preview](https://artificialanalysis.ai/models/gpt-4-turbo)          | gpt-4-turbo, 4-turbo, 4t | 100           | 10         | 30          | 128                |                                                      | doesn’t require a plugin |
+| Google      | [gemini-1.5-pro-latest](https://artificialanalysis.ai/models/gemini-1-5-pro)     |                          | 88            | 7          | 21          | 1000               |                                                      |                          |
+| Anthropic   | [claude-3-opus-20240229](https://artificialanalysis.ai/models/claude-3-opus)     | claude-3-opus            | 100           | 15         | 75          | 200                |                                                      |                          |
+| Anthropic   | [claude-3-sonnet-20240229](https://artificialanalysis.ai/models/claude-3-sonnet) | claude-3-sonnet          | 85            | 3          | 15          | 200                |                                                      |                          |
+| Anthropic   | [claude-3-haiku-20240307](https://artificialanalysis.ai/models/claude-3-haiku)   | claude-3-haiku           | 78            | 0.25       | 1.25        | 200                |                                                      |                          |
+
+## Examples of interleaving strings and files for `llm prompt`
 
 ```shell
 {
-  echo -e "here is the initial text\n";
-  cat CHANGELOG.md;
-  echo -e "\nand some subsequent text\n";
-  cat LICENSE;
-} | llm -m gemini-1.5-pro-latest
+  echo -e "\n Here is a CSV report of biomes according to the environment ontology, EnvO. \n" ;
+  cat assets/biome-class-annotations.csv ;
+  echo -e "\n Here is a CSV report of environmental extensions according to MIxS. \n";
+  cat local/mixs-extensions-schemasheets-template.csv ;
+  echo -e "\n Here is a YAML-serialized LinkML schema that specifies how EnvO biomes can be mapped to MIxS environmental extensions. \n" ;
+  cat assets/mixs_context_subsets_schema.yaml ;
+  echo -e "\n Here is a YAML-serialized data file with examples of records that follow the schema. \n" ;
+  cat assets/mixs_context_subsets_example.yaml ;
+  echo -e "Based on the information I have provided, generate the most exhaustive possible mapping of EnvO biomes where the mixs_environment_label is Soil and the mixs_context_label is env_broad_scale." ;
+  echo -e "You must follow the schema exactly." ;
+  echo -e "If you have mapped term X and X appears in the superclasses column for biome Y, then you don't need to map biome Y.  I will add them programmatically later." ;
+  echo -e "Don't bother reporting unacceptable mappings. I just included some to help train you." ;
+  echo -e "Don't bother reporting that your mappings have an accepted value of true. I will take that for granted." ;
+  echo -e "Don't emit any introduction, commentary or summary outside the YAML format. You can add a comment at any level in the YAML file " ;
+} > soil-biome-prompt.txt
 ```
 
-## Ways to use the LLMs
-- web interface
-- programmatically, esp Python
-- `llm` CLI
+```shell
+cat soil-biome-prompt.txt | llm -m gemini-1.5-pro-latest > soil-biome-results.yaml
+```
 
-## Remote APIs for `llm`
-### Under evaluation. @turbomam has keys through BBOP or as an individual
-* llm-claude-3 supports Anthropic’s Claude 3 family of models.
-* llm-gemini adds support for Google’s Gemini models.
+## `llm chat` hints
 
-Some local models are included too
+- Type `!multi` to enter multiple lines, then `!end` to finish
+- resume crashed chats with `llm chat --continue`
+    - does this resubmit the whole prior context?
+    - does each round of chatting?!
 
-### Perhaps...
-* llm-perplexity by Alexandru Geana supports the Perplexity Labs API models, including sonar-medium-online which can search for things online and llama-3-70b-instruct.
-
-### Skipping for now
-* llm-anyscale-endpoints supports models hosted on the Anyscale Endpoints platform, including Llama 2 70B.
-* llm-bedrock-anthropic by Sean Blakey adds support for Claude and Claude Instant by Anthropic via Amazon Bedrock.
-* llm-bedrock-meta by Fabian Labat adds support for Llama 2 by Meta via Amazon Bedrock.
-* llm-claude by Tom Viner adds support for Claude 2.1 and Claude Instant 2.1 by Anthropic.
-* llm-cohere by Alistair Shepherd provides cohere-generate and cohere-summarize API models, powered by Cohere.
-* llm-command-r supports Cohere’s Command R and Command R Plus API models.
-* llm-fireworks supports models hosted by Fireworks AI.
-* llm-groq by Moritz Angermann provides access to fast models hosted by Groq.
-* llm-mistral adds support for Mistral AI’s language and embedding models.
-* llm-openrouter provides access to models hosted on OpenRouter.
-* llm-palm adds support for Google’s PaLM 2 model.
-* llm-reka supports the Reka family of models via their API.
-* llm-replicate adds support for remote models hosted on Replicate, including Llama 2 from Meta AI.
-* llm-together adds support for the Together AI extensive family of hosted openly licensed models.
-
-## Google Gemini through the Vertex API
+## Google Gemini directly through the Vertex API
 
 Requires installing a client app. Once it is installed, a list of project codes can be retrieved with
 
 ```shell
 gcloud projects list
 ```
+
+----
+
+## SPARQL query for extracting class annotations
+
+For use in input contexts
+
+### esp EnvO
+
+First determine what properties should be included in the query
+
+```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+select
+?p ?plslug (count(?s) as ?count)
+where {
+    values ?root {
+        obo:ENVO_00000428
+        obo:ENVO_00010483
+    }
+    ?s rdfs:subClassOf* ?root ;
+    ?p ?o .
+    ?p a owl:AnnotationProperty
+    optional {
+        ?p rdfs:label ?pl .
+        bind(lcase(replace(?pl," ", "_")) as ?plslug)
+    }
+}
+group by ?p ?plslug
+```
+
+Then build the query
+
+```sparql
+# biome obo:ENVO_00000428
+# environmental material obo:ENVO_00010483
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+select
+?class ?alternative_term ?comment ?definition ?editor_note ?has_broad_synonym ?has_exact_synonym ?has_narrow_synonym ?has_related_synonym ?hasSynonym ?in_subset ?label (GROUP_CONCAT(distinct ?super_slug;
+SEPARATOR=", ") AS ?superclasses)
+where {
+    ?s rdfs:subClassOf+ obo:ENVO_00010483 .
+    minus {
+        ?s rdfs:subClassOf* obo:FOODON_00002403
+    }
+    bind(replace(str(?s), "http://purl.obolibrary.org/obo/", "") as ?class)
+    optional {
+        ?s rdfs:subClassOf ?superclass .
+        filter(isiri(?superclass) = true)
+        bind(replace(str(?superclass), "http://purl.obolibrary.org/obo/", "") as ?super_slug)
+    }
+    optional {
+        ?s obo:IAO_0000115 ?definition .
+    }
+    optional {
+        ?s obo:IAO_0000116 ?editor_note .
+    }
+    optional {
+        ?s obo:IAO_0000118 ?alternative_term .
+    }
+    optional {
+        ?s oboInOwl:hasExactSynonym ?has_exact_synonym .
+    }
+    optional {
+        ?s oboInOwl:hasBroadSynonym ?has_broad_synonym .
+    }
+    optional {
+        ?s oboInOwl:hasNarrowSynonym ?has_narrow_synonym .
+    }
+    optional {
+        ?s oboInOwl:hasRelatedSynonym ?has_related_synonym .
+    }
+    optional {
+        ?s oboInOwl:hasSynonym ?hasSynonym .
+    }
+    optional {
+        ?s oboInOwl:inSubset ?in_subset .
+    }
+    optional {
+        ?s rdfs:comment ?comment .
+    }
+    optional {
+        ?s rdfs:label ?label .
+    }
+}
+group by ?class ?alternative_term ?comment ?definition ?editor_note ?has_broad_synonym ?has_exact_synonym ?has_narrow_synonym ?has_related_synonym ?hasSynonym ?in_subset ?label
+```
+
+Sometimes the CSV downloads from the GraphDB web interface behave better than their TSV downloads.
+
+## Subsetting LinkML schemas
+
+```makefile
+downloads/mixs.yaml:
+	curl --request GET -sL \
+	     --url 'https://raw.githubusercontent.com/GenomicsStandardsConsortium/mixs/main/src/mixs/schema/mixs.yaml'\
+	     --output $@
+
+local/mixs-schemasheets-template.tsv: downloads/mixs.yaml # first four lines are headers
+	$(RUN) linkml2schemasheets-template \
+		--source-path $< \
+		--output-path $@ \
+		 --debug-report-path local/mixs-schemasheets-template-debug.txt \
+		 --log-file local/mixs-schemasheets-template-log.txt \
+		 --report-style concise
+	head -n 4 $@ > $@.headers.tsv
+
+local/mixs-extensions-schemasheets-template.tsv: local/mixs-schemasheets-template.tsv
+	cat $< | python nmdc_ontology/schemasheets-template-mixs-extensions-filter.py  > $@
+
+local/mixs-extensions-schemasheets-template.csv: local/mixs-extensions-schemasheets-template.tsv
+	$(RUN) in2csv --format csv --tabs $< > $@ # from csvtoolkit
+```
+
+## Extract *noisy* examples from the relational biosample database
+
+Could be more rough input for the kinds of vales that we should be able to support
+
+* Requires a NERSC account
+* Obtaining and using NERSC's sshproxy tool makes it possible to do multiple NERSC logins in a given day, without typing
+  in the password + MFA code each time
+
+see https://docs.nersc.gov/connect/mfa/#sshproxy
+
+### Do this once for each computer that you use. You will have to enter your NERSC password + MFA code.
+
+```shell
+scp <NERSC_USERNAME>@dtn01.nersc.gov:/global/cfs/cdirs/mfa/NERSC-MFA/sshproxy.sh .
+```
+
+### Do this once per day (on each computer that you use)
+
+```shell
+./sshproxy.sh -u <NERSC_USERNAME>
+```
+
+### Do this to establish a tunnel to the relational biosample database
+
+```shell
+ssh -i ~/.ssh/nersc -L 15432:biosample-postgres-loadbalancer.mam.production.svc.spin.nersc.org:5432 <NERSC_USERNAME>@dtn01.nersc.gov
+```
+
+### Here's the connection string
+
+Ask Mark, Sujay or Eric for the password
+
+```sql
+postgres
+://biosample_guest:<PASSWORD>@localhost:15432/ncbi_biosamples_feb26
+```
+
+Here are some [NCBI Biosample packages](https://www.ncbi.nlm.nih.gov/biosample/docs/packages/) that are common for our
+samples
+
+* MIMS.me.soil.6.0
+* MIMS.me.water.6.0
+
+```sql
+select package,
+       env_broad_scale,
+       sum(sample_count)
+from triads_per_package_mv tppm
+where package = 'MIMS.me.soil.6.0'
+group by package,
+         env_broad_scale
+having sum(sample_count) > 499
+order by sum(sample_count) desc
+;
+```
+
+You probably wouldn't want to apply such a high (or even any) `having` constraint in production
+
+| package          | env_broad_scale                                                          |  sum |
+|------------------|--------------------------------------------------------------------------|-----:|
+| MIMS.me.soil.6.0 | missing                                                                  | 8599 |
+| MIMS.me.soil.6.0 | not applicable                                                           | 3331 |
+| MIMS.me.soil.6.0 | not collected                                                            | 2887 |
+| MIMS.me.soil.6.0 | forest biome                                                             | 2656 |
+| MIMS.me.soil.6.0 | soil                                                                     | 2512 |
+| MIMS.me.soil.6.0 | forest                                                                   | 1736 |
+| MIMS.me.soil.6.0 | Agricultural soil                                                        | 1684 |
+| MIMS.me.soil.6.0 | ENVO:01000198                                                            | 1562 |
+| MIMS.me.soil.6.0 | temperate desert biome                                                   | 1505 |
+| MIMS.me.soil.6.0 | agricultural field                                                       | 1468 |
+| MIMS.me.soil.6.0 | eroded soil                                                              | 1426 |
+| MIMS.me.soil.6.0 | [ENVO:00000428]                                                          | 1372 |
+| MIMS.me.soil.6.0 | temperate grassland                                                      | 1362 |
+| MIMS.me.soil.6.0 | temperate forest                                                         | 1279 |
+| MIMS.me.soil.6.0 | desert grassland/shrubland                                               | 1215 |
+| MIMS.me.soil.6.0 | ENVO:00000446                                                            | 1183 |
+| MIMS.me.soil.6.0 | permafrost                                                               | 1055 |
+| MIMS.me.soil.6.0 | ENVO_01000180                                                            | 1022 |
+| MIMS.me.soil.6.0 | boreal forest biome                                                      | 1014 |
+| MIMS.me.soil.6.0 | grassland biome                                                          |  999 |
+| MIMS.me.soil.6.0 | Agricultural field                                                       |  974 |
+| MIMS.me.soil.6.0 | woodland area[ENVO:00000109]                                             |  944 |
+| MIMS.me.soil.6.0 | anthropogenic terrestrial biome [ENVO:01000219]                          |  881 |
+| MIMS.me.soil.6.0 | farmland                                                                 |  812 |
+| MIMS.me.soil.6.0 | ENVO:00001998                                                            |  741 |
+| MIMS.me.soil.6.0 | soil biome                                                               |  739 |
+| MIMS.me.soil.6.0 | ENVO:01000245                                                            |  709 |
+| MIMS.me.soil.6.0 | apple root microbiome                                                    |  648 |
+| MIMS.me.soil.6.0 | Coal mine                                                                |  646 |
+| MIMS.me.soil.6.0 | temperate dry conifer forest biome                                       |  645 |
+| MIMS.me.soil.6.0 | dryland                                                                  |  627 |
+| MIMS.me.soil.6.0 | soil ecosystem                                                           |  564 |
+| MIMS.me.soil.6.0 | ENVO:01000206                                                            |  563 |
+| MIMS.me.soil.6.0 | temperate deciduous forest biome [ENV 01000385]                          |  555 |
+| MIMS.me.soil.6.0 | Temperate biome [ENVO: 01001831]temperate woodland biome [ENVO:01000221] |  537 |
+| MIMS.me.soil.6.0 | Agricultural Field                                                       |  507 |
+
+## Getting higher-quality NMDC annotations from a triple store
+
+```sparql
+PREFIX nmdc: <https://w3id.org/nmdc/>
+PREFIX MIXS: <https://w3id.org/mixs/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX env_broad_scale: <https://w3id.org/mixs/0000012>
+PREFIX env_local_scale: <https://w3id.org/mixs/0000013>
+PREFIX env_medium: <https://w3id.org/mixs/0000014>
+select
+?context_predicate ?predicate_label ?term ?term_label ?context_raw_value (count(?bs) as ?count)
+where {
+    values ?context_predicate {
+        env_broad_scale:
+    }
+    graph <https://api.microbiomedata.org> {
+        ?bs a nmdc:Biosample ;
+        ?context_predicate ?context .
+        ?context nmdc:term ?term .
+        optional {
+            ?context nmdc:has_raw_value ?context_raw_value
+        }
+    }
+    optional {
+        graph obo:nmdco.owl {
+            ?term rdfs:label ?term_label .
+        }
+    }
+    optional {
+        graph nmdc:nmdc-no-use-native-uris {
+            ?context_predicate rdfs:label ?predicate_label .
+        }
+    }
+}
+group by ?context_predicate ?predicate_label ?term ?term_label ?context_raw_value
+order by desc(count(?bs))
+```
+
+| context_predicate | predicate_label | term          | term_label                        | context_raw_value                               | count |
+|-------------------|-----------------|---------------|-----------------------------------|-------------------------------------------------|------:|
+| MIXS:0000012      | env_broad_scale | ENVO:00000446 | terrestrial biome                 |                                                 |  4475 |
+| MIXS:0000012      | env_broad_scale | ENVO:00000446 | terrestrial biome                 | ENVO:00000446                                   |   643 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000253 | freshwater river biome            |                                                 |   573 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000252 | freshwater lake biome             | ENVO_01000252                                   |   484 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000253 | freshwater river biome            | ENVO_01000253                                   |   417 |
+| MIXS:0000012      | env_broad_scale | ENVO:00000446 | terrestrial biome                 | ENVO_00000446                                   |   416 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000174 | forest biome                      | ENVO:01000174                                   |   192 |
+| MIXS:0000012      | env_broad_scale | ENVO:01001442 | agriculture@en                    | agricultural biome [ENVO:01001442]              |   192 |
+| MIXS:0000012      | env_broad_scale | ENVO:03605008 | freshwater stream biome@en        |                                                 |   104 |
+| MIXS:0000012      | env_broad_scale | ENVO:01001002 | animal-associated environment@en  | ENVO_01001002                                   |    95 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000252 | freshwater lake biome             |                                                 |    75 |
+| MIXS:0000012      | env_broad_scale | ENVO:00000446 | terrestrial biome                 | terrestrial biome [ENVO:00000446]               |    72 |
+| MIXS:0000012      | env_broad_scale | ENVO:01001002 | animal-associated environment@en  | Animal-associated environment [ENVO:01001002]   |    61 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000177 | grassland biome                   | grassland biome [ENVO:01000177]                 |    60 |
+| MIXS:0000012      | env_broad_scale | ENVO:00000108 | meadow ecosystem                  | ENVO:00000108                                   |    53 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000253 | freshwater river biome            | ENVO:01000253                                   |    50 |
+| MIXS:0000012      | env_broad_scale | ENVO:00000873 | freshwater biome                  | ENVO:00000873                                   |    38 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000250 | subpolar coniferous forest biome  | ENVO:01000250                                   |    31 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000221 | temperate woodland biome          | ENVO:01000221                                   |    19 |
+| MIXS:0000012      | env_broad_scale | ENVO:01001837 | subalpine biome@en                | subalpine biome [ENVO:01001837]                 |    18 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000219 | anthropogenic terrestrial biome   | ENVO:01000219                                   |    12 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000219 | anthropogenic terrestrial biome   | anthropogenic terrestrial biome [ENVO:01000219] |    12 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000245 | cropland biome                    | ENVO:01000245                                   |     9 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000221 | temperate woodland biome          | __temperate woodland biome [ENVO:01000221]      |     8 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000249 | urban biome                       | urban biome [ENVO:01000249]                     |     8 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000249 | urban biome                       | ENVO:01000249                                   |     7 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000215 | temperate shrubland biome         | __temperate shrubland biome [ENVO:01000215]     |     6 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000216 | montane shrubland biome           | __montane shrubland biome [ENVO:01000216]       |     6 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000179 | desert biome                      | ENVO:01000179                                   |     6 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000189 | temperate savanna biome           | __temperate savanna biome [ENVO:01000189]       |     4 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000211 | temperate coniferous forest biome | ENVO:01000211                                   |     3 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000247 | rangeland biome                   | ENVO:01000247                                   |     3 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000247 | rangeland biome                   | __rangeland biome [ENVO:01000247]               |     2 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000183 | tropical desert biome             | ENVO:01000183                                   |     2 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000252 | freshwater lake biome             | ENVO:01000252                                   |     1 |
+| MIXS:0000012      | env_broad_scale | ENVO:01000215 | temperate shrubland biome         | ENVO:01000215                                   |     1 |
+
+There's probably some way to do that through the NMDC API and a little python cleanup code. I did some manual cleanup on
+teh result above anyway.

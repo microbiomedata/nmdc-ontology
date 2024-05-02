@@ -19,9 +19,9 @@ qc-all: qc-clean \
 	downloads/envo-idranges.owl.ttl \
 	downloads/envo.db \
 	downloads/envo.owl \
-	assets/extension_report.yaml \
-	assets/report_envo_biome_annotations.yaml \
-	assets/report_envo_environmental_material_annotations.yaml \
+	assets/misc_llm_input/extension_report.yaml \
+	assets/misc_llm_input/report_envo_biome_annotations.yaml \
+	assets/misc_llm_input/report_envo_environmental_material_annotations.yaml \
 	assets/robot_diff.txt \
 	qc-reports/biosample-triad-counts.tsv \
 	qc-reports/envo-all-classes.txt \
@@ -202,8 +202,8 @@ assets/report_envo_environmental_material_annotations.yaml:
 # 		--print-message
 
 
-assets/iterative_environments_biomes_mappings_json_training.yaml.txt: assets/extension_report.yaml \
-assets/report_envo_biome_annotations.yaml \
+assets/iterative_environments_biomes_mappings_json_training.yaml.txt: assets/misc_llm_input/extension_report.yaml \
+assets/misc_llm_input/report_envo_biome_annotations.yaml \
 assets/mixs_context_subsets_example.json
 	date && time $(RUN) python nmdc_ontology/iterative_mixs_environments_to_envo_biomes_by_claude.py \
 		--mixs-file $(word 1,$^) \
@@ -217,8 +217,8 @@ assets/mixs_context_subsets_example.json
 		--print-message
 
 
-assets/iterative_environments_materials_mappings_json_training.yaml.txt: assets/extension_report.yaml \
-assets/report_envo_environmental_material_annotations.yaml \
+assets/iterative_environments_materials_mappings_json_training.yaml.txt: assets/misc_llm_input/extension_report.yaml \
+assets/misc_llm_input/report_envo_environmental_material_annotations.yaml \
 assets/mixs_context_subsets_example.json
 	date && time $(RUN) python nmdc_ontology/iterative_mixs_environments_to_envo_materials_by_claude.py \
 		--mixs-file $(word 1,$^) \
@@ -233,9 +233,9 @@ assets/mixs_context_subsets_example.json
 
 
 
-assets/iterative_environments_biomes_mappings_denovo_raw.yaml.txt: assets/extension_report.yaml \
-assets/report_envo_biome_annotations.yaml \
-assets/biome_subsets_accepted_minimal.yaml
+assets/iterative_environments_biomes_mappings_denovo_raw.yaml.txt: assets/misc_llm_input/extension_report.yaml \
+assets/misc_llm_input/report_envo_biome_annotations.yaml \
+assets/misc_llm_mappings/biome_subsets_accepted_minimal.yaml
 	date && time $(RUN) python nmdc_ontology/iterative_mixs_environments_to_envo_classes_by_claude.py \
 		--mixs-file $(word 1,$^) \
 		--envo-file $(word 2,$^) \
@@ -247,9 +247,9 @@ assets/biome_subsets_accepted_minimal.yaml
 		--suffix "Generate a mapping of MIxS environments to EnvO biomes, following the provided YAML format. Include all of the environments and all of the biomes. Many-to-many mappings are ok. The provided examples are incomplete, so fill in any additionally applicable mappings, even if that means repeating mappings from the examples. If you map biome X to environment Y, then also map any variants of X to Y. In a previous conversation you said 'The only EnvO biomes I did not map were the more specific marine biomes like neritic zone, benthic zone, hydrothermal vent, etc. The generic marine biome should cover those environments if needed.' Do not make judgments like that on your own. Include all mappings no matter whether they appear to be included in a more general term. After you provide the mappings, report any cases in which you have not followed these directions verbatim."
 
 
-assets/environments_biomes_mappings_denovo_raw.yaml.txt: assets/extension_report.yaml \
-assets/report_envo_biome_annotations.yaml \
-assets/biome_subsets_accepted_minimal.yaml
+assets/environments_biomes_mappings_denovo_raw.yaml.txt: assets/misc_llm_input/extension_report.yaml \
+assets/misc_llm_input/report_envo_biome_annotations.yaml \
+assets/misc_llm_mappings/biome_subsets_accepted_minimal.yaml
 	date && time $(RUN) mixs-environments-to-envo-classes-by-claude \
 		--mixs-file $(word 1,$^) \
 		--envo-file $(word 2,$^) \
@@ -261,9 +261,9 @@ assets/biome_subsets_accepted_minimal.yaml
 		--suffix "Generate a mapping of MIxS environments to EnvO biomes, following the provided YAML format. Include all of the environments and all of the biomes. Many-to-many mappings are ok. The provided examples are incomplete, so fill in any additionally applicable mappings, even if that means repeating mappings from the examples. If you map biome X to environment Y, then also map any variants of X to Y. In a previous conversation you said 'The only EnvO biomes I did not map were the more specific marine biomes like neritic zone, benthic zone, hydrothermal vent, etc. The generic marine biome should cover those environments if needed.' Do not make judgments like that on your own. Include all mappings no matter whether they appear to be included in a more general term. After you provide the mappings, report any cases in which you have not followed these directions verbatim." > $@
 
 
-assets/environments_biomes_mappings_with_negatives_training_raw.yaml.txt: assets/extension_report.yaml \
-assets/report_envo_biome_annotations.yaml \
-assets/biome_subsets_training_with_unacceptables.yaml
+assets/environments_biomes_mappings_with_negatives_training_raw.yaml.txt: assets/misc_llm_input/extension_report.yaml \
+assets/misc_llm_input/report_envo_biome_annotations.yaml \
+assets/misc_llm_mappings/biome_subsets_training_with_unacceptables.yaml
 	date && time $(RUN) mixs-environments-to-envo-classes-by-claude \
 		--mixs-file $(word 1,$^) \
 		--envo-file $(word 2,$^) \
@@ -275,7 +275,7 @@ assets/biome_subsets_training_with_unacceptables.yaml
 		--suffix "Generate an exhaustive, completely valid mapping of MIxS environments to EnvO biomes. Include all of the environments and all of the biomes if possible. I have provided some training data, including examples of unacceptable mappings. Please provide your results in the same format, but don't bother returning unacceptable mappings. Do not provide any introduction, commentary, summary or anything like that." > $@
 
 
-assets/environments_with_no_biome_mappings.raw.yaml.txt: assets/extension_report.yaml assets/report_envo_biome_annotations.yaml assets/biome_subsets_accepted.yaml
+assets/environments_with_no_biome_mappings.raw.yaml.txt: assets/misc_llm_input/extension_report.yaml assets/misc_llm_input/report_envo_biome_annotations.yaml assets/misc_llm_mappings/biome_subsets_accepted.yaml
 	date && time $(RUN) mixs-environments-to-envo-classes-by-claude \
 		--mixs-file $(word 1,$^) \
 		--envo-file $(word 2,$^) \
@@ -286,7 +286,7 @@ assets/environments_with_no_biome_mappings.raw.yaml.txt: assets/extension_report
 		--model claude-3-opus-20240229 \
 		--suffix "Please list any EnvO biomes that have not been mapped to any MIxS environment. Provide both the id and the label. Do not provide any introduction, commentary, summary or anything like that." > $@
 
-assets/environments_with_no_biome_mappings.raw.txt: assets/extension_report.yaml assets/report_envo_biome_annotations.yaml assets/biome_subsets_accepted.yaml
+assets/environments_with_no_biome_mappings.raw.txt: assets/misc_llm_input/extension_report.yaml assets/misc_llm_input/report_envo_biome_annotations.yaml assets/misc_llm_mappings/biome_subsets_accepted.yaml
 	date && time $(RUN) mixs-environments-to-envo-classes-by-claude \
 		--mixs-file $(word 1,$^) \
 		--envo-file $(word 2,$^) \
@@ -297,9 +297,9 @@ assets/environments_with_no_biome_mappings.raw.txt: assets/extension_report.yaml
 		--model claude-3-opus-20240229 \
 		--suffix "Please list any MIxS environments to which no EnvO biomes have been mapped. Do not provide any introduction, commentary, summary or anything like that." > $@
 
-assets/material_environment_built_environment_mappings_raw.yaml.txt: assets/extension_report.yaml \
-assets/report_envo_biome_annotations.yaml \
-assets/materials_subsets_accepted.yaml
+assets/material_environment_built_environment_mappings_raw.yaml.txt: assets/misc_llm_input/extension_report.yaml \
+assets/misc_llm_input/report_envo_biome_annotations.yaml \
+assets/misc_llm_mappings/materials_subsets_accepted.yaml
 	date && time $(RUN) mixs-environments-to-envo-classes-by-claude \
 		--mixs-file $(word 1,$^) \
 		--envo-file $(word 2,$^) \
@@ -320,3 +320,23 @@ local/biomes.ttl: downloads/envo.owl
 		--input $< \
 		--term "ENVO:00000428" \
 		--output $@
+
+downloads/mixs.yaml:
+	curl --request GET -sL \
+	     --url 'https://raw.githubusercontent.com/GenomicsStandardsConsortium/mixs/main/src/mixs/schema/mixs.yaml'\
+	     --output $@
+
+local/mixs-schemasheets-template.tsv: downloads/mixs.yaml # first four lines are headers
+	$(RUN) linkml2schemasheets-template \
+		--source-path $< \
+		--output-path $@ \
+		 --debug-report-path local/mixs-schemasheets-template-debug.txt \
+		 --log-file local/mixs-schemasheets-template-log.txt \
+		 --report-style concise
+	head -n 4 $@ > $@.headers.tsv
+
+local/mixs-extensions-schemasheets-template.tsv: local/mixs-schemasheets-template.tsv
+	cat $< | python nmdc_ontology/schemasheets-template-mixs-extensions-filter.py  > $@
+
+local/mixs-extensions-schemasheets-template.csv: local/mixs-extensions-schemasheets-template.tsv
+	$(RUN) in2csv --format csv --tabs $< > $@

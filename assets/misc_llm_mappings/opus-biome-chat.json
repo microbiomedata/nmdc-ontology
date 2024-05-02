@@ -1,0 +1,943 @@
+{
+  "context_mappings": [
+    {
+      "mixs_context_label": "env_broad_scale",
+      "environment_mappings": [
+        {
+          "mixs_environment_label": "Agriculture",
+          "onto_term_mappings": [
+            {
+              "onto_term_id": "ENVO_01000245",
+              "onto_term_label": "cropland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000247",
+              "onto_term_label": "rangeland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000246",
+              "onto_term_label": "village biome"
+            }
+          ]
+        },
+        {
+          "mixs_environment_label": "BuiltEnvironment",
+          "onto_term_mappings": [
+            {
+              "onto_term_id": "ENVO_01000219",
+              "onto_term_label": "anthropogenic terrestrial biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000248",
+              "onto_term_label": "dense settlement biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000249",
+              "onto_term_label": "urban biome"
+            }
+          ]
+        },
+        {
+          "mixs_environment_label": "Water",
+          "onto_term_mappings": [
+            {
+              "onto_term_id": "ENVO_00000873",
+              "onto_term_label": "freshwater biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000252",
+              "onto_term_label": "freshwater lake biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000253",
+              "onto_term_label": "freshwater river biome"
+            },
+            {
+              "onto_term_id": "ENVO_00000887",
+              "onto_term_label": "large river biome"
+            },
+            {
+              "onto_term_id": "ENVO_00000888",
+              "onto_term_label": "large river headwater biome"
+            },
+            {
+              "onto_term_id": "ENVO_00000889",
+              "onto_term_label": "large river delta biome"
+            },
+            {
+              "onto_term_id": "ENVO_00000890",
+              "onto_term_label": "small river biome"
+            },
+            {
+              "onto_term_id": "ENVO_00000891",
+              "onto_term_label": "large freshwater lake biome"
+            },
+            {
+              "onto_term_id": "ENVO_00000892",
+              "onto_term_label": "small freshwater lake biome"
+            },
+            {
+              "onto_term_id": "ENVO_00002030",
+              "onto_term_label": "aquatic biome"
+            },
+            {
+              "onto_term_id": "ENVO_00000447",
+              "onto_term_label": "marine biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000048",
+              "onto_term_label": "ocean biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000047",
+              "onto_term_label": "mediterranean sea biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000046",
+              "onto_term_label": "marginal sea biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000045",
+              "onto_term_label": "epeiric sea biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000049",
+              "onto_term_label": "marine coral reef biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000123",
+              "onto_term_label": "marine sponge reef biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000050",
+              "onto_term_label": "marine rocky subtidal reef biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000030",
+              "onto_term_label": "marine hydrothermal vent biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000051",
+              "onto_term_label": "marine black smoker biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000052",
+              "onto_term_label": "marine white smoker biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000053",
+              "onto_term_label": "marine ultramafic hydrothermal vent biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000054",
+              "onto_term_label": "marine basaltic hydrothermal vent biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000127",
+              "onto_term_label": "marine cold seep biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000858",
+              "onto_term_label": "marine upwelling biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000023",
+              "onto_term_label": "marine pelagic biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000024",
+              "onto_term_label": "marine benthic biome"
+            },
+            {
+              "onto_term_id": "ENVO_01001230",
+              "onto_term_label": "tropical marginal sea biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000856",
+              "onto_term_label": "temperate marginal sea biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000857",
+              "onto_term_label": "temperate mediterranean sea biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000859",
+              "onto_term_label": "tropical marine upwelling biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000860",
+              "onto_term_label": "temperate marine upwelling biome"
+            }
+          ]
+        },
+        {
+          "mixs_environment_label": "Soil",
+          "onto_term_mappings": [
+            {
+              "onto_term_id": "ENVO_00000446",
+              "onto_term_label": "terrestrial biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000219",
+              "onto_term_label": "anthropogenic terrestrial biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000174",
+              "onto_term_label": "forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000196",
+              "onto_term_label": "coniferous forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000209",
+              "onto_term_label": "subtropical coniferous forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000210",
+              "onto_term_label": "tropical coniferous forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000211",
+              "onto_term_label": "temperate coniferous forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000250",
+              "onto_term_label": "subpolar coniferous forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000197",
+              "onto_term_label": "broadleaf forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000200",
+              "onto_term_label": "tropical broadleaf forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000227",
+              "onto_term_label": "tropical dry broadleaf forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000228",
+              "onto_term_label": "tropical moist broadleaf forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000201",
+              "onto_term_label": "subtropical broadleaf forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000225",
+              "onto_term_label": "subtropical dry broadleaf forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000226",
+              "onto_term_label": "subtropical moist broadleaf forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000202",
+              "onto_term_label": "temperate broadleaf forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000198",
+              "onto_term_label": "mixed forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000212",
+              "onto_term_label": "temperate mixed forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01001798",
+              "onto_term_label": "tropical mixed forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000199",
+              "onto_term_label": "mediterranean forest biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000175",
+              "onto_term_label": "woodland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000220",
+              "onto_term_label": "tropical woodland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000221",
+              "onto_term_label": "temperate woodland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000222",
+              "onto_term_label": "subtropical woodland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000208",
+              "onto_term_label": "mediterranean woodland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000176",
+              "onto_term_label": "shrubland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000213",
+              "onto_term_label": "subtropical shrubland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000214",
+              "onto_term_label": "tropical shrubland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000215",
+              "onto_term_label": "temperate shrubland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000216",
+              "onto_term_label": "montane shrubland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000217",
+              "onto_term_label": "mediterranean shrubland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000218",
+              "onto_term_label": "xeric shrubland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000177",
+              "onto_term_label": "grassland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000191",
+              "onto_term_label": "subtropical grassland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000192",
+              "onto_term_label": "tropical grassland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000193",
+              "onto_term_label": "temperate grassland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000194",
+              "onto_term_label": "montane grassland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000195",
+              "onto_term_label": "flooded grassland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000224",
+              "onto_term_label": "mediterranean grassland biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000178",
+              "onto_term_label": "savanna biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000187",
+              "onto_term_label": "subtropical savanna biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000188",
+              "onto_term_label": "tropical savanna biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000189",
+              "onto_term_label": "temperate savanna biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000223",
+              "onto_term_label": "montane savanna biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000190",
+              "onto_term_label": "flooded savanna biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000229",
+              "onto_term_label": "mediterranean savanna biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000181",
+              "onto_term_label": "mangrove biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000180",
+              "onto_term_label": "tundra biome"
+            },
+            {
+              "onto_term_id": "ENVO_01001505",
+              "onto_term_label": "alpine tundra biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000179",
+              "onto_term_label": "desert biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000182",
+              "onto_term_label": "temperate desert biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000183",
+              "onto_term_label": "tropical desert biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000184",
+              "onto_term_label": "subtropical desert biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000185",
+              "onto_term_label": "montane desert biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000186",
+              "onto_term_label": "polar desert biome"
+            },
+            {
+              "onto_term_id": "ENVO_00000893",
+              "onto_term_label": "xeric basin biome"
+            }
+          ]
+        },
+        {
+          "mixs_environment_label": "Sediment",
+          "onto_term_mappings": [
+            {
+              "onto_term_id": "ENVO_01000024",
+              "onto_term_label": "marine benthic biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000025",
+              "onto_term_label": "marine neritic benthic zone biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000026",
+              "onto_term_label": "marine bathyal zone biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000027",
+              "onto_term_label": "marine abyssal zone biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000028",
+              "onto_term_label": "marine hadal zone biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000252",
+              "onto_term_label": "freshwater lake biome"
+            },
+            {
+              "onto_term_id": "ENVO_01000253",
+              "onto_term_label": "freshwater river biome"
+            }
+          ]
+        },
+        {
+          "mixs_environment_label": "FoodFarmEnvironment",
+          "onto_term_mappings": [
+            {
+              "comment": "Forest biomes may be adjacent to farm environments, influencing the microbiome of the farm through edge effects and ecological interactions.",
+              "onto_term_id": "ENVO_01000174",
+              "onto_term_label": "forest biome"
+            },
+            {
+              "comment": "Shrubland biomes may be converted into farmland or may be adjacent to farm environments, influencing the microbiome of the farm.",
+              "onto_term_id": "ENVO_01000176",
+              "onto_term_label": "shrubland biome"
+            },
+            {
+              "comment": "Grassland biomes are often converted into farmland or used as pastures, making them directly relevant to food production on farms.",
+              "onto_term_id": "ENVO_01000177",
+              "onto_term_label": "grassland biome"
+            },
+            {
+              "comment": "Savanna biomes may be used for grazing livestock or may be adjacent to farm environments, influencing the microbiome of the farm.",
+              "onto_term_id": "ENVO_01000178",
+              "onto_term_label": "savanna biome"
+            },
+            {
+              "comment": "Anthropogenic terrestrial biomes, such as villages and settlements, are often closely associated with farm environments and can influence the farm microbiome through human activities and land use practices.",
+              "onto_term_id": "ENVO_01000219",
+              "onto_term_label": "anthropogenic terrestrial biome"
+            },
+            {
+              "comment": "Cropland biomes are directly relevant to food production on farms, as they represent the cultivated fields where crops are grown.",
+              "onto_term_id": "ENVO_01000245",
+              "onto_term_label": "cropland biome"
+            },
+            {
+              "comment": "Village biomes are often closely associated with farm environments, as farms are typically located near human settlements and rely on local communities for labor and resources.",
+              "onto_term_id": "ENVO_01000246",
+              "onto_term_label": "village biome"
+            },
+            {
+              "comment": "Rangeland biomes are used for grazing livestock, making them directly relevant to food production on farms.",
+              "onto_term_id": "ENVO_01000247",
+              "onto_term_label": "rangeland biome"
+            },
+            {
+              "comment": "Freshwater lake biomes may serve as water sources for irrigation or may influence the microbiome of nearby farm environments through hydrological connectivity.",
+              "onto_term_id": "ENVO_01000252",
+              "onto_term_label": "freshwater lake biome"
+            },
+            {
+              "comment": "Freshwater river biomes may serve as water sources for irrigation or may influence the microbiome of nearby farm environments through hydrological connectivity.",
+              "onto_term_id": "ENVO_01000253",
+              "onto_term_label": "freshwater river biome"
+            }
+          ]
+        },
+        {
+          "mixs_environment_label": "FoodAnimalAndAnimalFeed",
+          "onto_term_mappings": [
+            {
+              "comment": "Forest biomes may provide habitats for wild animals that are hunted or collected for food, making them relevant to the food animal and animal feed context.",
+              "onto_term_id": "ENVO_01000174",
+              "onto_term_label": "forest biome"
+            },
+            {
+              "comment": "Shrubland biomes may provide habitats for wild animals that are hunted or collected for food, making them relevant to the food animal and animal feed context.",
+              "onto_term_id": "ENVO_01000176",
+              "onto_term_label": "shrubland biome"
+            },
+            {
+              "comment": "Grassland biomes are often used for grazing livestock, making them directly relevant to food animal production and animal feed sourcing.",
+              "onto_term_id": "ENVO_01000177",
+              "onto_term_label": "grassland biome"
+            },
+            {
+              "comment": "Savanna biomes may be used for grazing livestock or may provide habitats for wild animals that are hunted or collected for food, making them relevant to the food animal and animal feed context.",
+              "onto_term_id": "ENVO_01000178",
+              "onto_term_label": "savanna biome"
+            },
+            {
+              "comment": "Anthropogenic terrestrial biomes, such as croplands and settlements, are often closely associated with food animal production and animal feed processing, as these activities typically occur in human-modified environments.",
+              "onto_term_id": "ENVO_01000219",
+              "onto_term_label": "anthropogenic terrestrial biome"
+            },
+            {
+              "comment": "Cropland biomes are relevant to the food animal and animal feed context, as crops are often grown specifically for animal feed or may be used as supplementary feed for livestock.",
+              "onto_term_id": "ENVO_01000245",
+              "onto_term_label": "cropland biome"
+            },
+            {
+              "comment": "Rangeland biomes are directly relevant to food animal production, as they are used for grazing livestock and providing forage for animals.",
+              "onto_term_id": "ENVO_01000247",
+              "onto_term_label": "rangeland biome"
+            },
+            {
+              "comment": "Dense settlement biomes, such as urban areas, are often hubs for animal feed processing, distribution, and consumption, making them relevant to the food animal and animal feed context.",
+              "onto_term_id": "ENVO_01000248",
+              "onto_term_label": "dense settlement biome"
+            },
+            {
+              "comment": "Urban biomes are often centers for animal feed processing, distribution, and consumption, as well as markets for food animals, making them relevant to the food animal and animal feed context.",
+              "onto_term_id": "ENVO_01000249",
+              "onto_term_label": "urban biome"
+            },
+            {
+              "comment": "Freshwater lake biomes may be used for aquaculture, where fish and other aquatic animals are raised for food, making them relevant to the food animal and animal feed context.",
+              "onto_term_id": "ENVO_01000252",
+              "onto_term_label": "freshwater lake biome"
+            },
+            {
+              "comment": "Freshwater river biomes may be used for aquaculture, where fish and other aquatic animals are raised for food, making them relevant to the food animal and animal feed context.",
+              "onto_term_id": "ENVO_01000253",
+              "onto_term_label": "freshwater river biome"
+            }
+          ]
+        },
+        {
+          "mixs_environment_label": "FoodFoodProductionFacility",
+          "onto_term_mappings": [
+            {
+              "comment": "Anthropogenic terrestrial biomes encompass human-modified environments, including areas where food production facilities are typically located, such as industrial or urban settings.",
+              "onto_term_id": "ENVO_01000219",
+              "onto_term_label": "anthropogenic terrestrial biome"
+            },
+            {
+              "comment": "Cropland biomes are relevant to food production facilities, as they are often the source of raw ingredients used in food processing and manufacturing.",
+              "onto_term_id": "ENVO_01000245",
+              "onto_term_label": "cropland biome"
+            },
+            {
+              "comment": "Village biomes may contain small-scale food production facilities, such as local food processing plants or artisanal food production units, that serve the local community.",
+              "onto_term_id": "ENVO_01000246",
+              "onto_term_label": "village biome"
+            },
+            {
+              "comment": "Dense settlement biomes, such as urban areas, are often hubs for food production facilities, as they provide access to necessary infrastructure, resources, and distribution networks.",
+              "onto_term_id": "ENVO_01000248",
+              "onto_term_label": "dense settlement biome"
+            },
+            {
+              "comment": "Urban biomes are common locations for food production facilities, as they offer access to a large consumer base, transportation networks, and other essential services required for food processing and distribution. Anthropogenic terrestrial biomes, such as agricultural lands and human settlements, are the primary sources of ingredients for human food products and are also the main environments where human foods are consumed.",
+              "onto_term_id": "ENVO_01000249",
+              "onto_term_label": "urban biome"
+            },
+            {
+              "comment": "Cropland biomes are a key source of plant-based ingredients for human food products, providing grains, vegetables, fruits, and other essential components of human diets.",
+              "onto_term_id": "ENVO_01000245",
+              "onto_term_label": "cropland biome"
+            },
+            {
+              "comment": "Village biomes are often centers of local food production, processing, and consumption, with human foods being an integral part of the local culture and economy.",
+              "onto_term_id": "ENVO_01000246",
+              "onto_term_label": "village biome"
+            },
+            {
+              "comment": "Rangeland biomes support livestock production, which provides animal-based ingredients such as meat, milk, and eggs for human food products.",
+              "onto_term_id": "ENVO_01000247",
+              "onto_term_label": "rangeland biome"
+            },
+            {
+              "comment": "Dense settlement biomes, such as urban areas, are major hubs for human food distribution, retail, and consumption, with a wide variety of human food products being available and consumed in these environments.",
+              "onto_term_id": "ENVO_01000248",
+              "onto_term_label": "dense settlement biome"
+            },
+            {
+              "comment": "Urban biomes are primary locations for human food consumption, with a diverse range of food outlets, restaurants, and markets catering to the dietary needs and preferences of urban populations.",
+              "onto_term_id": "ENVO_01000249",
+              "onto_term_label": "urban biome"
+            },
+            {
+              "comment": "Freshwater biomes, such as rivers and lakes, provide water resources for irrigation, food processing, and preparation of human food products. They also support freshwater fisheries, which contribute to human diets.",
+              "onto_term_id": "ENVO_00000873",
+              "onto_term_label": "freshwater biome"
+            },
+            {
+              "comment": "Marine biomes support marine fisheries and aquaculture, which are important sources of seafood for human consumption. Coastal marine environments are also important locations for harvesting seaweed and other edible marine organisms.",
+              "onto_term_id": "ENVO_00000447",
+              "onto_term_label": "marine biome"
+            }
+          ]
+        },
+        {
+          "mixs_environment_label": "HydrocarbonResourcesCores",
+          "onto_term_mappings": [
+            {
+              "comment": "Desert biomes, particularly in the geologic past, can be important environments for the deposition of organic-rich sediments and the formation of evaporites, which can serve as cap rocks for hydrocarbon traps.",
+              "onto_term_id": "ENVO_01000179",
+              "onto_term_label": "desert biome"
+            },
+            {
+              "comment": "Xeric basin biomes are arid to semi-arid basins that can accumulate sediments and evaporites, potentially leading to the formation of hydrocarbon resources over geologic time.",
+              "onto_term_id": "ENVO_00000893",
+              "onto_term_label": "xeric basin biome"
+            },
+            {
+              "comment": "Estuarine biomes are important depositional environments for sediments that may contain hydrocarbon resources. Ancient estuarine deposits can be source rocks for oil and gas formation.",
+              "onto_term_id": "ENVO_01000020",
+              "onto_term_label": "estuarine biome"
+            },
+            {
+              "comment": "Marine salt marsh biomes are coastal wetlands that can accumulate organic-rich sediments, which may serve as source rocks for hydrocarbon generation in geologic time.",
+              "onto_term_id": "ENVO_01000022",
+              "onto_term_label": "marine salt marsh biome"
+            },
+            {
+              "comment": "Marine pelagic biomes are the open ocean environments where organic matter from primary productivity can settle and accumulate in sediments, potentially leading to the formation of hydrocarbon source rocks over geologic time.",
+              "onto_term_id": "ENVO_01000023",
+              "onto_term_label": "marine pelagic biome"
+            },
+            {
+              "comment": "Marine benthic biomes, particularly in deep marine settings, are where sediments can accumulate and be buried, potentially leading to the formation of hydrocarbon resources in geologic time.",
+              "onto_term_id": "ENVO_01000024",
+              "onto_term_label": "marine benthic biome"
+            },
+            {
+              "comment": "Epeiric sea biomes are shallow marine environments that can be important depositional settings for sediments rich in organic matter, which may serve as source rocks for hydrocarbon generation over geologic time scales.",
+              "onto_term_id": "ENVO_01000045",
+              "onto_term_label": "epeiric sea biome"
+            },
+            {
+              "comment": "Marginal sea biomes, such as continental shelves and slopes, are important depositional environments for sediments that can accumulate organic matter and potentially generate hydrocarbons over geologic time.",
+              "onto_term_id": "ENVO_01000046",
+              "onto_term_label": "marginal sea biome"
+            }
+          ]
+        },
+        {
+          "mixs_environment_label": "HydrocarbonResourcesFluidsSwabs",
+          "onto_term_mappings": [
+            {
+              "comment": "Desert biomes, particularly in the geologic past, can be important environments for the deposition of organic-rich sediments and the formation of evaporites, which can serve as cap rocks for hydrocarbon traps. Hydrocarbon resource fluids may be found in these environments.",
+              "onto_term_id": "ENVO_01000179",
+              "onto_term_label": "desert biome"
+            },
+            {
+              "comment": "Xeric basin biomes are arid to semi-arid basins that can accumulate sediments and evaporites, potentially leading to the formation of hydrocarbon resources over geologic time. Hydrocarbon resource fluids may be found in these environments.",
+              "onto_term_id": "ENVO_00000893",
+              "onto_term_label": "xeric basin biome"
+            },
+            {
+              "comment": "Estuarine biomes are important depositional environments for sediments that may contain hydrocarbon resources. Ancient estuarine deposits can be source rocks for oil and gas formation, and hydrocarbon resource fluids may be found in these environments.",
+              "onto_term_id": "ENVO_01000020",
+              "onto_term_label": "estuarine biome"
+            },
+            {
+              "comment": "Marine salt marsh biomes are coastal wetlands that can accumulate organic-rich sediments, which may serve as source rocks for hydrocarbon generation in geologic time. Hydrocarbon resource fluids may be found in these environments.",
+              "onto_term_id": "ENVO_01000022",
+              "onto_term_label": "marine salt marsh biome"
+            },
+            {
+              "comment": "Marine pelagic biomes are the open ocean environments where organic matter from primary productivity can settle and accumulate in sediments, potentially leading to the formation of hydrocarbon source rocks over geologic time. Hydrocarbon resource fluids may be found in these environments.",
+              "onto_term_id": "ENVO_01000023",
+              "onto_term_label": "marine pelagic biome"
+            },
+            {
+              "comment": "Marine benthic biomes, particularly in deep marine settings, are where sediments can accumulate and be buried, potentially leading to the formation of hydrocarbon resources in geologic time. Hydrocarbon resource fluids may be found in these environments.",
+              "onto_term_id": "ENVO_01000024",
+              "onto_term_label": "marine benthic biome"
+            },
+            {
+              "comment": "Epeiric sea biomes are shallow marine environments that can be important depositional settings for sediments rich in organic matter, which may serve as source rocks for hydrocarbon generation over geologic time scales. Hydrocarbon resource fluids may be found in these environments.",
+              "onto_term_id": "ENVO_01000045",
+              "onto_term_label": "epeiric sea biome"
+            },
+            {
+              "comment": "Marginal sea biomes, such as continental shelves and slopes, are important depositional environments for sediments that can accumulate organic matter and potentially generate hydrocarbons over geologic time. Hydrocarbon resource fluids may be found in these environments.",
+              "onto_term_id": "ENVO_01000046",
+              "onto_term_label": "marginal sea biome"
+            }
+          ]
+        },
+        {
+          "mixs_environment_label": "MicrobialMatBiofilm",
+          "onto_term_mappings": [
+            {
+              "comment": "Marine salt marsh biomes are coastal wetlands that provide suitable environments for the formation of microbial mats and biofilms, particularly in intertidal zones and areas with high nutrient availability.",
+              "onto_term_id": "ENVO_01000022",
+              "onto_term_label": "marine salt marsh biome"
+            },
+            {
+              "comment": "In the marine pelagic biome, microbial mats and biofilms can form on the surfaces of suspended particles, marine snow, and other organic matter in the water column.",
+              "onto_term_id": "ENVO_01000023",
+              "onto_term_label": "marine pelagic biome"
+            },
+            {
+              "comment": "The marine benthic biome, particularly in shallow coastal areas, provides suitable substrates and environmental conditions for the formation of microbial mats and biofilms on sediment surfaces and other benthic structures.",
+              "onto_term_id": "ENVO_01000024",
+              "onto_term_label": "marine benthic biome"
+            },
+            {
+              "comment": "Marine hydrothermal vent biomes support unique microbial communities that form mats and biofilms adapted to the extreme conditions, such as high temperatures, chemical gradients, and reduced compounds.",
+              "onto_term_id": "ENVO_01000030",
+              "onto_term_label": "marine hydrothermal vent biome"
+            },
+            {
+              "comment": "In marine coral reef biomes, microbial mats and biofilms can form on the surfaces of corals, sponges, and other reef organisms, as well as on sediments and rocks within the reef ecosystem.",
+              "onto_term_id": "ENVO_01000049",
+              "onto_term_label": "marine coral reef biome"
+            },
+            {
+              "comment": "In freshwater lake biomes, microbial mats and biofilms can form on the surfaces of sediments, rocks, and aquatic vegetation, particularly in littoral zones and areas with high nutrient availability.",
+              "onto_term_id": "ENVO_01000252",
+              "onto_term_label": "freshwater lake biome"
+            },
+            {
+              "comment": "In freshwater river biomes, microbial mats and biofilms can form on the surfaces of sediments, rocks, and other substrates in the riverbed, particularly in areas with reduced flow and high nutrient availability.",
+              "onto_term_id": "ENVO_01000253",
+              "onto_term_label": "freshwater river biome"
+            },
+            {
+              "comment": "Freshwater biomes, including lakes, rivers, and wetlands, provide various habitats and environmental conditions suitable for the formation of microbial mats and biofilms.",
+              "onto_term_id": "ENVO_00000873",
+              "onto_term_label": "freshwater biome"
+            }
+          ]
+        },
+        {
+          "comment": "Due to the diverse and often unspecified nature of the environments covered by the MiscellaneousNaturalOrArtificialEnvironment extension, the mappings provided here are intentionally broad and inclusive. In practice, more specific EnvO terms may be used to describe particular environments when additional information is available.",
+          "mixs_environment_label": "MiscellaneousNaturalOrArtificialEnvironment",
+          "onto_term_mappings": [
+            {
+              "comment": "The term \"biome\" encompasses all biomes and can be used as a broad category for miscellaneous natural environments that do not fit into more specific biome categories.",
+              "onto_term_id": "ENVO_00000428",
+              "onto_term_label": "biome"
+            },
+            {
+              "comment": "Anthropogenic terrestrial biomes represent various artificial environments created or heavily influenced by human activities, such as urban areas, agricultural lands, and managed landscapes.",
+              "onto_term_id": "ENVO_01000219",
+              "onto_term_label": "anthropogenic terrestrial biome"
+            },
+            {
+              "comment": "Temperate woodland biomes can serve as a broad category for miscellaneous natural environments characterized by temperate climates and a mixture of trees and open spaces.",
+              "onto_term_id": "ENVO_01000221",
+              "onto_term_label": "temperate woodland biome"
+            },
+            {
+              "comment": "Freshwater lake biomes can represent miscellaneous natural or artificial aquatic environments, such as natural lakes, reservoirs, and other lentic water bodies.",
+              "onto_term_id": "ENVO_01000252",
+              "onto_term_label": "freshwater lake biome"
+            },
+            {
+              "comment": "Freshwater river biomes can represent miscellaneous natural or artificial aquatic environments, such as natural rivers, streams, canals, and other lotic water bodies.",
+              "onto_term_id": "ENVO_01000253",
+              "onto_term_label": "freshwater river biome"
+            },
+            {
+              "comment": "The term \"freshwater biome\" can be used as a broad category for miscellaneous natural or artificial freshwater environments that do not fit into more specific biome categories.",
+              "onto_term_id": "ENVO_00000873",
+              "onto_term_label": "freshwater biome"
+            },
+            {
+              "comment": "The term \"aquatic biome\" encompasses all aquatic biomes and can be used as a broad category for miscellaneous natural or artificial aquatic environments that do not fit into more specific biome categories.",
+              "onto_term_id": "ENVO_00002030",
+              "onto_term_label": "aquatic biome"
+            }
+          ]
+        },
+        {
+          "comment": "This mapping focuses on EnvO biomes characterized by the presence of diverse plant species that can support plant-associated microbial communities in the phyllosphere, rhizosphere, and endosphere. The selected biomes provide a range of habitats for plant-associated microorganisms, with each biome having specific characteristics that may influence the composition and adaptations of these microbial communities.",
+          "mixs_environment_label": "PlantAssociated",
+          "onto_term_mappings": [
+            {
+              "comment": "Forest biomes are characterized by dense tree cover and provide diverse habitats for plant-associated microorganisms, including those living in the phyllosphere, rhizosphere, and endosphere of forest plants.",
+              "onto_term_id": "ENVO_01000174",
+              "onto_term_label": "forest biome"
+            },
+            {
+              "comment": "Woodland biomes, with their mix of trees and open spaces, support a wide range of plant species and their associated microbial communities, including those in the phyllosphere, rhizosphere, and endosphere.",
+              "onto_term_id": "ENVO_01000175",
+              "onto_term_label": "woodland biome"
+            },
+            {
+              "comment": "Shrubland biomes are characterized by the dominance of shrubs and provide habitats for plant-associated microorganisms living in the phyllosphere, rhizosphere, and endosphere of shrubland plants.",
+              "onto_term_id": "ENVO_01000176",
+              "onto_term_label": "shrubland biome"
+            },
+            {
+              "comment": "Grassland biomes, dominated by grasses and other herbaceous plants, support diverse plant-associated microbial communities in the phyllosphere, rhizosphere, and endosphere of grassland plants.",
+              "onto_term_id": "ENVO_01000177",
+              "onto_term_label": "grassland biome"
+            },
+            {
+              "comment": "Savanna biomes, with their mix of grasses, scattered trees, and shrubs, provide habitats for plant-associated microorganisms living in the phyllosphere, rhizosphere, and endosphere of savanna plants.",
+              "onto_term_id": "ENVO_01000178",
+              "onto_term_label": "savanna biome"
+            },
+            {
+              "comment": "Mangrove biomes, characterized by salt-tolerant trees and shrubs growing in coastal environments, support unique plant-associated microbial communities adapted to the specific conditions of mangrove ecosystems.",
+              "onto_term_id": "ENVO_01000181",
+              "onto_term_label": "mangrove biome"
+            },
+            {
+              "comment": "Montane grassland biomes, found at high elevations, support plant-associated microbial communities adapted to the unique environmental conditions of these high-altitude ecosystems.",
+              "onto_term_id": "ENVO_01000194",
+              "onto_term_label": "montane grassland biome"
+            },
+            {
+              "comment": "Temperate woodland biomes, with their distinct seasons and diverse plant species, support plant-associated microbial communities that may vary throughout the year in response to seasonal changes.",
+              "onto_term_id": "ENVO_01000221",
+              "onto_term_label": "temperate woodland biome"
+            },
+            {
+              "comment": "Cropland biomes, characterized by the cultivation of crops, provide habitats for plant-associated microorganisms living in the phyllosphere, rhizosphere, and endosphere of crop plants.",
+              "onto_term_id": "ENVO_01000245",
+              "onto_term_label": "cropland biome"
+            }
+          ]
+        },
+        {
+          "comment": "This mapping focuses on EnvO biomes that can support diverse symbiotic relationships between organisms, including mutualistic, commensalistic, and parasitic associations. The selected biomes provide a range of habitats where symbiont-associated microorganisms may play important roles in the ecology and evolution of their host organisms.",
+          "mixs_environment_label": "SymbiontAssociated",
+          "onto_term_mappings": [
+            {
+              "comment": "Forest biomes support a wide range of symbiotic relationships, such as mycorrhizal associations between fungi and tree roots, and symbioses between plants and nitrogen-fixing bacteria.",
+              "onto_term_id": "ENVO_01000174",
+              "onto_term_label": "forest biome"
+            },
+            {
+              "comment": "Woodland biomes provide habitats for diverse symbiotic relationships, including those between plants and mycorrhizal fungi, and between plants and pollinating insects.",
+              "onto_term_id": "ENVO_01000175",
+              "onto_term_label": "woodland biome"
+            },
+            {
+              "comment": "Shrubland biomes support symbiotic relationships between shrubs and mycorrhizal fungi, as well as associations between plants and pollinating insects or dispersers.",
+              "onto_term_id": "ENVO_01000176",
+              "onto_term_label": "shrubland biome"
+            },
+            {
+              "comment": "Grassland biomes harbor symbiotic relationships between grasses and endophytic fungi, as well as associations between plants and pollinating insects or grazing mammals.",
+              "onto_term_id": "ENVO_01000177",
+              "onto_term_label": "grassland biome"
+            },
+            {
+              "comment": "Savanna biomes support symbiotic relationships between grasses and endophytic fungi, as well as associations between trees and mycorrhizal fungi, and between plants and pollinating insects or dispersers.",
+              "onto_term_id": "ENVO_01000178",
+              "onto_term_label": "savanna biome"
+            },
+            {
+              "comment": "Mangrove biomes host unique symbiotic relationships, such as those between mangrove trees and nitrogen-fixing bacteria, and between mangrove roots and sponges or oysters.",
+              "onto_term_id": "ENVO_01000181",
+              "onto_term_label": "mangrove biome"
+            },
+            {
+              "comment": "Marine biomes support a wide range of symbiotic relationships, including those between corals and zooxanthellae, between deep-sea mussels and chemosynthetic bacteria, and between marine sponges and their associated microbial communities.",
+              "onto_term_id": "ENVO_00000447",
+              "onto_term_label": "marine biome"
+            },
+            {
+              "comment": "Estuarine biomes provide habitats for symbiotic relationships between salt marsh plants and nitrogen-fixing bacteria, as well as associations between oysters and their gut microbiomes.",
+              "onto_term_id": "ENVO_01000020",
+              "onto_term_label": "estuarine biome"
+            },
+            {
+              "comment": "Freshwater biomes support symbiotic relationships, such as those between aquatic plants and nitrogen-fixing cyanobacteria, and between freshwater sponges and their associated microbial communities.",
+              "onto_term_id": "ENVO_00000873",
+              "onto_term_label": "freshwater biome"
+            }
+          ]
+        },
+        {
+          "comment": "This mapping focuses on EnvO biomes that are most likely to be impacted by or associated with wastewater and sludge production, treatment, and disposal. The selected biomes represent environments where wastewater and sludge may have significant ecological effects or where these materials may be processed or managed.",
+          "mixs_environment_label": "WastewaterSludge",
+          "onto_term_mappings": [
+            {
+              "comment": "Anthropogenic terrestrial biomes, such as urban and industrial areas, are major sources of wastewater and sludge production, and these materials may be processed, treated, or disposed of within these environments.",
+              "onto_term_id": "ENVO_01000219",
+              "onto_term_label": "anthropogenic terrestrial biome"
+            },
+            {
+              "comment": "Dense settlement biomes, such as cities and towns, are significant sources of wastewater and sludge production due to concentrated human populations and industrial activities.",
+              "onto_term_id": "ENVO_01000248",
+              "onto_term_label": "dense settlement biome"
+            },
+            {
+              "comment": "Urban biomes are major contributors to wastewater and sludge production, and these materials may be processed, treated, or disposed of within urban infrastructure, such as wastewater treatment plants.",
+              "onto_term_id": "ENVO_01000249",
+              "onto_term_label": "urban biome"
+            },
+            {
+              "comment": "Freshwater biomes, such as rivers and lakes, may be impacted by wastewater and sludge discharges, potentially leading to eutrophication, oxygen depletion, and other ecological effects.",
+              "onto_term_id": "ENVO_00000873",
+              "onto_term_label": "freshwater biome"
+            },
+            {
+              "comment": "Freshwater lake biomes may be impacted by wastewater and sludge discharges from nearby urban or industrial areas, potentially leading to water quality degradation and ecological disruption.",
+              "onto_term_id": "ENVO_01000252",
+              "onto_term_label": "freshwater lake biome"
+            },
+            {
+              "comment": "Freshwater river biomes may be impacted by wastewater and sludge discharges from upstream sources, such as cities, towns, and industrial facilities, potentially leading to water quality degradation and ecological effects.",
+              "onto_term_id": "ENVO_01000253",
+              "onto_term_label": "freshwater river biome"
+            },
+            {
+              "comment": "Marine biomes, particularly coastal areas, may be impacted by wastewater and sludge discharges from land-based sources, such as sewage outfalls and industrial effluents, potentially leading to nutrient enrichment, oxygen depletion, and other ecological effects.",
+              "onto_term_id": "ENVO_00000447",
+              "onto_term_label": "marine biome"
+            },
+            {
+              "comment": "Estuarine biomes are often the receiving environments for wastewater and sludge discharges from upstream sources, such as rivers and coastal cities, potentially leading to water quality degradation, eutrophication, and ecological impacts.",
+              "onto_term_id": "ENVO_01000020",
+              "onto_term_label": "estuarine biome"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "@type": "RootMappings"
+}

@@ -1,0 +1,124 @@
+environment_mappings:
+  - mixs_environment_label: FoodAnimalAndAnimalFeed
+    onto_term_mappings:
+      - onto_term_id: ENVO_01000247
+        onto_term_label: rangeland biome
+  - mixs_environment_label: FoodFarmEnvironment
+    onto_term_mappings:
+      - onto_term_label: cropland biome
+        onto_term_id: ENVO_01000245
+      - onto_term_label: rangeland biome
+        onto_term_id: ENVO_01000247
+  - mixs_environment_label: FoodFoodProductionFacility
+    onto_term_mappings:
+      - onto_term_id: ENVO_01000248
+        onto_term_label: dense settlement biome
+  - mixs_environment_label: MicrobialMatBiofilm
+    comment: initially the LLM didn't want to assign any biomes to this environment. I pushed and it came up with the following, with noted exceptions
+    onto_term_mappings:
+      - onto_term_id: ENVO_00000447
+        onto_term_label: marine biome
+      - onto_term_id: ENVO_00000873
+        onto_term_label: freshwater biome
+      - onto_term_id: ENVO_01000253
+        onto_term_label: freshwater river biome
+      - onto_term_id: ENVO_01000252
+        onto_term_label: freshwater lake biome
+      - onto_term_id: ENVO_01000047
+        onto_term_label: mediterranean sea biome
+      - onto_term_id: ENVO_01000020
+        onto_term_label: estuarine biome
+      - onto_term_id: ENVO_01000022
+        onto_term_label: marine salt marsh biome
+        comment: included in a second pass after I asked why mediterranean sea biome was included but this one wasn't
+  - mixs_environment_label: HydrocarbonResourcesFluidsSwabs
+    comment: This took a lot of convincing. THe LLM initially only included marine cold seep biome. I pressured it to include desert biome and other places where fluid hydrocarbons might be found.
+    onto_term_mappings:
+      - onto_term_id: ENVO_01000127
+        onto_term_label: marine cold seep biome
+      - onto_term_id: ENVO_00000447
+        onto_term_label: marine biome
+        comment: "This is a broad category that encompasses various marine environments where hydrocarbon seeps or oil spills might occur."
+      - onto_term_id: ENVO_01000024
+        onto_term_label: marine benthic biome
+        comment: "This specifically refers to the seafloor, where hydrocarbon seeps can be found."
+      - onto_term_id: ENVO_01000179
+        onto_term_label: desert biome
+      - onto_term_id: ENVO_01001838
+        onto_term_label: arid biome
+  - mixs_environment_label: HydrocarbonResourcesCores
+    onto_term_mappings:
+      - onto_term_id: ENVO_01000127
+        onto_term_label: marine cold seep biome
+      - onto_term_id: ENVO_00000447
+        onto_term_label: marine biome
+        comment: "This is a broad category that encompasses various marine environments where hydrocarbon seeps or oil spills might occur."
+      - onto_term_id: ENVO_01000024
+        onto_term_label: marine benthic biome
+        comment: "This specifically refers to the seafloor, where hydrocarbon seeps can be found."
+      - onto_term_id: ENVO_01000179
+        onto_term_label: desert biome
+      - onto_term_id: ENVO_01001838
+        onto_term_label: arid biome
+  - mixs_environment_label: WastewaterSludge
+    onto_term_mappings:
+      - comment: lots of arm twisting
+      - onto_term_id: ENVO_01000248
+        onto_term_label: dense settlement biome
+        comment: "This encompasses urban and industrial areas where wastewater treatment plants and sludge processing facilities are typically located."
+  - mixs_environment_label: SymbiontAssociated
+    onto_term_mappings:
+      - onto_term_id: ENVO_00002030
+        onto_term_label: aquatic biome
+      - onto_term_id: ENVO_00000446
+        onto_term_label: terrestrial biome
+      - onto_term_id: ENVO_00000873
+        onto_term_label: freshwater biome
+      - onto_term_id: ENVO_00000447
+        onto_term_label: marine biome
+    comment: "Symbionts can be found in association with hosts across virtually all biomes."
+  - mixs_environment_label: Sediment
+    comment: Initially it just wanted to include all aquatic environments and nothing else
+    onto_term_mappings:
+      - onto_term_id: ENVO_00000873
+        onto_term_label: freshwater biome
+        comment: "Freshwater environments like rivers, lakes, and wetlands often have substantial sediment deposition."
+      - onto_term_id: ENVO_01000253
+        onto_term_label: freshwater river biome
+      - onto_term_id: ENVO_01000252
+        onto_term_label: freshwater lake biome
+      - onto_term_id: ENVO_00000447
+        onto_term_label: marine biome
+        comment: "Marine environments, particularly coastal areas and regions with significant terrestrial runoff, can accumulate sediment."
+      - onto_term_id: ENVO_01000020
+        onto_term_label: estuarine biome
+        comment: "Estuaries are known for their sediment-rich environments due to the mixing of freshwater and saltwater."
+      - onto_term_id: ENVO_01000022
+        onto_term_label: marine salt marsh biome
+      - onto_term_id: ENVO_00000446
+        onto_term_label: terrestrial biome
+        comment: "Terrestrial environments, especially those prone to erosion or with historical deposition, can also have significant sediment layers."
+      - onto_term_id: ENVO_01000179
+        onto_term_label: desert biome
+  - mixs_environment_label: PlantAssociated
+    onto_term_mappings:
+      - onto_term_id: ENVO_00002030
+        onto_term_label: aquatic biome
+      - onto_term_id: ENVO_00000446
+        onto_term_label: terrestrial biome
+      - onto_term_id: ENVO_00000873
+        onto_term_label: freshwater biome
+      - onto_term_id: ENVO_00000447
+        onto_term_label: marine biome
+    comment: "Plants and their associated microbes can be found in virtually all biomes."
+  - mixs_environment_label: MiscellaneousNaturalOrArtificialEnvironment
+    onto_term_mappings:
+      - onto_term_id: ENVO_00002030
+        onto_term_label: aquatic biome
+      - onto_term_id: ENVO_00000446
+        onto_term_label: terrestrial biome
+      - onto_term_id: ENVO_00000873
+        onto_term_label: freshwater biome
+      - onto_term_id: ENVO_00000447
+        onto_term_label: marine biome
+    comment: "This MIxS environment is intended as a catch-all for situations where no other environment is applicable.  Therefore, it can apply to any biome."

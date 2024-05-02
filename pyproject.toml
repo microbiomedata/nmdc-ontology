@@ -22,6 +22,8 @@ beautifulsoup4 = "^4.12.3"
 linkml = "^1.7.8"
 linkml-runtime = "^1.7.5"
 llm = "^0.13.1"
+schemasheets = "^0.2.1"
+csvkit = "^1.5.0"
 
 [build-system]
 requires = ["poetry-core"]

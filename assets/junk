@@ -1,0 +1,64 @@
+```shell
+{
+  echo -e "here is the initial text\n";
+  cat CHANGELOG.md;
+  echo -e "\nand some subsequent text\n";
+  cat LICENSE;
+} | llm -m gemini-1.5-pro-latest
+```
+
+```shell
+{
+  echo -e "\n Here is a CSV report of biomes according to the environment ontology, EnvO. Please confirm that you received it and wait for me to provide more data. \n" ;
+  cat assets/biome-class-annotations.csv ;
+  echo -e "\n Here is a CSV report of environmental extensions according to MIxS. Please confirm that you received it and wait for me to provide more data. \n";
+  cat local/mixs-extensions-schemasheets-template.csv ;
+  echo -e "\n Here is a YAML-serialized LinkML schema that specifies how EnvO biomes can be mapped to MIxS environmental extensions. Please confirm that you received it and wait for me to provide more data. \n" ;
+  cat assets/mixs_context_subsets_schema.yaml ;
+  echo -e "\n Here is a YAML-serialized data file with examples of records that follow the schema. Please confirm that you received it and wait for me to provide more data. \n" ;
+  cat assets/mixs_context_subsets_example.yaml ;
+  echo -e "\n Based on the information I have provided, generate and most exhaustive possible mapping of ENvO biomes where the mixs_environment_label is Soil and the mixs_context_label will be env_broad_scale.  \n" ;
+  echo -e "\n You must follow the schema exactly. \n" ;
+  echo -e "\n If you have mapped term X and X has subclasses, you don't need to map all of the subclasses too. I will add them programmatically later. Just put the subclass ids in a comment field. \n" ;
+  echo -e "\n Don't bother reporting unacceptable mappings. I just included some to help train you. \n" ;
+  echo -e "\n Don't bother reporting that your mappings have an accepted value of true. I will take that for granted. \n" ;
+  echo -e "\n Don't emit any introduction, commentary or summary outside of the YAML format. You can add a comment at any level in the YAML file \n" ;
+} | llm -m claude-3-opus-20240229
+```
+
+
+  echo -e "\n Here is a CSV report of biomes according to the environment ontology, EnvO. Please confirm that you received it and wait for me to provide more data. \n" ;
+  cat assets/biome-class-annotations.csv ;
+  echo -e "\n Here is a CSV report of environmental extensions according to MIxS. Please confirm that you received it and wait for me to provide more data. \n";
+  cat local/mixs-extensions-schemasheets-template.csv ;
+  echo -e "\n Here is a YAML-serialized LinkML schema that specifies how EnvO biomes can be mapped to MIxS environmental extensions. Please confirm that you received it and wait for me to provide more data. \n" ;
+  cat assets/mixs_context_subsets_schema.yaml ;
+  echo -e "\n Here is a YAML-serialized data file with examples of records that follow the schema. Please confirm that you received it and wait for me to provide more data. \n" ;
+  cat assets/mixs_context_subsets_example.yaml ;
+  echo -e "Based on the information I have provided, generate the most exhaustive possible mapping of EnvO biomes where the mixs_environment_label is Soil and the mixs_context_label will be env_broad_scale." ;
+  echo -e "You must follow the schema exactly." ;
+  echo -e "If you have mapped term X and X appears in the superclasses column for biome Y, then you don't need to map biome Y.  I will add them programmatically later." ;
+  echo -e "Don't bother reporting unacceptable mappings. I just included some to help train you." ;
+  echo -e "Don't bother reporting that your mappings have an accepted value of true. I will take that for granted." ;
+  echo -e "Don't emit any introduction, commentary or summary outside the YAML format. You can add a comment at any level in the YAML file " ;
+} > soil-biome-prompt.txt
+```
+
+```shell
+{
+  echo -e "\n Here is a CSV report of environmental materials according to the environment ontology, EnvO. Please confirm that you received it and wait for me to provide more data.\n" ;
+  cat assets/environmental-material-class-annotations.csv ;
+  echo -e "\n Here is a CSV report of environmental extensions according to MIxS. Please confirm that you received it and wait for me to provide more data.\n";
+  cat local/mixs-extensions-schemasheets-template.csv ;
+  echo -e "\n Here is a YAML-serialized LinkML schema that specifies how EnvO entities can be mapped to MIxS environmental extensions. Please confirm that you received it and wait for me to provide more data.\n" ;
+  cat assets/mixs_context_subsets_schema.yaml ;
+  echo -e "\n Here is a YAML-serialized data file with examples of records that follow the schema. Please confirm that you received it and wait for me to provide more data.\n" ;
+  cat assets/mixs_context_subsets_example.yaml ;
+  echo -e "Based on the information I have provided, generate a mapping of EnvO environmental materials where the mixs_environment_label is Soil and the mixs_context_label will be env_medium." ;
+  echo -e "You must follow the schema exactly." ;
+  echo -e "If you have mapped term X and X appears in the superclasses column for biome Y, then you don't need to map biome Y.  I will add them programmatically later." ;
+  echo -e "Don't bother reporting unacceptable mappings. I just included some to help train you." ;
+  echo -e "Don't bother reporting that your mappings have an accepted value of true. I will take that for granted." ;
+  echo -e "Don't emit any introduction, commentary or summary outside the YAML format. You can add a comment at any level in the YAML file " ;
+} > soil-materials-prompt.txt
+```
