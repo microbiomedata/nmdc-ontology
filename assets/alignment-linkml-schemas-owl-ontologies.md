@@ -349,6 +349,137 @@ You probably wouldn't want to apply such a high (or even any) `having` constrain
 | MIMS.me.soil.6.0 | Temperate biome [ENVO: 01001831]temperate woodland biome [ENVO:01000221] |  537 |
 | MIMS.me.soil.6.0 | Agricultural Field                                                       |  507 |
 
+### What does ChatGPT 4 think of that?
+Even without having been supplied with explicit EnvO biome knowledge?
+
+### Analysis of env\_broad\_scale Values in NCBI Biosamples for MIMS.me.soil.6.0 Package
+
+The provided data shows the distribution of `env_broad_scale` values used in NCBI Biosamples submitted against the MIMS.me.soil.6.0 package. This package appears to be related to soil environments and the associated microbiome.
+
+**Key Observations:**
+
+* **Missing Values:** A significant portion of submissions (8599) have missing values for `env_broad_scale`. This indicates a lack of information about the broader environmental context for these samples, which could limit the analysis and interpretation of the data.
+* **Generic Terms:** The most frequent terms, after missing values, are generic terms like "not applicable" (3331), "not collected" (2887), "soil" (2512), and "forest" (1736). These terms provide limited ecological context.
+* **ENVO Terms:** Several submissions use ENVO (Environment Ontology) terms to describe the environment, such as "ENVO:01000198" (mixed forest biome), "ENVO:00000428" (terrestrial biome), and "ENVO:00000446" (land biome). This provides a more standardized and controlled vocabulary for describing the environment.
+* **Specific Biomes:** A variety of specific biomes are represented, including forest biomes (e.g., temperate forest, boreal forest), grassland biomes, desert biomes, tundra, and agricultural land.  This suggests a wide range of soil environments have been sampled.
+* **Agricultural Environments:** A substantial number of samples come from agricultural contexts, with terms like "Agricultural soil" (1684), "agricultural field" (1468), and "farmland" (812) appearing frequently. This highlights the importance of understanding soil microbial communities in agricultural systems. 
+* **Other Environments:**  The data also includes less frequent but noteworthy terms like "permafrost", "wetland", "rhizosphere", "compost", and "cave". These terms point to the diversity of soil environments represented in the dataset. 
+
+**Recommendations:**
+
+* **Standardization:** Encourage the use of controlled vocabularies like ENVO for `env_broad_scale` to improve data consistency and facilitate comparisons across studies.
+* **Completeness:**  Promote efforts to provide complete environmental information for Biosample submissions, reducing the number of missing values.
+* **Specificity:** When possible, use more specific terms to describe the environment beyond generic terms like "soil" or "forest". This will provide a more accurate and informative representation of the ecological context.
+
+**Additional Considerations:**
+
+*  Explore the use of additional environmental descriptors beyond `env_broad_scale`, such as `env_local_scale` and `env_medium`, to capture more detailed information about the sampling locations.
+* Investigate the potential biases in the data, such as overrepresentation of certain biomes or environments.
+* Utilize the environmental information to analyze and interpret the microbial community data in the context of ecological factors. 
+
+By addressing the missing values and encouraging the use of standardized and specific environmental descriptors, the value and usability of the data in NCBI Biosamples can be greatly enhanced for researchers studying soil microbial ecology.
+
+# Then I asked
+> please give a complete list of values in this dataset that could be considered indicators of missing data
+
+### Indicators of Missing Data in the env\_broad\_scale Dataset
+
+Based on the provided data, here's a list of values that could indicate missing data for the `env_broad_scale` field:
+
+* **Explicit Mentions:**
+    * missing
+    * not applicable 
+    * not collected
+    * unkown (misspelling of "unknown")
+    * Missing (capitalized)
+    * missing: control sample
+* **Ambiguous or Uninformative Terms:**
+    * NA 
+    * ?plains  (question mark indicates uncertainty) 
+    * Soil (capitalized, could imply a general category rather than specific environment)
+    * pH (refers to a soil property, not broad-scale environment) 
+
+**Justification:**
+
+* The terms "missing," "not applicable," "not collected," and "unknown" directly indicate the absence of information about the broader environment. 
+* "Missing" with capitalization could be a variant used inconsistently.
+* "missing: control sample" suggests missing environmental data specifically for control samples. 
+* "NA" and "?plains" represent uncertainty or lack of specific information.
+* While "Soil" with capitalization could be a valid descriptor in certain controlled vocabularies, in this context, it appears as a general categorization rather than a specific environmental term.
+* "pH" refers to a soil characteristic, not the broad-scale environment.
+
+**Additional Notes:**
+
+* The distinction between "not applicable" and "not collected" is unclear and might require further investigation into the data submission guidelines or context.
+* The presence of generic terms like "soil" and "forest" could also indicate missing data if more specific information about the environment was available but not recorded.
+
+It's important to consider these indicators of missing data when analyzing and interpreting the `env_broad_scale` information. Addressing these missing values and using more specific environmental descriptors will improve the quality and value of the data for ecological research. 
+
+
+# Then I provided the EnvO biomes CSV file
+
+## Matching env\_broad\_scale Values with ENVO Biomes
+
+To match the `env_broad_scale` values with ENVO biomes, we need to consider several factors:
+
+* **Exact Matches:** Some values may directly correspond to ENVO labels or synonyms.
+* **Partial Matches and Synonyms:** We need to account for variations in wording, capitalization, and the use of synonyms.
+* **Hierarchical Relationships:** ENVO has a hierarchical structure, so broader terms might encompass multiple specific biomes. 
+* **Ambiguity and Missing Data:** Some values might be ambiguous or represent missing data, as identified previously.
+
+Here's a possible approach:
+
+**1. Create a Lookup Table:**
+
+* Compile a list of ENVO biome labels, alternative terms, and synonyms from the provided data.
+* This table will serve as a reference for matching `env_broad_scale` values.
+
+**2. Matching Algorithm:**
+
+1. **Preprocessing:**
+    * Standardize the `env_broad_scale` values by converting them to lowercase and removing extra spaces.
+    * Address misspellings and obvious typos (e.g., "unkown" to "unknown").
+2. **Exact Matching:**
+    * Check for exact matches between the standardized values and the ENVO labels/synonyms.
+3. **Partial Matching:**
+    * If no exact match is found, look for partial matches using string similarity measures (e.g., Levenshtein distance). 
+    * Prioritize matches with higher similarity scores and consider the context of the values.
+4. **Hierarchical Matching:**
+    * If a specific biome cannot be identified, consider broader ENVO categories that might encompass the value (e.g., "terrestrial biome" for "land"). 
+5. **Ambiguity and Missing Data:**
+    * Flag values identified as potential indicators of missing data as "unidentified" or "missing."
+
+**3. Implementation:**
+
+This matching process can be implemented using various programming languages and tools for string manipulation and data matching.  For example, Python with libraries like `fuzzywuzzy` for fuzzy string matching could be utilized.
+
+**4. Example Matches:**
+
+| env\_broad\_scale Value       | Potential ENVO Biome Match                       |
+|-------------------------------|--------------------------------------------------|
+| temperate forest              | ENVO_01000202: temperate broadleaf forest biome   |
+| Agricultural soil            | ENVO_01000245: cropland biome                   |
+| ENVO:00000446                | ENVO_00000446: terrestrial biome                 |
+| grassland biome               | ENVO_01000177: grassland biome                   |
+| arctic                       | ENVO_01000339: polar biome (consider tundra biome) |
+| missing                      | (flagged as missing data)                         |
+
+**5. Challenges and Limitations:**
+
+* Ambiguous terms with multiple possible matches (e.g., "forest" could be various forest biomes).
+* Inconsistent use of terminology and spelling variations.
+* The hierarchical nature of ENVO might require additional steps to determine the most appropriate level of specificity.
+
+**6. Additional Recommendations:**
+
+* **Validation:** Manually review a subset of the matches to ensure accuracy and identify potential issues.
+* **Feedback Mechanism:** If possible, provide a way for users to report mismatches or suggest improvements to the matching algorithm.
+* **Documentation:** Clearly document the matching process and any assumptions made to ensure transparency and reproducibility. 
+
+> please give the most thorough mapping of the observed env_broad_scale values to EnvO terms, as you started to do above
+
+See separate huge table in `assets/ncbio-biosample-ebs-suggestions.md` !
+
 ## Getting higher-quality NMDC annotations from a triple store
 
 ```sparql
@@ -360,7 +491,7 @@ PREFIX env_broad_scale: <https://w3id.org/mixs/0000012>
 PREFIX env_local_scale: <https://w3id.org/mixs/0000013>
 PREFIX env_medium: <https://w3id.org/mixs/0000014>
 select
-?context_predicate ?predicate_label ?term ?term_label ?context_raw_value (count(?bs) as ?count)
+?context_predicate ?predicate_label ?term (str(?term_label_raw) as ?term_label) ?context_raw_value (count(?bs) as ?count)
 where {
     values ?context_predicate {
         env_broad_scale:
@@ -375,7 +506,7 @@ where {
     }
     optional {
         graph obo:nmdco.owl {
-            ?term rdfs:label ?term_label .
+            ?term rdfs:label ?term_label_raw .
         }
     }
     optional {
@@ -384,7 +515,7 @@ where {
         }
     }
 }
-group by ?context_predicate ?predicate_label ?term ?term_label ?context_raw_value
+group by ?context_predicate ?predicate_label ?term ?term_label_raw ?context_raw_value
 order by desc(count(?bs))
 ```
 
