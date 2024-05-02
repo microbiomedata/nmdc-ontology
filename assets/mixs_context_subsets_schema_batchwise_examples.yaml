@@ -1,0 +1,141 @@
+mixs_context_mappings:
+- mixs_context_label: env_broad_scale
+  environment_mappings:
+  - mixs_environment_label: Soil
+    mapping_batches:
+    - agent: claude-3-opus-20240229
+      timestamp: '2023-05-02T12:00:00Z'
+      ontology_terms:
+      - ontology_term_id: ENVO_01000179
+        ontology_term_label: desert biome
+        confidence: 1
+      - ontology_term_id: ENVO_01000180
+        ontology_term_label: tundra biome
+        confidence: 1
+      - ontology_term_id: ENVO_12345678
+        ontology_term_label: desert biome
+        confidence: 0
+        comments:
+        - agent: claude-3-opus-20240229
+          timestamp: '2023-05-02T12:00:00Z'
+          comment_body: desert biome is defined in the input, but ENVO_12345678 is
+            not.
+      - ontology_term_id: ENVO_01000179
+        ontology_term_label: bellybutton biome
+        confidence: 0
+        comments:
+        - agent: claude-3-opus-20240229
+          timestamp: '2023-05-02T12:00:00Z'
+          comment_body: ENVO_01000179 is defined in the input, but bellybutton biome
+            is not.
+      - ontology_term_id: ENVO_01000179
+        ontology_term_label: tundra biome
+        confidence: 0
+        comments:
+        - agent: claude-3-opus-20240229
+          timestamp: '2023-05-02T12:00:00Z'
+          comment_body: ENVO_01000179 and tundra biome are both defined in the input,
+            but tundra biome is not the correct label for ENVO_01000179.
+      - ontology_term_id: ENVO_00002030
+        ontology_term_label: aquatic biome
+        confidence: 0
+        comments:
+        - agent: claude-3-opus-20240229
+          timestamp: '2023-05-02T12:00:00Z'
+          comment_body: The Soil environment and an aquatic environment are disjoint.
+  - mixs_environment_label: Water
+    mapping_batches:
+    - agent: claude-3-opus-20240229
+      timestamp: '2023-05-02T12:00:00Z'
+      ontology_terms:
+      - ontology_term_id: ENVO_01000253
+        ontology_term_label: freshwater river biome
+        confidence: 1
+      - ontology_term_id: ENVO_00000447
+        ontology_term_label: marine biome
+        confidence: 1
+  - mixs_environment_label: Agriculture
+    mapping_batches:
+    - agent: claude-3-opus-20240229
+      timestamp: '2023-05-02T12:00:00Z'
+      ontology_terms:
+      - ontology_term_id: ENVO_01000247
+        ontology_term_label: rangeland biome
+        confidence: 1
+      - ontology_term_id: ENVO_01000245
+        ontology_term_label: cropland biome
+        confidence: 1
+      - ontology_term_id: ENVO_01000246
+        ontology_term_label: village biome
+        confidence: 1
+  - mixs_environment_label: BuiltEnvironment
+    mapping_batches:
+    - agent: claude-3-opus-20240229
+      timestamp: '2023-05-02T12:00:00Z'
+      ontology_terms:
+      - ontology_term_id: ENVO_01000249
+        ontology_term_label: urban biome
+        confidence: 1
+  - mixs_environment_label: Air
+    mapping_batches:
+    - agent: claude-3-opus-20240229
+      timestamp: '2023-05-02T12:00:00Z'
+      ontology_terms:
+      - ontology_term_id: ENVO_01000267
+        ontology_term_label: atmospheric dust
+        confidence: 0
+        comments:
+        - agent: claude-3-opus-20240229
+          timestamp: '2023-05-02T12:00:00Z'
+          comment_body: This is unacceptable for several reasons. ENVO:01000267 is
+            defined in the input but its label is atmosphere, not atmospheric dust.
+            In fact, atmospheric dust is not defined in the input. Even if it were,
+            atmospheric dust is not a biome.
+- mixs_context_label: env_local_scale
+  environment_mappings:
+  - mixs_environment_label: Soil
+    mapping_batches:
+    - agent: claude-3-opus-20240229
+      timestamp: '2023-05-02T12:00:00Z'
+      ontology_terms:
+      - ontology_term_id: ENVO_00000178
+        ontology_term_label: levee
+        confidence: 1
+      - ontology_term_id: ENVO_01001582
+        ontology_term_label: forest floor
+        confidence: 1
+  - mixs_environment_label: Water
+    mapping_batches:
+    - agent: claude-3-opus-20240229
+      timestamp: '2023-05-02T12:00:00Z'
+      ontology_terms:
+      - ontology_term_id: ENVO_00000045
+        ontology_term_label: estuary
+        confidence: 1
+      - ontology_term_id: ENVO_00000059
+        ontology_term_label: underground river
+        confidence: 1
+- mixs_context_label: env_medium
+  environment_mappings:
+  - mixs_environment_label: Soil
+    mapping_batches:
+    - agent: claude-3-opus-20240229
+      timestamp: '2023-05-02T12:00:00Z'
+      ontology_terms:
+      - ontology_term_id: ENVO_00005748
+        ontology_term_label: dry soil
+        confidence: 1
+      - ontology_term_id: ENVO_00005771
+        ontology_term_label: muddy soil
+        confidence: 1
+  - mixs_environment_label: Water
+    mapping_batches:
+    - agent: claude-3-opus-20240229
+      timestamp: '2023-05-02T12:00:00Z'
+      ontology_terms:
+      - ontology_term_id: ENVO_00002228
+        ontology_term_label: pond water
+        confidence: 1
+      - ontology_term_id: ENVO_00002150
+        ontology_term_label: coastal sea water
+        confidence: 1

@@ -1,0 +1,325 @@
+name: mixs_context_subsets_schema
+id: https://examples.com/mixs_context_subsets_schema
+prefixes:
+  linkml: https://w3id.org/linkml/
+  mappings: https://examples.com/mixs_context_subsets/
+default_prefix: mappings
+enums:
+  MixsContextEnum:
+    description: MIxS environmental context labels
+    see_also:
+      - https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS
+    permissible_values:
+      env_broad_scale:
+        description: The major environmental system the sample or specimen came from.
+          The system(s) identified should have a coarse spatial grain, to provide
+          the general environmental context of where the sampling was done (e.g. in
+          the desert or a rainforest). We recommend using subclasses of the EnvO biome
+          class, ENVO_00000428.
+        title: broad-scale environmental context
+      env_local_scale:
+        description: The entity or entities which are in the sample or specimen s
+          local vicinity and which you believe have significant causal influences
+          on your sample or specimen. We recommend using EnvO terms which are of smaller
+          spatial grain than your entry for env_broad_scale. Terms, such as anatomical
+          sites, from other OBO Library ontologies which interoperate with EnvO (e.g.
+          UBERON) are accepted in this field
+        title: local environmental context
+      env_medium:
+        description: The environmental material(s) immediately surrounding the sample
+          or specimen at the time of sampling. We recommend using subclasses of 'environmental
+          material', ENVO_00010483. Terms from other OBO ontologies are permissible
+          as long as they reference mass/volume nouns (e.g. air, water, blood) and
+          not discrete, countable entities (e.g. a tree, a leaf, a table top)
+        title: environmental medium
+  MixsEnvironmentEnum:
+    description: MIxS environmental context labels
+    permissible_values:
+      Agriculture:
+        description: A collection of terms appropriate when sequencing samples obtained
+          in an agricultural environment.  Suitable to capture metadata appropriate
+          to enhance crop productivity and agroecosystem health  with the aim to facilitate
+          research of agricultural microbiomes and their relationships to plant productivity  and
+          sustainable crop production from diverse crop management contexts.
+        annotations:
+          use_cases: Agricultural Microbiomes Research Coordination Network, model cropping
+            and plant systems focused on agricultural plant and soil microbe; microbiome
+            studies in agricultural sites; long-term ecological research in croplands;
+            eDNA in manure samples; describing agricultural microbiome studies
+        title: agriculture
+      Air:
+        description: A collection of terms appropriate when collecting and sequencing
+          samples obtained from a gaseous environment.
+        annotations:
+          use_cases: bioaerosol samples, pathogen load in urban air, aerosols
+        title: air
+      BuiltEnvironment:
+        description: A collection of terms appropriate when collecting samples and
+          sequencing samples obtained in the  built-up environment, which includes
+          terms for surface material, humidity, temperature, moisture and  occupancy
+          type along with specific metadata terms describing the indoor air, building
+          and sample properties.
+        annotations:
+          use_cases: microbiology studies of the built environment, NASA space station
+            sampling, MetaSUB transit system sampling, home, hospitals, office buildings
+        title: built environment
+      FoodAnimalAndAnimalFeed:
+        description: A collection of terms appropriate when collecting samples and
+          performing sequencing of samples  obtained from farm animals and their feed.
+        annotations:
+          use_cases: Microbiome of farm animals, their feed, and pet food.
+        title: food-animal and animal feed
+      FoodFarmEnvironment:
+        description: A collection of terms appropriate when collecting samples and
+          performing sequencing of samples  obtained from the farm environment
+        annotations:
+          use_cases: Microbiome of farm and field crops as well as environmental samples
+            including irrigation, soil amendments, and farm equipment.
+        title: food-farm environment
+      FoodFoodProductionFacility:
+        description: A collection of terms appropriate when collecting samples and
+          performing sequencing of samples  obtained from food production facilities.
+        annotations:
+          use_cases: Microbiome of food production facilities/factories
+        title: food-food production facility
+      FoodHumanFoods:
+        description: A collection of terms appropriate when collecting samples and
+          performing sequencing of samples  obtained from human food products.
+        annotations:
+          use_cases: Microbiome of foods intended for human consumption.
+        title: food-human foods
+      HostAssociated:
+        description: A collection of terms appropriate when collecting samples and
+          sequencing samples  obtained from a non-human host, to examine the host-associated
+          microbiome or genome.
+        annotations:
+          use_cases: elephant fecal matter or cat oral cavity
+        title: host-associated
+      HumanAssociated:
+        description: A collection of terms appropriate when collecting samples and
+          sequencing samples  obtained from a person to examine their human-associated
+          microbiome or genome,  that does not have a specific extension (e.g., skin,
+          gut, vaginal).
+        annotations:
+          use_cases: blood samples or biopsy samples.
+        title: human-associated
+      HumanGut:
+        description: A collection of terms appropriate when collecting samples and
+          sequencing samples  obtained from a person to examine their gut-associated
+          microbiome.
+        annotations:
+          use_cases: human stool or fecal samples, or samples collected directly from
+            the gut.
+        title: human-gut
+      HumanOral:
+        description: A collection of terms appropriate when collecting samples and
+          sequencing samples  obtained from a person to examine their oral-associated
+          microbiome.
+        annotations:
+          use_cases: mouth swab sampling, dental microbiome samples, microbiome of oral
+            swabs, nasal, mouth, throat, teeth, tongue microbiome studies
+        title: human-oral
+      HumanSkin:
+        description: A collection of terms appropriate when collecting samples and
+          sequencing samples  obtained from a person to examine their skin-associated
+          microbiome.
+        annotations:
+          use_cases: swab samples taken on a person’s skin surface.
+        title: human-skin
+      HumanVaginal:
+        description: A collection of terms appropriate when collecting samples and
+          sequencing samples  obtained from a person to examine their vaginal-associated
+          microbiome.
+        annotations:
+          use_cases: vaginal swabbing
+        title: human-vaginal
+      HydrocarbonResourcesCores:
+        description: A collection of terms appropriate when collecting samples and
+          sequencing samples  obtained from environments pertaining to hydrocarbon
+          resources, specifically core samples.
+        annotations:
+          use_cases: The microbial characterization of hydrocarbon occurrences, defined
+            as the natural and artificial environmental features that are rich in
+            hydrocarbons, from hydrocarbon rich formations, such as reservoir cores.
+        title: hydrocarbon resources-cores
+      HydrocarbonResourcesFluidsSwabs:
+        description: A collection of terms appropriate when collecting samples and
+          sequencing samples  obtained from environments pertaining to hydrocarbon
+          resources, specifically run-off liquids samples and swabs.
+        annotations:
+          use_cases: The microbial characterization of hydrocarbon occurrences,  defined
+            as the natural and artificial environmental features that are rich in
+            hydrocarbons, from hydrocarbon resource fluids.
+        title: hydrocarbon resources-fluids/swabs
+      MicrobialMatBiofilm:
+        description: A collection of terms appropriate when collecting samples and
+          sequencing samples  obtained from biofilm environments including microbial
+          mats.
+        annotations:
+          use_cases: samples from microbial mats at cold seeps
+        title: microbial mat/biofilm
+      MiscellaneousNaturalOrArtificialEnvironment:
+        description: A collection of generic terms appropriate when collecting and
+          sequencing samples  obtained from environments, where there is no specific
+          extension already available.
+        title: miscellaneous natural or artificial environment
+      PlantAssociated:
+        description: A collection of terms appropriate when collecting samples and
+          sequencing samples  obtained from a plant to examine it’s plant-associated
+          microbiome.
+        annotations:
+          use_cases: plant surface swabs, root soil or rhizosphere, cultivated plants,
+            plant phenotyping
+        title: plant-associated
+      Sediment:
+        description: A collection of terms appropriate when collecting samples and
+          sequencing samples  obtained from the sedimentary area of aquatic environments.
+        annotations:
+          use_cases: river bed or sea floor.
+        title: sediment
+      Soil:
+        description: A collection of terms appropriate when collecting samples and
+          sequencing samples  obtained from the uppermost layer of Earth's crust,
+          contributed by the Terragenome Consortium.
+        annotations:
+          use_cases: soil collection, island microbiome sampling, farm land or forest
+            floor.
+        title: soil
+      SymbiontAssociated:
+        description: A collection of terms appropriate when collecting samples and
+          sequencing samples  obtained from an organism that lives in close association
+          with any other organism(s).
+        annotations:
+          use_cases: the microbiome sequence of a flea sampled from a farm animal
+        title: symbiont-associated
+      WastewaterSludge:
+        description: A collection of terms appropriate when collecting samples and
+          sequencing samples  obtained from any solid, semisolid or liquid waste.
+        annotations:
+          use_cases: sewerage or industrial wastewater
+        title: wastewater/sludge
+      Water:
+        description: A collection of terms appropriate when collecting samples and
+          sequencing water samples  obtained from any aquatic environment.
+        annotations:
+          use_cases: sea or river water, global ocean sampling day
+        title: water
+  AgentEnum:
+    description: The human, LLM, etc. who performed this mapping
+    permissible_values:
+      Mark Andrew Miller:
+        meaning: https://orcid.org/0000-0001-9076-6066
+      Montana Smith:
+        meaning: https://orcid.org/0000-0002-8683-0050
+      gpt-4-turbo-preview:
+        see_also:
+          - https://artificialanalysis.ai/models/gpt-4-turbo
+      gemini-1.5-pro-latest:
+        see_also:
+          - https://artificialanalysis.ai/models/gemini-1-5-pro
+      claude-3-opus-20240229:
+        see_also:
+          - https://artificialanalysis.ai/models/claude-3-opus
+slots:
+  agent:
+    description: The human, LLM, etc. who performed this mapping
+    examples:
+      - value: Mark Andrew Miller
+      - value: claude-3-opus-20240229
+    range: AgentEnum
+    required: true
+  comment_body:
+    description: Some text about the circumstances of a mapping
+    examples:
+      - value: I had to keep encouraging the LLM to complete this mapping
+      - value: Initially the mapping only included stream water
+    range: string
+    required: true
+  comments:
+    multivalued: true
+    range: Comment
+  confidence:
+    description: A number between 0 and 1, where 1 is complete confidence that the
+      mapping is correct and 0 is complete confidence that the mapping is incorrect
+    range: float
+    required: true
+  environment_mappings:
+    description: MIxS environmental context mappings
+    multivalued: true
+    range: MixsExtensionMapping
+    required: true
+  mapping_batches:
+    multivalued: true
+    range: MappingBatch
+    required: true
+  mixs_context_label:
+    description: Label of the MIxS environmental context
+    range: MixsContextEnum
+    required: true
+  mixs_context_mappings:
+    description: MIxS environmental context mappings
+    multivalued: true
+    range: MixsContext
+    required: true
+  mixs_environment_label:
+    description: Label of the MIxS environmental context
+    range: MixsEnvironmentEnum
+    required: true
+  ontology_term_id:
+    description: The ID of an ontology term. Must always come from an input data file.
+      In this context, we use the right-hand most part of the term's IRI, with no
+      prefix and using an underscore as a separator, not a colon.
+    examples:
+      - value: ENVO_01000249
+      - value: ENVO_04000007
+    range: string
+    required: true
+  ontology_term_label:
+    description: The label of an ontology term. The paring of the ontology_term_id
+      and ontology_term_label must always match the input data file.
+    examples:
+      - value: urban biome
+      - value: lake water
+    range: string
+    required: true
+  ontology_terms:
+    description: Ontology terms
+    multivalued: true
+    range: OntologyTerm
+    required: true
+  timestamp:
+    description: An ISO 8601 formatted representation of when the mapping was made
+    examples:
+      - value: '2022-03-01T12:00:00Z'
+    range: string
+    required: true
+classes:
+  MappingsRoot:
+    tree_root: true
+    slots:
+      - mixs_context_mappings
+  MixsContext:
+    slots:
+      - mixs_context_label
+      - environment_mappings
+  MixsEnvironment:
+    slots:
+      - mixs_environment_label
+      - mapping_batches
+  MappingBatch:
+    slots:
+      - agent
+      - timestamp
+      - comments
+      - ontology_terms
+  OntologyTerm:
+    slots:
+      - ontology_term_id
+      - ontology_term_label
+      - confidence
+      - comments
+  Comment:
+    slots:
+      - agent
+      - timestamp
+      - comment_body

@@ -1,0 +1,520 @@
+mixs_context_mappings:
+  - mixs_context_label: env_broad_scale
+    environment_mappings:
+      - mixs_environment_label: Soil
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T12:15:01.461Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000179
+                ontology_term_label: desert biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000180
+                ontology_term_label: tundra biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000176
+                ontology_term_label: shrubland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000177
+                ontology_term_label: grassland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000245
+                ontology_term_label: cropland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000247
+                ontology_term_label: rangeland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000202
+                ontology_term_label: temperate broadleaf forest biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: High confidence due to the typical presence of well-developed soil ecosystems, but allowing for slight uncertainty due to potential variations in specific forest types or environmental conditions.
+              - ontology_term_id: ENVO_01000200
+                ontology_term_label: tropical broadleaf forest biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: High confidence due to the generally rich soil environments in these forests, but accounting for possible exceptions like flooded forests or unique soil conditions.
+              - ontology_term_id: ENVO_01000221
+                ontology_term_label: temperate woodland biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate to high confidence due to the typical presence of soil environments, but acknowledging potential variations in soil characteristics or specific woodland types.
+              - ontology_term_id: ENVO_01000220
+                ontology_term_label: tropical woodland biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate to high confidence due to the general association with soil environments, but allowing for potential exceptions or unique soil conditions in certain tropical woodland types.
+              - ontology_term_id: ENVO_01000181
+                ontology_term_label: mangrove biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence due to the presence of unique intertidal soil conditions, which may differ significantly from typical terrestrial soil environments.
+              - ontology_term_id: ENVO_01000219
+                ontology_term_label: anthropogenic terrestrial biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence due to the wide range of environments encompassed, with varying degrees of soil interaction depending on specific land use practices and human modifications.
+              - ontology_term_id: ENVO_01001831
+                ontology_term_label: temperate biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence as temperate biomes generally include forests, grasslands, and shrublands associated with soil, but acknowledging potential exceptions or subregions with minimal soil interaction.
+              - ontology_term_id: ENVO_01001830
+                ontology_term_label: tropical biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence due to the frequent presence of soil environments in rainforests, savannas, and grasslands, but considering possible exceptions or subregions with limited soil interaction.
+              - ontology_term_id: ENVO_01001832
+                ontology_term_label: subtropical biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence as subtropical biomes encompass diverse environments like forests, grasslands, and deserts, many involving soil, but acknowledging potential exceptions or subregions with limited soil interaction.
+              - ontology_term_id: ENVO_01001836
+                ontology_term_label: montane biome
+                confidence: 0.6
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence due to the presence of soil environments in various ecosystems at higher elevations, but considering potential limitations in rocky areas or regions with sparse vegetation.
+              - ontology_term_id: ENVO_01000339
+                ontology_term_label: polar biome
+                confidence: 0.6
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence as soil environments exist in tundra regions within polar biomes, but acknowledging limitations due to areas with permanent ice or snow cover.
+              - ontology_term_id: ENVO_01001834
+                ontology_term_label: subpolar biome
+                confidence: 0.6
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence due to the general presence of soil environments in boreal forests and taiga, but considering potential limitations in specific conditions or subregions.
+              - ontology_term_id: ENVO_01001837
+                ontology_term_label: subalpine biome
+                confidence: 0.6
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence as subalpine biomes often include forests, meadows, and shrublands with soil environments, but acknowledging potential limitations in rocky areas or regions with sparse vegetation.
+              - ontology_term_id: ENVO_01001838
+                ontology_term_label: arid biome
+                confidence: 0.6
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence as arid biomes typically have soil environments, but recognizing potential variations in soil types and conditions depending on the specific arid ecosystem and moisture levels.
+              - ontology_term_id: ENVO_01000246
+                ontology_term_label: village biome
+                confidence: 0.6
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence as village biomes involve soil interaction due to human settlements and agricultural activities, but acknowledging variability depending on land use practices and infrastructure.
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T13:27:34.044Z
+            comments:
+              - agent: Mark Andrew Miller
+                timestamp: 2024-05-02T13:29:03.780Z
+                comment_body: Encouraged finer grained scoring, more targets comments, inclusion of super classes even if they seem redundant
+            ontology_terms:
+              - ontology_term_id: ENVO_01000179
+                ontology_term_label: desert biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000180
+                ontology_term_label: tundra biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000176
+                ontology_term_label: shrubland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000177
+                ontology_term_label: grassland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000245
+                ontology_term_label: cropland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000247
+                ontology_term_label: rangeland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000202
+                ontology_term_label: temperate broadleaf forest biome
+                confidence: 0.9
+              - ontology_term_id: ENVO_01000200
+                ontology_term_label: tropical broadleaf forest biome
+                confidence: 0.9
+              - ontology_term_id: ENVO_01000221
+                ontology_term_label: temperate woodland biome
+                confidence: 0.8
+              - ontology_term_id: ENVO_01000220
+                ontology_term_label: tropical woodland biome
+                confidence: 0.8
+              - ontology_term_id: ENVO_01000181
+                ontology_term_label: mangrove biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T13:27:34.044Z
+                    comment_body: Mangrove biomes exist in intertidal zones with unique soil conditions that are periodically submerged by water, which may not fully align with typical soil environments.
+              - ontology_term_id: ENVO_01000219
+                ontology_term_label: anthropogenic terrestrial biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T13:27:34.044Z
+                    comment_body: The compatibility with the Soil extension varies significantly within this category depending on the specific type of anthropogenic environment and the degree of soil interaction.
+              - ontology_term_id: ENVO_01001831
+                ontology_term_label: temperate biome
+                confidence: 0.7
+              - ontology_term_id: ENVO_01001830
+                ontology_term_label: tropical biome
+                confidence: 0.7
+              - ontology_term_id: ENVO_01001832
+                ontology_term_label: subtropical biome
+                confidence: 0.7
+              - ontology_term_id: ENVO_01001836
+                ontology_term_label: montane biome
+                confidence: 0.6
+              - ontology_term_id: ENVO_01000339
+                ontology_term_label: polar biome
+                confidence: 0.6
+              - ontology_term_id: ENVO_01001834
+                ontology_term_label: subpolar biome
+                confidence: 0.6
+              - ontology_term_id: ENVO_01001837
+                ontology_term_label: subalpine biome
+                confidence: 0.6
+              - ontology_term_id: ENVO_01001838
+                ontology_term_label: arid biome
+                confidence: 0.6
+              - ontology_term_id: ENVO_01000246
+                ontology_term_label: village biome
+                confidence: 0.6
+      - mixs_environment_label: Water
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T12:15:01.461Z
+            ontology_terms:
+              - ontology_term_id: ENVO_00002030
+                ontology_term_label: aquatic biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_00000447
+                ontology_term_label: marine biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000048
+                ontology_term_label: ocean biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000046
+                ontology_term_label: marginal sea biome
+                confidence: 0.9
+              - ontology_term_id: ENVO_01000047
+                ontology_term_label: mediterranean sea biome
+                confidence: 0.9
+              - ontology_term_id: ENVO_01000023
+                ontology_term_label: marine pelagic biome
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000873
+                ontology_term_label: freshwater biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000253
+                ontology_term_label: freshwater river biome
+                confidence: 0.9
+              - ontology_term_id: ENVO_01000252
+                ontology_term_label: freshwater lake biome
+                confidence: 1.0
+      - mixs_environment_label: Agriculture
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T13:51:11.538Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000219
+                ontology_term_label: anthropogenic terrestrial biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T13:51:11.538Z
+                    comment_body: High confidence due to the inclusion of agricultural environments within this category, but allowing for some uncertainty as it also encompasses non-agricultural anthropogenic biomes.
+              - ontology_term_id: ENVO_01000245
+                ontology_term_label: cropland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000247
+                ontology_term_label: rangeland biome
+                confidence: 1.0
+      - mixs_environment_label: BuiltEnvironment
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T13:51:11.538Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000219
+                ontology_term_label: anthropogenic terrestrial biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T13:51:11.538Z
+                    comment_body: High confidence as built environments fall under anthropogenic influences, but acknowledging the inclusion of non-built environments within this category.
+              - ontology_term_id: ENVO_01000248
+                ontology_term_label: dense settlement biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T13:51:11.538Z
+                    comment_body: High confidence due to the relevance of dense human settlements to built environments, but allowing for some uncertainty as not all dense settlements are extensively built-up.
+              - ontology_term_id: ENVO_01000249
+                ontology_term_label: urban biome
+                confidence: 1.0
+      - mixs_environment_label: HydrocarbonResourcesFluidsSwabs
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T13:51:11.538Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000219
+                ontology_term_label: anthropogenic terrestrial biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T13:51:11.538Z
+                    comment_body: Moderate confidence due to the potential presence of hydrocarbon resource extraction activities within anthropogenic terrestrial biomes, but acknowledging the broad scope of this category and the possibility of environments without hydrocarbon resources.
+      - mixs_environment_label: HydrocarbonResourcesFluidsSwabs
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            comments:
+              - agent: Mark Andrew Miller
+                timestamp: 2024-05-02T14:03:10.182Z
+                comment_body: please include the "may be relevant" biomes, emphasizing where fluid hydrocarbons may be found, more so than biomes that might be affected by spills or runoff.
+            ontology_terms:
+              - ontology_term_id: ENVO_01000219
+                ontology_term_label: anthropogenic terrestrial biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence due to the frequent presence of hydrocarbon resource extraction activities within anthropogenic terrestrial biomes, but acknowledging the possibility of environments without hydrocarbon resources.
+              - ontology_term_id: ENVO_00000447
+                ontology_term_label: marine biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence as offshore oil and gas extraction occurs within marine environments, leading to the presence of fluid hydrocarbons in these areas.
+              - ontology_term_id: ENVO_00000873
+                ontology_term_label: freshwater biome
+                confidence: 0.6
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence due to the possibility of hydrocarbon extraction activities occurring near freshwater bodies, leading to the presence of fluid hydrocarbons in certain freshwater environments.
+              - ontology_term_id: ENVO_01000180
+                ontology_term_label: tundra biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence as oil and gas exploration and extraction occur in Arctic tundra regions, leading to the presence of fluid hydrocarbons in these areas.
+              - ontology_term_id: ENVO_01000179
+                ontology_term_label: desert biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence as many arid and desert regions are rich in hydrocarbon resources and extraction activities, leading to the presence of fluid hydrocarbons in these environments.
+      - mixs_environment_label: HydrocarbonResourcesCores
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000219
+                ontology_term_label: anthropogenic terrestrial biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence due to the association of hydrocarbon resource extraction activities, including core sampling, with anthropogenic terrestrial biomes, but acknowledging the possibility of environments without hydrocarbon resources.
+              - ontology_term_id: ENVO_00000447
+                ontology_term_label: marine biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence as offshore oil and gas exploration involves core sampling within marine environments.
+              - ontology_term_id: ENVO_01000180
+                ontology_term_label: tundra biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence due to the presence of oil and gas exploration and core sampling activities in Arctic tundra regions.
+              - ontology_term_id: ENVO_01000179
+                ontology_term_label: desert biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence as many arid and desert regions contain hydrocarbon resources and undergo exploration involving core sampling.
+      - mixs_environment_label: MicrobialMatBiofilm
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_00002030
+                ontology_term_label: aquatic biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as microbial mats and biofilms are frequently found in aquatic environments, but acknowledging the possibility of their occurrence in non-aquatic settings.
+              - ontology_term_id: ENVO_00000447
+                ontology_term_label: marine biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence due to the prevalence of microbial mats and biofilms in marine ecosystems, but considering potential variations in their distribution and abundance.
+              - ontology_term_id: ENVO_00000873
+                ontology_term_label: freshwater biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence as microbial mats and biofilms can occur in various freshwater environments, but acknowledging potential variations in their prevalence and specific habitat preferences.
+      - mixs_environment_label: MiscellaneousNaturalOrArtificialEnvironment
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000219
+                ontology_term_label: anthropogenic terrestrial biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as this extension is designed for miscellaneous environments, which often fall under anthropogenic influences, but acknowledging the inclusion of natural environments within this category.
+              - ontology_term_id: ENVO_00000446
+                ontology_term_label: terrestrial biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as this extension encompasses miscellaneous environments, including terrestrial ones, but considering the possibility of aquatic or other non-terrestrial environments.
+              - ontology_term_id: ENVO_00002030
+                ontology_term_label: aquatic biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence due to the possibility of miscellaneous environments occurring in aquatic settings, but acknowledging the broader scope of this extension beyond aquatic biomes.
+      - mixs_environment_label: PlantAssociated
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000174
+                ontology_term_label: forest biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as plant-associated environments are commonly found within forest biomes, but allowing for some uncertainty due to potential exceptions or variations in specific forest types.
+              - ontology_term_id: ENVO_01000175
+                ontology_term_label: woodland biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence due to the frequent presence of plant-associated environments in woodland biomes, but acknowledging potential variations in plant communities and soil conditions.
+              - ontology_term_id: ENVO_01000176
+                ontology_term_label: shrubland biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as shrubland biomes typically involve plant-associated environments, but allowing for some uncertainty due to potential variations in shrub types and densities.
+              - ontology_term_id: ENVO_01000177
+                ontology_term_label: grassland biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as grassland biomes often include plant-associated environments, but acknowledging potential variations in grass types and the presence of other vegetation.
+              - ontology_term_id: ENVO_01000181
+                ontology_term_label: mangrove biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate to high confidence as mangrove biomes are characterized by specific plant communities, but acknowledging the unique intertidal conditions and potential variations in mangrove species.
+      - mixs_environment_label: Sediment
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_00002030
+                ontology_term_label: aquatic biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as sediments are typically associated with aquatic environments, but allowing for some uncertainty as not all aquatic biomes have significant sediment deposition.
+              - ontology_term_id: ENVO_00000447
+                ontology_term_label: marine biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence due to the presence of sediments in various marine ecosystems, but acknowledging potential variations in sediment types and distribution across different marine zones.
+              - ontology_term_id: ENVO_00000873
+                ontology_term_label: freshwater biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate to high confidence as sediments are found in many freshwater environments, but considering potential variations in sediment deposition and the influence of water flow and currents.
+
+# for env_broad_scale from gemini 1.5 pro on the morning of 2024-05-02
+# Completed:
+# BuiltEnvironment
+# HydrocarbonResourcesCores
+# HydrocarbonResourcesFluidsSwabs
+# MicrobialMatBiofilm
+# MiscellaneousNaturalOrArtificialEnvironment
+# PlantAssociated
+# Sediment
+# Soil
+# Water
+#
+#Completed despite absence of template:
+# Agriculture
+#
+#Skipped not advertised:
+# FoodAnimalAndAnimalFeed
+# FoodFarmEnvironment
+# FoodFoodProductionFacility
+# FoodHumanFoods
+#
+#Skipped pending template:
+# HumanAssociated
+# HumanGut
+# HumanOral
+# HumanSkin
+# HumanVaginal
+#
+#Unfulfilled:
+# Air
+# HostAssociated
