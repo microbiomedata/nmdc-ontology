@@ -252,6 +252,104 @@ local/mixs-extensions-schemasheets-template.csv: local/mixs-extensions-schemashe
 	$(RUN) in2csv --format csv --tabs $< > $@ # from csvtoolkit
 ```
 
+### don't forget to ask about unmappeds
+
+
+## Examples of asking the LLM to keep a categorized status report
+### env_broad_scale from gemini 1.5 pro on the morning of 2024-05-02
+* Completed:
+  * BuiltEnvironment
+  * HydrocarbonResourcesCores
+  * HydrocarbonResourcesFluidsSwabs
+  * MicrobialMatBiofilm
+  * MiscellaneousNaturalOrArtificialEnvironment
+  * PlantAssociated
+  * Sediment
+  * Soil
+  * Water
+* Completed despite absence of template:
+  * Agriculture
+* Skipped not advertised:
+  * FoodAnimalAndAnimalFeed
+  * FoodFarmEnvironment
+  * FoodFoodProductionFacility
+  * FoodHumanFoods
+  * Skipped pending template:
+* HumanAssociated
+  * HumanGut
+  * HumanOral
+  * HumanSkin
+  * HumanVaginal
+  * Unfulfilled:
+  * Air
+  * HostAssociated
+
+### env_medium from gemini 1.5 pro on the morning of 2024-05-02
+* Completed:
+  * Air
+  * BuiltEnvironment
+  * HostAssociated
+  * HydrocarbonResourcesCores
+  * HydrocarbonResourcesFluidsSwabs
+  * MicrobialMatBiofilm
+  * MiscellaneousNaturalOrArtificialEnvironment
+  * PlantAssociated
+  * Sediment
+  * Soil
+  * Water
+* Completed despite absence of template:
+  * Agriculture
+* Pending:
+  * None
+* Skipped not advertised:
+  * FoodAnimalAndAnimalFeed
+  * FoodFarmEnvironment
+  * FoodFoodProductionFacility
+  * FoodHumanFoods
+* Skipped pending template:
+  * HumanAssociated
+  * HumanGut
+  * HumanOral
+  * HumanSkin
+  * HumanVaginal
+* Unfulfilled:
+  * None
+
+----
+
+## Pre-subsetting for non-host-associated env_local_scale values
+
+### Exclude
+* occurrent BFO:0000003 (~553 processes, ~11 temporal regions)
+* generically dependent continuant BFO:0000031 (~13 ICEs)
+* specifically dependent continuant BFO:0000020 (~716 BFO qualities, PATO qualities and realizable entities 
+
+which basically leaves independent continuant BFO:0000004
+  
+### limited applicability
+* anatomical entity UBERON:0001062
+* immaterial entity BFO:0000141
+  * continuant fiat boundary BFO:0000140
+  * site BFO:0000029
+    * except MAYBE for cave entrance ENVO:00000102, shoreline ENVO:00000486 and two dimensional flat water ice surface ENVO:01001545
+  * spatial region BFO:0000006
+
+which basically leaves material entity BFO:0000040
+
+### Keep 
+* astronomical body part ENVO:01000813
+* construction ENVO:01001813
+* fiat object BFO:0000024
+* layer ENVO:01000281
+* manufactured product ENVO:00003074
+* system RO:0002577
+
+### limited cases
+* material anatomical entity UBERON:0000465
+
+
+----
+
 ## Extract *noisy* examples from the relational biosample database
 
 Could be more rough input for the kinds of vales that we should be able to support

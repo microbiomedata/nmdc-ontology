@@ -340,3 +340,14 @@ local/mixs-extensions-schemasheets-template.tsv: local/mixs-schemasheets-templat
 
 local/mixs-extensions-schemasheets-template.csv: local/mixs-extensions-schemasheets-template.tsv
 	$(RUN) in2csv --format csv --tabs $< > $@
+
+#local/envo_subset_non_host_env_local_scale.ttl: downloads/envo.owl local/envo_subset_non_host_env_local_scale_term_list.txt # 12.4 k T
+#	robot extract --method BOT \
+#		--input $(word 1,$^) \
+#		--term-file $(word 2,$^) \
+#		--output $@
+
+assets/envo_subset_non_host_env_local_scale.tsv: downloads/envo.owl # slower than GraphDB
+	robot query \
+		--input $< \
+		--query $(subst .tsv,.rq,$@) $@

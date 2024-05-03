@@ -3,6 +3,8 @@ id: https://examples.com/mixs_context_subsets_schema
 prefixes:
   linkml: https://w3id.org/linkml/
   mappings: https://examples.com/mixs_context_subsets/
+imports:
+  - linkml:types
 default_prefix: mappings
 enums:
   MixsContextEnum:
@@ -227,6 +229,7 @@ slots:
       - value: Mark Andrew Miller
       - value: claude-3-opus-20240229
     range: AgentEnum
+    #    range: string
     required: true
   comment_body:
     description: Some text about the circumstances of a mapping
@@ -237,6 +240,7 @@ slots:
     required: true
   comments:
     multivalued: true
+    inlined_as_list: true
     range: Comment
   confidence:
     description: A number between 0 and 1, where 1 is complete confidence that the
@@ -246,24 +250,29 @@ slots:
   environment_mappings:
     description: MIxS environmental context mappings
     multivalued: true
-    range: MixsExtensionMapping
+    inlined_as_list: true
+    range: MixsEnvironment
     required: true
   mapping_batches:
     multivalued: true
+    inlined_as_list: true
     range: MappingBatch
     required: true
   mixs_context_label:
     description: Label of the MIxS environmental context
     range: MixsContextEnum
+    #    range: string
     required: true
   mixs_context_mappings:
     description: MIxS environmental context mappings
     multivalued: true
+    inlined_as_list: true
     range: MixsContext
     required: true
   mixs_environment_label:
     description: Label of the MIxS environmental context
     range: MixsEnvironmentEnum
+    #    range: string
     required: true
   ontology_term_id:
     description: The ID of an ontology term. Must always come from an input data file.
@@ -285,6 +294,7 @@ slots:
   ontology_terms:
     description: Ontology terms
     multivalued: true
+    inlined_as_list: true
     range: OntologyTerm
     required: true
   timestamp:

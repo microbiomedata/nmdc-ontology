@@ -1,0 +1,67 @@
+# biome obo:ENVO_00000428
+# environmental material obo:ENVO_00010483
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+select
+?class ?alternative_term ?comment ?definition ?editor_note ?has_broad_synonym ?has_exact_synonym ?has_narrow_synonym ?has_related_synonym ?hasSynonym ?in_subset ?label (GROUP_CONCAT(distinct ?super_slug;
+        SEPARATOR=", ") AS ?superclasses)
+where {
+    values ?super_super {
+        obo:ENVO_01000813 # ABP including beach sand, ecoregion, agricultural field, airport, village
+        obo:ENVO_01001813 # construction including beaver dam
+        obo:ENVO_0000024 # fiat object including area of barren land
+        obo:ENVO_01000281 # layer including mineral horizon
+        obo:ENVO_00003074 # manufactured product including chair
+        <http://purl.obolibrary.org/obo/RO_0002577> # system including public transit system
+    }
+    values ?minuses {
+        obo:ENVO_00000428 # biome
+        obo:ENVO_00010483 # environmental material
+        obo:FOODON_00002403
+    }
+    ?s rdfs:subClassOf+ ?super_super .
+    minus {
+        ?s rdfs:subClassOf* ?minuses
+    }
+    bind(replace(str(?s), "http://purl.obolibrary.org/obo/", "") as ?class)
+    optional {
+        ?s rdfs:subClassOf ?superclass .
+        filter(isiri(?superclass) = true)
+        bind(replace(str(?superclass), "http://purl.obolibrary.org/obo/", "") as ?super_slug)
+    }
+    optional {
+        ?s obo:IAO_0000115 ?definition .
+    }
+    optional {
+        ?s obo:IAO_0000116 ?editor_note .
+    }
+    optional {
+        ?s obo:IAO_0000118 ?alternative_term .
+    }
+    optional {
+        ?s oboInOwl:hasExactSynonym ?has_exact_synonym .
+    }
+    optional {
+        ?s oboInOwl:hasBroadSynonym ?has_broad_synonym .
+    }
+    optional {
+        ?s oboInOwl:hasNarrowSynonym ?has_narrow_synonym .
+    }
+    optional {
+        ?s oboInOwl:hasRelatedSynonym ?has_related_synonym .
+    }
+    optional {
+        ?s oboInOwl:hasSynonym ?hasSynonym .
+    }
+    optional {
+        ?s oboInOwl:inSubset ?in_subset .
+    }
+    optional {
+        ?s rdfs:comment ?comment .
+    }
+    optional {
+        ?s rdfs:label ?label .
+    }
+}
+group by ?class ?alternative_term ?comment ?definition ?editor_note ?has_broad_synonym ?has_exact_synonym ?has_narrow_synonym ?has_related_synonym ?hasSynonym ?in_subset ?label

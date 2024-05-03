@@ -486,35 +486,353 @@ mixs_context_mappings:
                   - agent: gemini-1.5-pro-latest
                     timestamp: 2024-05-02T14:03:10.182Z
                     comment_body: Moderate to high confidence as sediments are found in many freshwater environments, but considering potential variations in sediment deposition and the influence of water flow and currents.
-
-# for env_broad_scale from gemini 1.5 pro on the morning of 2024-05-02
-# Completed:
-# BuiltEnvironment
-# HydrocarbonResourcesCores
-# HydrocarbonResourcesFluidsSwabs
-# MicrobialMatBiofilm
-# MiscellaneousNaturalOrArtificialEnvironment
-# PlantAssociated
-# Sediment
-# Soil
-# Water
-#
-#Completed despite absence of template:
-# Agriculture
-#
-#Skipped not advertised:
-# FoodAnimalAndAnimalFeed
-# FoodFarmEnvironment
-# FoodFoodProductionFacility
-# FoodHumanFoods
-#
-#Skipped pending template:
-# HumanAssociated
-# HumanGut
-# HumanOral
-# HumanSkin
-# HumanVaginal
-#
-#Unfulfilled:
-# Air
-# HostAssociated
+  - mixs_context_label: env_medium
+    environment_mappings:
+      - mixs_environment_label: Soil
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            comments:
+              - agent: Mark Andrew Miller
+                timestamp: 2024-05-02T14:52:34.739Z
+                comment_body: we should include particulate matter that is likely to appear in in a sample collected from air.
+            ontology_terms:
+              - ontology_term_id: ENVO_00001998
+                ontology_term_label: soil
+                confidence: 1.0
+              - ontology_term_id: ENVO_00002871
+                ontology_term_label: alluvial soil
+                confidence: 0.9
+              - ontology_term_id: ENVO_00003082
+                ontology_term_label: enriched soil
+                confidence: 0.8
+              - ontology_term_id: ENVO_01001526
+                ontology_term_label: frozen soil
+                confidence: 0.9
+      - mixs_environment_label: Water
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_00002006
+                ontology_term_label: liquid water
+                confidence: 1.0
+              - ontology_term_id: ENVO_00002010
+                ontology_term_label: saline water
+                confidence: 0.9
+              - ontology_term_id: ENVO_00002011
+                ontology_term_label: fresh water
+                confidence: 0.9
+              - ontology_term_id: ENVO_00002019
+                ontology_term_label: brackish water
+                confidence: 0.8
+      - mixs_environment_label: Air
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000797
+                ontology_term_label: gaseous environmental material
+                confidence: 1.0
+              - ontology_term_id: ENVO_00010505
+                ontology_term_label: aerosol
+                confidence: 1.0
+              - ontology_term_id: ENVO_01001089
+                ontology_term_label: aerosolized solids
+                confidence: 0.9
+              - ontology_term_id: ENVO_01001088
+                ontology_term_label: aerosolized liquids
+                confidence: 0.8
+      - mixs_environment_label: HostAssociated
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            comments:
+              - agent: Mark Andrew Miller
+                timestamp: 2024-05-02T14:57:47.508Z
+                comment_body: This mapping/subsetting will requre more Uberon terms
+            ontology_terms:
+              - ontology_term_id: ENVO_02000019
+                ontology_term_label: bodily fluid material
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as bodily fluids are often the immediate medium surrounding samples from host-associated environments, but allowing for some uncertainty due to potential variations in sample types and collection methods.
+      - mixs_environment_label: BuiltEnvironment
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            comments:
+              - agent: Mark Andrew Miller
+                timestamp: 2024-05-02T15:07:45.318Z
+                comment_body: what about some of the solid environmental material ENVO_01000814 subclasses? ... i want to err on the side of inclusiveness. please include those and any releavnt subclasses of waste material ENVO_00002264 ... i would prefer if you picked among the subclasses of waste material more individually
+            ontology_terms:
+              - ontology_term_id: ENVO_0010001
+                ontology_term_label: anthropogenic environmental material
+                confidence: 0.9
+              - ontology_term_id: ENVO_01000814
+                ontology_term_label: solid environmental material
+                confidence: 0.8
+              - ontology_term_id: ENVO_01000458
+                ontology_term_label: concrete
+                confidence: 0.8
+              - ontology_term_id: ENVO_01000474
+                ontology_term_label: brick material
+                confidence: 0.8
+              - ontology_term_id: ENVO_01000476
+                ontology_term_label: plaster
+                confidence: 0.7
+              - ontology_term_id: ENVO_01000480
+                ontology_term_label: glass
+                confidence: 0.7
+              - ontology_term_id: ENVO_00002040
+                ontology_term_label: wood
+                confidence: 0.8
+              - ontology_term_id: ENVO_01001069
+                ontology_term_label: metal
+                confidence: 0.7
+              - ontology_term_id: ENVO_00002008
+                ontology_term_label: dust
+                confidence: 0.7
+              - ontology_term_id: ENVO_06105101
+                ontology_term_label: plastic
+                confidence: 0.7
+              - ontology_term_id: ENVO_00002001
+                ontology_term_label: waste water
+                confidence: 0.7
+              - ontology_term_id: ENVO_00002267
+                ontology_term_label: industrial waste material
+                confidence: 0.6
+              - ontology_term_id: ENVO_01000372
+                ontology_term_label: household waste material
+                confidence: 0.7
+      - mixs_environment_label: HydrocarbonResourcesCores
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_00001995
+                ontology_term_label: rock
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as hydrocarbon resource cores are typically composed of rock materials, but allowing for slight uncertainty as there might be cases with unconsolidated sediments or other materials.
+      - mixs_environment_label: HydrocarbonResourcesFluidsSwabs
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            comments:
+              - agent: Mark Andrew Miller
+                timestamp: 2024-05-02T15:12:19.204Z
+                comment_body: please use much more specific subclasses of fluid environmental material ENVO_02000140
+            ontology_terms:
+              - ontology_term_id: ENVO_2000045
+                ontology_term_label: hydrocarbon-based environmental material
+                confidence: 0.9
+              - ontology_term_id: ENVO_00002985
+                ontology_term_label: oil
+                confidence: 0.9
+              - ontology_term_id: ENVO_00002984
+                ontology_term_label: petroleum
+                confidence: 0.9
+              - ontology_term_id: ENVO_01001869
+                ontology_term_label: fracking liquid
+                confidence: 0.8
+      - mixs_environment_label: MicrobialMatBiofilm
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000156
+                ontology_term_label: biofilm material
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000157
+                ontology_term_label: microbial mat material
+                confidence: 1.0
+      - mixs_environment_label: MiscellaneousNaturalOrArtificialEnvironment
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_00010483
+                ontology_term_label: environmental material
+                confidence: 1.0
+      - mixs_environment_label: PlantAssociated
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01001121
+                ontology_term_label: plant matter
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as plant matter is often the immediate medium surrounding samples in plant-associated environments, but allowing for slight uncertainty as other materials like soil or water might also be relevant depending on the specific context.
+      - mixs_environment_label: Sediment
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_00002007
+                ontology_term_label: sediment
+                confidence: 1.0
+              - ontology_term_id: ENVO_00002045
+                ontology_term_label: anaerobic sediment
+                confidence: 0.9
+              - ontology_term_id: ENVO_03000033
+                ontology_term_label: marine sediment
+                confidence: 0.9
+      - mixs_environment_label: Agriculture
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            comments:
+              - agent: Mark Andrew Miller
+                timestamp: 2024-05-02T15:49:49.198Z
+                comment_body: what about any of these or any of their subclasses? animal litter, manure, nesting material, agricultural waste material, animal waste material, agricultural environmental material
+            ontology_terms:
+              - ontology_term_id: ENVO_00001998
+                ontology_term_label: soil
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as soil is a primary medium in agricultural environments, but allowing for slight uncertainty due to potential variations in agricultural practices and the use of other media like hydroponics.
+              - ontology_term_id: ENVO_00002191
+                ontology_term_label: animal litter
+                confidence: 0.8
+              - ontology_term_id: ENVO_03501300
+                ontology_term_label: manure
+                confidence: 0.9
+              - ontology_term_id: ENVO_02000004
+                ontology_term_label: nesting material
+                confidence: 0.7
+              - ontology_term_id: ENVO_01000371
+                ontology_term_label: agricultural waste material
+                confidence: 0.7
+              - ontology_term_id: ENVO_00002276
+                ontology_term_label: animal waste material
+                confidence: 0.7
+  - mixs_context_label: env_local_scale
+    environment_mappings:
+      - mixs_environment_label: Soil
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T16:01:09.807Z
+            comments:
+              - agent: Mark Andrew Miller
+                timestamp: 2024-05-02T16:01:09.807
+                comment_body: only a subset of these have been manually reviewed. ENVO:01001886 landform is probably a good anchor. Also 'human construction', 'environmental zone', 'environmental system', 'geographic feature'. Possibly 'hydrographic feature', 'island', 'roadside'
+            ontology_terms:
+              - ontology_term_id: ENVO_01001785
+                ontology_term_label: land
+                confidence: 0.9
+              - ontology_term_id: ENVO_01001886
+                ontology_term_label: landform
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000013
+                ontology_term_label: continent
+                confidence: 0.7
+                comments:
+                  - agent: Mark Andrew Miller
+                    timestamp: 2024-05-02T16:01:09.807
+                    comment_body: Hallucination. ENVO_00000013 is cave system
+              - ontology_term_id: ENVO_00000014
+                ontology_term_label: landmass
+                confidence: 0.8
+                comments:
+                  - agent: Mark Andrew Miller
+                    timestamp: 2024-05-02T16:01:09.807
+                    comment_body: Hallucination. ENVO_00000014 is cave system. landmass is ENVO_01001782
+              - ontology_term_id: ENVO_00000015
+                ontology_term_label: island
+                confidence: 0.8
+                comments:
+                  - agent: Mark Andrew Miller
+                    timestamp: 2024-05-02T16:01:09.807
+                    comment_body: Hallucination. ENVO_00000015 is ocean. island is ENVO_00000098
+              - ontology_term_id: ENVO_00000016
+                ontology_term_label: mountain
+                confidence: 0.7
+                comments:
+                  - agent: Mark Andrew Miller
+                    timestamp: 2024-05-02T16:01:09.807
+                    comment_body: Hallucination. ENVO_00000016 is sea. mountain is ENVO_00000081
+              - ontology_term_id: ENVO_00000017
+                ontology_term_label: peninsula
+                confidence: 0.8
+                comments:
+                  - agent: Mark Andrew Miller
+                    timestamp: 2024-05-02T16:01:09.807
+                    comment_body: Hallucination. ENVO_00000017 is saline hydrographic feature. peninsula is ENVO_00000305
+              - ontology_term_id: ENVO_00000018
+                ontology_term_label: isthmus
+                confidence: 0.8
+                comments:
+                  - agent: Mark Andrew Miller
+                    timestamp: 2024-05-02T16:01:09.807
+                    comment_body: Hallucination. there is no ENVO_00000018 entity. isthmus is ENVO_00000174
+              - ontology_term_id: ENVO_01000021
+                ontology_term_label: coastal zone
+                confidence: 0.7
+              - ontology_term_id: ENVO_01000020
+                ontology_term_label: intertidal zone
+                confidence: 0.6
+              - ontology_term_id: ENVO_01000434
+                ontology_term_label: plain
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000019
+                ontology_term_label: valley
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000054
+                ontology_term_label: hill
+                confidence: 0.8
+              - ontology_term_id: ENVO_01000449
+                ontology_term_label: plateau
+                confidence: 0.7
+              - ontology_term_id: ENVO_00000044
+                ontology_term_label: dune
+                confidence: 0.8
+              - ontology_term_id: ENVO_01000404
+                ontology_term_label: cliff face
+                confidence: 0.7
+              - ontology_term_id: ENVO_01000435
+                ontology_term_label: rock formation
+                confidence: 0.7
+      - mixs_environment_label: Water
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T16:01:09.807Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000813
+                ontology_term_label: water body
+                confidence: 0.9
+              - ontology_term_id: ENVO_01001788
+                ontology_term_label: hydroform
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000045
+                ontology_term_label: estuary
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000059
+                ontology_term_label: underground river
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000015
+                ontology_term_label: island
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T16:01:09.807Z
+                    comment_body: Moderate confidence as islands can influence local water conditions and currents, but acknowledging that they are not directly part of the water body itself.
+              - ontology_term_id: ENVO_00000017
+                ontology_term_label: peninsula
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T16:01:09.807Z
+                    comment_body: Moderate confidence as peninsulas can affect local water circulation and coastal processes, but recognizing that they are not directly within the water body.
+              - ontology_term_id: ENVO_01000021
+                ontology_term_label: coastal zone
+                confidence: 0.8
