@@ -1,0 +1,16 @@
+Agriculture:
+  - id: ENVO_01000247
+    label: rangeland biome
+BuiltEnvironment:
+  - id: ENVO_01000249
+    label: urban biome
+Soil:
+  - id: ENVO_01000179
+    label: desert biome
+  - id: ENVO_01000181
+    label: mangrove biome
+Water:
+  - id: ENVO_00002030
+    label: aquatic biome
+  - id: ENVO_01001369
+    label: tidal mangrove shrubland

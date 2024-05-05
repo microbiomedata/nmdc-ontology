@@ -1,0 +1,12 @@
+ENVO_00000428 biome
+ENVO_00000446 terrestrial biome
+ENVO_01000219 anthropogenic terrestrial biome
+ENVO_01000830 tropical biome
+ENVO_01001831 temperate biome
+ENVO_01001832 subtropical biome
+ENVO_01001833 mediterranean biome
+ENVO_01001834 subpolar biome
+ENVO_01001835 alpine biome
+ENVO_01001836 montane biome
+ENVO_01001837 subalpine biome
+ENVO_01001838 arid biome

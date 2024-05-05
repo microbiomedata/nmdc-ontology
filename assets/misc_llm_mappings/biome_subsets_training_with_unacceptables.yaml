@@ -1,0 +1,44 @@
+Agriculture:
+  - id: ENVO_01000247
+    label: rangeland biome
+    acceptable: true
+  - id: ENVO_01000245
+    label: cropland biome
+    acceptable: true
+  - id: ENVO_01000246
+    label: village biome
+    acceptable: true
+BuiltEnvironment:
+  - id: ENVO_01000249
+    label: urban biome
+    acceptable: true
+Soil:
+  - id: ENVO_01000179
+    label: desert biome
+    acceptable: true
+  - id: ENVO_12345678
+    label: desert biome
+    acceptable: false
+    reason: "desert biome is defined in the input, but ENVO_12345678 is not."
+  - id: ENVO_01000179
+    label: bellybutton biome
+    acceptable: false
+    reason: "ENVO_01000179 is defined in the input, but bellybutton biome is not."
+  - id: ENVO_01000179
+    label: tundra biome
+    acceptable: false
+    reason: "ENVO_01000179 and tundra biome are both defined in the input, but tundra biome is not the correct label for ENVO_01000179."
+  - id: ENVO_00002030
+    label: aquatic biome
+    acceptable: false
+    reason: "The Soil environment and an aquatic environment are disjoint."
+Air:
+  - id: ENVO_01000267
+    label: atmospheric dust
+    acceptable: false
+    reason: "This is unacceptable for several reasons. ENVO:01000267 is defined in the input but its label is atmosphere, not atmospheric dust. In fact, atmospheric dust is not defined in the input. Even if it were, atmospheric dust is not a biome."
+HumanVaginal:
+  - id: ENVO_02000065
+    label: vaginal lubrication fluid
+    acceptable: false
+    reason: "This is unacceptable for several reasons. Neither ENVO_02000065 nor vaginal lubrication fluid are  defined in the input Even if they were, vaginal lubrication fluid is not a biome."

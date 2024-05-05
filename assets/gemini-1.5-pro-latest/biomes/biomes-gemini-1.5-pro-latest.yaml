@@ -1,0 +1,336 @@
+context_mappings:
+  - mixs_context_label: env_broad_scale
+    environment_mappings:
+      - mixs_environment_label: Soil
+        onto_term_mappings:
+          - onto_term_id: ENVO_01000179
+            onto_term_label: desert biome
+          - onto_term_id: ENVO_01000180
+            onto_term_label: tundra biome
+          - onto_term_id: ENVO_01001831
+            onto_term_label: temperate biome
+          - onto_term_id: ENVO_01001830
+            onto_term_label: tropical biome
+          - onto_term_id: ENVO_01001832
+            onto_term_label: subtropical biome
+          - onto_term_id: ENVO_01001836
+            onto_term_label: montane biome
+          - onto_term_id: ENVO_01000339
+            onto_term_label: polar biome
+          - onto_term_id: ENVO_01001834
+            onto_term_label: subpolar biome
+          - onto_term_id: ENVO_01001835
+            onto_term_label: alpine biome
+          - onto_term_id: ENVO_01001837
+            onto_term_label: subalpine biome
+          - onto_term_id: ENVO_01001838
+            onto_term_label: arid biome
+          - onto_term_id: ENVO_01000174
+            onto_term_label: forest biome
+          - onto_term_id: ENVO_01000175
+            onto_term_label: woodland biome
+          - onto_term_id: ENVO_01000176
+            onto_term_label: shrubland biome
+          - onto_term_id: ENVO_01000177
+            onto_term_label: grassland biome
+          - onto_term_id: ENVO_01000181
+            onto_term_label: mangrove biome
+          - onto_term_id: ENVO_01000219
+            onto_term_label: anthropogenic terrestrial biome
+          - onto_term_id: ENVO_01000182
+            onto_term_label: temperate desert biome
+          - onto_term_id: ENVO_01000183
+            onto_term_label: tropical desert biome
+          - onto_term_id: ENVO_01000184
+            onto_term_label: subtropical desert biome
+          - onto_term_id: ENVO_01000185
+            onto_term_label: montane desert biome
+          - onto_term_id: ENVO_01000186
+            onto_term_label: polar desert biome
+          - onto_term_id: ENVO_01000189
+            onto_term_label: temperate savanna biome
+          - onto_term_id: ENVO_01000193
+            onto_term_label: temperate grassland biome
+          - onto_term_id: ENVO_01000202
+            onto_term_label: temperate broadleaf forest biome
+          - onto_term_id: ENVO_01000211
+            onto_term_label: temperate coniferous forest biome
+          - onto_term_id: ENVO_01000212
+            onto_term_label: temperate mixed forest biome
+          - onto_term_id: ENVO_01000215
+            onto_term_label: temperate shrubland biome
+          - onto_term_id: ENVO_01000221
+            onto_term_label: temperate woodland biome
+          - onto_term_id: ENVO_01000188
+            onto_term_label: tropical savanna biome
+          - onto_term_id: ENVO_01000192
+            onto_term_label: tropical grassland biome
+          - onto_term_id: ENVO_01000200
+            onto_term_label: tropical broadleaf forest biome
+          - onto_term_id: ENVO_01000210
+            onto_term_label: tropical coniferous forest biome
+          - onto_term_id: ENVO_01000214
+            onto_term_label: tropical shrubland biome
+          - onto_term_id: ENVO_01000220
+            onto_term_label: tropical woodland biome
+          - onto_term_id: ENVO_01001798
+            onto_term_label: tropical mixed forest biome
+          - onto_term_id: ENVO_01001833
+            onto_term_label: mediterranean biome
+          - onto_term_id: ENVO_01000187
+            onto_term_label: subtropical savanna biome
+          - onto_term_id: ENVO_01000191
+            onto_term_label: subtropical grassland biome
+          - onto_term_id: ENVO_01000201
+            onto_term_label: subtropical broadleaf forest biome
+          - onto_term_id: ENVO_01000222
+            onto_term_label: subtropical woodland biome
+          - onto_term_id: ENVO_01000209
+            onto_term_label: subtropical coniferous forest biome
+          - onto_term_id: ENVO_01000213
+            onto_term_label: subtropical shrubland biome
+          - onto_term_id: ENVO_01000194
+            onto_term_label: montane grassland biome
+          - onto_term_id: ENVO_01000216
+            onto_term_label: montane shrubland biome
+          - onto_term_id: ENVO_01000223
+            onto_term_label: montane savanna biome
+          - onto_term_id: ENVO_01000250
+            onto_term_label: subpolar coniferous forest biome
+          - onto_term_id: ENVO_01001505
+            onto_term_label: alpine tundra biome
+          - onto_term_id: ENVO_01000196
+            onto_term_label: coniferous forest biome
+          - onto_term_id: ENVO_01000197
+            onto_term_label: broadleaf forest biome
+          - onto_term_id: ENVO_01000198
+            onto_term_label: mixed forest biome
+          - onto_term_id: ENVO_01000199
+            onto_term_label: mediterranean forest biome
+          - onto_term_id: ENVO_01000178
+            onto_term_label: savanna biome
+          - onto_term_id: ENVO_01000218
+            onto_term_label: xeric shrubland biome
+          - onto_term_id: ENVO_01001369
+            onto_term_label: tidal mangrove shrubland
+          - onto_term_id: ENVO_01000195
+            onto_term_label: flooded grassland biome
+          - onto_term_id: ENVO_01000245
+            onto_term_label: cropland biome
+          - onto_term_id: ENVO_01000247
+            onto_term_label: rangeland biome
+          - onto_term_id: ENVO_01000227
+            onto_term_label: tropical dry broadleaf forest biome
+          - onto_term_id: ENVO_01000228
+            onto_term_label: tropical moist broadleaf forest biome
+          - onto_term_id: ENVO_01000208
+            onto_term_label: mediterranean woodland biome
+          - onto_term_id: ENVO_01000217
+            onto_term_label: mediterranean shrubland biome
+          - onto_term_id: ENVO_01000224
+            onto_term_label: mediterranean grassland biome
+          - onto_term_id: ENVO_01000229
+            onto_term_label: mediterranean savanna biome
+          - onto_term_id: ENVO_01000225
+            onto_term_label: subtropical dry broadleaf forest biome
+          - onto_term_id: ENVO_01000226
+            onto_term_label: subtropical moist broadleaf forest biome
+          - onto_term_id: ENVO_01000190
+            onto_term_label: flooded savanna biome
+          - onto_term_id: ENVO_00000893
+            onto_term_label: xeric basin biome
+          - onto_term_id: ENVO_01000246
+            onto_term_label: village biome
+            comment: this was added after MAM asked the LLM not to use any subclass/superclass reasoning of its own, and to only go by the assertions provided
+          - onto_term_id: ENVO_01000248
+            onto_term_label: dense settlement biome
+            comment: this was added after MAM asked the LLM not to use any subclass/superclass reasoning of its own, and to only go by the assertions provided
+          - onto_term_id: ENVO_01000249
+            onto_term_label: urban biome
+            comment: this was added after MAM asked the LLM not to use any subclass/superclass reasoning of its own, and to only go by the assertions provided
+  - mixs_environment_label: Water
+    onto_term_mappings:
+      - onto_term_label: aquatic biome
+        onto_term_id: ENVO_00002030
+        comment: 'Parent of both marine and freshwater biomes'
+      - onto_term_label: freshwater biome
+        onto_term_id: ENVO_00000873
+      - onto_term_label: marine biome
+        onto_term_id: ENVO_00000447
+  - mixs_environment_label: Agriculture
+    onto_term_mappings:
+      - onto_term_label: cropland biome
+        onto_term_id: ENVO_01000245
+      - onto_term_label: rangeland biome
+        onto_term_id: ENVO_01000247
+      - onto_term_label: village biome
+        onto_term_id: ENVO_01000246
+environment_mappings:
+  - mixs_environment_label: BuiltEnvironment
+    onto_term_mappings:
+      - onto_term_id: ENVO_01000249
+        onto_term_label: urban biome
+  - mixs_environment_label: FoodAnimalAndAnimalFeed
+    onto_term_mappings:
+      - onto_term_id: ENVO_01000247
+        onto_term_label: rangeland biome
+  - mixs_environment_label: FoodFarmEnvironment
+    onto_term_mappings:
+      - onto_term_label: cropland biome
+        onto_term_id: ENVO_01000245
+      - onto_term_label: rangeland biome
+        onto_term_id: ENVO_01000247
+  - mixs_environment_label: FoodFoodProductionFacility
+    onto_term_mappings:
+      - onto_term_id: ENVO_01000248
+        onto_term_label: dense settlement biome
+  - mixs_environment_label: MicrobialMatBiofilm
+    comment: initially the LLM didn't want to assign any biomes to this environment. I pushed and it came up with the following, with noted exceptions
+    onto_term_mappings:
+      - onto_term_id: ENVO_00000447
+        onto_term_label: marine biome
+      - onto_term_id: ENVO_00000873
+        onto_term_label: freshwater biome
+      - onto_term_id: ENVO_01000253
+        onto_term_label: freshwater river biome
+      - onto_term_id: ENVO_01000252
+        onto_term_label: freshwater lake biome
+      - onto_term_id: ENVO_01000047
+        onto_term_label: mediterranean sea biome
+      - onto_term_id: ENVO_01000020
+        onto_term_label: estuarine biome
+      - onto_term_id: ENVO_01000022
+        onto_term_label: marine salt marsh biome
+        comment: included in a second pass after I asked why mediterranean sea biome was included but this one wasn't
+  - mixs_environment_label: HydrocarbonResourcesFluidsSwabs
+    comment: This took a lot of convincing. THe LLM initially only included marine cold seep biome. I pressured it to include desert biome and other places where fluid hydrocarbons might be found.
+    onto_term_mappings:
+      - onto_term_id: ENVO_01000127
+        onto_term_label: marine cold seep biome
+      - onto_term_id: ENVO_00000447
+        onto_term_label: marine biome
+        comment: "This is a broad category that encompasses various marine environments where hydrocarbon seeps or oil spills might occur."
+      - onto_term_id: ENVO_01000024
+        onto_term_label: marine benthic biome
+        comment: "This specifically refers to the seafloor, where hydrocarbon seeps can be found."
+      - onto_term_id: ENVO_01000179
+        onto_term_label: desert biome
+      - onto_term_id: ENVO_01001838
+        onto_term_label: arid biome
+  - mixs_environment_label: HydrocarbonResourcesCores
+    onto_term_mappings:
+      - onto_term_id: ENVO_01000127
+        onto_term_label: marine cold seep biome
+      - onto_term_id: ENVO_00000447
+        onto_term_label: marine biome
+        comment: "This is a broad category that encompasses various marine environments where hydrocarbon seeps or oil spills might occur."
+      - onto_term_id: ENVO_01000024
+        onto_term_label: marine benthic biome
+        comment: "This specifically refers to the seafloor, where hydrocarbon seeps can be found."
+      - onto_term_id: ENVO_01000179
+        onto_term_label: desert biome
+      - onto_term_id: ENVO_01001838
+        onto_term_label: arid biome
+  - mixs_environment_label: WastewaterSludge
+    onto_term_mappings:
+      - comment: lots of arm twisting
+      - onto_term_id: ENVO_01000248
+        onto_term_label: dense settlement biome
+        comment: "This encompasses urban and industrial areas where wastewater treatment plants and sludge processing facilities are typically located."
+  - mixs_environment_label: SymbiontAssociated
+    onto_term_mappings:
+      - onto_term_id: ENVO_00002030
+        onto_term_label: aquatic biome
+      - onto_term_id: ENVO_00000446
+        onto_term_label: terrestrial biome
+      - onto_term_id: ENVO_00000873
+        onto_term_label: freshwater biome
+      - onto_term_id: ENVO_00000447
+        onto_term_label: marine biome
+    comment: "Symbionts can be found in association with hosts across virtually all biomes."
+  - mixs_environment_label: Sediment
+    comment: Initially it just wanted to include all aquatic environments and nothing else
+    onto_term_mappings:
+      - onto_term_id: ENVO_00000873
+        onto_term_label: freshwater biome
+        comment: "Freshwater environments like rivers, lakes, and wetlands often have substantial sediment deposition."
+      - onto_term_id: ENVO_01000253
+        onto_term_label: freshwater river biome
+      - onto_term_id: ENVO_01000252
+        onto_term_label: freshwater lake biome
+      - onto_term_id: ENVO_00000447
+        onto_term_label: marine biome
+        comment: "Marine environments, particularly coastal areas and regions with significant terrestrial runoff, can accumulate sediment."
+      - onto_term_id: ENVO_01000020
+        onto_term_label: estuarine biome
+        comment: "Estuaries are known for their sediment-rich environments due to the mixing of freshwater and saltwater."
+      - onto_term_id: ENVO_01000022
+        onto_term_label: marine salt marsh biome
+      - onto_term_id: ENVO_00000446
+        onto_term_label: terrestrial biome
+        comment: "Terrestrial environments, especially those prone to erosion or with historical deposition, can also have significant sediment layers."
+      - onto_term_id: ENVO_01000179
+        onto_term_label: desert biome
+  - mixs_environment_label: PlantAssociated
+    onto_term_mappings:
+      - onto_term_id: ENVO_00002030
+        onto_term_label: aquatic biome
+      - onto_term_id: ENVO_00000446
+        onto_term_label: terrestrial biome
+      - onto_term_id: ENVO_00000873
+        onto_term_label: freshwater biome
+      - onto_term_id: ENVO_00000447
+        onto_term_label: marine biome
+    comment: "Plants and their associated microbes can be found in virtually all biomes."
+  - mixs_environment_label: MiscellaneousNaturalOrArtificialEnvironment
+    onto_term_mappings:
+      - onto_term_id: ENVO_00002030
+        onto_term_label: aquatic biome
+      - onto_term_id: ENVO_00000446
+        onto_term_label: terrestrial biome
+      - onto_term_id: ENVO_00000873
+        onto_term_label: freshwater biome
+      - onto_term_id: ENVO_00000447
+        onto_term_label: marine biome
+    comment: "This MIxS environment is intended as a catch-all for situations where no other environment is applicable.  Therefore, it can apply to any biome."
+
+
+#  Based on the information I have provided, generate the most exhaustive possible mapping of EnvO biomes where the mixs_environment_label is Water and the mixs_context_label is env_broad_scale
+# You must follow the schema exactly
+# If you have reported a mapping for term X and X appears in the superclasses column for biome Y, then you don't need to report the mapping for biome Y.
+# Don't make any assumptions of your own regarding subclass/superclass relationships. Rely solely on the assertions I have provided.
+# Don't bother reporting unacceptable mappings. I just included some to help train you
+# Don't bother reporting that your mappings have an accepted value of true. I will take that for granted
+# Don't emit any introduction, commentary or summary outside the YAML format. You can add a comment at any level in the YAML file.
+
+# ## Completed MIxS Environments:
+#
+#*   Agriculture
+#*   BuiltEnvironment
+#*   FoodAnimalAndAnimalFeed
+#*   FoodFarmEnvironment
+#*   FoodFoodProductionFacility
+#*   HydrocarbonResourcesCores
+#*   HydrocarbonResourcesFluidsSwabs
+#*   MicrobialMatBiofilm
+#*   MiscellaneousNaturalOrArtificialEnvironment
+#*   PlantAssociated
+#*   Sediment
+#*   Soil
+#*   SymbiontAssociated
+#*   WastewaterSludge
+#*   Water
+#
+### Failed MIxS Environments:
+#
+#*   Air
+#*   FoodHumanFoods
+#
+### Skipped MIxS Environments:
+#
+#*   HostAssociated
+#*   HumanAssociated
+#*   HumanGut
+#*   HumanOral
+#*   HumanSkin
+#*   HumanVaginal

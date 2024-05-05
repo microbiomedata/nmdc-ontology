@@ -1,0 +1,101 @@
+# This SPARQL query generates a CSV report of terms from the EnvO ontology that can be used to answer environmental context questions
+# and is intended as training for LLMs performing a subset mapping
+# It specifically retrieves identifiers, textual annotations and superclass identifiers
+# that might be reasonable answers to the env_local_scale question form the Minimal Information about any (X) Sequence (MIxS) standard
+# If the LLM doesn’t think that the CSV report has been provided, it should ask for it.
+# Chances are high that the CSV report will be provided in chunks.
+# If that's the case, then only the first chunk will include the column header.
+# The LLM should report the first and last EnvO terms it has received after each cunk is submitted
+#
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?class
+(GROUP_CONCAT(DISTINCT ?alternative_term;
+        SEPARATOR=", ") AS ?alternative_terms)
+(GROUP_CONCAT(DISTINCT ?comment;
+        SEPARATOR=", ") AS ?comments)
+(GROUP_CONCAT(DISTINCT ?definition;
+        SEPARATOR=", ") AS ?definitions)
+(GROUP_CONCAT(DISTINCT ?editor_note;
+        SEPARATOR=", ") AS ?editor_notes)
+(GROUP_CONCAT(DISTINCT ?has_broad_synonym;
+        SEPARATOR=", ") AS ?has_broad_synonyms)
+(GROUP_CONCAT(DISTINCT ?has_exact_synonym;
+        SEPARATOR=", ") AS ?has_exact_synonyms)
+(GROUP_CONCAT(DISTINCT ?has_narrow_synonym;
+        SEPARATOR=", ") AS ?has_narrow_synonyms)
+(GROUP_CONCAT(DISTINCT ?has_related_synonym;
+        SEPARATOR=", ") AS ?has_related_synonyms)
+(GROUP_CONCAT(DISTINCT ?hasSynonym;
+        SEPARATOR=", ") AS ?hasSynonyms)
+(GROUP_CONCAT(DISTINCT ?in_subset;
+        SEPARATOR=", ") AS ?in_subsets)
+(GROUP_CONCAT(DISTINCT ?label;
+        SEPARATOR=", ") AS ?labels)
+(GROUP_CONCAT(DISTINCT ?super_slug;
+        SEPARATOR=", ") AS ?superclasses)
+WHERE {
+    VALUES ?super_super {
+        obo:ENVO_01000813 # ABP including beach sand, ecoregion, agricultural field, airport, village
+        obo:ENVO_01001813 # construction including beaver dam
+        obo:BFO_0000024 # fiat object including area of barren land
+        obo:ENVO_01000281 # layer including mineral horizon
+        obo:ENVO_00003074 # manufactured product including chair
+        <http://purl.obolibrary.org/obo/RO_0002577> # system including public transit system
+    }
+    ?s rdfs:subClassOf+ ?super_super .
+    MINUS {
+        ?s rdfs:subClassOf* obo:ENVO_00000428 # biome
+    }
+    MINUS {
+        ?s rdfs:subClassOf* obo:ENVO_00010483 # environmental material
+    }
+    MINUS {
+        ?s rdfs:subClassOf* obo:FOODON_00002403
+    }
+    MINUS {
+        ?s rdfs:subClassOf* obo:ENVO_00001998 # soil
+    }
+    BIND(REPLACE(STR(?s), "http://purl.obolibrary.org/obo/", "") AS ?class)
+    OPTIONAL {
+        ?s rdfs:subClassOf ?superclass .
+        FILTER(ISIRI(?superclass) = true)
+        BIND(REPLACE(STR(?superclass), "http://purl.obolibrary.org/obo/", "") AS ?super_slug)
+    }
+    OPTIONAL {
+        ?s obo:IAO_0000115 ?definition .
+    }
+    OPTIONAL {
+        ?s obo:IAO_0000116 ?editor_note .
+    }
+    OPTIONAL {
+        ?s obo:IAO_0000118 ?alternative_term .
+    }
+    OPTIONAL {
+        ?s oboInOwl:hasExactSynonym ?has_exact_synonym .
+    }
+    OPTIONAL {
+        ?s oboInOwl:hasBroadSynonym ?has_broad_synonym .
+    }
+    OPTIONAL {
+        ?s oboInOwl:hasNarrowSynonym ?has_narrow_synonym .
+    }
+    OPTIONAL {
+        ?s oboInOwl:hasRelatedSynonym ?has_related_synonym .
+    }
+    OPTIONAL {
+        ?s oboInOwl:hasSynonym ?hasSynonym .
+    }
+    OPTIONAL {
+        ?s oboInOwl:inSubset ?in_subset .
+    }
+    OPTIONAL {
+        ?s rdfs:comment ?comment .
+    }
+    OPTIONAL {
+        ?s rdfs:label ?label .
+    }
+}
+GROUP BY ?class
+order by ?class

@@ -1,0 +1,53 @@
+predicate	usage
+acts upstream of	1
+acts upstream of or within	5
+adjacent to	136
+bearer of	128
+capable of	29
+capable of part of	29
+causal agent in process	48
+causal relation between entities	30
+causal relation between material entity and a process	48
+causally influenced by	30
+causally related to	78
+composed primarily of	124
+contained in	5
+contains	1
+contains process	22
+continuous with	23
+derives from	46
+derives from part of	46
+derives into	4
+determined by	30
+determined by part of	30
+device utilizes material	7
+formed as result of	98
+functionally related to	187
+generates	11
+has characteristic	128
+has component	6
+has function	9
+has increased levels of	6
+has part	363
+has part structure that is capable of	1
+has quality	92
+has role	21
+http://www.w3.org/2000/01/rdf-schema#subClassOf	2688
+involved in	4
+involved in negative regulation of	1
+involved in or involved in regulation of	5
+involved in regulation of	1
+located in	46
+location of	2
+mereotopologically related to	809
+obsolete contained in	5
+obsolete contains	1
+output of	152
+overlaps	723
+part of	326
+part of structure that is capable of	2
+partially overlaps	13
+partially surrounded by	20
+participates in	296
+spatially disjoint from	136
+surrounded by	5
