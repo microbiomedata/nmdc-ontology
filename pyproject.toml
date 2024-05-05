@@ -24,6 +24,7 @@ linkml-runtime = "^1.7.5"
 llm = "^0.13.1"
 schemasheets = "^0.2.1"
 csvkit = "^1.5.0"
+sparql-dataframe = "^0.4"
 
 [build-system]
 requires = ["poetry-core"]

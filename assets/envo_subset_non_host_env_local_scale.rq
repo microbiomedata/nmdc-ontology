@@ -39,7 +39,7 @@ WHERE {
     VALUES ?super_super {
         obo:ENVO_01000813 # ABP including beach sand, ecoregion, agricultural field, airport, village
         obo:ENVO_01001813 # construction including beaver dam
-        obo:ENVO_0000024 # fiat object including area of barren land
+        obo:BFO_0000024 # fiat object including area of barren land
         obo:ENVO_01000281 # layer including mineral horizon
         obo:ENVO_00003074 # manufactured product including chair
         <http://purl.obolibrary.org/obo/RO_0002577> # system including public transit system

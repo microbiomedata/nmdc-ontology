@@ -852,12 +852,12 @@ files = [
 google-auth = ">=2.14.1,<3.0.dev0"
 googleapis-common-protos = ">=1.56.2,<2.0.dev0"
 grpcio = [
-    {version = ">=1.49.1,<2.0dev", optional = true, markers = "python_version >= \"3.11\" and extra == \"grpc\""},
     {version = ">=1.33.2,<2.0dev", optional = true, markers = "python_version < \"3.11\" and extra == \"grpc\""},
+    {version = ">=1.49.1,<2.0dev", optional = true, markers = "python_version >= \"3.11\" and extra == \"grpc\""},
 ]
 grpcio-status = [
-    {version = ">=1.49.1,<2.0.dev0", optional = true, markers = "python_version >= \"3.11\" and extra == \"grpc\""},
     {version = ">=1.33.2,<2.0.dev0", optional = true, markers = "python_version < \"3.11\" and extra == \"grpc\""},
+    {version = ">=1.49.1,<2.0.dev0", optional = true, markers = "python_version >= \"3.11\" and extra == \"grpc\""},
 ]
 proto-plus = ">=1.22.3,<2.0.0dev"
 protobuf = ">=3.19.5,<3.20.0 || >3.20.0,<3.20.1 || >3.20.1,<4.21.0 || >4.21.0,<4.21.1 || >4.21.1,<4.21.2 || >4.21.2,<4.21.3 || >4.21.3,<4.21.4 || >4.21.4,<4.21.5 || >4.21.5,<5.0.0.dev0"
@@ -2589,9 +2589,9 @@ files = [
 
 [package.dependencies]
 numpy = [
+    {version = ">=1.22.4", markers = "python_version < \"3.11\""},
     {version = ">=1.23.2", markers = "python_version == \"3.11\""},
     {version = ">=1.26.0", markers = "python_version >= \"3.12\""},
-    {version = ">=1.22.4", markers = "python_version < \"3.11\""},
 ]
 python-dateutil = ">=2.8.2"
 pytz = ">=2020.1"
@@ -3882,6 +3882,21 @@ files = [
 ]
 
 [[package]]
+name = "sparql-dataframe"
+version = "0.4"
+description = "Convert SPARQL results to Pandas dataframes"
+optional = false
+python-versions = "*"
+files = [
+    {file = "sparql_dataframe-0.4-py3-none-any.whl", hash = "sha256:3512f898526cea55ccefd0d4535774458ee385faa0dffdcc2751e8d54aa73228"},
+    {file = "sparql_dataframe-0.4.tar.gz", hash = "sha256:b9e1e722d02989ae21269574fc9cf22f572e209d5aa129527b7a97cb020588f3"},
+]
+
+[package.dependencies]
+pandas = ">=0.22.0"
+SPARQLWrapper = ">=1.8.1"
+
+[[package]]
 name = "sparqlslurper"
 version = "0.5.1"
 description = "SPARQL Slurper for rdflib"
@@ -4601,4 +4616,4 @@ test = ["pytest", "pytest-cov"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "9446b651fab7405afdbe2d4378d1371815d3b7d4c5ea3b9386f267306a20bb49"
+content-hash = "f54e280f123eb8e6e73e86aa7a932875d0aa5760e120abdab35e31e0ce9d63f2"
