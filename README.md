@@ -1,14 +1,40 @@
 
 <!-- ![Build Status](https://github.com/microbiomedata/nmdc-ontology/workflows/CI/badge.svg) -->
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](https://github.com/microbiomedata/nmdc-ontology/blob/main/LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/microbiomedata/nmdc-ontology?branch=main&kill_cache=1)](https://github.com/microbiomedata/nmdc-ontology/commits)
-[![GitHub issues](https://img.shields.io/github/issues/microbiomedata/nmdc-ontology?branch=master&kill_cache=1)](https://github.com/microbiomedata/nmdc-ontology/issues)
-[![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/microbiomedata/nmdc-ontology?branch=main&kill_cache=1)](https://github.com/microbiomedata/nmdc-ontology/issues?q=is%3Aissue+is%3Aclosed)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/microbiomedata/nmdc-ontology?branch=main&kill_cache=1)](https://github.com/microbiomedata/nmdc-ontology/pulls)
+
+> **This repository is archived.** Its primary function — producing ontology artifacts for nmdc-server — has been replaced by [`microbiomedata/ontology-loader`](https://github.com/microbiomedata/ontology-loader). See [#70](https://github.com/microbiomedata/nmdc-ontology/issues/70) for details.
 
 # NMDC Ontology
 
-The NMDC Ontology (NMDCO) is used  by the [National Microbiome Data Collaborative (NMDC)](https://microbiomedata.org) to annotate multi-omic microbiome metadata. The ontology products are built by merging a number of relevant ontologies (see the [import directory](src/ontology/imports/)) into a single ontology, and then converted into the appropriate product.
+The NMDC Ontology (NMDCO) was used by the [National Microbiome Data Collaborative (NMDC)](https://microbiomedata.org) to annotate multi-omic microbiome metadata. The ontology products were built by merging a number of relevant ontologies (see the [import directory](src/ontology/imports/)) into a single ontology, and then converted into the appropriate product.
+
+## Superseded by ontology-loader (March 2026)
+
+This repo's primary consumer was nmdc-server, which ingested `nmdco-classes.json` to populate ontology data in the data portal. That pathway was fully replaced by Sierra Moxon's [ontology-loader](https://github.com/microbiomedata/ontology-loader):
+
+- **ontology-loader** runs as 3 scheduled Dagster jobs in [nmdc-runtime](https://github.com/microbiomedata/nmdc-runtime), loading ENVO, UBERON, PO, ChEBI, and MS into MongoDB (`ontology_class_set`, `ontology_relation_set`)
+- **nmdc-server** [PR #1923](https://github.com/microbiomedata/nmdc-server/pull/1923) (merged 2026-03-10, released in v1.16.0) added Postgres ontology tables and removed all references to `nmdco-classes.json`
+
+## Last activities (2024)
+
+### Ontology build rescue and cycle fixes (Feb–Mar 2024)
+
+The repo had not been updated in ~3 years. @turbomam regenerated `nmdco-classes.json`, discovered and fixed a critical subClassOf cycle between ChEBI and BFO roles (#49) that was breaking nmdc-server ingest, switched to importing base ontology artifacts (`envo-base.owl` etc.) to reduce upstream cycle risk (#51, #53), and removed the relation-graph processing step (#32, #44).
+
+### Data quality audit (Mar 2024)
+
+Built a QC pipeline (`qc.Makefile`, 40+ targets) that validated NMDCO against actual NMDC biosample data in MongoDB. Key findings:
+- **Problematic triads** (`qc-reports/problematic_triads.tsv`): Identified specific `env_broad_scale` and `env_medium` values using non-standard ontology terms (FMA, wrong ENVO classes). Changesheets were submitted for FMA:14541 → UBERON replacements. Remaining data quality work carried forward to [microbiomedata/issues#631](https://github.com/microbiomedata/issues/issues/631#issuecomment-4156053114).
+- **Term ownership inventory** (`qc-reports/nmdco-envo-classes-with-id-owner.tsv`): 14K+ terms categorized by source ontology.
+
+### LLM-assisted MIxS/EnvO mapping (Mar–May 2024)
+
+Experimental work using Claude to systematically map MIxS environment packages to appropriate EnvO terms. Design rationale in `assets/mapping_problem_statement.md`. Key artifacts:
+- `nmdc_ontology/mixs_environments_to_envo_classes_by_claude.py` — CLI tool feeding YAML definitions to Claude with conservative temperature settings
+- `assets/biome_subsets_accepted.yaml`, `assets/materials_subsets_accepted.yaml` — hand-curated accepted/rejected mappings used as few-shot examples
+- Branch `56-save-scripts-etc-for-llm-alignment-of-mixs-and-envo-terms-in-this-repo` — contains intermediate LLM outputs and iteration scripts
+
+This was prototype work exploring exhaustive ontology subset generation with minimal hallucination. The approach informed later work in [external-metadata-awareness](https://github.com/microbiomedata/external-metadata-awareness) and [nmdc-ai-eval](https://github.com/microbiomedata/nmdc-ai-eval).
 
 ## Ontology Products
 
@@ -37,4 +63,4 @@ See [MAINTAINERS.md](MAINTAINERS.md) for instructions on maintaining and updatin
 
 ## Acknowledgements
 
-This ontology repository was initally created using the [ontology starter kit](https://github.com/INCATools/ontology-starter-kit). Later edits were made to the [Makefile](src/onotology/Makefile).
+This ontology repository was initially created by @wdduncan using the [ontology starter kit](https://github.com/INCATools/ontology-starter-kit). Maintained 2024 by @turbomam. Superseded 2025–2026 by @sierra-moxon's [ontology-loader](https://github.com/microbiomedata/ontology-loader).
