@@ -1,0 +1,8 @@
+sls	predicate	ols
+cell	part_of	organism
+oak	http://www.w3.org/2000/01/rdf-schema#subClassOf	tree
+organism	has_color	green
+organism	made_of	cell
+plant	has_color	green
+plant	http://www.w3.org/2000/01/rdf-schema#subClassOf	organism
+tree	http://www.w3.org/2000/01/rdf-schema#subClassOf	plant

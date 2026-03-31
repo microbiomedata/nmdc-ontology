@@ -1,4 +1,5 @@
 local
+assets/chunks
 
 src/ontology/imports/*
 mirror/*

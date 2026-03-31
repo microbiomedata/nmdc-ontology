@@ -1,0 +1,9 @@
+environment_mappings:
+  - mixs_environment_label: Agriculture
+    onto_term_mappings:
+      - onto_term_label: cropland biome
+        onto_term_id: ENVO_01000245
+      - onto_term_label: rangeland biome
+        onto_term_id: ENVO_01000247
+      - onto_term_label: village biome
+        onto_term_id: ENVO_01000246

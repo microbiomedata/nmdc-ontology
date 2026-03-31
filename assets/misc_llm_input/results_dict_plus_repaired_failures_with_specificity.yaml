@@ -1,0 +1,1562 @@
+context_mappings:
+- mixs_context_label: env_broad_scale
+  environment_mappings:
+  - mixs_environment_label: Agriculture
+    onto_term_mappings:
+    - term_id: ENVO_01000245
+      term_label: cropland biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Croplands are a key component of agricultural environments.
+    - term_id: ENVO_01000246
+      term_label: village biome
+      comment: Villages are described as agricultural settlements, so the village
+        biome is compatible with the agriculture environment.
+      accepted: true
+      specificity_score: 4.0
+      specificity_justification: Villages are often closely associated with agricultural
+        activities.
+    - term_id: ENVO_01000247
+      term_label: rangeland biome
+      accepted: true
+      specificity_score: 4.0
+      specificity_justification: Rangelands are often used for grazing livestock as
+        part of agricultural activities.
+    - term_id: ENVO_01000189
+      term_label: temperate savanna biome
+      comment: Temperate savannas, also known as prairies, can support agricultural
+        activity like livestock grazing.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Temperate savannas, also known as temperate grasslands
+        or prairies, are often used for grazing livestock.
+    - term_id: ENVO_01000187
+      term_label: subtropical savanna biome
+      comment: Subtropical savannas can support agricultural activity like livestock
+        grazing.
+      accepted: true
+    - term_id: ENVO_01000188
+      term_label: tropical savanna biome
+      comment: Tropical savannas can support agricultural activity like livestock
+        grazing.
+      accepted: true
+    - term_id: ENVO_01000190
+      term_label: flooded savanna biome
+      comment: Flooded savannas, also known as swamps or marshes, can support agricultural
+        activity like rice cultivation.
+      accepted: true
+  - mixs_environment_label: Air
+    onto_term_mappings:
+    - accepted: true
+      onto_term_id: ENVO_01000174
+      onto_term_label: forest biome
+    - accepted: true
+      onto_term_id: ENVO_01000177
+      onto_term_label: grassland biome
+    - accepted: true
+      onto_term_id: ENVO_01000178
+      onto_term_label: shrubland biome
+    - accepted: true
+      onto_term_id: ENVO_01000179
+      onto_term_label: desert biome
+    - accepted: true
+      onto_term_id: ENVO_01000180
+      onto_term_label: tundra biome
+    - comment: The air environment can be associated with any terrestrial biome.
+      accepted: true
+      onto_term_id: ENVO_00000446
+      onto_term_label: terrestrial biome
+  - mixs_environment_label: BuiltEnvironment
+    onto_term_mappings:
+    - accepted: true
+      onto_term_id: ENVO_01000219
+      onto_term_label: anthropogenic terrestrial biome
+    - accepted: true
+      onto_term_id: ENVO_01000248
+      onto_term_label: dense settlement biome
+    - accepted: true
+      onto_term_id: ENVO_01000249
+      onto_term_label: urban biome
+    - comment: A village biome is a type of anthropogenic terrestrial biome that contains
+        human settlements and agricultural activity.
+      accepted: true
+      onto_term_id: ENVO_01000246
+      onto_term_label: village biome
+  - mixs_environment_label: FoodAnimalAndAnimalFeed
+    onto_term_mappings:
+    - term_id: ENVO_01000246
+      term_label: village biome
+      comment: Farm animals and their feed may be found in villages, which are primarily
+        agricultural settlements.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Villages often have some association with food animals
+        and animal feed, particularly in agricultural contexts, but it is not a defining
+        characteristic.
+    - term_id: ENVO_01000247
+      term_label: rangeland biome
+      comment: Rangelands are used for grazing livestock, a type of farm animal.
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Rangelands are primarily used for grazing livestock,
+        which are food animals.
+    - term_id: ENVO_01000245
+      term_label: cropland biome
+      comment: Crops grown in croplands may be used as animal feed.
+      accepted: true
+      specificity_score: 4.0
+      specificity_justification: Crops grown in croplands are often used as animal
+        feed.
+    - term_id: ENVO_01000219
+      term_label: anthropogenic terrestrial biome
+      comment: Farm animals and animal feed exist in human-influenced terrestrial
+        biomes.
+      accepted: true
+      specificity_score: 4.0
+      specificity_justification: Many anthropogenic terrestrial biomes, particularly
+        agricultural ones, are associated with food animals and animal feed.
+  - mixs_environment_label: FoodFarmEnvironment
+    onto_term_mappings:
+    - term_id: ENVO_01000174
+      term_label: forest biome
+      comment: A farm environment could contain forest biomes.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some forests may be part of farm environments, but
+        it is not a defining characteristic of all forests.
+    - term_id: ENVO_01000177
+      term_label: grassland biome
+      comment: A farm environment could contain grassland biomes used for grazing
+        or hay production.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Many grasslands are used for livestock grazing as
+        part of farm environments.
+    - term_id: ENVO_01000178
+      term_label: savanna biome
+      comment: A farm environment in a tropical or subtropical region could contain
+        savanna biomes used for grazing.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Savannas used for grazing can be considered part
+        of farm environments.
+    - term_id: ENVO_01000189
+      term_label: temperate savanna biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Temperate savannas used for grazing can be considered
+        part of farm environments.
+    - term_id: ENVO_01000193
+      term_label: temperate grassland biome
+      accepted: true
+    - term_id: ENVO_01000202
+      term_label: temperate broadleaf forest biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some temperate broadleaf forests may be managed as
+        part of farm environments, but it is not a defining characteristic.
+    - term_id: ENVO_01000211
+      term_label: temperate coniferous forest biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some temperate coniferous forests may be managed
+        as part of farm environments, particularly for timber, but it is not a defining
+        characteristic.
+    - term_id: ENVO_01000212
+      term_label: temperate mixed forest biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some temperate mixed forests may be managed as part
+        of farm environments, but it is not a defining characteristic.
+    - term_id: ENVO_01000215
+      term_label: temperate shrubland biome
+      comment: A farm environment could contain managed shrubland biomes.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some temperate shrublands may be managed as part
+        of farm environments, particularly for livestock grazing, but it is not a
+        defining characteristic.
+    - term_id: ENVO_01000221
+      term_label: temperate woodland biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some temperate woodlands may be managed as part of
+        farm environments, particularly for livestock grazing, but it is not a defining
+        characteristic.
+    - term_id: ENVO_01000245
+      term_label: cropland biome
+      comment: Cropland biomes are a key component of farm environments.
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Croplands are a key component of farm environments.
+    - term_id: ENVO_01000246
+      term_label: village biome
+      comment: Farm environments often include human settlements like villages.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Villages are often closely associated with farm environments,
+        but not all villages are farms.
+    - term_id: ENVO_01000247
+      term_label: rangeland biome
+      comment: Rangeland biomes used for grazing are common in farm environments.
+      accepted: true
+      specificity_score: 4.0
+      specificity_justification: Rangelands are often managed as part of farm environments.
+  - comment: Food production facilities are built environments and anthropogenic terrestrial
+      biomes.
+    mixs_environment_label: FoodFoodProductionFacility
+    onto_term_mappings:
+    - term_id: ENVO_01000219
+      term_label: anthropogenic terrestrial biome
+      accepted: true
+    - term_id: ENVO_01000248
+      term_label: dense settlement biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Food production facilities may be found in dense
+        settlements, but they are not a defining characteristic.
+    - term_id: ENVO_01000249
+      term_label: urban biome
+      comment: Food production facilities are often located in urban areas.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Food production facilities may be found in urban
+        biomes, but they are not a defining characteristic.
+  - mixs_environment_label: FoodHumanFoods
+    onto_term_mappings:
+    - term_id: ENVO_01000174
+      term_label: forest biome
+      comment: Human foods can be derived from forest biomes, such as fruits, nuts,
+        and mushrooms.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some human foods can come from forests, but forests
+        are not exclusively sources of human food.
+    - term_id: ENVO_01000177
+      term_label: grassland biome
+      comment: Human foods can be derived from grassland biomes, such as grains, legumes,
+        and livestock.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Grasslands can be sources of human foods like grains
+        and livestock, but it is not their defining characteristic.
+    - term_id: ENVO_01000219
+      term_label: anthropogenic terrestrial biome
+      comment: Many human foods are produced in anthropogenic terrestrial biomes,
+        such as croplands, pastures, and orchards.
+      accepted: true
+      specificity_score: 4.0
+      specificity_justification: Many anthropogenic terrestrial biomes, particularly
+        agricultural ones, are associated with the production of human foods.
+    - term_id: ENVO_01000245
+      term_label: cropland biome
+      comment: A wide variety of human foods are grown in cropland biomes, including
+        fruits, vegetables, grains, and more.
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Croplands are a major source of human foods.
+    - term_id: ENVO_01000246
+      term_label: village biome
+      comment: Human foods are often produced in and around village biomes, such as
+        in home gardens and small farms.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Villages are often sites of small-scale human food
+        production and consumption, but it is not a defining characteristic.
+    - term_id: ENVO_01000247
+      term_label: rangeland biome
+      comment: Rangeland biomes are often used to raise livestock for human consumption,
+        such as cattle, sheep, and goats.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: While rangelands contribute to human food production
+        through livestock, it is not their defining characteristic.
+    - term_id: ENVO_00000428
+      term_label: biome
+      comment: Human foods can potentially be derived from any biome, as this is a
+        very broad term.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The biome class is very broad and not specific to
+        human foods.
+  - comment: Many biomes could potentially be host-associated environments, depending
+      on the specific host organism being considered. The mappings here represent
+      some common possibilities, but the list is not exhaustive.
+    mixs_environment_label: HostAssociated
+    onto_term_mappings:
+    - term_id: ENVO_01000174
+      term_label: forest biome
+      comment: A forest biome could be a host-associated environment, for example
+        in the case of arboreal animals or epiphytes living on trees.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Forests can host many symbiotic relationships, but
+        it is not a defining characteristic of all forests.
+    - term_id: ENVO_01000175
+      term_label: woodland biome
+      comment: A woodland biome could be a host-associated environment, for example
+        in the case of animals or epiphytes living on or among the widely spaced trees.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Woodlands can host many symbiotic relationships,
+        but it is not a defining characteristic of all woodlands.
+    - term_id: ENVO_01000176
+      term_label: shrubland biome
+      comment: A shrubland biome could be a host-associated environment, for example
+        in the case of animals living in or among the shrubs.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Shrublands can host many symbiotic relationships,
+        but it is not a defining characteristic of all shrublands.
+    - term_id: ENVO_01000177
+      term_label: grassland biome
+      comment: A grassland biome could be a host-associated environment, for example
+        in the case of animals grazing on the grasses or living in burrows.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Grasslands host many animal and plant symbiotic relationships,
+        but it is not a defining characteristic.
+    - term_id: ENVO_01000178
+      term_label: savanna biome
+      comment: A savanna biome could be a host-associated environment, for example
+        in the case of animals grazing on the grasses or living among the scattered
+        trees.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Savannas host many animal and plant symbiotic relationships,
+        but it is not a defining characteristic.
+    - term_id: ENVO_01000179
+      term_label: desert biome
+      comment: A desert biome could be a host-associated environment, for example
+        in the case of animals adapted to the arid conditions.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Deserts can host symbiotic relationships, particularly
+        between plants and microbes, but it is not a defining characteristic.
+    - term_id: ENVO_01000180
+      term_label: tundra biome
+      comment: A tundra biome could be a host-associated environment, for example
+        in the case of animals adapted to the cold conditions.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Tundra can host symbiotic relationships, particularly
+        between plants and microbes, but it is not a defining characteristic.
+    - term_id: ENVO_01000181
+      term_label: mangrove biome
+      comment: A mangrove biome could be a host-associated environment, for example
+        in the case of animals living among the mangrove trees or in the tidal waters.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Mangroves host many symbiotic relationships, particularly
+        between plants and microbes and animals, but it is not a defining characteristic.
+  - mixs_environment_label: HumanAssociated
+    onto_term_mappings:
+    - term_id: ENVO_01000219
+      term_label: anthropogenic terrestrial biome
+      comment: The HumanAssociated environment is compatible with anthropogenic terrestrial
+        biomes, which are biomes determined by human activity.
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Anthropogenic terrestrial biomes are heavily influenced
+        by and associated with humans.
+    - term_id: ENVO_01000246
+      term_label: village biome
+      comment: Villages are a type of anthropogenic terrestrial biome compatible with
+        the HumanAssociated environment.
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Villages are human settlements and are thus heavily
+        associated with humans.
+    - term_id: ENVO_01000248
+      term_label: dense settlement biome
+      comment: Dense settlements like cities are anthropogenic terrestrial biomes
+        compatible with the HumanAssociated environment.
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Dense settlements are human settlements and are thus
+        heavily associated with humans.
+    - term_id: ENVO_01000249
+      term_label: urban biome
+      comment: Urban areas are a type of dense settlement biome compatible with the
+        HumanAssociated environment.
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Urban biomes are human settlements and are thus heavily
+        associated with humans.
+  - mixs_environment_label: HumanGut
+    onto_term_mappings:
+    - term_id: ENVO_01000174
+      term_label: forest biome
+      comment: A forest biome could contain a human gut sample, for example if a cadaver
+        was left in a forest.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The human gut is not directly related to forest environments.
+    - term_id: ENVO_01000177
+      term_label: grassland biome
+      comment: A grassland biome could contain a human gut sample, for example if
+        a cadaver was left in a grassland.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The human gut is not directly related to grassland
+        environments.
+    - term_id: ENVO_01000178
+      term_label: savanna biome
+      comment: A savanna biome could contain a human gut sample, for example if a
+        cadaver was left in a savanna.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The human gut is not directly related to savanna
+        environments.
+    - term_id: ENVO_01000179
+      term_label: desert biome
+      comment: A desert biome could contain a human gut sample, for example if a cadaver
+        was left in a desert.
+      accepted: true
+    - term_id: ENVO_01000180
+      term_label: tundra biome
+      comment: A tundra biome could contain a human gut sample, for example if a cadaver
+        was left in a tundra.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The human gut is not directly related to tundra environments.
+    - term_id: ENVO_01000219
+      term_label: anthropogenic terrestrial biome
+      comment: An anthropogenic terrestrial biome is likely to contain human gut samples.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: While humans inhabit anthropogenic terrestrial biomes,
+        the human gut is not directly related to these environments.
+    - term_id: ENVO_01000221
+      term_label: temperate woodland biome
+      comment: A temperate woodland biome could contain a human gut sample, for example
+        if a cadaver was left in a temperate woodland.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The human gut is not directly related to temperate
+        woodland environments.
+    - term_id: ENVO_01000248
+      term_label: dense settlement biome
+      comment: A dense settlement biome is very likely to contain human gut samples.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: While humans inhabit dense settlements, the human
+        gut is not directly related to these environments.
+    - term_id: ENVO_01000249
+      term_label: urban biome
+      comment: An urban biome is very likely to contain human gut samples.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: While humans inhabit urban biomes, the human gut
+        is not directly related to these environments.
+  - mixs_environment_label: HumanOral
+    onto_term_mappings:
+    - term_id: ENVO_01000174
+      term_label: forest biome
+      comment: The human oral environment can contain microbes found in forest biomes
+        due to environmental exposure.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The human oral cavity is not directly related to
+        forest environments.
+    - term_id: ENVO_01000177
+      term_label: grassland biome
+      comment: The human oral environment can contain microbes found in grassland
+        biomes due to environmental exposure.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The human oral cavity is not directly related to
+        grassland environments.
+    - term_id: ENVO_01000178
+      term_label: shrubland biome
+      comment: The human oral environment can contain microbes found in shrubland
+        biomes due to environmental exposure.
+      accepted: true
+    - term_id: ENVO_01000179
+      term_label: desert biome
+      comment: The human oral environment can contain microbes found in desert biomes
+        due to environmental exposure.
+      accepted: true
+    - term_id: ENVO_01000180
+      term_label: tundra biome
+      comment: The human oral environment can contain microbes found in tundra biomes
+        due to environmental exposure.
+      accepted: true
+    - term_id: ENVO_01000219
+      term_label: anthropogenic terrestrial biome
+      comment: The human oral environment is directly influenced by human activity
+        and built environments.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: While humans inhabit anthropogenic terrestrial biomes,
+        the human oral cavity is not directly related to these environments.
+    - term_id: ENVO_01000221
+      term_label: temperate woodland biome
+      comment: The human oral environment can contain microbes found in temperate
+        woodland biomes due to environmental exposure.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The human oral cavity is not directly related to
+        temperate woodland environments.
+    - term_id: ENVO_01000248
+      term_label: dense settlement biome
+      comment: The human oral environment is directly influenced by human activity
+        and built environments like dense settlements.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: While humans inhabit dense settlements, the human
+        oral cavity is not directly related to these environments.
+    - term_id: ENVO_01000249
+      term_label: urban biome
+      comment: The human oral environment is directly influenced by human activity
+        and built environments like urban areas.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: While humans inhabit urban biomes, the human oral
+        cavity is not directly related to these environments.
+  - comment: The HumanSkin environment best maps to anthropogenic biomes, as human
+      skin microbial communities are largely shaped by human activities and behaviors.
+    mixs_environment_label: HumanSkin
+    onto_term_mappings:
+    - term_id: ENVO_01000219
+      term_label: anthropogenic terrestrial biome
+      comment: The human skin environment is part of the anthropogenic terrestrial
+        biome, which has community structures determined by human activity.
+      accepted: true
+      specificity_score: 2.0
+      specificity_justification: Human skin is influenced by the anthropogenic terrestrial
+        biomes that humans inhabit, but the relationship is not as direct as with
+        the built environment or human activities.
+  - mixs_environment_label: HumanVaginal
+    onto_term_mappings:
+    - term_id: ENVO_01000219
+      term_label: anthropogenic terrestrial biome
+      comment: The human vaginal environment is part of the human body, which is part
+        of the anthropogenic terrestrial biome.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: While humans inhabit anthropogenic terrestrial biomes,
+        the human vaginal environment is not directly related to these environments.
+    - term_id: ENVO_01000174
+      term_label: forest biome
+      comment: The human body can be thought of as a kind of 'forest' with its diversity
+        of microbes living in different niches.
+      accepted: true
+    - term_id: ENVO_01000177
+      term_label: grassland biome
+      comment: The human microbiome could be compared to a 'grassland' with its complex
+        community interactions.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The human vaginal environment is not directly related
+        to grassland biomes.
+    - term_id: ENVO_01000176
+      term_label: shrubland biome
+      comment: The diverse yet low-growing microbial communities of the human microbiome
+        are reminiscent of a shrubland biome.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The human vaginal environment is not directly related
+        to shrubland biomes.
+    - term_id: ENVO_01000175
+      term_label: woodland biome
+      comment: The human body's complex ecosystem of microbes could be compared to
+        a woodland biome.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The human vaginal environment is not directly related
+        to woodland biomes.
+  - mixs_environment_label: HydrocarbonResourcesCores
+    onto_term_mappings:
+    - term_id: ENVO_00000428
+      term_label: biome
+      comment: Hydrocarbon resources cores can come from any biome, so the root biome
+        class is appropriate.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The biome class is very broad and not specific to
+        hydrocarbon resources cores.
+    - term_id: ENVO_00000446
+      term_label: terrestrial biome
+      comment: Hydrocarbon resources cores are often extracted from terrestrial environments.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Hydrocarbon resources are often extracted from terrestrial
+        environments, but not all terrestrial biomes are relevant.
+    - term_id: ENVO_01000174
+      term_label: forest biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some forests may overlay hydrocarbon resources, but
+        it is not a defining characteristic of all forests.
+    - term_id: ENVO_01000175
+      term_label: woodland biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some woodlands may overlay hydrocarbon resources,
+        but it is not a defining characteristic of all woodlands.
+    - term_id: ENVO_01000176
+      term_label: shrubland biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some shrublands may overlay hydrocarbon resources,
+        but it is not a defining characteristic of all shrublands.
+    - term_id: ENVO_01000177
+      term_label: grassland biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some grasslands may overlay hydrocarbon resources,
+        but it is not a defining characteristic.
+    - term_id: ENVO_01000178
+      term_label: savanna biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some savannas may overlay hydrocarbon resources,
+        but it is not a defining characteristic.
+    - term_id: ENVO_01000179
+      term_label: desert biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some deserts may overlay hydrocarbon resources, but
+        it is not a defining characteristic.
+    - term_id: ENVO_01000180
+      term_label: tundra biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some tundra may overlay hydrocarbon resources, but
+        it is not a defining characteristic.
+    - term_id: ENVO_00002030
+      term_label: aquatic biome
+      comment: Hydrocarbon resources can also be extracted from aquatic environments,
+        for example offshore drilling.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some aquatic biomes, such as marine, can be sources
+        of hydrocarbon resources, but it is not a defining characteristic of all.
+    - term_id: ENVO_00000873
+      term_label: freshwater biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: Freshwater biomes are not a major source of hydrocarbon
+        resources.
+    - term_id: ENVO_00000447
+      term_label: marine biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some marine biomes are sources of hydrocarbon resources,
+        but it is not a defining characteristic.
+  - mixs_environment_label: HydrocarbonResourcesFluidsSwabs
+    onto_term_mappings:
+    - term_id: ENVO_00000428
+      term_label: biome
+      comment: Hydrocarbon resources fluids and swabs could potentially come from
+        any biome.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The biome class is very broad and not specific to
+        hydrocarbon resources fluids and swabs.
+    - term_id: ENVO_00000446
+      term_label: terrestrial biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Hydrocarbon resources fluids and swabs can come from
+        terrestrial environments, but not all terrestrial biomes are relevant.
+    - term_id: ENVO_01000830
+      term_label: temperate biome
+      accepted: true
+    - term_id: ENVO_01000174
+      term_label: forest biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Hydrocarbon resources fluids and swabs could potentially
+        come from some forest environments, but it is not a defining characteristic.
+    - term_id: ENVO_01000177
+      term_label: grassland biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Hydrocarbon resources fluids and swabs could potentially
+        come from some grassland environments, but it is not a defining characteristic.
+    - term_id: ENVO_01000179
+      term_label: desert biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Hydrocarbon resources fluids and swabs could potentially
+        come from some desert environments, but it is not a defining characteristic.
+    - term_id: ENVO_01000180
+      term_label: tundra biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Hydrocarbon resources fluids and swabs could potentially
+        come from some tundra environments, but it is not a defining characteristic.
+    - term_id: ENVO_01000219
+      term_label: anthropogenic terrestrial biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some anthropogenic terrestrial biomes, particularly
+        those associated with resource extraction, may be sources of hydrocarbon resources
+        fluids and swabs, but it is not a defining characteristic.
+    - term_id: ENVO_00002030
+      term_label: aquatic biome
+      comment: Hydrocarbon resources can be found in aquatic environments as well,
+        such as offshore oil drilling.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Hydrocarbon resources fluids and swabs can come from
+        some aquatic biomes, but it is not a defining characteristic of all.
+    - term_id: ENVO_00000447
+      term_label: marine biome
+      accepted: true
+    - term_id: ENVO_01000048
+      term_label: ocean biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Ocean biomes can be sources of hydrocarbon resources
+        fluids and swabs, but it is not a defining characteristic.
+    - term_id: ENVO_00000873
+      term_label: freshwater biome
+      accepted: true
+  - mixs_environment_label: MicrobialMatBiofilm
+    onto_term_mappings:
+    - term_id: ENVO_00000428
+      term_label: biome
+      comment: A microbial mat or biofilm can form in any biome.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The biome class is very broad and not specific to
+        microbial mats or biofilms.
+    - term_id: ENVO_00000446
+      term_label: terrestrial biome
+      comment: A microbial mat or biofilm can form in a terrestrial biome.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Microbial mats and biofilms can form in some terrestrial
+        biomes, but it is not a defining characteristic.
+    - term_id: ENVO_00000447
+      term_label: marine biome
+      comment: A microbial mat or biofilm can form in a marine biome.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Microbial mats and biofilms can form in some marine
+        biomes, but it is not a defining characteristic.
+    - term_id: ENVO_00000873
+      term_label: freshwater biome
+      comment: A microbial mat or biofilm can form in a freshwater biome.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Microbial mats and biofilms can form in some freshwater
+        biomes, but it is not a defining characteristic.
+    - term_id: ENVO_01000020
+      term_label: estuarine biome
+      comment: A microbial mat or biofilm can form in an estuarine biome.
+      accepted: true
+    - term_id: ENVO_01000127
+      term_label: marine cold seep biome
+      comment: A microbial mat or biofilm can form in a marine cold seep biome.
+      accepted: true
+    - term_id: ENVO_01000030
+      term_label: marine hydrothermal vent biome
+      comment: A microbial mat or biofilm can form in a marine hydrothermal vent biome.
+      accepted: true
+    - term_id: ENVO_01000174
+      term_label: forest biome
+      comment: A microbial mat or biofilm can form in a forest biome.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: While microbial mats and biofilms can occur in forests,
+        they are not a defining characteristic of forest biomes.
+    - term_id: ENVO_01000177
+      term_label: grassland biome
+      comment: A microbial mat or biofilm can form in a grassland biome.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: While microbial mats and biofilms can occur in grasslands,
+        especially in wetland areas, they are not a defining characteristic of most
+        grassland biomes.
+    - term_id: ENVO_01000252
+      term_label: freshwater lake biome
+      comment: A microbial mat or biofilm can form in a freshwater lake biome.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Microbial mats and biofilms can form in some freshwater
+        lake biomes, but it is not a defining characteristic.
+    - term_id: ENVO_01000253
+      term_label: freshwater river biome
+      comment: A microbial mat or biofilm can form in a freshwater river biome.
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Microbial mats and biofilms can form in some freshwater
+        river biomes, but it is not a defining characteristic.
+    - term_id: ENVO_01000051
+      term_label: marine black smoker biome
+      accepted: true
+    - term_id: ENVO_01000052
+      term_label: marine white smoker biome
+      accepted: true
+    - term_id: ENVO_01000053
+      term_label: marine ultramafic hydrothermal vent biome
+      accepted: true
+    - term_id: ENVO_01000054
+      term_label: marine basaltic hydrothermal vent biome
+      accepted: true
+  - mixs_environment_label: MiscellaneousNaturalOrArtificialEnvironment
+    onto_term_mappings:
+    - term_id: ENVO_00000428
+      term_label: biome
+      comment: This is the root biome class in ENVO. Any biome is compatible with
+        the generic MiscellaneousNaturalOrArtificialEnvironment MIxS package.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The biome class is assigned to other, more specific
+        MIxS environmental extensions.
+    - term_id: ENVO_00000446
+      term_label: terrestrial biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The terrestrial biome class is assigned to other,
+        more specific MIxS environmental extensions.
+    - term_id: ENVO_00000447
+      term_label: marine biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The marine biome class is assigned to other, more
+        specific MIxS environmental extensions.
+    - term_id: ENVO_00000873
+      term_label: freshwater biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The freshwater biome class is assigned to other,
+        more specific MIxS environmental extensions.
+    - term_id: ENVO_00000887
+      term_label: large river biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The large river biome class is assigned to another,
+        more specific MIxS environmental extension.
+    - term_id: ENVO_00000888
+      term_label: large river headwater biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The large river headwater biome class is assigned
+        to another, more specific MIxS environmental extension.
+    - term_id: ENVO_00000889
+      term_label: large river delta biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The large river delta biome class is assigned to
+        another, more specific MIxS environmental extension.
+    - term_id: ENVO_00000890
+      term_label: small river biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The small river biome class is assigned to another,
+        more specific MIxS environmental extension.
+    - term_id: ENVO_00000891
+      term_label: large freshwater lake biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The large freshwater lake biome class is assigned
+        to another, more specific MIxS environmental extension.
+    - term_id: ENVO_00000892
+      term_label: small freshwater lake biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The small freshwater lake biome class is assigned
+        to another, more specific MIxS environmental extension.
+    - term_id: ENVO_00000893
+      term_label: xeric basin biome
+      accepted: true
+    - term_id: ENVO_01000174
+      term_label: forest biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The forest biome class is assigned to other, more
+        specific MIxS environmental extensions.
+    - term_id: ENVO_01000175
+      term_label: woodland biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The woodland biome class is assigned to other, more
+        specific MIxS environmental extensions.
+    - term_id: ENVO_01000176
+      term_label: shrubland biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The shrubland biome class is assigned to other, more
+        specific MIxS environmental extensions.
+    - term_id: ENVO_01000177
+      term_label: grassland biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The grassland biome class is assigned to other, more
+        specific MIxS environmental extensions.
+    - term_id: ENVO_01000178
+      term_label: savanna biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The savanna biome class is assigned to other, more
+        specific MIxS environmental extensions.
+    - term_id: ENVO_01000179
+      term_label: desert biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The desert biome class is assigned to other, more
+        specific MIxS environmental extensions.
+    - term_id: ENVO_01000180
+      term_label: tundra biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The tundra biome class is assigned to other, more
+        specific MIxS environmental extensions.
+    - term_id: ENVO_01000181
+      term_label: mangrove biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The mangrove biome class is assigned to other, more
+        specific MIxS environmental extensions.
+    - term_id: ENVO_01000219
+      term_label: anthropogenic terrestrial biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The anthropogenic terrestrial biome class is assigned
+        to other, more specific MIxS environmental extensions.
+    - term_id: ENVO_01000252
+      term_label: freshwater lake biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The freshwater lake biome class is assigned to other,
+        more specific MIxS environmental extensions.
+    - term_id: ENVO_01000253
+      term_label: freshwater river biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The freshwater river biome class is assigned to other,
+        more specific MIxS environmental extensions.
+    - term_id: ENVO_03605008
+      term_label: freshwater stream biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The freshwater stream biome class is assigned to
+        other, more specific MIxS environmental extensions.
+    - term_id: ENVO_01000339
+      term_label: polar biome
+      accepted: true
+    - term_id: ENVO_01001830
+      term_label: tropical biome
+      accepted: true
+    - term_id: ENVO_01001831
+      term_label: temperate biome
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The temperate biome class is assigned to other, more
+        specific MIxS environmental extensions.
+    - term_id: ENVO_01001832
+      term_label: subtropical biome
+      accepted: true
+    - term_id: ENVO_01001833
+      term_label: mediterranean biome
+      accepted: true
+    - term_id: ENVO_01001834
+      term_label: subpolar biome
+      accepted: true
+    - term_id: ENVO_01001835
+      term_label: alpine biome
+      accepted: true
+    - term_id: ENVO_01001836
+      term_label: montane biome
+      accepted: true
+    - term_id: ENVO_01001837
+      term_label: subalpine biome
+      accepted: true
+    - term_id: ENVO_01001838
+      term_label: arid biome
+      accepted: true
+  - mixs_environment_label: PlantAssociated
+    onto_term_mappings:
+    - term_id: ENVO_01000174
+      term_label: forest biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Forests are defined by their plant communities.
+    - term_id: ENVO_01000175
+      term_label: woodland biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Woodlands are defined by their sparse tree communities.
+    - term_id: ENVO_01000176
+      term_label: shrubland biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Shrublands are defined by their dense shrub communities.
+    - term_id: ENVO_01000177
+      term_label: grassland biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Grasslands are defined by their grass communities.
+    - term_id: ENVO_01000178
+      term_label: savanna biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Savannas are defined by their grass and tree communities.
+    - term_id: ENVO_01000181
+      term_label: mangrove biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Mangroves are defined by their unique plant communities
+        adapted to coastal environments.
+    - term_id: ENVO_01000196
+      term_label: coniferous forest biome
+      accepted: true
+    - term_id: ENVO_01000197
+      term_label: broadleaf forest biome
+      accepted: true
+    - term_id: ENVO_01000198
+      term_label: mixed forest biome
+      accepted: true
+    - term_id: ENVO_01000199
+      term_label: mediterranean forest biome
+      accepted: true
+    - term_id: ENVO_01000200
+      term_label: tropical broadleaf forest biome
+      accepted: true
+    - term_id: ENVO_01000201
+      term_label: subtropical broadleaf forest biome
+      accepted: true
+    - term_id: ENVO_01000202
+      term_label: temperate broadleaf forest biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Temperate broadleaf forests are defined by their
+        broadleaf tree communities.
+    - term_id: ENVO_01000208
+      term_label: mediterranean woodland biome
+      accepted: true
+    - term_id: ENVO_01000209
+      term_label: subtropical coniferous forest biome
+      accepted: true
+    - term_id: ENVO_01000210
+      term_label: tropical coniferous forest biome
+      accepted: true
+    - term_id: ENVO_01000211
+      term_label: temperate coniferous forest biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Temperate coniferous forests are defined by their
+        coniferous tree communities.
+    - term_id: ENVO_01000212
+      term_label: temperate mixed forest biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Temperate mixed forests are defined by their mix
+        of broadleaf and coniferous tree communities.
+    - term_id: ENVO_01000213
+      term_label: subtropical shrubland biome
+      accepted: true
+    - term_id: ENVO_01000214
+      term_label: tropical shrubland biome
+      accepted: true
+    - term_id: ENVO_01000215
+      term_label: temperate shrubland biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Temperate shrublands are defined by their dense shrub
+        communities.
+    - term_id: ENVO_01000216
+      term_label: montane shrubland biome
+      accepted: true
+    - term_id: ENVO_01000217
+      term_label: mediterranean shrubland biome
+      accepted: true
+    - term_id: ENVO_01000218
+      term_label: xeric shrubland biome
+      accepted: true
+    - term_id: ENVO_01000220
+      term_label: tropical woodland biome
+      accepted: true
+    - term_id: ENVO_01000221
+      term_label: temperate woodland biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Temperate woodlands are defined by their sparse tree
+        communities.
+    - term_id: ENVO_01000222
+      term_label: subtropical woodland biome
+      accepted: true
+    - term_id: ENVO_01000223
+      term_label: montane savanna biome
+      accepted: true
+    - term_id: ENVO_01000224
+      term_label: mediterranean grassland biome
+      accepted: true
+    - term_id: ENVO_01000225
+      term_label: subtropical dry broadleaf forest biome
+      accepted: true
+    - term_id: ENVO_01000226
+      term_label: subtropical moist broadleaf forest biome
+      accepted: true
+    - term_id: ENVO_01000227
+      term_label: tropical dry broadleaf forest biome
+      accepted: true
+    - term_id: ENVO_01000228
+      term_label: tropical moist broadleaf forest biome
+      accepted: true
+    - term_id: ENVO_01000229
+      term_label: mediterranean savanna biome
+      accepted: true
+    - term_id: ENVO_01000245
+      term_label: cropland biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Croplands are defined by their cultivated plant communities.
+    - term_id: ENVO_01000247
+      term_label: rangeland biome
+      accepted: true
+      specificity_score: 4.0
+      specificity_justification: Rangelands are typically grasslands or shrublands,
+        and thus are defined in part by their plant communities.
+    - term_id: ENVO_01000250
+      term_label: subpolar coniferous forest biome
+      accepted: true
+    - term_id: ENVO_01001798
+      term_label: tropical mixed forest biome
+      accepted: true
+    - term_id: ENVO_01000192
+      term_label: tropical grassland biome
+      accepted: true
+    - term_id: ENVO_01000195
+      term_label: flooded grassland biome
+      accepted: true
+  - mixs_environment_label: Sediment
+    onto_term_mappings:
+    - term_id: ENVO_00000428
+      term_label: biome
+      comment: Sediment is compatible with any biome.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The biome class is very broad and not specific to
+        sediments.
+    - term_id: ENVO_00000446
+      term_label: terrestrial biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Some terrestrial biomes may have associated sediments,
+        but it is not a defining characteristic.
+    - term_id: ENVO_00000447
+      term_label: marine biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Sediment is a common component of marine biomes,
+        especially in benthic zones.
+    - term_id: ENVO_00000873
+      term_label: freshwater biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Sediment is a common component of freshwater biomes,
+        especially in benthic zones.
+    - term_id: ENVO_01000048
+      term_label: ocean biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Sediment is a common component of ocean biomes, especially
+        in benthic zones.
+    - term_id: ENVO_01000252
+      term_label: freshwater lake biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Sediment is a common component of freshwater lake
+        biomes, especially in benthic zones.
+    - term_id: ENVO_01000253
+      term_label: freshwater river biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Sediment is a common component of freshwater river
+        biomes, especially in benthic zones.
+    - term_id: ENVO_03605008
+      term_label: freshwater stream biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Sediment is a common component of freshwater stream
+        biomes, especially in benthic zones.
+    - term_id: ENVO_01001369
+      term_label: tidal mangrove shrubland
+      accepted: true
+  - mixs_environment_label: Soil
+    onto_term_mappings:
+    - term_id: ENVO_01000179
+      term_label: desert biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: While desert soils are often thin and nutrient-poor,
+        they are a key component of desert ecosystems.
+    - term_id: ENVO_01000180
+      term_label: tundra biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: While tundra soils are often frozen and nutrient-poor,
+        they are a key component of tundra ecosystems.
+    - term_id: ENVO_01000177
+      term_label: grassland biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Soil is a key component of grassland ecosystems.
+    - term_id: ENVO_01000174
+      term_label: forest biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Soil is a key component of forest ecosystems.
+    - term_id: ENVO_01000175
+      term_label: woodland biome
+      accepted: true
+    - term_id: ENVO_01000176
+      term_label: shrubland biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Soil is a key component of shrubland ecosystems.
+    - term_id: ENVO_01000178
+      term_label: savanna biome
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Soil is a key component of savanna ecosystems.
+    - term_id: ENVO_01000219
+      term_label: anthropogenic terrestrial biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: While soils in anthropogenic terrestrial biomes are
+        heavily influenced by human activities, they are not the defining characteristic
+        of these biomes.
+    - term_id: ENVO_00000446
+      term_label: terrestrial biome
+      comment: This is a general parent class that encompasses many soil-related biomes.
+      accepted: true
+      specificity_score: 5.0
+      specificity_justification: Soil is a key component of terrestrial biomes.
+    - term_id: ENVO_01001505
+      term_label: alpine tundra biome
+      accepted: true
+  - mixs_environment_label: SymbiontAssociated
+    onto_term_mappings:
+    - term_id: ENVO_00000428
+      term_label: biome
+      comment: Any biome could potentially host a symbiotic relationship.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: The biome class is very broad and not specific to
+        symbiont-associated environments.
+    - term_id: ENVO_00000446
+      term_label: terrestrial biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Terrestrial biomes can host symbiotic relationships,
+        but it is not a defining characteristic.
+    - term_id: ENVO_00000447
+      term_label: marine biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Marine biomes can host symbiotic relationships, such
+        as coral reefs, but it is not a defining characteristic of all.
+    - term_id: ENVO_00000873
+      term_label: freshwater biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Freshwater biomes can host symbiotic relationships,
+        but it is not a defining characteristic of all.
+    - term_id: ENVO_01000174
+      term_label: forest biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Forests host many symbiotic relationships, but it
+        is not a defining characteristic of all forests.
+    - term_id: ENVO_01000175
+      term_label: woodland biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Woodlands host many symbiotic relationships, but
+        it is not a defining characteristic of all woodlands.
+    - term_id: ENVO_01000176
+      term_label: shrubland biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Shrublands host many symbiotic relationships, but
+        it is not a defining characteristic of all shrublands.
+    - term_id: ENVO_01000177
+      term_label: grassland biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Grasslands host many symbiotic relationships, particularly
+        between grasses and soil microbes, but it is not a defining characteristic
+        of all grasslands.
+    - term_id: ENVO_01000178
+      term_label: savanna biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Savannas host many symbiotic relationships, particularly
+        between grasses and soil microbes and trees and mycorrhizal fungi, but it
+        is not a defining characteristic of all savannas.
+    - term_id: ENVO_01000179
+      term_label: desert biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Deserts host some symbiotic relationships, particularly
+        between plants and microbes, but it is not a defining characteristic of all
+        deserts.
+    - term_id: ENVO_01000180
+      term_label: tundra biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Tundra hosts some symbiotic relationships, particularly
+        between plants and microbes, but it is not a defining characteristic of all
+        tundra.
+    - term_id: ENVO_01000181
+      term_label: mangrove biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Mangroves host many symbiotic relationships, particularly
+        between plants and microbes and animals, but it is not a defining characteristic
+        of all mangroves.
+    - term_id: ENVO_01000219
+      term_label: anthropogenic terrestrial biome
+      accepted: true
+      specificity_score: 2.0
+      specificity_justification: Some symbiotic relationships, particularly those
+        involving humans, may be associated with anthropogenic terrestrial biomes,
+        but it is not a defining characteristic.
+    - term_id: ENVO_01000245
+      term_label: cropland biome
+      accepted: true
+      specificity_score: 2.0
+      specificity_justification: Some symbiotic relationships, particularly those
+        between crops and microbes, are associated with croplands, but it is not a
+        defining characteristic.
+    - term_id: ENVO_01000246
+      term_label: village biome
+      accepted: true
+      specificity_score: 2.0
+      specificity_justification: Some symbiotic relationships, particularly those
+        involving humans, may be associated with villages, but it is not a defining
+        characteristic.
+    - term_id: ENVO_01000247
+      term_label: rangeland biome
+      accepted: true
+      specificity_score: 2.0
+      specificity_justification: Some symbiotic relationships, particularly those
+        between livestock and microbes, may be associated with rangelands, but it
+        is not a defining characteristic.
+    - term_id: ENVO_01000248
+      term_label: dense settlement biome
+      accepted: true
+      specificity_score: 2.0
+      specificity_justification: Some symbiotic relationships, particularly those
+        involving humans, may be associated with dense settlements, but it is not
+        a defining characteristic.
+    - term_id: ENVO_01000249
+      term_label: urban biome
+      accepted: true
+      specificity_score: 2.0
+      specificity_justification: Some symbiotic relationships, particularly those
+        involving humans, may be associated with urban biomes, but it is not a defining
+        characteristic.
+    - term_id: ENVO_01000252
+      term_label: freshwater lake biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Freshwater lake biomes can host symbiotic relationships,
+        but it is not a defining characteristic of all.
+    - term_id: ENVO_01000253
+      term_label: freshwater river biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Freshwater river biomes can host symbiotic relationships,
+        but it is not a defining characteristic of all.
+    - term_id: ENVO_03605008
+      term_label: freshwater stream biome
+      accepted: true
+      specificity_score: 3.0
+      specificity_justification: Freshwater stream biomes can host symbiotic relationships,
+        but it is not a defining characteristic of all.
+  - mixs_environment_label: WastewaterSludge
+    onto_term_mappings:
+    - term_id: ENVO_01000174
+      term_label: forest biome
+      comment: Wastewater sludge could potentially be found in a forest biome.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: Wastewater sludge is not a natural component of forest
+        environments.
+    - term_id: ENVO_01000177
+      term_label: grassland biome
+      comment: Wastewater sludge could potentially be found in a grassland biome.
+      accepted: true
+      specificity_score: 1.0
+      specificity_justification: Wastewater sludge is not a natural component of grassland
+        environments.
+    - term_id: ENVO_01000178
+      term_label: shrubland biome
+      comment: Wastewater sludge could potentially be found in a shrubland biome.
+      accepted: true
+    - term_id: ENVO_01000219
+      term_label: anthropogenic terrestrial biome
+      comment: Wastewater sludge is often associated with human activity and built
+        environments.
+      accepted: true
+      specificity_score: 2.0
+      specificity_justification: Wastewater sludge is a byproduct of human activities
+        in anthropogenic terrestrial biomes, but it is not a defining characteristic
+        of these biomes.
+    - term_id: ENVO_01000248
+      term_label: dense settlement biome
+      comment: Wastewater treatment plants are often located in or near dense human
+        settlements.
+      accepted: true
+      specificity_score: 2.0
+      specificity_justification: Wastewater sludge is a byproduct of human activities
+        in dense settlements, but it is not a defining characteristic of these biomes.
+    - term_id: ENVO_01000249
+      term_label: urban biome
+      comment: Wastewater sludge is commonly generated in urban areas.
+      accepted: true
+      specificity_score: 2.0
+      specificity_justification: Wastewater sludge is a byproduct of human activities
+        in urban biomes, but it is not a defining characteristic of these biomes.
+  - mixs_environment_label: Water
+    onto_term_mappings:
+    - accepted: true
+      onto_term_id: ENVO_00000873
+      onto_term_label: freshwater biome
+    - accepted: true
+      onto_term_id: ENVO_00000447
+      onto_term_label: marine biome
+    - accepted: true
+      onto_term_id: ENVO_01000252
+      onto_term_label: freshwater lake biome
+    - accepted: true
+      onto_term_id: ENVO_01000253
+      onto_term_label: freshwater river biome
+    - accepted: true
+      onto_term_id: ENVO_00000887
+      onto_term_label: large river biome
+    - accepted: true
+      onto_term_id: ENVO_00000888
+      onto_term_label: large river headwater biome
+    - accepted: true
+      onto_term_id: ENVO_00000889
+      onto_term_label: large river delta biome
+    - accepted: true
+      onto_term_id: ENVO_00000890
+      onto_term_label: small river biome
+    - accepted: true
+      onto_term_id: ENVO_00000891
+      onto_term_label: large freshwater lake biome
+    - accepted: true
+      onto_term_id: ENVO_00000892
+      onto_term_label: small freshwater lake biome
+    - comment: Including some marine biomes as well
+      accepted: true
+      onto_term_id: ENVO_01000048
+      onto_term_label: ocean biome
+    - accepted: true
+      onto_term_id: ENVO_01000046
+      onto_term_label: marginal sea biome
+    - accepted: true
+      onto_term_id: ENVO_01000047
+      onto_term_label: mediterranean sea biome
+    - accepted: true
+      onto_term_id: ENVO_01000045
+      onto_term_label: epeiric sea biome
+    - accepted: true
+      onto_term_id: ENVO_03605008
+      onto_term_label: freshwater stream biome
+    - term_id: ENVO_01000004
+      term_label: concentration basin mediterranean sea biome
+      accepted: true
+    - term_id: ENVO_01000022
+      term_label: marine salt marsh biome
+      accepted: true
+    - term_id: ENVO_01000023
+      term_label: marine pelagic biome
+      accepted: true
+    - term_id: ENVO_01000024
+      term_label: marine benthic biome
+      accepted: true
+    - term_id: ENVO_01000025
+      term_label: marine neritic benthic zone biome
+      accepted: true
+    - term_id: ENVO_01000026
+      term_label: marine bathyal zone biome
+      accepted: true
+    - term_id: ENVO_01000027
+      term_label: marine abyssal zone biome
+      accepted: true
+    - term_id: ENVO_01000028
+      term_label: marine hadal zone biome
+      accepted: true
+    - term_id: ENVO_01000029
+      term_label: marine reef biome
+      accepted: true
+    - term_id: ENVO_01000032
+      term_label: neritic pelagic zone biome
+      accepted: true
+    - term_id: ENVO_01000033
+      term_label: oceanic pelagic zone biome
+      accepted: true
+    - term_id: ENVO_01000034
+      term_label: oceanic sea surface microlayer biome
+      accepted: true
+    - term_id: ENVO_01000035
+      term_label: oceanic epipelagic zone biome
+      accepted: true
+    - term_id: ENVO_01000036
+      term_label: oceanic mesopelagic zone biome
+      accepted: true
+    - term_id: ENVO_01000037
+      term_label: oceanic bathypelagic zone biome
+      accepted: true
+    - term_id: ENVO_01000038
+      term_label: oceanic abyssopelagic zone biome
+      accepted: true
+    - term_id: ENVO_01000039
+      term_label: oceanic hadal pelagic zone biome
+      accepted: true
+    - term_id: ENVO_01000040
+      term_label: oceanic benthopelagic zone biome
+      accepted: true
+    - term_id: ENVO_01000041
+      term_label: neritic sea surface microlayer biome
+      accepted: true
+    - term_id: ENVO_01000042
+      term_label: neritic epipelagic zone biome
+      accepted: true
+    - term_id: ENVO_01000043
+      term_label: neritic mesopelagic zone biome
+      accepted: true
+    - term_id: ENVO_01000049
+      term_label: marine coral reef biome
+      accepted: true
+    - term_id: ENVO_01000050
+      term_label: marine subtidal rocky reef biome
+      accepted: true
+    - term_id: ENVO_01000123
+      term_label: marine sponge reef biome
+      accepted: true
+    - term_id: ENVO_01000128
+      term_label: dilution basin mediterranean sea biome
+      accepted: true
+    - term_id: ENVO_01000854
+      term_label: tropical marine coral reef biome
+      accepted: true
+    - term_id: ENVO_01000856
+      term_label: temperate marginal sea biome
+      accepted: true
+    - term_id: ENVO_01000857
+      term_label: temperate mediterranean sea biome
+      accepted: true
+    - term_id: ENVO_01000858
+      term_label: marine upwelling biome
+      accepted: true
+    - term_id: ENVO_01000859
+      term_label: tropical marine upwelling biome
+      accepted: true
+    - term_id: ENVO_01000860
+      term_label: temperate marine upwelling biome
+      accepted: true
+    - term_id: ENVO_01001230
+      term_label: tropical marginal sea biome
+      accepted: true

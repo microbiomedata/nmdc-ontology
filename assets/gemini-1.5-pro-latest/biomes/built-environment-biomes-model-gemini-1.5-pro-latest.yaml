@@ -1,0 +1,5 @@
+environment_mappings:
+  - mixs_environment_label: BuiltEnvironment
+    onto_term_mappings:
+      - onto_term_id: ENVO_01000249
+        onto_term_label: urban biome 

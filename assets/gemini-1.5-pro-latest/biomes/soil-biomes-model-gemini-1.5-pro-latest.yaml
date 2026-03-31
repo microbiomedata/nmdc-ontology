@@ -1,0 +1,150 @@
+context_mappings:
+  - mixs_context_label: env_broad_scale
+    environment_mappings:
+      - mixs_environment_label: Soil
+        onto_term_mappings:
+          - onto_term_id: ENVO_01000179
+            onto_term_label: desert biome
+          - onto_term_id: ENVO_01000180
+            onto_term_label: tundra biome
+          - onto_term_id: ENVO_01001831
+            onto_term_label: temperate biome
+          - onto_term_id: ENVO_01001830
+            onto_term_label: tropical biome
+          - onto_term_id: ENVO_01001832
+            onto_term_label: subtropical biome
+          - onto_term_id: ENVO_01001836
+            onto_term_label: montane biome
+          - onto_term_id: ENVO_01000339
+            onto_term_label: polar biome
+          - onto_term_id: ENVO_01001834
+            onto_term_label: subpolar biome
+          - onto_term_id: ENVO_01001835
+            onto_term_label: alpine biome
+          - onto_term_id: ENVO_01001837
+            onto_term_label: subalpine biome
+          - onto_term_id: ENVO_01001838
+            onto_term_label: arid biome
+          - onto_term_id: ENVO_01000174
+            onto_term_label: forest biome
+          - onto_term_id: ENVO_01000175
+            onto_term_label: woodland biome
+          - onto_term_id: ENVO_01000176
+            onto_term_label: shrubland biome
+          - onto_term_id: ENVO_01000177
+            onto_term_label: grassland biome
+          - onto_term_id: ENVO_01000181
+            onto_term_label: mangrove biome
+          - onto_term_id: ENVO_01000219
+            onto_term_label: anthropogenic terrestrial biome
+          - onto_term_id: ENVO_01000182
+            onto_term_label: temperate desert biome
+          - onto_term_id: ENVO_01000183
+            onto_term_label: tropical desert biome
+          - onto_term_id: ENVO_01000184
+            onto_term_label: subtropical desert biome
+          - onto_term_id: ENVO_01000185
+            onto_term_label: montane desert biome
+          - onto_term_id: ENVO_01000186
+            onto_term_label: polar desert biome
+          - onto_term_id: ENVO_01000189
+            onto_term_label: temperate savanna biome
+          - onto_term_id: ENVO_01000193
+            onto_term_label: temperate grassland biome
+          - onto_term_id: ENVO_01000202
+            onto_term_label: temperate broadleaf forest biome
+          - onto_term_id: ENVO_01000211
+            onto_term_label: temperate coniferous forest biome
+          - onto_term_id: ENVO_01000212
+            onto_term_label: temperate mixed forest biome
+          - onto_term_id: ENVO_01000215
+            onto_term_label: temperate shrubland biome
+          - onto_term_id: ENVO_01000221
+            onto_term_label: temperate woodland biome
+          - onto_term_id: ENVO_01000188
+            onto_term_label: tropical savanna biome
+          - onto_term_id: ENVO_01000192
+            onto_term_label: tropical grassland biome
+          - onto_term_id: ENVO_01000200
+            onto_term_label: tropical broadleaf forest biome
+          - onto_term_id: ENVO_01000210
+            onto_term_label: tropical coniferous forest biome
+          - onto_term_id: ENVO_01000214
+            onto_term_label: tropical shrubland biome
+          - onto_term_id: ENVO_01000220
+            onto_term_label: tropical woodland biome
+          - onto_term_id: ENVO_01001798
+            onto_term_label: tropical mixed forest biome
+          - onto_term_id: ENVO_01001833
+            onto_term_label: mediterranean biome
+          - onto_term_id: ENVO_01000187
+            onto_term_label: subtropical savanna biome
+          - onto_term_id: ENVO_01000191
+            onto_term_label: subtropical grassland biome
+          - onto_term_id: ENVO_01000201
+            onto_term_label: subtropical broadleaf forest biome
+          - onto_term_id: ENVO_01000222
+            onto_term_label: subtropical woodland biome
+          - onto_term_id: ENVO_01000209
+            onto_term_label: subtropical coniferous forest biome
+          - onto_term_id: ENVO_01000213
+            onto_term_label: subtropical shrubland biome
+          - onto_term_id: ENVO_01000194
+            onto_term_label: montane grassland biome
+          - onto_term_id: ENVO_01000216
+            onto_term_label: montane shrubland biome
+          - onto_term_id: ENVO_01000223
+            onto_term_label: montane savanna biome
+          - onto_term_id: ENVO_01000250
+            onto_term_label: subpolar coniferous forest biome
+          - onto_term_id: ENVO_01001505
+            onto_term_label: alpine tundra biome
+          - onto_term_id: ENVO_01000196
+            onto_term_label: coniferous forest biome
+          - onto_term_id: ENVO_01000197
+            onto_term_label: broadleaf forest biome
+          - onto_term_id: ENVO_01000198
+            onto_term_label: mixed forest biome
+          - onto_term_id: ENVO_01000199
+            onto_term_label: mediterranean forest biome
+          - onto_term_id: ENVO_01000178
+            onto_term_label: savanna biome
+          - onto_term_id: ENVO_01000218
+            onto_term_label: xeric shrubland biome
+          - onto_term_id: ENVO_01001369
+            onto_term_label: tidal mangrove shrubland
+          - onto_term_id: ENVO_01000195
+            onto_term_label: flooded grassland biome
+          - onto_term_id: ENVO_01000245
+            onto_term_label: cropland biome
+          - onto_term_id: ENVO_01000247
+            onto_term_label: rangeland biome
+          - onto_term_id: ENVO_01000227
+            onto_term_label: tropical dry broadleaf forest biome
+          - onto_term_id: ENVO_01000228
+            onto_term_label: tropical moist broadleaf forest biome
+          - onto_term_id: ENVO_01000208
+            onto_term_label: mediterranean woodland biome
+          - onto_term_id: ENVO_01000217
+            onto_term_label: mediterranean shrubland biome
+          - onto_term_id: ENVO_01000224
+            onto_term_label: mediterranean grassland biome
+          - onto_term_id: ENVO_01000229
+            onto_term_label: mediterranean savanna biome
+          - onto_term_id: ENVO_01000225
+            onto_term_label: subtropical dry broadleaf forest biome
+          - onto_term_id: ENVO_01000226
+            onto_term_label: subtropical moist broadleaf forest biome
+          - onto_term_id: ENVO_01000190
+            onto_term_label: flooded savanna biome
+          - onto_term_id: ENVO_00000893
+            onto_term_label: xeric basin biome
+          - onto_term_id: ENVO_01000246
+            onto_term_label: village biome
+            comment: this was added after MAM asked the LLM not to use any subclass/superclass reasoning of its own, and to only go by the assertions provided
+          - onto_term_id: ENVO_01000248
+            onto_term_label: dense settlement biome
+            comment: this was added after MAM asked the LLM not to use any subclass/superclass reasoning of its own, and to only go by the assertions provided
+          - onto_term_id: ENVO_01000249
+            onto_term_label: urban biome
+            comment: this was added after MAM asked the LLM not to use any subclass/superclass reasoning of its own, and to only go by the assertions provided

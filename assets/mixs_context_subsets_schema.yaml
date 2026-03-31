@@ -1,0 +1,86 @@
+name: mixs_context_subsets_schema
+id: https://examples.com/mixs_context_subsets_schema
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+
+imports:
+  - linkml:types
+
+classes:
+  RootMappings:
+    slots:
+      - context_mappings
+  Mapping:
+    slots:
+      - term_id
+      - term_label
+      - mappings
+      - comment
+      - accepted
+  OntoTermMapping:
+    is_a: Mapping
+    slots:
+      - onto_term_id
+      - onto_term_label
+      - specificity_score
+      - specificity_justification
+  MixsExtensionMapping:
+    is_a: Mapping
+    slots:
+      - mixs_environment_id
+      - mixs_environment_label
+      - onto_term_mappings
+  MixsContextMapping:
+    is_a: Mapping
+    slots:
+      - mixs_context_id
+      - mixs_context_label
+      - environment_mappings
+
+slots:
+  term_id:
+    range: string
+    identifier: false
+    comments:
+      - everything will be inlined in this file, and never mentioned by id
+      - so no identifier will be asserted and nothing will be inlined AS A LIST
+  term_label:
+    range: string
+  comment:
+    range: string
+  mappings:
+    range: Mapping
+    multivalued: true
+    inlined: true
+  mixs_environment_id:
+    is_a: term_id
+    aliases:
+      - mixs_environment_id
+  mixs_environment_label:
+    is_a: term_id
+    aliases:
+      - mixs_environment_label
+  onto_term_id:
+    is_a: term_id
+  onto_term_label:
+    is_a: term_label
+  mixs_context_id:
+    is_a: term_id
+  mixs_context_label:
+    is_a: term_label
+  onto_term_mappings:
+    is_a: mappings
+    range: OntoTermMapping
+  environment_mappings:
+    is_a: mappings
+    range: MixsExtensionMapping
+  context_mappings:
+    is_a: mappings
+    range: MixsContextMapping
+  accepted:
+    range: boolean
+  specificity_score:
+    range: float
+  specificity_justification:
+    range: string

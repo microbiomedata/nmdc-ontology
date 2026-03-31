@@ -1,0 +1,8 @@
+# http://purl.obolibrary.org/obo/ENVO_00000078 # farm from ecosystem from system
+http://purl.obolibrary.org/obo/ENVO_01000813 # ABP including beach sand, ecoregion, agricultural field, airport, village
+http://purl.obolibrary.org/obo/ENVO_01001813 # construction including beaver dam
+http://purl.obolibrary.org/obo/BFO_0000024 # fiat object including area of barren land
+http://purl.obolibrary.org/obo/ENVO_01000281 # layer including mineral horizon
+http://purl.obolibrary.org/obo/ENVO_00003074 # manufactured product including chair
+http://purl.obolibrary.org/obo/RO_0002577 # system including farm and public transit system
+

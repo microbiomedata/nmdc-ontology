@@ -1,0 +1,236 @@
+mixs_context_mappings:
+  - mixs_context_label: env_local_scale
+    environment_mappings:
+      - mixs_environment_label: Agriculture
+        mapping_batches:
+          - agent: claude-3-opus-20240229
+            timestamp: '2024-05-03T14:42:08.187Z'
+            ontology_terms:
+              - ontology_term_id: ENVO_00000114
+                ontology_term_label: agricultural field
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000117
+                ontology_term_label: plantation
+                confidence: 0.8
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: The term plantation can refer to large-scale, commercial crops like sugarcane or cotton, so it may not always fit with smaller scale agricultural systems.
+              - ontology_term_id: ENVO_00000266
+                ontology_term_label: pasture
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000078
+                ontology_term_label: farm
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000115
+                ontology_term_label: orchard
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000116
+                ontology_term_label: vineyard
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000297
+                ontology_term_label: freshwater river
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Rivers near agricultural land could be relevant local environments, but may not always be directly part of the agricultural system.
+              - ontology_term_id: ENVO_00000020
+                ontology_term_label: lake
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Lakes near agricultural land could be relevant local environments, but may not always be directly part of the agricultural system.
+              - ontology_term_id: ENVO_00000033
+                ontology_term_label: pond
+                confidence: 0.8
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Ponds are often found on farms and can be an important part of agricultural systems.
+              - ontology_term_id: ENVO_00000036
+                ontology_term_label: irrigation canal
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000037
+                ontology_term_label: ditch
+                confidence: 0.8
+              - ontology_term_id: ENVO_00002221
+                ontology_term_label: shop
+                confidence: 0.6
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Shops may be present on farms for selling agricultural products, but are not necessarily a core part of all agricultural systems.
+              - ontology_term_id: ENVO_00000038
+                ontology_term_label: lagoon
+                confidence: 0.5
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Lagoons can sometimes be adjacent to agricultural land, especially in coastal areas, but are not a typical feature of most agricultural systems.
+              - ontology_term_id: ENVO_00000044
+                ontology_term_label: peatland
+                confidence: 0.6
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Peatlands can sometimes be used for agriculture, especially grazing, but are a specialized environment that is not representative of most agricultural systems.
+              - ontology_term_id: ENVO_00000294
+                ontology_term_label: fish farm
+                confidence: 0.8
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Fish farms are a type of agricultural system focused on aquaculture rather than crops or livestock.
+              - ontology_term_id: ENVO_00000295
+                ontology_term_label: fish hatchery
+                confidence: 0.8
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Fish hatcheries are often a component of fish farming operations.
+              - ontology_term_id: ENVO_00000296
+                ontology_term_label: rice field
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000935
+                ontology_term_label: campground
+                confidence: 0.4
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Campgrounds are not typically a direct part of agricultural systems, though they may sometimes be located adjacent to agricultural land.
+              - ontology_term_id: ENVO_00003040
+                ontology_term_label: animal house
+                confidence: 0.8
+              - ontology_term_id: ENVO_00003041
+                ontology_term_label: cow shed
+                confidence: 0.9
+              - ontology_term_id: ENVO_00003042
+                ontology_term_label: piggery
+                confidence: 0.9
+              - ontology_term_id: ENVO_00005745
+                ontology_term_label: allotment garden
+                confidence: 0.8
+      - mixs_environment_label: BuiltEnvironment
+        mapping_batches:
+          - agent: claude-3-opus-20240229
+            timestamp: '2024-05-03T14:42:08.187Z'
+            ontology_terms:
+              - ontology_term_id: ENVO_00000073
+                ontology_term_label: building
+                confidence: 0.9
+              - ontology_term_id: ENVO_00002173
+                ontology_term_label: hospital
+                confidence: 0.9
+              - ontology_term_id: ENVO_00003861
+                ontology_term_label: industrial building
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000064
+                ontology_term_label: road
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000074
+                ontology_term_label: dam
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000075
+                ontology_term_label: bridge
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000070
+                ontology_term_label: human construction
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: This is a broad term that encompasses many types of built structures, so it may not always provide the most specific or informative label for a local environment.
+              - ontology_term_id: ENVO_00000065
+                ontology_term_label: railway
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000467
+                ontology_term_label: constructed barrier
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Constructed barriers like walls and fences are common features of built environments, but may not always be the most salient or informative labels for a local environment.
+              - ontology_term_id: ENVO_00000469
+                ontology_term_label: research facility
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000562
+                ontology_term_label: park
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Parks and green spaces are important parts of built environments, but may not always be considered "built" in the same sense as buildings and infrastructure.
+              - ontology_term_id: ENVO_00000566
+                ontology_term_label: winter sports facility
+                confidence: 0.6
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Winter sports facilities are a specialized type of built environment that may not be representative of built environments in general.
+      - mixs_environment_label: Soil
+        mapping_batches:
+          - agent: claude-3-opus-20240229
+            timestamp: '2024-05-03T14:42:08.187Z'
+            ontology_terms:
+              - ontology_term_id: ENVO_00001998
+                ontology_term_label: soil
+                confidence: 0.9
+              - ontology_term_id: ENVO_00002007
+                ontology_term_label: soil layer
+                confidence: 0.9
+              - ontology_term_id: ENVO_00005801
+                ontology_term_label: rhizosphere
+                confidence: 0.9
+              - ontology_term_id: ENVO_00005802
+                ontology_term_label: rhizosphere soil
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000213
+                ontology_term_label: soil horizon
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000043
+                ontology_term_label: wetland area
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Wetland soils are a specific type of soil that may not be representative of all soil environments, but are still relevant to the Soil extension.
+              - ontology_term_id: ENVO_00000044
+                ontology_term_label: peatland
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Peatlands are a specific type of wetland with distinctive soil characteristics, but may not be representative of all soil environments.
+              - ontology_term_id: ENVO_00000097
+                ontology_term_label: desert area
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Desert soils are a specific type of soil that may not be representative of all soil environments, but are still relevant to the Soil extension.
+              - ontology_term_id: ENVO_00000109
+                ontology_term_label: woodland area
+                confidence: 0.8
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Woodland soils are influenced by the presence of trees and may have distinctive characteristics compared to soils in other environments.
+              - ontology_term_id: ENVO_00000112
+                ontology_term_label: area of tundra
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Tundra soils are a specific type of soil that may not be representative of all soil environments, but are still relevant to the Soil extension.
+              - ontology_term_id: ENVO_00000114
+                ontology_term_label: agricultural field
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000139
+                ontology_term_label: irrigation ditch
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Irrigation ditches are associated with agricultural soils and can influence their properties, but are not soil environments per se.

@@ -1,0 +1,22 @@
+> FoodAnimalAndAnimalFeed
+```yaml
+environment_mappings:
+  - mixs_environment_label: FoodAnimalAndAnimalFeed
+    onto_term_mappings:
+      - onto_term_id: ENVO_01000247
+        onto_term_label: rangeland biome
+```
+
+
+> please tell me why you chose such a small number of mappings. was anythign else close in your mind?
+You are correct that the mapping for FoodAnimalAndAnimalFeed is quite sparse.  There were a couple of reasons why I chose only rangeland biome.
+
+*   **Focus on environment:** The MIxS environment focuses on the context of where the sample was collected, which in this case is related to animal feed and the animals themselves.  Many of the EnvO terms describe the biome that results from the presence of animals, rather than the environment in which the animals are found. For instance, terms like "grassland biome" could be a consequence of grazing animals, but it's not necessarily the environment of the animal itself.
+*   **Lack of specificity in EnvO:**  EnvO, while extensive, lacks the specificity to describe environments like "animal gut" or "feedlot" which are relevant to this MIxS environment.
+
+I did consider a few other options, but ultimately rejected them:
+
+*   **Pasture:** This is similar to rangeland, but typically implies more managed land.  I wasn't sure if this was the intent of the MIxS environment.
+*   **Agricultural biome:** This is broader than what I think is implied by the MIxS environment.
+
+I think it would be helpful to get some clarification on the intended scope of the FoodAnimalAndAnimalFeed environment.

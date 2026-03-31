@@ -1,0 +1,10 @@
+environment_mappings:
+  - mixs_environment_label: Water
+    onto_term_mappings:
+      - onto_term_label: aquatic biome
+        onto_term_id: ENVO_00002030
+        comment: 'Parent of both marine and freshwater biomes'
+      - onto_term_label: freshwater biome
+        onto_term_id: ENVO_00000873 
+      - onto_term_label: marine biome
+        onto_term_id: ENVO_00000447 

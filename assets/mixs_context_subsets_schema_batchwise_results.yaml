@@ -1,0 +1,1073 @@
+mixs_context_mappings:
+  - mixs_context_label: env_broad_scale
+    environment_mappings:
+      - mixs_environment_label: Soil
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T12:15:01.461Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000179
+                ontology_term_label: desert biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000180
+                ontology_term_label: tundra biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000176
+                ontology_term_label: shrubland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000177
+                ontology_term_label: grassland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000245
+                ontology_term_label: cropland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000247
+                ontology_term_label: rangeland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000202
+                ontology_term_label: temperate broadleaf forest biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: High confidence due to the typical presence of well-developed soil ecosystems, but allowing for slight uncertainty due to potential variations in specific forest types or environmental conditions.
+              - ontology_term_id: ENVO_01000200
+                ontology_term_label: tropical broadleaf forest biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: High confidence due to the generally rich soil environments in these forests, but accounting for possible exceptions like flooded forests or unique soil conditions.
+              - ontology_term_id: ENVO_01000221
+                ontology_term_label: temperate woodland biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate to high confidence due to the typical presence of soil environments, but acknowledging potential variations in soil characteristics or specific woodland types.
+              - ontology_term_id: ENVO_01000220
+                ontology_term_label: tropical woodland biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate to high confidence due to the general association with soil environments, but allowing for potential exceptions or unique soil conditions in certain tropical woodland types.
+              - ontology_term_id: ENVO_01000181
+                ontology_term_label: mangrove biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence due to the presence of unique intertidal soil conditions, which may differ significantly from typical terrestrial soil environments.
+              - ontology_term_id: ENVO_01000219
+                ontology_term_label: anthropogenic terrestrial biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence due to the wide range of environments encompassed, with varying degrees of soil interaction depending on specific land use practices and human modifications.
+              - ontology_term_id: ENVO_01001831
+                ontology_term_label: temperate biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence as temperate biomes generally include forests, grasslands, and shrublands associated with soil, but acknowledging potential exceptions or subregions with minimal soil interaction.
+              - ontology_term_id: ENVO_01001830
+                ontology_term_label: tropical biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence due to the frequent presence of soil environments in rainforests, savannas, and grasslands, but considering possible exceptions or subregions with limited soil interaction.
+              - ontology_term_id: ENVO_01001832
+                ontology_term_label: subtropical biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence as subtropical biomes encompass diverse environments like forests, grasslands, and deserts, many involving soil, but acknowledging potential exceptions or subregions with limited soil interaction.
+              - ontology_term_id: ENVO_01001836
+                ontology_term_label: montane biome
+                confidence: 0.6
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence due to the presence of soil environments in various ecosystems at higher elevations, but considering potential limitations in rocky areas or regions with sparse vegetation.
+              - ontology_term_id: ENVO_01000339
+                ontology_term_label: polar biome
+                confidence: 0.6
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence as soil environments exist in tundra regions within polar biomes, but acknowledging limitations due to areas with permanent ice or snow cover.
+              - ontology_term_id: ENVO_01001834
+                ontology_term_label: subpolar biome
+                confidence: 0.6
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence due to the general presence of soil environments in boreal forests and taiga, but considering potential limitations in specific conditions or subregions.
+              - ontology_term_id: ENVO_01001837
+                ontology_term_label: subalpine biome
+                confidence: 0.6
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence as subalpine biomes often include forests, meadows, and shrublands with soil environments, but acknowledging potential limitations in rocky areas or regions with sparse vegetation.
+              - ontology_term_id: ENVO_01001838
+                ontology_term_label: arid biome
+                confidence: 0.6
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence as arid biomes typically have soil environments, but recognizing potential variations in soil types and conditions depending on the specific arid ecosystem and moisture levels.
+              - ontology_term_id: ENVO_01000246
+                ontology_term_label: village biome
+                confidence: 0.6
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T12:15:01.461Z
+                    comment_body: Moderate confidence as village biomes involve soil interaction due to human settlements and agricultural activities, but acknowledging variability depending on land use practices and infrastructure.
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T13:27:34.044Z
+            comments:
+              - agent: Mark Andrew Miller
+                timestamp: 2024-05-02T13:29:03.780Z
+                comment_body: Encouraged finer grained scoring, more targets comments, inclusion of super classes even if they seem redundant
+            ontology_terms:
+              - ontology_term_id: ENVO_01000179
+                ontology_term_label: desert biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000180
+                ontology_term_label: tundra biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000176
+                ontology_term_label: shrubland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000177
+                ontology_term_label: grassland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000245
+                ontology_term_label: cropland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000247
+                ontology_term_label: rangeland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000202
+                ontology_term_label: temperate broadleaf forest biome
+                confidence: 0.9
+              - ontology_term_id: ENVO_01000200
+                ontology_term_label: tropical broadleaf forest biome
+                confidence: 0.9
+              - ontology_term_id: ENVO_01000221
+                ontology_term_label: temperate woodland biome
+                confidence: 0.8
+              - ontology_term_id: ENVO_01000220
+                ontology_term_label: tropical woodland biome
+                confidence: 0.8
+              - ontology_term_id: ENVO_01000181
+                ontology_term_label: mangrove biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T13:27:34.044Z
+                    comment_body: Mangrove biomes exist in intertidal zones with unique soil conditions that are periodically submerged by water, which may not fully align with typical soil environments.
+              - ontology_term_id: ENVO_01000219
+                ontology_term_label: anthropogenic terrestrial biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T13:27:34.044Z
+                    comment_body: The compatibility with the Soil extension varies significantly within this category depending on the specific type of anthropogenic environment and the degree of soil interaction.
+              - ontology_term_id: ENVO_01001831
+                ontology_term_label: temperate biome
+                confidence: 0.7
+              - ontology_term_id: ENVO_01001830
+                ontology_term_label: tropical biome
+                confidence: 0.7
+              - ontology_term_id: ENVO_01001832
+                ontology_term_label: subtropical biome
+                confidence: 0.7
+              - ontology_term_id: ENVO_01001836
+                ontology_term_label: montane biome
+                confidence: 0.6
+              - ontology_term_id: ENVO_01000339
+                ontology_term_label: polar biome
+                confidence: 0.6
+              - ontology_term_id: ENVO_01001834
+                ontology_term_label: subpolar biome
+                confidence: 0.6
+              - ontology_term_id: ENVO_01001837
+                ontology_term_label: subalpine biome
+                confidence: 0.6
+              - ontology_term_id: ENVO_01001838
+                ontology_term_label: arid biome
+                confidence: 0.6
+              - ontology_term_id: ENVO_01000246
+                ontology_term_label: village biome
+                confidence: 0.6
+      - mixs_environment_label: Water
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T12:15:01.461Z
+            ontology_terms:
+              - ontology_term_id: ENVO_00002030
+                ontology_term_label: aquatic biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_00000447
+                ontology_term_label: marine biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000048
+                ontology_term_label: ocean biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000046
+                ontology_term_label: marginal sea biome
+                confidence: 0.9
+              - ontology_term_id: ENVO_01000047
+                ontology_term_label: mediterranean sea biome
+                confidence: 0.9
+              - ontology_term_id: ENVO_01000023
+                ontology_term_label: marine pelagic biome
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000873
+                ontology_term_label: freshwater biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000253
+                ontology_term_label: freshwater river biome
+                confidence: 0.9
+              - ontology_term_id: ENVO_01000252
+                ontology_term_label: freshwater lake biome
+                confidence: 1.0
+      - mixs_environment_label: Agriculture
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T13:51:11.538Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000219
+                ontology_term_label: anthropogenic terrestrial biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T13:51:11.538Z
+                    comment_body: High confidence due to the inclusion of agricultural environments within this category, but allowing for some uncertainty as it also encompasses non-agricultural anthropogenic biomes.
+              - ontology_term_id: ENVO_01000245
+                ontology_term_label: cropland biome
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000247
+                ontology_term_label: rangeland biome
+                confidence: 1.0
+      - mixs_environment_label: BuiltEnvironment
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T13:51:11.538Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000219
+                ontology_term_label: anthropogenic terrestrial biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T13:51:11.538Z
+                    comment_body: High confidence as built environments fall under anthropogenic influences, but acknowledging the inclusion of non-built environments within this category.
+              - ontology_term_id: ENVO_01000248
+                ontology_term_label: dense settlement biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T13:51:11.538Z
+                    comment_body: High confidence due to the relevance of dense human settlements to built environments, but allowing for some uncertainty as not all dense settlements are extensively built-up.
+              - ontology_term_id: ENVO_01000249
+                ontology_term_label: urban biome
+                confidence: 1.0
+      - mixs_environment_label: HydrocarbonResourcesFluidsSwabs
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T13:51:11.538Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000219
+                ontology_term_label: anthropogenic terrestrial biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T13:51:11.538Z
+                    comment_body: Moderate confidence due to the potential presence of hydrocarbon resource extraction activities within anthropogenic terrestrial biomes, but acknowledging the broad scope of this category and the possibility of environments without hydrocarbon resources.
+      - mixs_environment_label: HydrocarbonResourcesFluidsSwabs
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            comments:
+              - agent: Mark Andrew Miller
+                timestamp: 2024-05-02T14:03:10.182Z
+                comment_body: please include the "may be relevant" biomes, emphasizing where fluid hydrocarbons may be found, more so than biomes that might be affected by spills or runoff.
+            ontology_terms:
+              - ontology_term_id: ENVO_01000219
+                ontology_term_label: anthropogenic terrestrial biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence due to the frequent presence of hydrocarbon resource extraction activities within anthropogenic terrestrial biomes, but acknowledging the possibility of environments without hydrocarbon resources.
+              - ontology_term_id: ENVO_00000447
+                ontology_term_label: marine biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence as offshore oil and gas extraction occurs within marine environments, leading to the presence of fluid hydrocarbons in these areas.
+              - ontology_term_id: ENVO_00000873
+                ontology_term_label: freshwater biome
+                confidence: 0.6
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence due to the possibility of hydrocarbon extraction activities occurring near freshwater bodies, leading to the presence of fluid hydrocarbons in certain freshwater environments.
+              - ontology_term_id: ENVO_01000180
+                ontology_term_label: tundra biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence as oil and gas exploration and extraction occur in Arctic tundra regions, leading to the presence of fluid hydrocarbons in these areas.
+              - ontology_term_id: ENVO_01000179
+                ontology_term_label: desert biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence as many arid and desert regions are rich in hydrocarbon resources and extraction activities, leading to the presence of fluid hydrocarbons in these environments.
+      - mixs_environment_label: HydrocarbonResourcesCores
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000219
+                ontology_term_label: anthropogenic terrestrial biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence due to the association of hydrocarbon resource extraction activities, including core sampling, with anthropogenic terrestrial biomes, but acknowledging the possibility of environments without hydrocarbon resources.
+              - ontology_term_id: ENVO_00000447
+                ontology_term_label: marine biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence as offshore oil and gas exploration involves core sampling within marine environments.
+              - ontology_term_id: ENVO_01000180
+                ontology_term_label: tundra biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence due to the presence of oil and gas exploration and core sampling activities in Arctic tundra regions.
+              - ontology_term_id: ENVO_01000179
+                ontology_term_label: desert biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence as many arid and desert regions contain hydrocarbon resources and undergo exploration involving core sampling.
+      - mixs_environment_label: MicrobialMatBiofilm
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_00002030
+                ontology_term_label: aquatic biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as microbial mats and biofilms are frequently found in aquatic environments, but acknowledging the possibility of their occurrence in non-aquatic settings.
+              - ontology_term_id: ENVO_00000447
+                ontology_term_label: marine biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence due to the prevalence of microbial mats and biofilms in marine ecosystems, but considering potential variations in their distribution and abundance.
+              - ontology_term_id: ENVO_00000873
+                ontology_term_label: freshwater biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence as microbial mats and biofilms can occur in various freshwater environments, but acknowledging potential variations in their prevalence and specific habitat preferences.
+      - mixs_environment_label: MiscellaneousNaturalOrArtificialEnvironment
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000219
+                ontology_term_label: anthropogenic terrestrial biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as this extension is designed for miscellaneous environments, which often fall under anthropogenic influences, but acknowledging the inclusion of natural environments within this category.
+              - ontology_term_id: ENVO_00000446
+                ontology_term_label: terrestrial biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as this extension encompasses miscellaneous environments, including terrestrial ones, but considering the possibility of aquatic or other non-terrestrial environments.
+              - ontology_term_id: ENVO_00002030
+                ontology_term_label: aquatic biome
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate confidence due to the possibility of miscellaneous environments occurring in aquatic settings, but acknowledging the broader scope of this extension beyond aquatic biomes.
+      - mixs_environment_label: PlantAssociated
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000174
+                ontology_term_label: forest biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as plant-associated environments are commonly found within forest biomes, but allowing for some uncertainty due to potential exceptions or variations in specific forest types.
+              - ontology_term_id: ENVO_01000175
+                ontology_term_label: woodland biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence due to the frequent presence of plant-associated environments in woodland biomes, but acknowledging potential variations in plant communities and soil conditions.
+              - ontology_term_id: ENVO_01000176
+                ontology_term_label: shrubland biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as shrubland biomes typically involve plant-associated environments, but allowing for some uncertainty due to potential variations in shrub types and densities.
+              - ontology_term_id: ENVO_01000177
+                ontology_term_label: grassland biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as grassland biomes often include plant-associated environments, but acknowledging potential variations in grass types and the presence of other vegetation.
+              - ontology_term_id: ENVO_01000181
+                ontology_term_label: mangrove biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate to high confidence as mangrove biomes are characterized by specific plant communities, but acknowledging the unique intertidal conditions and potential variations in mangrove species.
+      - mixs_environment_label: Sediment
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_00002030
+                ontology_term_label: aquatic biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as sediments are typically associated with aquatic environments, but allowing for some uncertainty as not all aquatic biomes have significant sediment deposition.
+              - ontology_term_id: ENVO_00000447
+                ontology_term_label: marine biome
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence due to the presence of sediments in various marine ecosystems, but acknowledging potential variations in sediment types and distribution across different marine zones.
+              - ontology_term_id: ENVO_00000873
+                ontology_term_label: freshwater biome
+                confidence: 0.8
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: Moderate to high confidence as sediments are found in many freshwater environments, but considering potential variations in sediment deposition and the influence of water flow and currents.
+  - mixs_context_label: env_medium
+    environment_mappings:
+      - mixs_environment_label: Soil
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            comments:
+              - agent: Mark Andrew Miller
+                timestamp: 2024-05-02T14:52:34.739Z
+                comment_body: we should include particulate matter that is likely to appear in in a sample collected from air.
+            ontology_terms:
+              - ontology_term_id: ENVO_00001998
+                ontology_term_label: soil
+                confidence: 1.0
+              - ontology_term_id: ENVO_00002871
+                ontology_term_label: alluvial soil
+                confidence: 0.9
+              - ontology_term_id: ENVO_00003082
+                ontology_term_label: enriched soil
+                confidence: 0.8
+              - ontology_term_id: ENVO_01001526
+                ontology_term_label: frozen soil
+                confidence: 0.9
+      - mixs_environment_label: Water
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_00002006
+                ontology_term_label: liquid water
+                confidence: 1.0
+              - ontology_term_id: ENVO_00002010
+                ontology_term_label: saline water
+                confidence: 0.9
+              - ontology_term_id: ENVO_00002011
+                ontology_term_label: fresh water
+                confidence: 0.9
+              - ontology_term_id: ENVO_00002019
+                ontology_term_label: brackish water
+                confidence: 0.8
+      - mixs_environment_label: Air
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000797
+                ontology_term_label: gaseous environmental material
+                confidence: 1.0
+              - ontology_term_id: ENVO_00010505
+                ontology_term_label: aerosol
+                confidence: 1.0
+              - ontology_term_id: ENVO_01001089
+                ontology_term_label: aerosolized solids
+                confidence: 0.9
+              - ontology_term_id: ENVO_01001088
+                ontology_term_label: aerosolized liquids
+                confidence: 0.8
+      - mixs_environment_label: HostAssociated
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            comments:
+              - agent: Mark Andrew Miller
+                timestamp: 2024-05-02T14:57:47.508Z
+                comment_body: This mapping/subsetting will requre more Uberon terms
+            ontology_terms:
+              - ontology_term_id: ENVO_02000019
+                ontology_term_label: bodily fluid material
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as bodily fluids are often the immediate medium surrounding samples from host-associated environments, but allowing for some uncertainty due to potential variations in sample types and collection methods.
+      - mixs_environment_label: BuiltEnvironment
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            comments:
+              - agent: Mark Andrew Miller
+                timestamp: 2024-05-02T15:07:45.318Z
+                comment_body: what about some of the solid environmental material ENVO_01000814 subclasses? ... i want to err on the side of inclusiveness. please include those and any releavnt subclasses of waste material ENVO_00002264 ... i would prefer if you picked among the subclasses of waste material more individually
+            ontology_terms:
+              - ontology_term_id: ENVO_0010001
+                ontology_term_label: anthropogenic environmental material
+                confidence: 0.9
+              - ontology_term_id: ENVO_01000814
+                ontology_term_label: solid environmental material
+                confidence: 0.8
+              - ontology_term_id: ENVO_01000458
+                ontology_term_label: concrete
+                confidence: 0.8
+              - ontology_term_id: ENVO_01000474
+                ontology_term_label: brick material
+                confidence: 0.8
+              - ontology_term_id: ENVO_01000476
+                ontology_term_label: plaster
+                confidence: 0.7
+              - ontology_term_id: ENVO_01000480
+                ontology_term_label: glass
+                confidence: 0.7
+              - ontology_term_id: ENVO_00002040
+                ontology_term_label: wood
+                confidence: 0.8
+              - ontology_term_id: ENVO_01001069
+                ontology_term_label: metal
+                confidence: 0.7
+              - ontology_term_id: ENVO_00002008
+                ontology_term_label: dust
+                confidence: 0.7
+              - ontology_term_id: ENVO_06105101
+                ontology_term_label: plastic
+                confidence: 0.7
+              - ontology_term_id: ENVO_00002001
+                ontology_term_label: waste water
+                confidence: 0.7
+              - ontology_term_id: ENVO_00002267
+                ontology_term_label: industrial waste material
+                confidence: 0.6
+              - ontology_term_id: ENVO_01000372
+                ontology_term_label: household waste material
+                confidence: 0.7
+      - mixs_environment_label: HydrocarbonResourcesCores
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_00001995
+                ontology_term_label: rock
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as hydrocarbon resource cores are typically composed of rock materials, but allowing for slight uncertainty as there might be cases with unconsolidated sediments or other materials.
+      - mixs_environment_label: HydrocarbonResourcesFluidsSwabs
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            comments:
+              - agent: Mark Andrew Miller
+                timestamp: 2024-05-02T15:12:19.204Z
+                comment_body: please use much more specific subclasses of fluid environmental material ENVO_02000140
+            ontology_terms:
+              - ontology_term_id: ENVO_2000045
+                ontology_term_label: hydrocarbon-based environmental material
+                confidence: 0.9
+              - ontology_term_id: ENVO_00002985
+                ontology_term_label: oil
+                confidence: 0.9
+              - ontology_term_id: ENVO_00002984
+                ontology_term_label: petroleum
+                confidence: 0.9
+              - ontology_term_id: ENVO_01001869
+                ontology_term_label: fracking liquid
+                confidence: 0.8
+      - mixs_environment_label: MicrobialMatBiofilm
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000156
+                ontology_term_label: biofilm material
+                confidence: 1.0
+              - ontology_term_id: ENVO_01000157
+                ontology_term_label: microbial mat material
+                confidence: 1.0
+      - mixs_environment_label: MiscellaneousNaturalOrArtificialEnvironment
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_00010483
+                ontology_term_label: environmental material
+                confidence: 1.0
+      - mixs_environment_label: PlantAssociated
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01001121
+                ontology_term_label: plant matter
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as plant matter is often the immediate medium surrounding samples in plant-associated environments, but allowing for slight uncertainty as other materials like soil or water might also be relevant depending on the specific context.
+      - mixs_environment_label: Sediment
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            ontology_terms:
+              - ontology_term_id: ENVO_00002007
+                ontology_term_label: sediment
+                confidence: 1.0
+              - ontology_term_id: ENVO_00002045
+                ontology_term_label: anaerobic sediment
+                confidence: 0.9
+              - ontology_term_id: ENVO_03000033
+                ontology_term_label: marine sediment
+                confidence: 0.9
+      - mixs_environment_label: Agriculture
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T14:03:10.182Z
+            comments:
+              - agent: Mark Andrew Miller
+                timestamp: 2024-05-02T15:49:49.198Z
+                comment_body: what about any of these or any of their subclasses? animal litter, manure, nesting material, agricultural waste material, animal waste material, agricultural environmental material
+            ontology_terms:
+              - ontology_term_id: ENVO_00001998
+                ontology_term_label: soil
+                confidence: 0.9
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T14:03:10.182Z
+                    comment_body: High confidence as soil is a primary medium in agricultural environments, but allowing for slight uncertainty due to potential variations in agricultural practices and the use of other media like hydroponics.
+              - ontology_term_id: ENVO_00002191
+                ontology_term_label: animal litter
+                confidence: 0.8
+              - ontology_term_id: ENVO_03501300
+                ontology_term_label: manure
+                confidence: 0.9
+              - ontology_term_id: ENVO_02000004
+                ontology_term_label: nesting material
+                confidence: 0.7
+              - ontology_term_id: ENVO_01000371
+                ontology_term_label: agricultural waste material
+                confidence: 0.7
+              - ontology_term_id: ENVO_00002276
+                ontology_term_label: animal waste material
+                confidence: 0.7
+  - mixs_context_label: env_local_scale
+    environment_mappings:
+      - mixs_environment_label: Soil
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T16:01:09.807Z
+            comments:
+              - agent: Mark Andrew Miller
+                timestamp: 2024-05-02T16:01:09.807
+                comment_body: only a subset of these have been manually reviewed. ENVO:01001886 landform is probably a good anchor. Also 'human construction', 'environmental zone', 'environmental system', 'geographic feature'. Possibly 'hydrographic feature', 'island', 'roadside'
+            ontology_terms:
+              - ontology_term_id: ENVO_01001785
+                ontology_term_label: land
+                confidence: 0.9
+              - ontology_term_id: ENVO_01001886
+                ontology_term_label: landform
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000013
+                ontology_term_label: continent
+                confidence: 0.7
+                comments:
+                  - agent: Mark Andrew Miller
+                    timestamp: 2024-05-02T16:01:09.807
+                    comment_body: Hallucination. ENVO_00000013 is cave system
+              - ontology_term_id: ENVO_00000014
+                ontology_term_label: landmass
+                confidence: 0.8
+                comments:
+                  - agent: Mark Andrew Miller
+                    timestamp: 2024-05-02T16:01:09.807
+                    comment_body: Hallucination. ENVO_00000014 is cave system. landmass is ENVO_01001782
+              - ontology_term_id: ENVO_00000015
+                ontology_term_label: island
+                confidence: 0.8
+                comments:
+                  - agent: Mark Andrew Miller
+                    timestamp: 2024-05-02T16:01:09.807
+                    comment_body: Hallucination. ENVO_00000015 is ocean. island is ENVO_00000098
+              - ontology_term_id: ENVO_00000016
+                ontology_term_label: mountain
+                confidence: 0.7
+                comments:
+                  - agent: Mark Andrew Miller
+                    timestamp: 2024-05-02T16:01:09.807
+                    comment_body: Hallucination. ENVO_00000016 is sea. mountain is ENVO_00000081
+              - ontology_term_id: ENVO_00000017
+                ontology_term_label: peninsula
+                confidence: 0.8
+                comments:
+                  - agent: Mark Andrew Miller
+                    timestamp: 2024-05-02T16:01:09.807
+                    comment_body: Hallucination. ENVO_00000017 is saline hydrographic feature. peninsula is ENVO_00000305
+              - ontology_term_id: ENVO_00000018
+                ontology_term_label: isthmus
+                confidence: 0.8
+                comments:
+                  - agent: Mark Andrew Miller
+                    timestamp: 2024-05-02T16:01:09.807
+                    comment_body: Hallucination. there is no ENVO_00000018 entity. isthmus is ENVO_00000174
+              - ontology_term_id: ENVO_01000021
+                ontology_term_label: coastal zone
+                confidence: 0.7
+              - ontology_term_id: ENVO_01000020
+                ontology_term_label: intertidal zone
+                confidence: 0.6
+              - ontology_term_id: ENVO_01000434
+                ontology_term_label: plain
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000019
+                ontology_term_label: valley
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000054
+                ontology_term_label: hill
+                confidence: 0.8
+              - ontology_term_id: ENVO_01000449
+                ontology_term_label: plateau
+                confidence: 0.7
+              - ontology_term_id: ENVO_00000044
+                ontology_term_label: dune
+                confidence: 0.8
+              - ontology_term_id: ENVO_01000404
+                ontology_term_label: cliff face
+                confidence: 0.7
+              - ontology_term_id: ENVO_01000435
+                ontology_term_label: rock formation
+                confidence: 0.7
+      - mixs_environment_label: Water
+        mapping_batches:
+          - agent: gemini-1.5-pro-latest
+            timestamp: 2024-05-02T16:01:09.807Z
+            ontology_terms:
+              - ontology_term_id: ENVO_01000813
+                ontology_term_label: water body
+                confidence: 0.9
+              - ontology_term_id: ENVO_01001788
+                ontology_term_label: hydroform
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000045
+                ontology_term_label: estuary
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000059
+                ontology_term_label: underground river
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000015
+                ontology_term_label: island
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T16:01:09.807Z
+                    comment_body: Moderate confidence as islands can influence local water conditions and currents, but acknowledging that they are not directly part of the water body itself.
+              - ontology_term_id: ENVO_00000017
+                ontology_term_label: peninsula
+                confidence: 0.7
+                comments:
+                  - agent: gemini-1.5-pro-latest
+                    timestamp: 2024-05-02T16:01:09.807Z
+                    comment_body: Moderate confidence as peninsulas can affect local water circulation and coastal processes, but recognizing that they are not directly within the water body.
+              - ontology_term_id: ENVO_01000021
+                ontology_term_label: coastal zone
+                confidence: 0.8
+  - mixs_context_label: env_local_scale
+    environment_mappings:
+      - mixs_environment_label: Agriculture
+        mapping_batches:
+          - agent: claude-3-opus-20240229
+            timestamp: '2024-05-03T14:42:08.187Z'
+            ontology_terms:
+              - ontology_term_id: ENVO_00000114
+                ontology_term_label: agricultural field
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000117
+                ontology_term_label: plantation
+                confidence: 0.8
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: The term plantation can refer to large-scale, commercial crops like sugarcane or cotton, so it may not always fit with smaller scale agricultural systems.
+              - ontology_term_id: ENVO_00000266
+                ontology_term_label: pasture
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000078
+                ontology_term_label: farm
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000115
+                ontology_term_label: orchard
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000116
+                ontology_term_label: vineyard
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000297
+                ontology_term_label: freshwater river
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Rivers near agricultural land could be relevant local environments, but may not always be directly part of the agricultural system.
+              - ontology_term_id: ENVO_00000020
+                ontology_term_label: lake
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Lakes near agricultural land could be relevant local environments, but may not always be directly part of the agricultural system.
+              - ontology_term_id: ENVO_00000033
+                ontology_term_label: pond
+                confidence: 0.8
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Ponds are often found on farms and can be an important part of agricultural systems.
+              - ontology_term_id: ENVO_00000036
+                ontology_term_label: irrigation canal
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000037
+                ontology_term_label: ditch
+                confidence: 0.8
+              - ontology_term_id: ENVO_00002221
+                ontology_term_label: shop
+                confidence: 0.6
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Shops may be present on farms for selling agricultural products, but are not necessarily a core part of all agricultural systems.
+              - ontology_term_id: ENVO_00000038
+                ontology_term_label: lagoon
+                confidence: 0.5
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Lagoons can sometimes be adjacent to agricultural land, especially in coastal areas, but are not a typical feature of most agricultural systems.
+              - ontology_term_id: ENVO_00000044
+                ontology_term_label: peatland
+                confidence: 0.6
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Peatlands can sometimes be used for agriculture, especially grazing, but are a specialized environment that is not representative of most agricultural systems.
+              - ontology_term_id: ENVO_00000294
+                ontology_term_label: fish farm
+                confidence: 0.8
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Fish farms are a type of agricultural system focused on aquaculture rather than crops or livestock.
+              - ontology_term_id: ENVO_00000295
+                ontology_term_label: fish hatchery
+                confidence: 0.8
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Fish hatcheries are often a component of fish farming operations.
+              - ontology_term_id: ENVO_00000296
+                ontology_term_label: rice field
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000935
+                ontology_term_label: campground
+                confidence: 0.4
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Campgrounds are not typically a direct part of agricultural systems, though they may sometimes be located adjacent to agricultural land.
+              - ontology_term_id: ENVO_00003040
+                ontology_term_label: animal house
+                confidence: 0.8
+              - ontology_term_id: ENVO_00003041
+                ontology_term_label: cow shed
+                confidence: 0.9
+              - ontology_term_id: ENVO_00003042
+                ontology_term_label: piggery
+                confidence: 0.9
+              - ontology_term_id: ENVO_00005745
+                ontology_term_label: allotment garden
+                confidence: 0.8
+      - mixs_environment_label: BuiltEnvironment
+        mapping_batches:
+          - agent: claude-3-opus-20240229
+            timestamp: '2024-05-03T14:42:08.187Z'
+            ontology_terms:
+              - ontology_term_id: ENVO_00000073
+                ontology_term_label: building
+                confidence: 0.9
+              - ontology_term_id: ENVO_00002173
+                ontology_term_label: hospital
+                confidence: 0.9
+              - ontology_term_id: ENVO_00003861
+                ontology_term_label: industrial building
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000064
+                ontology_term_label: road
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000074
+                ontology_term_label: dam
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000075
+                ontology_term_label: bridge
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000070
+                ontology_term_label: human construction
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: This is a broad term that encompasses many types of built structures, so it may not always provide the most specific or informative label for a local environment.
+              - ontology_term_id: ENVO_00000065
+                ontology_term_label: railway
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000467
+                ontology_term_label: constructed barrier
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Constructed barriers like walls and fences are common features of built environments, but may not always be the most salient or informative labels for a local environment.
+              - ontology_term_id: ENVO_00000469
+                ontology_term_label: research facility
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000562
+                ontology_term_label: park
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Parks and green spaces are important parts of built environments, but may not always be considered "built" in the same sense as buildings and infrastructure.
+              - ontology_term_id: ENVO_00000566
+                ontology_term_label: winter sports facility
+                confidence: 0.6
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Winter sports facilities are a specialized type of built environment that may not be representative of built environments in general.
+      - mixs_environment_label: Soil
+        mapping_batches:
+          - agent: claude-3-opus-20240229
+            timestamp: '2024-05-03T14:42:08.187Z'
+            ontology_terms:
+              - ontology_term_id: ENVO_00001998
+                ontology_term_label: soil
+                confidence: 0.9
+              - ontology_term_id: ENVO_00002007
+                ontology_term_label: soil layer
+                confidence: 0.9
+              - ontology_term_id: ENVO_00005801
+                ontology_term_label: rhizosphere
+                confidence: 0.9
+              - ontology_term_id: ENVO_00005802
+                ontology_term_label: rhizosphere soil
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000213
+                ontology_term_label: soil horizon
+                confidence: 0.8
+              - ontology_term_id: ENVO_00000043
+                ontology_term_label: wetland area
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Wetland soils are a specific type of soil that may not be representative of all soil environments, but are still relevant to the Soil extension.
+              - ontology_term_id: ENVO_00000044
+                ontology_term_label: peatland
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Peatlands are a specific type of wetland with distinctive soil characteristics, but may not be representative of all soil environments.
+              - ontology_term_id: ENVO_00000097
+                ontology_term_label: desert area
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Desert soils are a specific type of soil that may not be representative of all soil environments, but are still relevant to the Soil extension.
+              - ontology_term_id: ENVO_00000109
+                ontology_term_label: woodland area
+                confidence: 0.8
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Woodland soils are influenced by the presence of trees and may have distinctive characteristics compared to soils in other environments.
+              - ontology_term_id: ENVO_00000112
+                ontology_term_label: area of tundra
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Tundra soils are a specific type of soil that may not be representative of all soil environments, but are still relevant to the Soil extension.
+              - ontology_term_id: ENVO_00000114
+                ontology_term_label: agricultural field
+                confidence: 0.9
+              - ontology_term_id: ENVO_00000139
+                ontology_term_label: irrigation ditch
+                confidence: 0.7
+                comments:
+                  - agent: claude-3-opus-20240229
+                    timestamp: '2024-05-03T14:42:08.187Z'
+                    comment_body: Irrigation ditches are associated with agricultural soils and can influence their properties, but are not soil environments per se.
